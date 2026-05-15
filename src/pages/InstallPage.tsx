@@ -1,19 +1,18 @@
 import { PageHeader } from '../components/ui/PageHeader';
-import { installSteps } from '../content/install';
 import { site } from '../config/site';
+import { useI18n } from '../i18n/useI18n';
 
 export function InstallPage() {
+  const { t } = useI18n();
+
   return (
     <>
-      <PageHeader
-        title="Installation"
-        description="플러그인 설치, 버전 호환, 리소스팩 적용 가이드"
-      />
+      <PageHeader title={t.install.pageTitle} description={t.install.pageDescription} />
       <div className="notice">
-        <strong>Version:</strong> {site.mcVersionsNote}
+        <strong>{t.install.versionNotice}:</strong> {site.mcVersion} — {t.hero.mcVersionLabel}
       </div>
       <div className="install-steps">
-        {installSteps.map((step, i) => (
+        {t.install.steps.map((step, i) => (
           <article key={step.title} className="install-step">
             <span className="step-num">{i + 1}</span>
             <div>

@@ -1,12 +1,16 @@
 import { useState } from 'react';
-import { faqItems } from '../../content/faq';
+import type { FaqEntry } from '../../i18n/types';
 
-export function FaqList() {
-  const [openId, setOpenId] = useState<string | null>(faqItems[0]?.id ?? null);
+type FaqListProps = {
+  items: FaqEntry[];
+};
+
+export function FaqList({ items }: FaqListProps) {
+  const [openId, setOpenId] = useState<string | null>(items[0]?.id ?? null);
 
   return (
     <div className="faq-list">
-      {faqItems.map((item) => {
+      {items.map((item) => {
         const open = openId === item.id;
         return (
           <article key={item.id} className="faq-item">

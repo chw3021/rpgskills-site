@@ -1,31 +1,30 @@
 import { downloads } from '../../config/downloads';
 import { site } from '../../config/site';
+import { useI18n } from '../../i18n/useI18n';
 import { useLatestRelease } from '../../hooks/useLatestRelease';
 
 export function DownloadCards() {
+  const { t } = useI18n();
   const release = useLatestRelease();
+  const d = t.download;
 
   return (
     <div className="card-grid">
       <article className="card">
-        <h3>Plugin JAR</h3>
+        <h3>{d.pluginJar}</h3>
         <p className="meta">
-          Latest release from GitHub
-          {release.loading && ' — loading…'}
+          {d.latestFromGithub}
+          {release.loading && d.loading}
           {!release.loading && release.version && ` — ${release.version}`}
         </p>
         {release.error && (
           <p className="meta" style={{ color: 'var(--warning)' }}>
-            API fallback: {release.error}
+            {d.apiFallback}: {release.error}
           </p>
         )}
         <div className="btn-row" style={{ marginTop: '1rem' }}>
-          <a
-            href={release.jarUrl}
-            className="btn btn-primary"
-            download
-          >
-            Download JAR
+          <a href={release.jarUrl} className="btn btn-primary" download>
+            {d.downloadJar}
           </a>
           <a
             href={`${site.pluginRepo}/releases`}
@@ -33,17 +32,17 @@ export function DownloadCards() {
             rel="noopener noreferrer"
             className="btn btn-secondary"
           >
-            All Releases
+            {d.allReleases}
           </a>
         </div>
       </article>
 
       <article className="card">
-        <h3>Resource Pack (GitHub)</h3>
-        <p className="meta">RpgSkills repository — Code → Download ZIP</p>
+        <h3>{d.resourcePackGithub}</h3>
+        <p className="meta">{d.resourcePackGithubMeta}</p>
         <div className="btn-row" style={{ marginTop: '1rem' }}>
           <a href={downloads.resourcePack.githubZip} className="btn btn-primary">
-            Download ZIP
+            {d.downloadZip}
           </a>
           <a
             href={site.resourcePackRepo}
@@ -51,14 +50,14 @@ export function DownloadCards() {
             rel="noopener noreferrer"
             className="btn btn-secondary"
           >
-            Repository
+            {d.repository}
           </a>
         </div>
       </article>
 
       <article className="card">
-        <h3>Resource Pack (Google Drive)</h3>
-        <p className="meta">Alternative mirror for players</p>
+        <h3>{d.resourcePackDrive}</h3>
+        <p className="meta">{d.resourcePackDriveMeta}</p>
         <div className="btn-row" style={{ marginTop: '1rem' }}>
           <a
             href={downloads.resourcePack.googleDrive}
@@ -66,7 +65,7 @@ export function DownloadCards() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Open Drive
+            {d.openDrive}
           </a>
         </div>
       </article>

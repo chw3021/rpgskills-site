@@ -1,6 +1,9 @@
 import { site } from '../../config/site';
+import { useI18n } from '../../i18n/useI18n';
 
 export function Footer() {
+  const { t } = useI18n();
+
   return (
     <footer className="site-footer">
       <div className="footer-inner">
@@ -9,14 +12,14 @@ export function Footer() {
         </span>
         <span>
           <a href={site.spigotUrl} target="_blank" rel="noopener noreferrer">
-            Spigot
+            {t.footer.spigot}
           </a>
           {' · '}
           <a href={site.pluginRepo} target="_blank" rel="noopener noreferrer">
-            Source
+            {t.footer.source}
           </a>
           {' · '}
-          <a href={site.siteUrl}>Website</a>
+          <a href={site.siteUrl}>{t.footer.website}</a>
         </span>
       </div>
     </footer>

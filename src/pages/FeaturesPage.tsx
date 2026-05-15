@@ -1,14 +1,13 @@
 import { PageHeader } from '../components/ui/PageHeader';
-import { featureSections } from '../content/features';
+import { useI18n } from '../i18n/useI18n';
 
 export function FeaturesPage() {
+  const { t } = useI18n();
+
   return (
     <>
-      <PageHeader
-        title="Features"
-        description="Spigot 페이지 기능 목록을 섹션별로 정리했습니다."
-      />
-      {featureSections.map((section) => (
+      <PageHeader title={t.features.pageTitle} description={t.features.pageDescription} />
+      {t.features.sections.map((section) => (
         <section key={section.title} className="feature-section">
           <h2>{section.title}</h2>
           <ul>

@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom';
 import { site } from '../../config/site';
+import { useI18n } from '../../i18n/useI18n';
 
 export function Hero() {
+  const { t } = useI18n();
+
   return (
     <section className="hero">
       <div>
         <h1>{site.name}</h1>
-        <p>{site.tagline}</p>
-        <p style={{ color: 'var(--text-muted)' }}>
-          커스텀 몬스터, 무기·방어구, 스킬, 퀘스트, 보스 레이드, 파티 시스템으로 서버를
-          RPG 어드벤처로 바꿔 보세요.
-        </p>
+        <p>{t.hero.tagline}</p>
+        <p style={{ color: 'var(--text-muted)' }}>{t.hero.intro}</p>
         <div className="btn-row">
           <Link to="/download" className="btn btn-primary">
-            Download
+            {t.hero.download}
           </Link>
           <a
             href={site.spigotUrl}
@@ -21,18 +21,18 @@ export function Hero() {
             rel="noopener noreferrer"
             className="btn btn-secondary"
           >
-            Spigot Page
+            {t.hero.spigot}
           </a>
           <Link to="/install" className="btn btn-secondary">
-            Getting Started
+            {t.hero.gettingStarted}
           </Link>
         </div>
       </div>
       <div className="hero-visual" aria-hidden>
         <div className="hero-badge">
-          Compatible with <strong>Minecraft {site.mcVersion}</strong>
+          {t.hero.compatible} <strong>Minecraft {site.mcVersion}</strong>
           <br />
-          <span style={{ fontSize: '0.75rem' }}>{site.mcVersionsNote}</span>
+          <span style={{ fontSize: '0.75rem' }}>{t.hero.mcVersionLabel}</span>
         </div>
       </div>
     </section>

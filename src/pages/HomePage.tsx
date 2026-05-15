@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/home/Hero';
-import { featureSections } from '../content/features';
+import { useI18n } from '../i18n/useI18n';
 
 export function HomePage() {
+  const { t } = useI18n();
+  const sections = t.features.sections;
+
   return (
     <>
       <Hero />
       <section>
-        <h2>Why RPGSkills?</h2>
+        <h2>{t.home.whyTitle}</h2>
         <div className="card-grid">
-          {featureSections.slice(0, 3).map((section) => (
+          {sections.slice(0, 3).map((section) => (
             <article key={section.title} className="card">
               <h3>{section.title}</h3>
               <ul>
@@ -22,7 +25,7 @@ export function HomePage() {
         </div>
         <div className="btn-row" style={{ marginTop: '1.5rem' }}>
           <Link to="/features" className="btn btn-secondary">
-            View all features
+            {t.home.viewAllFeatures}
           </Link>
         </div>
       </section>

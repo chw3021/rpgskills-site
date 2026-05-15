@@ -2,8 +2,6 @@ export const site = {
   name: 'RPGSkills',
   tagline: 'Transform your Minecraft server into an RPG adventure',
   mcVersion: '26.1.2',
-  mcVersionsNote:
-    'Spigot/Paper 1.21.x — tested with API 26.1.2-R0.1-SNAPSHOT',
   spigotUrl: 'https://www.spigotmc.org/resources/rpgskills.122034/',
   pluginRepo: 'https://github.com/chw3021/rpgskills.github.io',
   resourcePackRepo: 'https://github.com/chw3021/RpgSkills',
