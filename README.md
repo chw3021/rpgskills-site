@@ -21,9 +21,11 @@ GitHub Actions also deploys on every push to `main` (see `.github/workflows/depl
 
 ## GitHub Pages setup
 
-1. Create repository `chw3021/rpgskills-site`
-2. Push `main` branch
-3. **Settings → Pages →** Branch: `gh-pages`, folder `/ (root)`
+1. Push `main` branch (Actions builds and deploys automatically).
+2. **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions** (not “Deploy from a branch”).
+3. Open **https://chw3021.github.io/rpgskills-site/** (must include `/rpgskills-site/` — the user root URL will 404).
+
+If you previously used the `gh-pages` branch, switch the source to **GitHub Actions** and re-run the deploy workflow.
 
 ## Plugin releases
 
