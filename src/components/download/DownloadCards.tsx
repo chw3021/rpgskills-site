@@ -19,21 +19,46 @@ export function DownloadCards() {
         </p>
         {release.error && (
           <p className="meta" style={{ color: 'var(--warning)' }}>
-            {d.apiFallback}: {release.error}
+            {release.error === 'no_jar_on_github'
+              ? d.noGithubReleaseHint
+              : `${d.apiFallback}: ${release.error}`}
           </p>
         )}
         <div className="btn-row" style={{ marginTop: '1rem' }}>
-          <a href={release.jarUrl} className="btn btn-primary" download>
-            {d.downloadJar}
-          </a>
-          <a
-            href={`${site.pluginRepo}/releases`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            {d.allReleases}
-          </a>
+          {release.directJar ? (
+            <>
+              <a href={release.jarUrl} className="btn btn-primary" download>
+                {d.downloadJar}
+              </a>
+              <a
+                href={`${site.pluginRepo}/releases`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                {d.allReleases}
+              </a>
+            </>
+          ) : (
+            <>
+              <a
+                href={release.jarUrl}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {d.allReleases}
+              </a>
+              <a
+                href={site.spigotUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                {d.getJarFromSpigot}
+              </a>
+            </>
+          )}
         </div>
       </article>
 

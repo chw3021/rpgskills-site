@@ -85,6 +85,8 @@ export type Translations = {
     resourcePackDrive: string;
     resourcePackDriveMeta: string;
     openDrive: string;
+    noGithubReleaseHint: string;
+    getJarFromSpigot: string;
   };
   support: {
     pageTitle: string;

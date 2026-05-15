@@ -116,6 +116,10 @@ export const en: Translations = {
     resourcePackDrive: 'Resource Pack (Google Drive)',
     resourcePackDriveMeta: 'Alternative mirror for players',
     openDrive: 'Open Drive',
+    noGithubReleaseHint:
+      'No GitHub Release with a JAR asset yet, or only pre-releases exist (the /releases/latest API returns 404). ' +
+      'Push a version tag on rpgskills.github.io (e.g. v1.0.1) so Actions uploads RPGskills.jar, or download from Spigot below.',
+    getJarFromSpigot: 'Download from Spigot',
   },
   support: {
     pageTitle: 'Support',

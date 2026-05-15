@@ -116,6 +116,10 @@ export const ko: Translations = {
     resourcePackDrive: '리소스팩 (Google Drive)',
     resourcePackDriveMeta: '플레이어용 미러 링크',
     openDrive: 'Drive 열기',
+    noGithubReleaseHint:
+      'GitHub에 JAR가 첨부된 Release가 없거나, 최신만 pre-release라 /releases/latest 가 404일 수 있습니다. ' +
+      'rpgskills.github.io 에서 태그를 푸시해(v1.0.1 등) Actions가 RPGskills.jar를 올리게 하거나, 아래 Spigot에서 받으세요.',
+    getJarFromSpigot: 'Spigot에서 받기',
   },
   support: {
     pageTitle: '지원',
