@@ -169,7 +169,7 @@ export const ko: Translations = {
   },
   footer: {
     spigot: 'Spigot',
-    source: '소스',
+    releases: '릴리스',
     website: '웹사이트',
   },
   commands: {

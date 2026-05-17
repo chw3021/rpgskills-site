@@ -47,7 +47,7 @@ export function SupportPage() {
   const reportChannels = t.support.reportChannels.map((ch, i) => ({
     ...ch,
     href:
-      i === 0 ? `${site.pluginRepo}/issues/new` : site.spigotUrl,
+      i === 0 ? `${site.pluginPublicRepoUrl}/issues/new` : site.spigotUrl,
   }));
 
   return (

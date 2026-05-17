@@ -31,7 +31,7 @@ export function DownloadCards() {
                 {d.downloadJar}
               </a>
               <a
-                href={`${site.pluginRepo}/releases`}
+                href={site.pluginReleasesUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary"

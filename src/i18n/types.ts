@@ -117,7 +117,7 @@ export type Translations = {
   };
   footer: {
     spigot: string;
-    source: string;
+    releases: string;
     website: string;
   };
   commands: {

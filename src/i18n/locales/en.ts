@@ -170,7 +170,7 @@ export const en: Translations = {
   },
   footer: {
     spigot: 'Spigot',
-    source: 'Source',
+    releases: 'Releases',
     website: 'Website',
   },
   commands: {

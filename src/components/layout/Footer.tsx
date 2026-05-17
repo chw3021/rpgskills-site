@@ -15,8 +15,8 @@ export function Footer() {
             {t.footer.spigot}
           </a>
           {' · '}
-          <a href={site.pluginRepo} target="_blank" rel="noopener noreferrer">
-            {t.footer.source}
+          <a href={site.pluginReleasesUrl} target="_blank" rel="noopener noreferrer">
+            {t.footer.releases}
           </a>
           {' · '}
           <a href={site.siteUrl}>{t.footer.website}</a>

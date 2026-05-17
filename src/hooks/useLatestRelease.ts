@@ -3,7 +3,7 @@ import { downloads } from '../config/downloads';
 import { site } from '../config/site';
 import type { ReleaseInfo } from '../types/release';
 
-const releasesUrl = `${site.pluginRepo}/releases`;
+const releasesUrl = site.pluginReleasesUrl;
 
 type GithubRelease = {
   tag_name?: string;
