@@ -167,172 +167,172 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 
 ---
 
-## 16/32 — cavalryman
+## 16/32 — cavalryman (여)
 
-**파일:** `cavalryman.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Cavalryman, iron spear, simplified blocky horse silhouette beside rider, speed motion lines, mobile lancer.
-```
-
----
-
-## 17/32 — broiler
-
-**파일:** `broiler.webp`
+**파일:** `cavalryman.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Broiler warrior, iron mace, shockwave at ground, crowd-control suppressor, formation breaker stance.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Cavalryman, iron spear, simplified blocky horse silhouette beside rider, speed motion lines, mobile lancer.
 ```
 
 ---
 
-## 18/32 — launcher
+## 17/32 — broiler (남)
 
-**파일:** `launcher.webp` · **게임 내 이름: Elementalist / 원소술사**
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Elementalist archer, bow with spectral multi-element arrows (fire ice lightning), elemental suppressor.
-```
-
----
-
-## 19/32 — wreltler
-
-**파일:** `wreltler.webp` · **게임 내: Wrestler / 유술가**
+**파일:** `broiler.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Wrestler, golden chestplate, knuckles, grappling lock pose, single-target control fighter.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Broiler warrior, iron mace, shockwave at ground, crowd-control suppressor, formation breaker stance.
 ```
 
 ---
 
-## 20/32 — gardener
+## 18/32 — launcher (여) · 원소술사
 
-**파일:** `gardener.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Gardener, shovel, flowering azalea vines growing from ground, root trap suppressor mage.
-```
-
----
-
-## 21/32 — engineer
-
-**파일:** `engineer.webp`
+**파일:** `launcher.png` · **sref:** `swordman.png` · **성별:** Female · **게임 내:** Elementalist / 원소술사
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Engineer, iron pickaxe, redstone dispenser gadgets, vortex pulling enemies, battlefield control technician.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Elementalist archer, bow with spectral multi-element arrows (fire ice lightning), elemental suppressor.
 ```
 
 ---
 
-## 22/32 — frostMan
+## 19/32 — wreltler (남) · 유술가
 
-**파일:** `frostMan.webp` · **빙술사**
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Frostman, dagger, packed ice crystals, freezing aura, immobilize suppressor.
-```
-
----
-
-## 23/32 — witherist
-
-**파일:** `witherist.webp`
+**파일:** `wreltler.png` · **sref:** `swordman.png` · **성별:** Male · **게임 내:** Wrestler / 유술가
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Witherist, hoe, wither rose, black smoke trails, fast mobile curse mage.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Wrestler, golden chestplate, knuckles, grappling lock pose, single-target control fighter.
 ```
 
 ---
 
-## 24/32 — sapper
+## 20/32 — gardener (여)
 
-**파일:** `sapper.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Sapper siege engineer, shovel, small ballista and tnt contraption, battlefield suppressor.
-```
-
----
-
-## 25/32 — paladin
-
-**파일:** `paladin.webp`
+**파일:** `gardener.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Paladin, tower shield and axe, holy defensive stance, protector supporter warrior.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Gardener, shovel, flowering azalea vines growing from ground, root trap suppressor mage.
 ```
 
 ---
 
-## 26/32 — medic
+## 21/32 — engineer (남)
 
-**파일:** `medic.webp` · **게임 내: ArrowMedic / 의궁**
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: ArrowMedic, crossbow with glowing tipped healing arrow, medic support archer, ranged healer-debuffer.
-```
-
----
-
-## 27/32 — taoist
-
-**파일:** `taoist.webp`
+**파일:** `engineer.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Taoist, knuckles, floating talisman papers, soul campfire spirit, support fighter.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Engineer, iron pickaxe, redstone dispenser gadgets, vortex pulling enemies, battlefield control technician.
 ```
 
 ---
 
-## 28/32 — musician
+## 22/32 — frostMan (여) · 빙술사
 
-**파일:** `musician.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Musician bard, wand as conductor baton, musical note particles, jukebox motif, morale support mage.
-```
-
----
-
-## 29/32 — cook
-
-**파일:** `cook.webp`
+**파일:** `frostMan.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Cook, shovel, cooked beef platter, warm food buff steam, team support chef.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Frostman, dagger, packed ice crystals, freezing aura, immobilize suppressor.
 ```
 
 ---
 
-## 30/32 — angler
+## 23/32 — witherist (남)
 
-**파일:** `angler.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Angler, fishing rod with hooked fish silhouette, supportive fisherman, pull enemies theme.
-```
-
----
-
-## 31/32 — witchDoctor
-
-**파일:** `witchDoctor.webp`
+**파일:** `witherist.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: WitchDoctor, hoe and totem of undying, ritual mask, voodoo green spirits, ally protector.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Witherist, hoe, wither rose, black smoke trails, fast mobile curse mage.
 ```
 
 ---
 
-## 32/32 — standardBearer
+## 24/32 — sapper (여)
 
-**파일:** `standardBearer.webp`
+**파일:** `sapper.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: StandardBearer, white banner flag and dagger, rallying troops pose, battle line supporter.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Sapper siege engineer, shovel, small ballista and tnt contraption, battlefield suppressor.
+```
+
+---
+
+## 25/32 — paladin (남)
+
+**파일:** `paladin.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Paladin, tower shield and axe, holy defensive stance, protector supporter warrior.
+```
+
+---
+
+## 26/32 — medic (여) · 의궁
+
+**파일:** `medic.png` · **sref:** `swordman.png` · **성별:** Female · **게임 내:** ArrowMedic / 의궁
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female ArrowMedic, crossbow with glowing tipped healing arrow, medic support archer, ranged healer-debuffer.
+```
+
+---
+
+## 27/32 — taoist (남)
+
+**파일:** `taoist.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Taoist, knuckles, floating talisman papers, soul campfire spirit, support fighter.
+```
+
+---
+
+## 28/32 — musician (여) · 예술가
+
+**파일:** `musician.png` · **sref:** `swordman.png` · **성별:** Female
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Musician bard, wand as conductor baton, musical note particles, jukebox motif, morale support mage.
+```
+
+---
+
+## 29/32 — cook (남)
+
+**파일:** `cook.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Cook, shovel, cooked beef platter, warm food buff steam, team support chef.
+```
+
+---
+
+## 30/32 — angler (여)
+
+**파일:** `angler.png` · **sref:** `swordman.png` · **성별:** Female
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Angler, fishing rod with hooked fish silhouette, supportive fisherman, pull enemies theme.
+```
+
+---
+
+## 31/32 — witchDoctor (남) · 부두술사
+
+**파일:** `witchDoctor.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male WitchDoctor, hoe and totem of undying, ritual mask, voodoo green spirits, ally protector.
+```
+
+---
+
+## 32/32 — standardBearer (여) · 기수
+
+**파일:** `standardBearer.png` · **sref:** `swordman.png` · **성별:** Female
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female StandardBearer, white banner flag and dagger, rallying troops pose, battle line supporter.
 ```
 
 ---
@@ -346,4 +346,4 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 | **SD WebUI** | IP-Adapter + swordman.png, denoise 0.5~0.65 |
 | **ChatGPT / Gemini** | swordman 결과를 첨부하고 "same style, only change to Archer: ..." |
 
-완료 후: `c:\rpgskills-site\public\class-icons\swordman.webp` 등으로 저장 → 사이트 push.
+완료 후: `c:\rpgskills-site\public\class-icons\{id}.png` 로 저장 → 사이트 push. (32/32 완료)
