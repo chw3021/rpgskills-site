@@ -97,12 +97,12 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 
 ---
 
-## 9/32 — hunter (남)
+## 9/32 — hunter (남, 후드)
 
 **파일:** `hunter.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Hunter, iron axe raised overhead, dark tracking cloak, single-target burst assassin energy, high mobility stance.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Hunter, hood pulled up over head, agile build, iron axe, dark tracking cloak, swift shadow assassin stance.
 ```
 
 ---
@@ -217,12 +217,13 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 
 ---
 
-## 21/32 — engineer (남)
+## 21/32 — engineer (남, 기본 장비)
 
-**파일:** `engineer.png` · **sref:** `swordman.png` · **성별:** Male
+**파일:** `engineer.png` · **sref:** `swordman.png` · **성별:** Male  
+**한계돌파 참고(화려 슈트):** `_limit-break-ref/engineer-tier2-suit.png`
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Engineer, iron pickaxe, redstone dispenser gadgets, vortex pulling enemies, battlefield control technician.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions, stylized Minecraft promotional illustration, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic pose, no text, no watermark, 1:1 square, NO monsters. Character: Male Engineer, simple work outfit (NOT full powered armor). Modest jetpack, floating redstone dispenser, handheld x-ray emitter scanner, small antimatter particle orb. NO Iron Man suit, NO pickaxe.
 ```
 
 ---
@@ -237,12 +238,12 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 
 ---
 
-## 23/32 — witherist (남)
+## 23/32 — witherist (남, 괭이)
 
 **파일:** `witherist.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Witherist, hoe, wither rose, black smoke trails, fast mobile curse mage.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Witherist, clearly holding HOE not pickaxe, wither rose, black smoke trails, fast mobile curse mage.
 ```
 
 ---
@@ -307,22 +308,22 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 
 ---
 
-## 30/32 — angler (여)
+## 30/32 — angler (여, 한량)
 
 **파일:** `angler.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Angler, fishing rod with hooked fish silhouette, supportive fisherman, pull enemies theme.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Angler, fishing rod, carefree Hanryang leisurely eyes and smirk, supportive fisherman.
 ```
 
 ---
 
-## 31/32 — witchDoctor (남) · 부두술사
+## 31/32 — witchDoctor (남, 괭이) · 부두술사
 
 **파일:** `witchDoctor.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male WitchDoctor, hoe and totem of undying, ritual mask, voodoo green spirits, ally protector.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male WitchDoctor, clearly holding HOE not pickaxe, totem of undying, ritual mask, voodoo green spirits, ally protector.
 ```
 
 ---
