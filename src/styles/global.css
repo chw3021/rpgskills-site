@@ -162,6 +162,11 @@ ul {
   color: var(--accent);
 }
 
+.brand-logo {
+  flex-shrink: 0;
+  display: block;
+}
+
 .brand-mark {
   width: 28px;
   height: 28px;
@@ -576,6 +581,16 @@ ul {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.1rem;
+}
+
+.class-card__portrait {
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+  background: var(--bg-elevated);
 }
 
 .class-card__head {

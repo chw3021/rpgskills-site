@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { ClassDef } from '../../data/classCatalog';
 import { useI18n } from '../../i18n/useI18n';
 
@@ -5,7 +6,12 @@ type ClassCardProps = {
   cls: ClassDef;
 };
 
+const iconBase = `${import.meta.env.BASE_URL}class-icons/`;
+
+const iconExtensions = ['webp', 'png'] as const;
+
 export function ClassCard({ cls }: ClassCardProps) {
+  const [iconIndex, setIconIndex] = useState(0);
   const { locale, t } = useI18n();
   const copy = locale === 'ko' ? cls.ko : cls.en;
   const diff = t.classes.difficulty[cls.difficulty];
@@ -13,8 +19,24 @@ export function ClassCard({ cls }: ClassCardProps) {
   const role = t.classes.roleLabels[cls.role];
   const s = cls.stats;
 
+  const iconSrc =
+    iconIndex < iconExtensions.length
+      ? `${iconBase}${cls.id}.${iconExtensions[iconIndex]}`
+      : null;
+
   return (
     <article className="class-card">
+      {iconSrc && (
+        <img
+          src={iconSrc}
+          alt=""
+          className="class-card__portrait"
+          width={96}
+          height={96}
+          loading="lazy"
+          onError={() => setIconIndex((i) => i + 1)}
+        />
+      )}
       <header className="class-card__head">
         <h3>{copy.name}</h3>
         <span className="class-card__badges">
