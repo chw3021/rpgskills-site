@@ -26,6 +26,59 @@ export type ReportChannel = {
   description: string;
 };
 
+export type ClassesTranslations = {
+  pageTitle: string;
+  pageDescription: string;
+  tabListLabel: string;
+  tabClasses: string;
+  tabCrafting: string;
+  archetypesTitle: string;
+  rolesTitle: string;
+  rosterTitle: string;
+  rosterHint: string;
+  filterArchetype: string;
+  filterRole: string;
+  filterAll: string;
+  showingCount: string;
+  equipmentLabel: string;
+  archetypeLabels: Record<
+    | 'warrior'
+    | 'shooter'
+    | 'fighter'
+    | 'mage'
+    | 'technician'
+    | 'marine'
+    | 'avenger'
+    | 'battleLine',
+    string
+  >;
+  roleLabels: Record<'assault' | 'nuker' | 'suppressor' | 'supporter', string>;
+  difficulty: Record<'easy' | 'normal' | 'hard', string>;
+  stats: {
+    attack: string;
+    defence: string;
+    control: string;
+    support: string;
+    area: string;
+    range: string;
+    mobility: string;
+  };
+};
+
+export type CraftingTranslations = {
+  title: string;
+  intro: string;
+  smithTitle: string;
+  smithBody: string;
+  alternateTools: string;
+  mirrorNote: string;
+  legendMaterial: string;
+  legendStick: string;
+  legendMaterialShort: string;
+  legendStickShort: string;
+  recipeNames: Record<'knuckle' | 'wand' | 'dagger', string>;
+};
+
 export type Translations = {
   meta: {
     htmlLang: string;
@@ -34,6 +87,7 @@ export type Translations = {
   nav: {
     home: string;
     features: string;
+    classes: string;
     install: string;
     download: string;
     support: string;
@@ -57,7 +111,10 @@ export type Translations = {
   home: {
     whyTitle: string;
     viewAllFeatures: string;
+    viewClasses: string;
   };
+  classes: ClassesTranslations;
+  crafting: CraftingTranslations;
   features: {
     pageTitle: string;
     pageDescription: string;

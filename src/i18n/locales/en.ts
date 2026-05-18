@@ -9,6 +9,7 @@ export const en: Translations = {
   nav: {
     home: 'Home',
     features: 'Features',
+    classes: 'Classes',
     install: 'Install',
     download: 'Download',
     support: 'Support',
@@ -28,47 +29,61 @@ export const en: Translations = {
     spigot: 'Spigot Page',
     gettingStarted: 'Getting Started',
     compatible: 'Compatible with',
-    mcVersionLabel: 'Spigot/Paper 1.21.x — tested with API 26.1.2-R0.1-SNAPSHOT',
+    mcVersionLabel: 'Spigot/Paper API 26.1.2 (26.1.2-R0.1-SNAPSHOT) · Minecraft 1.21.x',
   },
   home: {
     whyTitle: 'Why RPGSkills?',
     viewAllFeatures: 'View all features',
+    viewClasses: 'Class guide & crafting',
   },
   features: {
     pageTitle: 'Features',
-    pageDescription: 'Core gameplay systems from the Spigot resource page, organized by category.',
+    pageDescription:
+      'Overview of RPGSkills systems — monsters, items, quests, raids, parties, and configuration.',
     sections: [
       {
-        title: 'Combat & Monsters',
+        title: 'Custom Monsters & Combat',
         items: [
-          'Custom monsters with special abilities and biome-based scaling',
-          'Combo system — at 5 stacks, additional monsters spawn; milestones trigger field bosses',
-          'Elemental progression: Earth → Wind → Frost → Ocean → Dark → Hyper → Burning → Poison → Wild',
+          'Unique enemies with special abilities challenge your players',
+          'Biome-based monster scaling — strength varies by biome',
+          'Combo system: at 5 stacks, extra monsters spawn; milestones summon field bosses',
         ],
       },
       {
-        title: 'Items & Skills',
+        title: 'Weapons, Armor & Skills',
         items: [
-          'Custom weapons, armor sets, and resource-pack visuals (Beta)',
-          'Class skills, proficiency rankings, and damage tracking (/rpg skill, /rpg rank, /rpg graph)',
-          'Weapon enhancement with elemental fragments; /smith for equipment',
-          'Custom crafting: Knuckle, Wand, Dagger, and alternate-material bows & tools',
+          'Wide variety of custom weapons and armor for your adventure',
+          '32 classes across 8 archetypes and 4 roles — see the Classes page',
+          'Skills & abilities: /rpg skill, proficiency rankings /rpg rank, damage graph /rpg graph',
+          'Resource pack support for custom visuals (Beta)',
         ],
       },
       {
-        title: 'Quests & Raids',
+        title: 'Biome Elements & Enhancement',
         items: [
-          'Quest NPCs appear after structure loot — tasks and objectives for players',
-          'Boss raids in Jungle, Nether, End (EnderMimic), and Wither Raid (Beta)',
-          'After reinstall, delete raid world folders: OverworldRaid, NethercoreRaid, EndercoreRaid, WitherRaid',
+          'Each biome grants unique elemental fragments to enhance weapons',
+          'Order: Earth (Plains) → Wind (Mountain/Hill) → Frost → Ocean → Dark (Forest) → Hyper (Desert) → Burning (Badlands) → Poison (Swamp) → Wild (Jungle)',
+          'Netherite weapons level up with fragments; Trident and Mace can be enhanced directly',
+          'Smith gear with /smith — netherite-tier weapons via ingredients',
         ],
       },
       {
-        title: 'Party & Configuration',
+        title: 'Quests & Boss Raids',
         items: [
-          'Party system: create, join, invite, kick, password, assemble, list',
+          'Quest NPCs appear after structure loot with tasks and objectives',
+          'Jungle & Nether: killing monsters may spawn a portal — right-click to enter a boss raid',
+          'End: killing EnderMimic spawns a raid portal',
+          'Wither Raid (Beta): summon and defeat the Wither in the field to open the Wither Raid portal',
+          'After reinstall, delete: OverworldRaid, NethercoreRaid, EndercoreRaid, WitherRaid',
+        ],
+      },
+      {
+        title: 'Party & Server Configuration',
+        items: [
+          'Party commands: create, join, password, invite, kick, leave, assemble, list',
           'Multi-language support in config',
-          'Per-world enable/disable',
+          'Enable or disable the plugin per world',
+          'Drop RPGskills.jar into plugins/, configure, and apply the resource pack',
         ],
       },
     ],
@@ -80,7 +95,7 @@ export const en: Translations = {
     steps: [
       {
         title: '1. Prepare your server',
-        body: 'Use Paper or Spigot 1.21.x. Builds compatible with API 26.1.2 are recommended.',
+        body: 'Use Paper or Spigot 1.21.x with Spigot API 26.1.2 or newer (matches pom.xml spigot-api 26.1.2-R0.1-SNAPSHOT).',
       },
       {
         title: '2. Install the plugin',
@@ -117,8 +132,7 @@ export const en: Translations = {
     resourcePackDriveMeta: 'Alternative mirror for players',
     openDrive: 'Open Drive',
     noGithubReleaseHint:
-      'No GitHub Release with a JAR asset yet, or only pre-releases exist (the /releases/latest API returns 404). ' +
-      'Push a version tag on rpgskills.github.io (e.g. v1.0.1) so Actions uploads RPGskills.jar, or download from Spigot below.',
+      'Could not load the latest JAR from GitHub Releases. Open All Releases on chw3021/rpgskills-releases or use Spigot below.',
     getJarFromSpigot: 'Download from Spigot',
   },
   support: {
@@ -186,11 +200,11 @@ export const en: Translations = {
       { cmd: '/smith', desc: 'Smith equipment in slot 1 using ingredient in slot 2' },
     ],
     party: [
-      { cmd: '/party create', desc: 'Create a party (you become owner)' },
-      { cmd: '/party join', desc: 'Join an existing party' },
-      { cmd: '/party password', desc: 'Lock party with password' },
-      { cmd: '/party invite', desc: 'Invite a player (owner only)' },
-      { cmd: '/party kick', desc: 'Kick a player (owner only)' },
+      { cmd: '/party create <partyname>', desc: 'Create a party (you become owner)' },
+      { cmd: '/party join <partyname>', desc: 'Join an existing party' },
+      { cmd: '/party password <password>', desc: 'Lock party with a password' },
+      { cmd: '/party invite <player>', desc: 'Invite a player (owner only)' },
+      { cmd: '/party kick <player>', desc: 'Kick a player (owner only)' },
       { cmd: '/party leave', desc: 'Leave current party' },
       { cmd: '/party assemble', desc: 'Teleport all members to owner (owner only)' },
       { cmd: '/party list', desc: 'List parties and owners' },
@@ -202,6 +216,65 @@ export const en: Translations = {
       { cmd: '/rpg enchant clear', desc: 'Remove enchantments from main hand' },
       { cmd: '/rpg elements (elm)', desc: 'Open elements inventory' },
     ],
+  },
+  classes: {
+    pageTitle: 'Classes & Crafting',
+    pageDescription:
+      'All 32 playable classes from the in-game GUI, plus custom weapon crafting recipes.',
+    tabListLabel: 'Classes page sections',
+    tabClasses: 'Classes',
+    tabCrafting: 'Crafting',
+    archetypesTitle: 'Class archetypes (columns in /rpg class)',
+    rolesTitle: 'Roles (rows in /rpg class)',
+    rosterTitle: 'All classes',
+    rosterHint: 'Stats match the in-game class selection GUI (Attack / Defence / Control / Support / Area / Range / Mobility).',
+    filterArchetype: 'Archetype',
+    filterRole: 'Role',
+    filterAll: 'All',
+    showingCount: 'Showing {count} classes',
+    equipmentLabel: 'Recommended gear',
+    archetypeLabels: {
+      warrior: 'Warrior',
+      shooter: 'Shooter',
+      fighter: 'Fighter',
+      mage: 'Mage',
+      technician: 'Technician',
+      marine: 'Marine',
+      avenger: 'Avenger',
+      battleLine: 'Battle Line',
+    },
+    roleLabels: {
+      assault: 'Assault',
+      nuker: 'Nuker',
+      suppressor: 'Suppressor',
+      supporter: 'Supporter',
+    },
+    difficulty: { easy: 'Easy', normal: 'Normal', hard: 'Hard' },
+    stats: {
+      attack: 'Attack',
+      defence: 'Defence',
+      control: 'Control',
+      support: 'Support',
+      area: 'Area',
+      range: 'Range',
+      mobility: 'Mobility',
+    },
+  },
+  crafting: {
+    title: 'Custom weapon crafting',
+    intro:
+      'Craft Knuckle, Wand, and Dagger with alternative materials. Bow, Crossbow, and Fishing Rod recipes accept non-wood materials in place of planks.',
+    smithTitle: '/smith:',
+    smithBody:
+      'Smith equipment in the first inventory slot using an ingredient in the second slot. Netherite-tier weapons can be obtained this way.',
+    alternateTools:
+      'Bow, Crossbow, Fishing Rod: replace wood components with other materials in the crafting grid.',
+    mirrorNote: 'All recipes are reversible (can be mirrored horizontally).',
+    legendMaterial: 'Material (any eligible block/item)',
+    legendStick: 'Stick',
+    legendMaterialShort: 'Mat',
+    legendStickShort: 'Stk',
+    recipeNames: { knuckle: 'Knuckle', wand: 'Wand', dagger: 'Dagger' },
   },
   faq: [
     {

@@ -30,7 +30,11 @@ export function Hero() {
       </div>
       <div className="hero-visual" aria-hidden>
         <div className="hero-badge">
-          {t.hero.compatible} <strong>Minecraft {site.mcVersion}</strong>
+          {t.hero.compatible}{' '}
+          <strong>
+            API {site.spigotApiVersion}
+          </strong>{' '}
+          <span style={{ color: 'var(--text-muted)' }}>({site.mcVersion})</span>
           <br />
           <span style={{ fontSize: '0.75rem' }}>{t.hero.mcVersionLabel}</span>
         </div>

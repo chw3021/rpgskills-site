@@ -27,6 +27,9 @@ export function HomePage() {
           <Link to="/features" className="btn btn-secondary">
             {t.home.viewAllFeatures}
           </Link>
+          <Link to="/classes" className="btn btn-secondary">
+            {t.home.viewClasses}
+          </Link>
         </div>
       </section>
     </>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { PageHeader } from '../components/ui/PageHeader';
 import { useI18n } from '../i18n/useI18n';
 
@@ -17,6 +18,9 @@ export function FeaturesPage() {
           </ul>
         </section>
       ))}
+      <p className="meta" style={{ marginTop: '1.5rem' }}>
+        <Link to="/classes">{t.home.viewClasses}</Link>
+      </p>
     </>
   );
 }

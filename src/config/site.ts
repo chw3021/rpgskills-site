@@ -1,7 +1,10 @@
 export const site = {
   name: 'RPGSkills',
   tagline: 'Transform your Minecraft server into an RPG adventure',
-  mcVersion: '26.1.2',
+  /** Minecraft line — use with matching Spigot/Paper API */
+  mcVersion: '1.21.x',
+  /** Matches rpgskills.github.io pom.xml spigot-api */
+  spigotApiVersion: '26.1.2',
   spigotUrl: 'https://www.spigotmc.org/resources/rpgskills.122034/',
   /** Private source — not used for JAR downloads */
   pluginRepo: 'https://github.com/chw3021/rpgskills.github.io',
