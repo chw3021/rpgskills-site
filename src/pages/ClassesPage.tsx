@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { PageHeader } from '../components/ui/PageHeader';
 import { ClassCard } from '../components/classes/ClassCard';
+import { ImageLightbox } from '../components/ui/ImageLightbox';
 import { CraftingGrid } from '../components/crafting/CraftingGrid';
 import {
   ARCHETYPES,
@@ -19,6 +20,7 @@ export function ClassesPage() {
   const [tab, setTab] = useState<PageTab>('classes');
   const [archetypeFilter, setArchetypeFilter] = useState<ArchetypeId | 'all'>('all');
   const [roleFilter, setRoleFilter] = useState<RoleId | 'all'>('all');
+  const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
 
   const filtered = useMemo(() => {
     return CLASSES.filter((c) => {
@@ -119,7 +121,11 @@ export function ClassesPage() {
             </p>
             <div className="class-grid">
               {filtered.map((cls) => (
-                <ClassCard key={cls.id} cls={cls} />
+                <ClassCard
+                  key={cls.id}
+                  cls={cls}
+                  onPortraitClick={(src, title) => setLightbox({ src, title })}
+                />
               ))}
             </div>
           </section>
@@ -155,6 +161,13 @@ export function ClassesPage() {
             })}
           </div>
         </section>
+      )}
+      {lightbox && (
+        <ImageLightbox
+          src={lightbox.src}
+          title={lightbox.title}
+          onClose={() => setLightbox(null)}
+        />
       )}
     </>
   );

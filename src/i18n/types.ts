@@ -41,6 +41,8 @@ export type ClassesTranslations = {
   filterAll: string;
   showingCount: string;
   equipmentLabel: string;
+  portraitZoom: string;
+  closeLightbox: string;
   archetypeLabels: Record<
     | 'warrior'
     | 'shooter'

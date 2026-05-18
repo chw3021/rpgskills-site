@@ -230,6 +230,8 @@ export const ko: Translations = {
     filterAll: '전체',
     showingCount: '{count}개 직업 표시',
     equipmentLabel: '추천 장비',
+    portraitZoom: '{name} 초상화 크게 보기',
+    closeLightbox: '이미지 닫기',
     archetypeLabels: {
       warrior: '전사',
       shooter: '사수',

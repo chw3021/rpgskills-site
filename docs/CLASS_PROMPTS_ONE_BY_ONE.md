@@ -2,7 +2,9 @@
 
 **저장 경로:** `public/class-icons/{id}.webp` (512×512 권장)
 
-**순서:** 1번 `swordman`으로 그림체 확정 → 2~32번은 **같은 시드 / style reference / --sref** 로 `swordman` 이미지를 넣고 생성.
+**순서:** 1번 `swordman`으로 그림체 확정 → 2~32번은 **같은 시드 / style reference / --sref** 로 `swordman.png`를 넣고 생성.
+
+**성별:** 남성 고정 아님. 번호 기준 **홀수(1,3,5…) 남성 · 짝수(2,4,6…) 여성** (프롬프트에 `Male` / `Female` 추가). 1 검사=남, 2 궁수=여, 3 권사=남 …
 
 **공통 네거티브 (모든 장에 동일하게 붙이기):**
 
@@ -27,140 +29,140 @@ Minecraft Java Edition hero character, full body three-quarter view facing sligh
 
 ## 2/32 — archer
 
-**파일:** `archer.webp` · **검사 다음 style reference에 swordman 사용**
+**파일:** `archer.png` · **style reference: `swordman.png`** · **여성**
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Archer, bow drawn ready to fire, quiver on back, green-trim leather armor, ranged assault stance.
-```
-
----
-
-## 3/32 — boxer
-
-**파일:** `boxer.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Boxer brawler, iron knuckles on both hands, iron helmet, muscular blocky build, frontline fist fighter guard pose.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Archer, bow drawn ready to fire, quiver on back, green-trim leather armor, ranged assault stance.
 ```
 
 ---
 
-## 4/32 — fireMage
+## 3/32 — boxer (남)
 
-**파일:** `fireMage.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: FireMage, holding glowing magic wand, fire charge particles, ember-colored robes, aggressive frontal caster pose.
-```
-
----
-
-## 5/32 — chemist
-
-**파일:** `chemist.webp`
+**파일:** `boxer.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Chemist, iron pickaxe, belt with potion bottles, throwing splash potion, protective goggles, technician assault vibe.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Boxer brawler, iron knuckles on both hands, iron helmet, muscular blocky build, frontline fist fighter guard pose.
 ```
 
 ---
 
-## 6/32 — oceanKnight
+## 4/32 — fireMage (남, 초싸이언 머리)
 
-**파일:** `oceanKnight.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: OceanKnight, trident and shield, prismarine armor accents, water splash at boots, charging marine knight.
-```
-
----
-
-## 7/32 — berserker
-
-**파일:** `berserker.webp`
+**파일:** `fireMage.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Berserker, crimson-tinted sword, crimson roots on shoulders, life-drain red aura, reckless aggressive battle stance.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male FireMage, holding glowing magic wand, fire charge particles, ember-colored robes, aggressive frontal caster pose. Head: subtle psionic psychic feel — faint purple-cyan glow around cubic head, intense glowing eyes under hood, telepathic mystic caster (blocky Minecraft, not anime).
 ```
 
 ---
 
-## 8/32 — vanguard
+## 5/32 — chemist (남)
 
-**파일:** `vanguard.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Vanguard spear soldier, iron spear, sturdy plate armor, small ally-support banner strap, frontline protector pose.
-```
-
----
-
-## 9/32 — hunter
-
-**파일:** `hunter.webp`
+**파일:** `chemist.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Hunter, iron axe raised overhead, dark tracking cloak, single-target burst assassin energy, high mobility stance.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Chemist, iron pickaxe, belt with potion bottles, throwing splash potion, protective goggles, technician assault vibe.
 ```
 
 ---
 
-## 10/32 — sniper
+## 6/32 — oceanKnight (여)
 
-**파일:** `sniper.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Sniper, crossbow aimed down sights, minimal light armor, extreme long-range focus, lone marksman pose.
-```
-
----
-
-## 11/32 — tamer
-
-**파일:** `tamer.webp`
+**파일:** `oceanKnight.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Tamer, knuckles on hands, lead rope, blocky wolf companion at side, beast commander pose.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female OceanKnight, trident and shield, prismarine armor accents, water splash at boots, charging marine knight.
 ```
 
 ---
 
-## 12/32 — illusionist
+## 7/32 — berserker (남, 광기)
 
-**파일:** `illusionist.webp`
-
-```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Illusionist mage, magic wand, faint mirror duplicate silhouette behind, jack-o-lantern purple magic motif, elusive nuker stance.
-```
-
----
-
-## 13/32 — forger
-
-**파일:** `forger.webp`
+**파일:** `berserker.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Forger blacksmith fighter, iron pickaxe, floating ghost weapons around, beacon glow, weaponmaster nuker.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Berserker, crimson-tinted sword, crimson roots on shoulders, life-drain red aura, reckless aggressive battle stance. Bright glowing red mad eyes, unhinged crazed face; subtle blood on sword edge and armor (stylized, not gory).
 ```
 
 ---
 
-## 14/32 — nobility
+## 8/32 — vanguard (여)
 
-**파일:** `nobility.webp`
+**파일:** `vanguard.png` · **sref:** `swordman.png` · **성별:** Female
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Nobility marine lord, trident, heart of the sea amulet, simplified blocky dolphin spirit, ocean commander.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Vanguard spear soldier, iron spear, sturdy plate armor, small ally-support banner strap, frontline protector pose.
 ```
 
 ---
 
-## 15/32 — daggerlist
+## 9/32 — hunter (남)
 
-**파일:** `daggerlist.webp`
+**파일:** `hunter.png` · **sref:** `swordman.png` · **성별:** Male
 
 ```
-Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Daggerlist assassin, dual daggers, shadow wisps, agile low crouch, high mobility rogue.
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Hunter, iron axe raised overhead, dark tracking cloak, single-target burst assassin energy, high mobility stance.
+```
+
+---
+
+## 10/32 — sniper (여)
+
+**파일:** `sniper.png` · **sref:** `swordman.png` · **성별:** Female
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Sniper, crossbow aimed down sights, minimal light armor, extreme long-range focus, lone marksman pose.
+```
+
+---
+
+## 11/32 — tamer (남)
+
+**파일:** `tamer.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Tamer, knuckles on hands, lead rope, blocky wolf companion at side, beast commander pose.
+```
+
+---
+
+## 12/32 — illusionist (여)
+
+**파일:** `illusionist.png` · **sref:** `swordman.png` · **성별:** Female
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Illusionist mage, magic wand, faint mirror duplicate silhouette behind, jack-o-lantern purple magic motif, elusive nuker stance.
+```
+
+---
+
+## 13/32 — forger (남, 최첨단 화기)
+
+**파일:** `forger.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Forger futuristic weapons engineer (NOT blacksmith). High-tech armor, cyan lightning accents. Electromagnetic rail SMG in hand; floating holographic weapons: TNT rocket launcher, lightning cannon laser rifle, sticky missile pod. Plasma and lightning sparks. NO apron, pickaxe, medieval sword/axe.
+```
+
+---
+
+## 14/32 — nobility (여)
+
+**파일:** `nobility.png` · **sref:** `swordman.png` · **성별:** Female
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Female Nobility marine lord, trident, heart of the sea amulet, simplified blocky dolphin spirit, ocean commander.
+```
+
+---
+
+## 15/32 — daggerlist (남)
+
+**파일:** `daggerlist.png` · **sref:** `swordman.png` · **성별:** Male
+
+```
+Minecraft Java Edition hero character, full body three-quarter view facing slightly right, classic blocky voxel proportions (cubic head, 4-pixel-wide arms, square torso), stylized official Minecraft promotional illustration (clean, not photorealistic), cohesive game character roster style, soft studio lighting from upper left, subtle emerald green rim accent (#3ecf8e), dark blue-gray gradient background (#0f1419 to #1a2332), heroic idle pose, weapon and armor clearly readable, no text, no logo, no watermark, 1:1 aspect ratio, character centered, head height about 22 percent of frame. Character: Male Daggerlist assassin, dual daggers, shadow wisps, agile low crouch, high mobility rogue.
 ```
 
 ---

@@ -233,6 +233,8 @@ export const en: Translations = {
     filterAll: 'All',
     showingCount: 'Showing {count} classes',
     equipmentLabel: 'Recommended gear',
+    portraitZoom: 'View larger portrait of {name}',
+    closeLightbox: 'Close image',
     archetypeLabels: {
       warrior: 'Warrior',
       shooter: 'Shooter',

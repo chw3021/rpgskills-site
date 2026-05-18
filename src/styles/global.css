@@ -583,14 +583,93 @@ ul {
   padding: 1.1rem;
 }
 
+.class-card__portrait-btn {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  border-radius: 8px;
+}
+
+.class-card__portrait-btn:disabled {
+  cursor: default;
+}
+
+.class-card__portrait-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .class-card__portrait {
   width: 96px;
   height: 96px;
   border-radius: 8px;
   object-fit: cover;
   border: 1px solid var(--border);
-  margin-bottom: 0.75rem;
   background: var(--bg-elevated);
+  display: block;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.class-card__portrait-btn:hover .class-card__portrait {
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(5, 10, 15, 0.88);
+  backdrop-filter: blur(6px);
+}
+
+.image-lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-lightbox__close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.image-lightbox__figure {
+  margin: 0;
+  max-width: min(90vw, 640px);
+  text-align: center;
+}
+
+.image-lightbox__img {
+  max-width: 100%;
+  max-height: min(80vh, 640px);
+  width: auto;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.image-lightbox__figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 .class-card__head {

@@ -4,13 +4,14 @@ import { useI18n } from '../../i18n/useI18n';
 
 type ClassCardProps = {
   cls: ClassDef;
+  onPortraitClick?: (src: string, title: string) => void;
 };
 
 const iconBase = `${import.meta.env.BASE_URL}class-icons/`;
 
 const iconExtensions = ['webp', 'png'] as const;
 
-export function ClassCard({ cls }: ClassCardProps) {
+export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
   const [iconIndex, setIconIndex] = useState(0);
   const { locale, t } = useI18n();
   const copy = locale === 'ko' ? cls.ko : cls.en;
@@ -27,15 +28,23 @@ export function ClassCard({ cls }: ClassCardProps) {
   return (
     <article className="class-card">
       {iconSrc && (
-        <img
-          src={iconSrc}
-          alt=""
-          className="class-card__portrait"
-          width={96}
-          height={96}
-          loading="lazy"
-          onError={() => setIconIndex((i) => i + 1)}
-        />
+        <button
+          type="button"
+          className="class-card__portrait-btn"
+          onClick={() => onPortraitClick?.(iconSrc, copy.name)}
+          aria-label={t.classes.portraitZoom.replace('{name}', copy.name)}
+          disabled={!onPortraitClick}
+        >
+          <img
+            src={iconSrc}
+            alt=""
+            className="class-card__portrait"
+            width={96}
+            height={96}
+            loading="lazy"
+            onError={() => setIconIndex((i) => i + 1)}
+          />
+        </button>
       )}
       <header className="class-card__head">
         <h3>{copy.name}</h3>

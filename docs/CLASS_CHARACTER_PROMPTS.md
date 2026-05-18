@@ -49,7 +49,7 @@ Replace `{MASTER}` with the master style block above.
 | `sniper` | {MASTER} Character: sniper with crossbow scoped aim, minimal armor, long-range focus | 저격수, 쇠뇌 |
 | `tamer` | {MASTER} Character: beast tamer with knuckles, wolf companion at side, lead rope | 조련사, 늑대 |
 | `illusionist` | {MASTER} Character: illusionist with wand, mirror duplicate silhouette, jack-o-lantern magic motif | 환술사, 환영 |
-| `forger` | {MASTER} Character: blacksmith fighter with pickaxe, floating weapon spirits, beacon glow | 무기공, 대장장이 |
+| `forger` | {MASTER} Character: futuristic weapons engineer, rail SMG, floating TNT launcher + lightning laser cannon + missiles, cyan plasma glow (NOT blacksmith) | 무기공, 레일건·TNT·천둥포 |
 | `nobility` | {MASTER} Character: sea noble with trident, heart-of-the-sea amulet, dolphin silhouette | 귀족, 바다 생물 |
 | `daggerlist` | {MASTER} Character: dagger assassin dual blades, shadow wisps, shears-like daggers, agile crouch | 단검사, 그림자 |
 | `cavalryman` | {MASTER} Character: cavalry lancer on armored horse silhouette simplified blocky, iron spear, speed lines | 기마병, 창, 말 |
