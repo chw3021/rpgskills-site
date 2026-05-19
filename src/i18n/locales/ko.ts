@@ -337,6 +337,7 @@ export const ko: Translations = {
     inputLabel: '입력',
     followUp: '연계',
     passive: '패시브',
+    ultimate: '궁극기',
     masterLevel: '마스터 LV.{lv}',
   },
   crafting: {

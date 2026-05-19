@@ -90,6 +90,7 @@ export type ClassDetailTranslations = {
   inputLabel: string;
   followUp: string;
   passive: string;
+  ultimate: string;
   masterLevel: string;
 };
 

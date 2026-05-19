@@ -317,6 +317,7 @@ export const swordmanDetail: ClassDetailDef = {
           id: 'swordStorm',
           icon: 'storm',
           element: 'earth',
+          ultimate: true,
           ko: {
             name: '비검',
             input: '웅크리기 + 숫자키 4',
@@ -434,6 +435,7 @@ export const swordmanDetail: ClassDetailDef = {
           id: 'mindSword',
           icon: 'mind-sword',
           element: 'earth',
+          ultimate: true,
           ko: {
             name: '심검',
             input: '웅크리기 + 숫자키 5',

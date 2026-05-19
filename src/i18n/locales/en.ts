@@ -340,6 +340,7 @@ export const en: Translations = {
     inputLabel: 'Input',
     followUp: 'Follow-up',
     passive: 'Passive',
+    ultimate: 'Ultimate',
     masterLevel: 'Master LV.{lv}',
   },
   crafting: {

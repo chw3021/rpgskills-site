@@ -121,11 +121,7 @@ export function ClassesPage() {
             </p>
             <div className="class-grid">
               {filtered.map((cls) => (
-                <ClassCard
-                  key={cls.id}
-                  cls={cls}
-                  onPortraitClick={(src, title) => setLightbox({ src, title })}
-                />
+                <ClassCard key={cls.id} cls={cls} />
               ))}
             </div>
           </section>

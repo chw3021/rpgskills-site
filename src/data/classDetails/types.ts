@@ -23,12 +23,42 @@ export type SkillIconId =
   | 'soul'
   | 'recovery'
   | 'steady'
-  | 'mind-sword';
+  | 'mind-sword'
+  | 'bow'
+  | 'arrow'
+  | 'arrows-scatter'
+  | 'hook-shot'
+  | 'spectral-arrow'
+  | 'target-shot'
+  | 'fist'
+  | 'fist-serious'
+  | 'fist-flurry'
+  | 'knuckle'
+  | 'flame'
+  | 'fireball'
+  | 'phoenix'
+  | 'sun'
+  | 'lava'
+  | 'wand'
+  | 'potion'
+  | 'poison'
+  | 'acid'
+  | 'bomb'
+  | 'pickaxe'
+  | 'trident'
+  | 'wave'
+  | 'blood'
+  | 'spear'
+  | 'axe'
+  | 'stealth'
+  | 'crossbow'
+  | 'paw'
+  | 'golem';
 
 export type ClassSkillDef = {
   id: string;
   icon: SkillIconId;
-  element: 'earth';
+  element: 'earth' | 'wind' | 'fire' | 'poison' | 'lightning' | 'water';
   en: {
     name: string;
     input?: string;
@@ -44,6 +74,8 @@ export type ClassSkillDef = {
   masterLevel?: number;
   followUp?: boolean;
   passive?: boolean;
+  /** num4 / num5 style ultimates */
+  ultimate?: boolean;
 };
 
 export type ClassSkillSection = {
@@ -57,6 +89,8 @@ export type ClassDetailDef = {
   id: string;
   /** 1–32 display order (CLASS_PROMPTS_ONE_BY_ONE.md) */
   order: number;
+  /** Skill element label (defaults to Earth in UI) */
+  element?: { en: string; ko: string };
   proficiency: {
     expLimit1: number;
     expLimit2: number;

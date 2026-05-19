@@ -6,14 +6,12 @@ import { useI18n } from '../../i18n/useI18n';
 
 type ClassCardProps = {
   cls: ClassDef;
-  onPortraitClick?: (src: string, title: string) => void;
 };
 
 const iconBase = `${import.meta.env.BASE_URL}class-icons/`;
-
 const iconExtensions = ['webp', 'png'] as const;
 
-export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
+export function ClassCard({ cls }: ClassCardProps) {
   const [iconIndex, setIconIndex] = useState(0);
   const { locale, t } = useI18n();
   const copy = locale === 'ko' ? cls.ko : cls.en;
@@ -22,22 +20,17 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
   const role = t.classes.roleLabels[cls.role];
   const s = cls.stats;
   const hasDetail = Boolean(getClassDetail(cls.id));
+  const detailHref = `/classes/${cls.id}`;
 
   const iconSrc =
     iconIndex < iconExtensions.length
       ? `${iconBase}${cls.id}.${iconExtensions[iconIndex]}`
       : null;
 
-  return (
-    <article className="class-card">
+  const body = (
+    <>
       {iconSrc && (
-        <button
-          type="button"
-          className="class-card__portrait-btn"
-          onClick={() => onPortraitClick?.(iconSrc, copy.name)}
-          aria-label={t.classes.portraitZoom.replace('{name}', copy.name)}
-          disabled={!onPortraitClick}
-        >
+        <div className="class-card__portrait-wrap">
           <img
             src={iconSrc}
             alt=""
@@ -47,18 +40,10 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
             loading="lazy"
             onError={() => setIconIndex((i) => i + 1)}
           />
-        </button>
+        </div>
       )}
       <header className="class-card__head">
-        <h3>
-          {hasDetail ? (
-            <Link to={`/classes/${cls.id}`} className="class-card__title-link">
-              {copy.name}
-            </Link>
-          ) : (
-            copy.name
-          )}
-        </h3>
+        <h3>{copy.name}</h3>
         <span className="class-card__badges">
           <span className="class-badge">{archetype}</span>
           <span className="class-badge class-badge--role">{role}</span>
@@ -69,11 +54,6 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
         <strong>{t.classes.equipmentLabel}:</strong> {copy.equipment}
       </p>
       <p className="class-card__summary">{copy.summary}</p>
-      {hasDetail && (
-        <p className="class-card__more">
-          <Link to={`/classes/${cls.id}`}>{t.classes.viewDetail}</Link>
-        </p>
-      )}
       <dl className="class-stats">
         <div>
           <dt>{t.classes.stats.attack}</dt>
@@ -104,6 +84,20 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
           <dd>{s.mobility}/5</dd>
         </div>
       </dl>
-    </article>
+    </>
   );
+
+  if (hasDetail) {
+    return (
+      <Link
+        to={detailHref}
+        className="class-card class-card--link"
+        aria-label={`${copy.name} — ${t.classes.viewDetail}`}
+      >
+        {body}
+      </Link>
+    );
+  }
+
+  return <article className="class-card">{body}</article>;
 }
