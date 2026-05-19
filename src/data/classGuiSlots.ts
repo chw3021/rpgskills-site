@@ -23,4 +23,10 @@ export const CLASS_GUI_SLOTS: Record<string, readonly number[]> = {
   /** Follow-ups share column with base (row 1); ultimates at 9 / 18 */
   vanguard: [0, 1, 2, 3, 6, 0, 1, 9, 18],
   cavalryman: [0, 1, 2, 3, 6, 9, 10, 11, 12, 13, 14, 15, 16, 7, 17, 18],
+  /** Ultimates stack in column 0 (slots 9 / 18) */
+  gardener: [0, 1, 2, 3, 4, 6, 9, 18],
+  engineer: [0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 23, 24, 26],
+  frostMan: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 25, 26],
+  witherist: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 21, 22, 23, 25, 26],
+  sapper: [0, 1, 2, 3, 6, 9, 10, 11, 12, 17, 13, 14, 15, 16, 18],
 };

@@ -1268,6 +1268,16 @@ ul {
   background: #4cc9f0;
 }
 
+.skill-tree__element--dark {
+  color: #9d7cd8;
+  background: #9d7cd8;
+}
+
+.skill-tree__element--frost {
+  color: #c8e6ff;
+  background: #c8e6ff;
+}
+
 .skill-tree__board-wrap {
   display: grid;
   grid-template-columns: minmax(4.5rem, auto) 1fr;
@@ -1397,6 +1407,14 @@ ul {
 
 .skill-tree__element-badge.skill-tree__element--water {
   color: #4cc9f0;
+}
+
+.skill-tree__element-badge.skill-tree__element--dark {
+  color: #9d7cd8;
+}
+
+.skill-tree__element-badge.skill-tree__element--frost {
+  color: #c8e6ff;
 }
 
 .skill-tree__detail {

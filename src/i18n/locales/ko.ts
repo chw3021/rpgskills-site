@@ -331,6 +331,8 @@ export const ko: Translations = {
     elementPoison: '독',
     elementLightning: '번개',
     elementWater: '물',
+    elementDark: '어둠',
+    elementFrost: '서리',
     chainHint: '같은 열 = 연계기 (게임 내 스킬 GUI와 동일한 열)',
     sectionBase: '기본 스킬',
     sectionLimit1: '1차 한계 돌파',

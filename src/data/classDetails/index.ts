@@ -18,6 +18,11 @@ import { broilerDetail } from './broiler';
 import { launcherDetail } from './launcher';
 import { wreltlerDetail } from './wreltler';
 import { vanguardDetail } from './vanguard';
+import { gardenerDetail } from './gardener';
+import { engineerDetail } from './engineer';
+import { frostManDetail } from './frostMan';
+import { witheristDetail } from './witherist';
+import { sapperDetail } from './sapper';
 
 const CLASS_DETAILS_LIST: ClassDetailDef[] = [
   swordmanDetail,
@@ -39,6 +44,11 @@ const CLASS_DETAILS_LIST: ClassDetailDef[] = [
   broilerDetail,
   launcherDetail,
   wreltlerDetail,
+  gardenerDetail,
+  engineerDetail,
+  frostManDetail,
+  witheristDetail,
+  sapperDetail,
 ];
 
 const byId = new Map(CLASS_DETAILS_LIST.map((d) => [d.id, d]));

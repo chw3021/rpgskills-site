@@ -33,7 +33,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'slash',
           icon: 'slash',
-          element: 'wind',
+          element: 'dark',
           ko: {
             name: '절개',
             input: '가위 + 비웅크리기 + 우클릭',
@@ -49,7 +49,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'shadowDash',
           icon: 'rush',
-          element: 'wind',
+          element: 'dark',
           ko: {
             name: '그림자 질주',
             input: '가위 + 웅크리기 + 우클릭',
@@ -65,7 +65,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'fanOfBlades',
           icon: 'stab',
-          element: 'wind',
+          element: 'dark',
           ko: {
             name: '칼날 부채',
             input: '가위 + 비웅크리기 + 좌클릭',
@@ -81,7 +81,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'shadowClone',
           icon: 'stealth',
-          element: 'wind',
+          element: 'dark',
           ko: {
             name: '그림자 분신',
             input: '가위 + 비웅크리기 + 손 바꾸기',
@@ -97,7 +97,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'execution',
           icon: 'stab',
-          element: 'wind',
+          element: 'dark',
           ko: {
             name: '처형',
             input: '가위 + 웅크리기 + 손 바꾸기',
@@ -113,7 +113,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'assassin',
           icon: 'book',
-          element: 'wind',
+          element: 'dark',
           passive: true,
           ko: {
             name: '암살자',
@@ -133,7 +133,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'deathMark',
           icon: 'target-shot',
-          element: 'wind',
+          element: 'dark',
           ultimate: true,
           ko: {
             name: '죽음의 표식',
@@ -157,7 +157,7 @@ export const daggerlistDetail: ClassDetailDef = {
         {
           id: 'finalCut',
           icon: 'slash',
-          element: 'wind',
+          element: 'dark',
           ultimate: true,
           ko: {
             name: '최후의 절단',

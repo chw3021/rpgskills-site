@@ -55,7 +55,15 @@ export type SkillIconId =
   | 'paw'
   | 'golem';
 
-export type SkillElement = 'earth' | 'wind' | 'fire' | 'poison' | 'lightning' | 'water';
+export type SkillElement =
+  | 'earth'
+  | 'wind'
+  | 'fire'
+  | 'poison'
+  | 'lightning'
+  | 'water'
+  | 'dark'
+  | 'frost';
 
 export type ClassSkillDef = {
   id: string;

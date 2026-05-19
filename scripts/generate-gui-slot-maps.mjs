@@ -24,6 +24,11 @@ const CLASS_TO_GUI = {
   broiler: 'BroSkillsGui',
   vanguard: 'VanguardSkillsGui',
   cavalryman: 'CavalrySkillsGui',
+  gardener: 'GardSkillsGui',
+  engineer: 'EngSkillsGui',
+  frostMan: 'FrostSkillsGui',
+  witherist: 'WitSkillsGui',
+  sapper: 'SapperSkillsGui',
 };
 
 const slotRe = /,\s*(\d+)\s*,\s*skillsInv\s*\)/g;

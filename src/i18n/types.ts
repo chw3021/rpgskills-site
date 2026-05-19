@@ -84,6 +84,8 @@ export type ClassDetailTranslations = {
   elementPoison: string;
   elementLightning: string;
   elementWater: string;
+  elementDark: string;
+  elementFrost: string;
   chainHint: string;
   sectionBase: string;
   sectionLimit1: string;

@@ -334,6 +334,8 @@ export const en: Translations = {
     elementPoison: 'Poison',
     elementLightning: 'Lightning',
     elementWater: 'Water',
+    elementDark: 'Dark',
+    elementFrost: 'Frost',
     chainHint: 'Same column = combo chain (matches in-game skill GUI layout)',
     sectionBase: 'Base skills',
     sectionLimit1: '1st limit break',

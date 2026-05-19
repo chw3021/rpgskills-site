@@ -18,7 +18,20 @@ const ELEMENT_CLASS: Record<SkillElement, string> = {
   poison: 'skill-tree__element--poison',
   lightning: 'skill-tree__element--lightning',
   water: 'skill-tree__element--water',
+  dark: 'skill-tree__element--dark',
+  frost: 'skill-tree__element--frost',
 };
+
+const LEGEND_ELEMENTS: SkillElement[] = [
+  'earth',
+  'wind',
+  'fire',
+  'poison',
+  'lightning',
+  'water',
+  'dark',
+  'frost',
+];
 
 function elementLabel(element: SkillElement, t: SkillTreeGridProps['t']): string {
   const labels: Record<SkillElement, string> = {
@@ -28,6 +41,8 @@ function elementLabel(element: SkillElement, t: SkillTreeGridProps['t']): string
     poison: t.classDetail.elementPoison,
     lightning: t.classDetail.elementLightning,
     water: t.classDetail.elementWater,
+    dark: t.classDetail.elementDark,
+    frost: t.classDetail.elementFrost,
   };
   return labels[element];
 }
@@ -142,30 +157,12 @@ export function SkillTreeGrid({ detail, loc, locale, t }: SkillTreeGridProps) {
   return (
     <div className="skill-tree">
       <div className="skill-tree__legend">
-        <span className="skill-tree__legend-item">
-          <span className="skill-tree__element-dot skill-tree__element--earth" />
-          {t.classDetail.elementEarth}
-        </span>
-        <span className="skill-tree__legend-item">
-          <span className="skill-tree__element-dot skill-tree__element--wind" />
-          {t.classDetail.elementWind}
-        </span>
-        <span className="skill-tree__legend-item">
-          <span className="skill-tree__element-dot skill-tree__element--fire" />
-          {t.classDetail.elementFire}
-        </span>
-        <span className="skill-tree__legend-item">
-          <span className="skill-tree__element-dot skill-tree__element--poison" />
-          {t.classDetail.elementPoison}
-        </span>
-        <span className="skill-tree__legend-item">
-          <span className="skill-tree__element-dot skill-tree__element--lightning" />
-          {t.classDetail.elementLightning}
-        </span>
-        <span className="skill-tree__legend-item">
-          <span className="skill-tree__element-dot skill-tree__element--water" />
-          {t.classDetail.elementWater}
-        </span>
+        {LEGEND_ELEMENTS.map((element) => (
+          <span key={element} className="skill-tree__legend-item">
+            <span className={`skill-tree__element-dot ${ELEMENT_CLASS[element]}`} />
+            {elementLabel(element, t)}
+          </span>
+        ))}
         <span className="skill-tree__legend-chain">{t.classDetail.chainHint}</span>
       </div>
 
