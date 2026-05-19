@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from 'react';
 import { site } from '../config/site';
+import { detectLocaleFromIp } from './detectLocale';
 import {
   defaultLocale,
   getStoredLocale,
@@ -39,6 +40,17 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const t = locales[locale];
+
+  useEffect(() => {
+    if (getStoredLocale()) return;
+    let cancelled = false;
+    detectLocaleFromIp().then((detected) => {
+      if (!cancelled) setLocaleState(detected);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = t.meta.htmlLang;

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/home/Hero';
+import { StoryTeaser } from '../components/home/StoryTeaser';
 import { useI18n } from '../i18n/useI18n';
 
 export function HomePage() {
@@ -9,6 +10,11 @@ export function HomePage() {
   return (
     <>
       <Hero />
+      <StoryTeaser />
+      <section className="home-champions">
+        <h2>{t.home.championsTitle}</h2>
+        <p className="home-champions__hint">{t.home.championsHint}</p>
+      </section>
       <section>
         <h2>{t.home.whyTitle}</h2>
         <div className="card-grid">

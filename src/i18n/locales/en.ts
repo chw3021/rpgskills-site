@@ -8,6 +8,7 @@ export const en: Translations = {
   },
   nav: {
     home: 'Home',
+    story: 'Story',
     features: 'Features',
     classes: 'Classes',
     install: 'Install',
@@ -22,7 +23,7 @@ export const en: Translations = {
     ko: '한국어',
   },
   hero: {
-    tagline: 'Transform your Minecraft server into an RPG adventure',
+    tagline: 'Under the Wither’s shadow—turn your server into an RPG adventure',
     intro:
       'Custom monsters, weapons, armor, skills, quests, boss raids, and a party system — turn your server into an RPG adventure.',
     download: 'Download',
@@ -30,11 +31,65 @@ export const en: Translations = {
     gettingStarted: 'Getting Started',
     compatible: 'Compatible with',
     mcVersionLabel: 'Spigot/Paper API 26.1.2 (26.1.2-R0.1-SNAPSHOT) · Minecraft 1.21.x',
+    battleImageAlt:
+      'The Wither descends through violet mist as swordsmen, archers, mages, and other heroes charge to meet it',
   },
   home: {
     whyTitle: 'Why RPGSkills?',
     viewAllFeatures: 'View all features',
     viewClasses: 'Class guide & crafting',
+    championsTitle: 'Thirty-two champions answer the call',
+    championsHint:
+      'Every class brings its own weapons and skills to the front line. In a world under the Wither’s shadow, the path you choose becomes the last line of defense.',
+  },
+  story: {
+    pageTitle: 'Lore — Return of the Wither',
+    pageDescription:
+      'The broken seal, a land slowly consumed, and thirty-two classes rising to answer the catastrophe.',
+    epigraph:
+      '“The day the ancient seal shattered, the sky split open in violet—and the earth remembered the Wither’s breath.”',
+    teaserLabel: 'RPGSkills Lore',
+    teaserTitle: 'When the seal broke, the world began to drown in the Wither’s breath',
+    teaserParagraphs: [
+      'For centuries the Wither slept behind a seal forged at terrible cost. When it finally broke, violet mist rolled across the continents. Monsters grew crueler, raiders bolder, and even ordinary adventurers—including you—felt the corruption seep in, breath by breath.',
+      'To survive, heroes chose their classes and grew stronger together. The final goal is singular: strike down the Wither of this world, then cut the roots of the calamity spreading through parallel dimensions beyond.',
+    ],
+    readFull: 'Read the full story',
+    chapters: [
+      {
+        title: 'Chapter I — The Broken Seal',
+        paragraphs: [
+          'Legend holds that the first Wither devoured the world’s balance until mystics bound it with their lives. Time gnawed at that prison; the moment dimensional rifts widened, the sky turned violet once more.',
+          'When the seal failed completely, echoes of the Wither rose everywhere—End depths, Nether fire, jungle gloom. At first people called it a disaster. Soon they understood it was not an ending, but a beginning.',
+        ],
+      },
+      {
+        title: 'Chapter II — A Land Consumed',
+        paragraphs: [
+          'The Wither’s aura seeped into the air itself. Violet fog wrapped villages at night; by day, monsters fought with new fury and cunning. Raider bands no longer feared failed assaults, and villagers endured behind locked doors.',
+          'Adventurers—everyone on your server, yourself included—were not spared. The longer you fought, the more a cold fatigue settled in your bones; the deeper you mastered skills, the more you felt the Wither grin at the edge of sight. Yet corruption was also awakening. In despair, people chose their classes, took up arms, and learned to stand back to back.',
+        ],
+      },
+      {
+        title: 'Chapter III — Champions of the Classes',
+        paragraphs: [
+          'Swordsmen with sweeping blades, archers with storming arrows, chemists wielding alchemical fire, Ocean Knights channeling the tide—thirty-two paths opened, each carving through the Wither’s legions in its own way.',
+          'Parties became the walls that shielded towns; quests became compasses for lost hope. A Wither defeated in the open world could open the gate to a raid—and beyond that gate, sterner trials waited. Heroes were no longer merely surviving; they were learning how to let the world breathe again.',
+        ],
+      },
+      {
+        title: 'Chapter IV — Beyond the Parallel Veil',
+        paragraphs: [
+          'When the first Wither fell, the sky seemed to clear for a moment. The rifts did not close. In parallel worlds—other continents adrift in other timelines—seals broke in tandem, and their Withers and monsters fed one another’s catastrophe.',
+          'The true end is not a single boss on the ground. Overworld, Nether, End, and the heart of the Wither Raid—all dimensional tears must be sealed, and the remnants hunted to the last parallel shore. The class you pick, the mastery you earn, the party you lead may become the final seal.',
+        ],
+      },
+    ],
+    ctaTitle: 'Continue your chapter',
+    ctaBody:
+      'Choose a class, master your skills, and challenge the raids. The world is not over yet—and the hero’s place is still open.',
+    ctaClasses: 'Browse classes',
+    ctaDownload: 'Download the plugin',
   },
   features: {
     pageTitle: 'Features',
@@ -232,6 +287,7 @@ export const en: Translations = {
     filterRole: 'Role',
     filterAll: 'All',
     showingCount: 'Showing {count} classes',
+    viewDetail: 'View details',
     equipmentLabel: 'Recommended gear',
     portraitZoom: 'View larger portrait of {name}',
     closeLightbox: 'Close image',
@@ -261,6 +317,30 @@ export const en: Translations = {
       range: 'Range',
       mobility: 'Mobility',
     },
+  },
+  classDetail: {
+    pageTitle: 'Class details',
+    notFoundTitle: 'Class not found',
+    notFoundBody: 'This class has no detail page yet, or the URL is invalid.',
+    backToRoster: '← All classes',
+    classIndex: '{n} / {total}',
+    storyTitle: 'Lore',
+    skillsTitle: 'Skills',
+    skillsHint: 'Matches the in-game /rpg skill GUI. Damage scales with skill level and proficiency.',
+    elementLabel: 'Element',
+    elementEarth: 'Earth',
+    sectionBase: 'Base skills',
+    sectionLimit1: '1st limit break',
+    sectionLimit2: '2nd limit break',
+    tierBase: 'Base',
+    tierLimit1: '1st',
+    tierLimit2: '2nd',
+    proficiencyHint: 'Proficiency {exp1}+ → 1st limit break, {exp2}+ → 2nd limit break',
+    unlockAt: 'Unlocks at proficiency {exp}',
+    inputLabel: 'Input',
+    followUp: 'Follow-up',
+    passive: 'Passive',
+    masterLevel: 'Master LV.{lv}',
   },
   crafting: {
     title: 'Custom weapon crafting',

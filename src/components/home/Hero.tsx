@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { site } from '../../config/site';
 import { useI18n } from '../../i18n/useI18n';
+import { HeroBattleVisual } from './HeroBattleVisual';
 
 export function Hero() {
   const { t } = useI18n();
@@ -26,9 +27,13 @@ export function Hero() {
           <Link to="/install" className="btn btn-secondary">
             {t.hero.gettingStarted}
           </Link>
+          <Link to="/story" className="btn btn-secondary">
+            {t.nav.story}
+          </Link>
         </div>
       </div>
-      <div className="hero-visual" aria-hidden>
+      <div className="hero-visual">
+        <HeroBattleVisual />
         <div className="hero-badge">
           {t.hero.compatible}{' '}
           <strong>

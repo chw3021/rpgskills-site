@@ -3,6 +3,7 @@ import { useI18n } from '../../i18n/useI18n';
 
 const routes = [
   { to: '/', key: 'home' as const, end: true },
+  { to: '/story', key: 'story' as const },
   { to: '/features', key: 'features' as const },
   { to: '/classes', key: 'classes' as const },
   { to: '/install', key: 'install' as const },

@@ -40,6 +40,7 @@ export type ClassesTranslations = {
   filterRole: string;
   filterAll: string;
   showingCount: string;
+  viewDetail: string;
   equipmentLabel: string;
   portraitZoom: string;
   closeLightbox: string;
@@ -67,6 +68,51 @@ export type ClassesTranslations = {
   };
 };
 
+export type ClassDetailTranslations = {
+  pageTitle: string;
+  notFoundTitle: string;
+  notFoundBody: string;
+  backToRoster: string;
+  classIndex: string;
+  storyTitle: string;
+  skillsTitle: string;
+  skillsHint: string;
+  elementLabel: string;
+  elementEarth: string;
+  sectionBase: string;
+  sectionLimit1: string;
+  sectionLimit2: string;
+  tierBase: string;
+  tierLimit1: string;
+  tierLimit2: string;
+  proficiencyHint: string;
+  unlockAt: string;
+  inputLabel: string;
+  followUp: string;
+  passive: string;
+  masterLevel: string;
+};
+
+export type StoryChapter = {
+  title: string;
+  paragraphs: string[];
+};
+
+export type StoryTranslations = {
+  pageTitle: string;
+  pageDescription: string;
+  epigraph: string;
+  teaserLabel: string;
+  teaserTitle: string;
+  teaserParagraphs: string[];
+  readFull: string;
+  chapters: StoryChapter[];
+  ctaTitle: string;
+  ctaBody: string;
+  ctaClasses: string;
+  ctaDownload: string;
+};
+
 export type CraftingTranslations = {
   title: string;
   intro: string;
@@ -88,6 +134,7 @@ export type Translations = {
   };
   nav: {
     home: string;
+    story: string;
     features: string;
     classes: string;
     install: string;
@@ -109,13 +156,18 @@ export type Translations = {
     gettingStarted: string;
     compatible: string;
     mcVersionLabel: string;
+    battleImageAlt: string;
   };
   home: {
     whyTitle: string;
     viewAllFeatures: string;
     viewClasses: string;
+    championsTitle: string;
+    championsHint: string;
   };
+  story: StoryTranslations;
   classes: ClassesTranslations;
+  classDetail: ClassDetailTranslations;
   crafting: CraftingTranslations;
   features: {
     pageTitle: string;

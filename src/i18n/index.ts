@@ -6,10 +6,8 @@ export type { Locale, Translations };
 
 export const locales: Record<Locale, Translations> = { en, ko };
 
-export const defaultLocale: Locale =
-  typeof navigator !== 'undefined' && navigator.language.toLowerCase().startsWith('ko')
-    ? 'ko'
-    : 'en';
+/** Fallback when geo lookup fails and no saved preference exists. */
+export const defaultLocale: Locale = 'en';
 
 export const LOCALE_STORAGE_KEY = 'rpgskills-site-locale';
 

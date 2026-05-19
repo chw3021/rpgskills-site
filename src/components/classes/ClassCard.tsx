@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import type { ClassDef } from '../../data/classCatalog';
+import { getClassDetail } from '../../data/classDetails';
 import { useI18n } from '../../i18n/useI18n';
 
 type ClassCardProps = {
@@ -19,6 +21,7 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
   const archetype = t.classes.archetypeLabels[cls.archetype];
   const role = t.classes.roleLabels[cls.role];
   const s = cls.stats;
+  const hasDetail = Boolean(getClassDetail(cls.id));
 
   const iconSrc =
     iconIndex < iconExtensions.length
@@ -47,7 +50,15 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
         </button>
       )}
       <header className="class-card__head">
-        <h3>{copy.name}</h3>
+        <h3>
+          {hasDetail ? (
+            <Link to={`/classes/${cls.id}`} className="class-card__title-link">
+              {copy.name}
+            </Link>
+          ) : (
+            copy.name
+          )}
+        </h3>
         <span className="class-card__badges">
           <span className="class-badge">{archetype}</span>
           <span className="class-badge class-badge--role">{role}</span>
@@ -58,6 +69,11 @@ export function ClassCard({ cls, onPortraitClick }: ClassCardProps) {
         <strong>{t.classes.equipmentLabel}:</strong> {copy.equipment}
       </p>
       <p className="class-card__summary">{copy.summary}</p>
+      {hasDetail && (
+        <p className="class-card__more">
+          <Link to={`/classes/${cls.id}`}>{t.classes.viewDetail}</Link>
+        </p>
+      )}
       <dl className="class-stats">
         <div>
           <dt>{t.classes.stats.attack}</dt>
