@@ -51,4 +51,10 @@ export function getClassDetailIds(): string[] {
   return CLASS_DETAILS_LIST.map((d) => d.id);
 }
 
-export type { ClassDetailDef, ClassSkillDef, ClassSkillSection, SkillIconId } from './types';
+export type {
+  ClassDetailDef,
+  ClassSkillDef,
+  ClassSkillSection,
+  SkillElement,
+  SkillIconId,
+} from './types';

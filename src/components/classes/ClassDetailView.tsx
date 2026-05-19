@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { ClassDef } from '../../data/classCatalog';
-import type { ClassDetailDef, ClassSkillDef, ClassSkillSection } from '../../data/classDetails';
+import type { ClassDetailDef } from '../../data/classDetails';
 import { ImageLightbox } from '../ui/ImageLightbox';
 import { useI18n } from '../../i18n/useI18n';
-import { SkillIcon } from './SkillIcon';
+import { SkillTreeGrid } from './SkillTreeGrid';
 
 const iconBase = `${import.meta.env.BASE_URL}class-icons/`;
 
@@ -12,86 +12,6 @@ type ClassDetailViewProps = {
   cls: ClassDef;
   detail: ClassDetailDef;
 };
-
-function SkillRow({
-  skill,
-  loc,
-  t,
-}: {
-  skill: ClassSkillDef;
-  loc: 'en' | 'ko';
-  t: ReturnType<typeof useI18n>['t'];
-}) {
-  const s = skill[loc];
-  return (
-    <li className="class-detail__skill">
-      <SkillIcon id={skill.icon} />
-      <div className="class-detail__skill-body">
-        <h4>
-          {s.name}
-          {skill.ultimate && (
-            <span className="class-detail__tag class-detail__tag--ultimate">{t.classDetail.ultimate}</span>
-          )}
-          {skill.followUp && <span className="class-detail__tag">{t.classDetail.followUp}</span>}
-          {skill.passive && (
-            <span className="class-detail__tag class-detail__tag--passive">{t.classDetail.passive}</span>
-          )}
-        </h4>
-        {s.input && (
-          <p className="class-detail__input">
-            <strong>{t.classDetail.inputLabel}:</strong> {s.input}
-          </p>
-        )}
-        <p>{s.description}</p>
-        {s.extra?.map((line, i) => (
-          <p key={i} className="meta">
-            {line}
-          </p>
-        ))}
-        {skill.masterLevel != null && (
-          <p className="meta">{t.classDetail.masterLevel.replace('{lv}', String(skill.masterLevel))}</p>
-        )}
-      </div>
-    </li>
-  );
-}
-
-function SkillColumn({
-  section,
-  title,
-  detail,
-  locale,
-  loc,
-  t,
-}: {
-  section: ClassSkillSection;
-  title: string;
-  detail: ClassDetailDef;
-  locale: string;
-  loc: 'en' | 'ko';
-  t: ReturnType<typeof useI18n>['t'];
-}) {
-  return (
-    <div className="class-detail__skill-column">
-      <h3>{title}</h3>
-      {section.requiredProficiency > 0 && (
-        <p className="meta class-detail__unlock">
-          {t.classDetail.unlockAt.replace(
-            '{exp}',
-            section.requiredProficiency === 1
-              ? detail.proficiency.expLimit1.toLocaleString(locale)
-              : detail.proficiency.expLimit2.toLocaleString(locale),
-          )}
-        </p>
-      )}
-      <ul className="class-detail__skill-list">
-        {section.skills.map((skill) => (
-          <SkillRow key={skill.id} skill={skill} loc={loc} t={t} />
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 export function ClassDetailView({ cls, detail }: ClassDetailViewProps) {
   const { locale, t } = useI18n();
@@ -101,11 +21,6 @@ export function ClassDetailView({ cls, detail }: ClassDetailViewProps) {
   const archetype = t.classes.archetypeLabels[cls.archetype];
   const role = t.classes.roleLabels[cls.role];
   const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
-
-  const sectionById = Object.fromEntries(detail.skillSections.map((s) => [s.id, s])) as Record<
-    ClassSkillSection['id'],
-    ClassSkillSection
-  >;
 
   return (
     <article className="class-detail">
@@ -181,37 +96,12 @@ export function ClassDetailView({ cls, detail }: ClassDetailViewProps) {
       <section className="guide-block class-detail__skills">
         <h2>{t.classDetail.skillsTitle}</h2>
         <p className="meta">{t.classDetail.skillsHint}</p>
-        <p className="meta">
-          <strong>{t.classDetail.elementLabel}:</strong>{' '}
-          {detail.element?.[loc] ?? t.classDetail.elementEarth}
-        </p>
-
-        <div className="class-detail__skill-columns">
-          <SkillColumn
-            section={sectionById.base}
-            title={t.classDetail.sectionBase}
-            detail={detail}
-            locale={locale}
-            loc={loc}
-            t={t}
-          />
-          <SkillColumn
-            section={sectionById.limit1}
-            title={t.classDetail.sectionLimit1}
-            detail={detail}
-            locale={locale}
-            loc={loc}
-            t={t}
-          />
-          <SkillColumn
-            section={sectionById.limit2}
-            title={t.classDetail.sectionLimit2}
-            detail={detail}
-            locale={locale}
-            loc={loc}
-            t={t}
-          />
-        </div>
+        {detail.element && (
+          <p className="meta">
+            <strong>{t.classDetail.elementLabel}:</strong> {detail.element[loc]}
+          </p>
+        )}
+        <SkillTreeGrid detail={detail} loc={loc} locale={locale} t={t} />
       </section>
 
       {lightbox && (

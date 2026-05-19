@@ -79,6 +79,12 @@ export type ClassDetailTranslations = {
   skillsHint: string;
   elementLabel: string;
   elementEarth: string;
+  elementWind: string;
+  elementFire: string;
+  elementPoison: string;
+  elementLightning: string;
+  elementWater: string;
+  chainHint: string;
   sectionBase: string;
   sectionLimit1: string;
   sectionLimit2: string;

@@ -55,10 +55,16 @@ export type SkillIconId =
   | 'paw'
   | 'golem';
 
+export type SkillElement = 'earth' | 'wind' | 'fire' | 'poison' | 'lightning' | 'water';
+
 export type ClassSkillDef = {
   id: string;
   icon: SkillIconId;
-  element: 'earth' | 'wind' | 'fire' | 'poison' | 'lightning' | 'water';
+  element: SkillElement;
+  /** Base skill id for follow-ups (same inventory column as parent) */
+  chainOf?: string;
+  /** Override column 0–8 when not inferable from chain */
+  guiColumn?: number;
   en: {
     name: string;
     input?: string;
