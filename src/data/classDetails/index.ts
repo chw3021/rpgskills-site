@@ -23,6 +23,14 @@ import { engineerDetail } from './engineer';
 import { frostManDetail } from './frostMan';
 import { witheristDetail } from './witherist';
 import { sapperDetail } from './sapper';
+import { paladinDetail } from './paladin';
+import { medicDetail } from './medic';
+import { taoistDetail } from './taoist';
+import { musicianDetail } from './musician';
+import { cookDetail } from './cook';
+import { anglerDetail } from './angler';
+import { witchDoctorDetail } from './witchDoctor';
+import { standardBearerDetail } from './standardBearer';
 
 const CLASS_DETAILS_LIST: ClassDetailDef[] = [
   swordmanDetail,
@@ -49,6 +57,14 @@ const CLASS_DETAILS_LIST: ClassDetailDef[] = [
   frostManDetail,
   witheristDetail,
   sapperDetail,
+  paladinDetail,
+  medicDetail,
+  taoistDetail,
+  musicianDetail,
+  cookDetail,
+  anglerDetail,
+  witchDoctorDetail,
+  standardBearerDetail,
 ];
 
 const byId = new Map(CLASS_DETAILS_LIST.map((d) => [d.id, d]));

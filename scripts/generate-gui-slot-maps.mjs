@@ -29,6 +29,14 @@ const CLASS_TO_GUI = {
   frostMan: 'FrostSkillsGui',
   witherist: 'WitSkillsGui',
   sapper: 'SapperSkillsGui',
+  paladin: 'PalSkillsGui',
+  medic: 'MedSkillsGui',
+  taoist: 'TaoSkillsGui',
+  musician: 'MusSkillsGui',
+  cook: 'CookSkillsGui',
+  angler: 'AngSkillsGui',
+  witchDoctor: 'WdcSkillsGui',
+  standardBearer: 'BearerSkillsGui',
 };
 
 const slotRe = /,\s*(\d+)\s*,\s*skillsInv\s*\)/g;
