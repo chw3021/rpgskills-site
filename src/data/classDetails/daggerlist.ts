@@ -204,13 +204,15 @@ export const daggerlistDetail: ClassDetailDef = {
           ultimate: true,
           ko: {
             name: '죽음의 표식',
-            input: '단검 + 웅크리기 + 단검 버리기(Q)',
-            description: '전투 모드에서만 발동합니다. 광역 표식과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
+            input: '웅크리기 + 숫자키 4 (전투 모드)',
+            description:
+              '전투 모드에서만 발동합니다. 광역 표식과 출혈 피해를 입힙니다(배율 × 패널 공격력). 출혈은 중첩당 현재 체력 0.6% 고정 피해(최대 4/회)이며 최대 5중첩입니다.',
           },
           en: {
             name: 'Death Mark',
-            input: 'Dagger + sneak + drop dagger (Q)',
-            description: 'Combat mode only. Deals area mark and bleed damage (multiplier × panel attack damage).',
+            input: 'Sneak + hotkey 4 (combat mode)',
+            description:
+              'Combat mode only. Deals area mark and bleed damage (multiplier × panel attack damage). Bleed: 0.6% of current HP per stack per hit (max 4/stack), up to 5 stacks.',
           },
         },
       ],
@@ -280,12 +282,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ultimate: true,
           ko: {
             name: '최후의 절단',
-            input: '단검 + 웅크리기 + 전투 숫자키 4',
+            input: '웅크리기 + 숫자키 5 (전투 모드)',
             description: '전투 모드에서만 발동합니다. 광역 절단과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
           },
           en: {
             name: 'Final Cut',
-            input: 'Dagger + sneak + combat hotkey 4',
+            input: 'Sneak + hotkey 5 (combat mode)',
             description: 'Combat mode only. Wide slash and bleed damage (multiplier × panel attack damage).',
           },
         },

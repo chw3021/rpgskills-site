@@ -273,12 +273,12 @@ export const wrestlerDetail: ClassDetailDef = {
           ultimate: true,
           ko: {
             name: '무릎 비틀기',
-            input: '전투 모드 + 깃발무늬 + 웅크리기 + 전투 숫자키 4',
+            input: '웅크리기 + 숫자키 4 (전투 모드)',
             description: '무릎 비틀기로 주변 적을 제압한 뒤 연계 피해를 입힙니다.',
           },
           en: {
             name: 'Heel Hook',
-            input: 'Combat mode + banner-pattern + sneak + combat hotkey 4',
+            input: 'Sneak + hotkey 4 (combat mode)',
             description: 'Locks nearby foes with a heel hook, then deals follow-up damage.',
           },
         },
@@ -307,11 +307,11 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '금강쇄',
-            description: '뒤공중돌기 적중 시 추가 폭발 피해를 줍니다(×공격력).',
+            description: '뒤메치기 적중 시 추가 폭발 피해를 줍니다.',
           },
           en: {
             name: 'Muscle Bomb',
-            description: 'Bonus explosion after Moonsault (×attack damage).',
+            description: 'Bonus explosion after Back Suplex.',
           },
         },
         {
@@ -320,11 +320,11 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '메치고 띄우기',
-            description: '뒤공중돌기 이후 적을 띄웁니다(×공격력).',
+            description: '머리꽂기 이후 적을 띄웁니다.',
           },
           en: {
             name: 'Slam to Blow',
-            description: 'Launches enemies after Moonsault (×attack damage).',
+            description: 'Launches enemies after Piledriver.',
           },
         },
         {
@@ -348,13 +348,13 @@ export const wrestlerDetail: ClassDetailDef = {
           ultimate: true,
           ko: {
             name: '회오리 내려꽂기',
-            input: '전투 모드 + 깃발무늬 + 웅크리기 + 전투 숫자키 5',
-            description: '공중 회전 후 강하게 내려찍습니다. 피해는 패널에 곱해집니다.',
+            input: '웅크리기 + 숫자키 5 (전투 모드)',
+            description: '공중 회전 후 강하게 내려찍습니다.',
           },
           en: {
             name: 'Cyclone Driver',
-            input: 'Combat mode + banner-pattern + sneak + combat hotkey 5',
-            description: 'Spins in the air then slams down. Damage is multiplier × panel attack damage.',
+            input: 'Sneak + hotkey 5 (combat mode)',
+            description: 'Spins in the air then slams down hard.',
           },
         },
       ],

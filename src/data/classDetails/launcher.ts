@@ -296,12 +296,12 @@ export const launcherDetail: ClassDetailDef = {
           ultimate: true,
           ko: {
             name: '행성 화살',
-            input: '달리기 + 숫자키 5',
+            input: '웅크리기 + 숫자키 5 (전투 모드)',
             description: '하늘에서 행성 화살을 쏘아 궤적·충돌 피해를 입힙니다.',
           },
           en: {
             name: 'Planet Arrow',
-            input: 'Sprint + hotkey 5',
+            input: 'Sneak + hotkey 5 (combat mode)',
             description: 'Fires a planetary arrow from the sky for trail and impact damage.',
           },
         },

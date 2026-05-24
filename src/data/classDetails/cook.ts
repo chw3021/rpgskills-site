@@ -15,14 +15,14 @@ export const cookDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '삽으로 전장에 요리를 펼치는 요리사입니다. 디저트비·버섯스파·베리샐러드·멜론벽·구운요리로 아군을 돕고, 포만감으로 공격력을 키웁니다.',
-      '셰프는 여러 조리 도구를 능숙히 다루며 플람베·스톡팟·연회준비로 지원 리듬을 완성하고, 특별메뉴로 화려한 일격을 냅니다.',
-      '대가는 요리의 신에 달한 경지로 헬키친·황금코스·왕실뷔페로 전장 전체를 식탁처럼 지배합니다.',
+      '삽으로 전장에 요리를 펼치는 요리사입니다. 디저트벌·버섯탕·나눔밥상·셰프가드·구운요리로 아군을 돕고, 포만감으로 공격력을 키웁니다.',
+      '셰프는 슈가러시·스톡팟·한상차림으로 지원을 강화하고, 특별메뉴로 화려한 일격을 냅니다.',
+      '대가는 치즈분수·마이야르·헬키친으로 전장을 뜨거운 주방처럼 지배합니다.',
     ],
     en: [
-      'A cook who feeds the front line with a shovel. Dessert rain, mushroom spa, berry salad, melon wall, and grilled dishes support allies while Saturation raises damage.',
-      'The Chef juggles many tools at once—flambé, stockpot, and banquet prep—then finishes with Special Menu.',
-      'The Demeter stands as a grand master of cuisine, ruling the field with Hell Kitchen, golden course, and royal buffet.',
+      'A cook who feeds the front line with a shovel. Dessert Bee, Mushroom Soup, Shared Table, Chef Guard, and Grilled Dish support allies while Saturation raises damage.',
+      'The Chef adds Sugar Rush, Stockpot, and Feast Spread, then finishes with Special Menu in combat mode.',
+      'The Demeter rules the field with Cheese Fountain, Maillard, and Hell Kitchen.',
     ],
   },
   skillSections: [
@@ -31,73 +31,75 @@ export const cookDetail: ClassDetailDef = {
       requiredProficiency: 0,
       skills: [
         {
-          id: 'dessertRain',
+          id: 'dessertBee',
           icon: 'pickaxe',
           element: 'fire',
           ko: {
-            name: '디저트비',
-            input: '삽 + 비웅크리기 + 손 바꾸기',
+            name: '디저트벌',
+            input: '삽 + 손 바꾸기',
             description: '달콤한 비로 아군을 강화합니다.',
           },
           en: {
-            name: 'Dessert Rain',
-            input: 'Shovel + not sneaking + swap hands',
+            name: 'Dessert Bee',
+            input: 'Shovel + swap hands',
             description: 'Sweet rain buffs allies.',
           },
           masterLevel: 50,
         },
         {
-          id: 'mushSpa',
+          id: 'mushroomSoup',
           icon: 'recovery',
           element: 'fire',
           ko: {
-            name: '버섯스파',
+            name: '버섯탕',
             input: '삽 + 웅크리기 + 우클릭',
             description: '뜨거운 버섯탕으로 아군을 회복합니다.',
           },
           en: {
-            name: 'Mushroom Spa',
+            name: 'Mushroom Soup',
             input: 'Shovel + sneak + right-click',
-            description: 'Hot mushroom spa heals allies.',
+            description: 'Hot mushroom soup heals allies.',
           },
           masterLevel: 50,
         },
         {
-          id: 'berrySalad',
+          id: 'sharedTable',
           icon: 'potion',
           element: 'fire',
           ko: {
-            name: '베리샐러드',
-            input: '삽 + 비웅크리기 + 우클릭',
+            name: '나눔밥상',
+            input: '삽 + 우클릭',
             description:
-              '파티의 허기·독·시듦·실명·멀미를 제거합니다. 몬스터에게는 불타는 덤불 공격을 합니다.',
+              '주변에 음식을 나눠 아군·적에게 서서히 효과를 줍니다. 몬스터에게는 불타는 덤불 공격을 합니다.',
           },
           en: {
-            name: 'Berry Salad',
-            input: 'Shovel + not sneaking + right-click',
+            name: 'Shared Table',
+            input: 'Shovel + right-click',
             description:
-              'Clears hunger, poison, wither, blindness, and nausea for party. Burns mobs with flaming brush.',
+              'Gradually shares food effects with nearby allies and foes. Burns mobs with a flaming brush.',
           },
           masterLevel: 50,
         },
         {
-          id: 'melonWall',
+          id: 'chefGuard',
           icon: 'shield',
           element: 'fire',
           ko: {
-            name: '멜론벽',
-            input: '삽 + 공중 + 비웅크리기 + 좌클릭',
-            description: '멜론벽을 세우고 충돌한 몹을 기절시킵니다.',
+            name: '셰프가드',
+            input: '삽 + 좌클릭',
+            description:
+              '주변 아군에게 잠시 피해 저항을 부여하고, 충돌한 몹을 기절시킵니다.',
           },
           en: {
-            name: 'Melon Wall',
-            input: 'Shovel + airborne + not sneaking + left-click',
-            description: 'Raises a melon wall; colliding mobs are stunned.',
+            name: 'Chef Guard',
+            input: 'Shovel + left-click',
+            description:
+              'Briefly grants nearby allies damage resistance and stuns colliding mobs.',
           },
           masterLevel: 1,
         },
         {
-          id: 'grilledDishes',
+          id: 'grilledDish',
           icon: 'flame',
           element: 'fire',
           ko: {
@@ -106,7 +108,7 @@ export const cookDetail: ClassDetailDef = {
             description: '목표 주변에 구운 요리를 떨어뜨립니다.',
           },
           en: {
-            name: 'Grilled Dishes',
+            name: 'Grilled Dish',
             input: 'Shovel + sneak + swap hands',
             description: 'Drops grilled meals around the target.',
           },
@@ -134,61 +136,66 @@ export const cookDetail: ClassDetailDef = {
       requiredProficiency: 1,
       skills: [
         {
-          id: 'flambe',
-          icon: 'flame',
+          id: 'sugarRush',
+          icon: 'rush',
           element: 'fire',
+          chainOf: 'dessertBee',
           ko: {
-            name: '플람베',
-            description: '요리사 공격이 지원형 합산 화염 피해를 사용합니다.',
+            name: '슈가러시',
+            description: '디저트벌이 속도·점프력·야간 투시를 부여합니다.',
           },
           en: {
-            name: 'Flambé',
-            description: 'Cook attacks use support-style additive fire damage.',
+            name: 'Sugar Rush',
+            description: 'Dessert Bee grants speed, jump boost, and night vision.',
           },
         },
         {
           id: 'stockpot',
           icon: 'recovery',
           element: 'fire',
+          chainOf: 'mushroomSoup',
           ko: {
             name: '스톡팟',
-            description: '버섯스파가 주변 아군을 강화하고 적을 불태웁니다.',
+            description: '버섯탕이 주변 아군을 강화하고 적을 불태웁니다.',
           },
           en: {
             name: 'Stockpot',
-            description: 'Mushroom Spa strengthens nearby allies and burns enemies.',
+            description: 'Mushroom Soup strengthens allies and burns enemies.',
           },
         },
         {
-          id: 'sugarRush',
-          icon: 'rush',
+          id: 'feastSpread',
+          icon: 'recovery',
           element: 'fire',
+          chainOf: 'sharedTable',
           ko: {
-            name: '슈가러시',
-            description: '디저트비가 속도·점프력·야간 투시를 부여합니다.',
+            name: '한상차림',
+            description: '나눔밥상이 더 넓은 범위로 천천히 회복·해로운 효과를 나눕니다.',
           },
           en: {
-            name: 'Sugar Rush',
-            description: 'Dessert Rain grants speed, jump boost, and night vision.',
+            name: 'Feast Spread',
+            description: 'Shared Table spreads gradual heals and debuffs farther.',
           },
         },
         {
           id: 'chefsGuard',
           icon: 'shield',
           element: 'fire',
+          chainOf: 'chefGuard',
           ko: {
             name: '셰프의수호',
-            description: '멜론벽이 공간을 지키고 충돌한 몹을 기절시킵니다.',
+            description: '셰프가드 사용 시 주변 아군에게 흡수 체력을 추가로 부여합니다.',
           },
           en: {
             name: "Chef's Guard",
-            description: 'Melon Wall protects space and stuns colliding mobs.',
+            description: 'Chef Guard also grants nearby allies absorption.',
           },
         },
         {
           id: 'spicyPlating',
           icon: 'flame',
           element: 'fire',
+          chainOf: 'grilledDish',
           ko: {
             name: '매콤한플레이팅',
             description: '치료받은 파티원이 포만감으로 추가 피해를 얻습니다.',
@@ -199,42 +206,36 @@ export const cookDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'banquetPrep',
-          icon: 'sun',
-          element: 'fire',
-          ko: {
-            name: '연회준비',
-            description: '화염 요리로 지원 리듬을 유지합니다.',
-          },
-          en: {
-            name: 'Banquet Prep',
-            description: 'Fire-themed meals keep the support rhythm active.',
-          },
-        },
-        {
-          id: 'saturationLimit1',
+          id: 'culinaryKnack',
           icon: 'book',
           element: 'fire',
           passive: true,
-          ko: { name: '포만감', description: '공격력이 증가합니다. 치료받은 파티원의 피해도 증가합니다.' },
-          en: { name: 'Saturation', description: 'Increases damage; healed allies also deal more damage.' },
+          guiColumn: 16,
+          ko: {
+            name: '요리솜씨',
+            description: '공격력이 증가합니다. 치료받은 파티원의 피해도 증가합니다.',
+          },
+          en: {
+            name: 'Culinary Knack',
+            description: 'Increases damage; healed allies also deal more damage.',
+          },
         },
         {
           id: 'specialMenu',
           icon: 'flame',
           element: 'fire',
           ultimate: true,
+          guiColumn: 17,
           ko: {
             name: '특별메뉴',
-            input: '삽 + 웅크리기 + 전투 숫자키 4(핫바 4번) 또는 삽 버리기(Q)',
+            input: '삽 + 웅크리기 + 전투 숫자키 4(핫바 4번)',
             description:
-              '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다. 2차 한계 돌파 시 헬키친 계수로 강화됩니다.',
+              '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
           },
           en: {
             name: 'Special Menu',
-            input: 'Shovel + sneak + combat hotbar 4 or drop shovel (Q)',
-            description:
-              'Combat mode only. Damage scales with level. At second limit break, uses Hell Kitchen coefficients.',
+            input: 'Shovel + sneak + combat hotbar 4',
+            description: 'Combat mode only. Damage scales with your level.',
           },
         },
       ],
@@ -244,111 +245,64 @@ export const cookDetail: ClassDetailDef = {
       requiredProficiency: 2,
       skills: [
         {
-          id: 'infernoCatering',
-          icon: 'lava',
-          element: 'fire',
-          ko: {
-            name: '지옥출장요리',
-            description: '특별메뉴가 더 강한 헬키친 피해로 강화됩니다.',
-          },
-          en: {
-            name: 'Inferno Catering',
-            description: 'Special Menu upgrades to stronger Hell Kitchen damage.',
-          },
-        },
-        {
-          id: 'royalBuffet',
-          icon: 'recovery',
-          element: 'fire',
-          ko: {
-            name: '왕실뷔페',
-            description: '연회 효과가 주변 파티원에게 퍼집니다.',
-          },
-          en: {
-            name: 'Royal Buffet',
-            description: 'Banquet effects spread to nearby party members.',
-          },
-        },
-        {
-          id: 'dragonWok',
-          icon: 'flame',
-          element: 'fire',
-          ko: {
-            name: '드래곤웍',
-            description: '대부분의 공격형 요리 효과가 화염 공격으로 처리됩니다.',
-          },
-          en: {
-            name: 'Dragon Wok',
-            description: 'Most offensive cook effects count as flame attacks.',
-          },
-        },
-        {
-          id: 'emergencyRations',
-          icon: 'recovery',
-          element: 'fire',
-          ko: {
-            name: '비상식량',
-            description: '특별메뉴가 체력 증가·포만·재생을 부여합니다.',
-          },
-          en: {
-            name: 'Emergency Rations',
-            description: 'Special Menu grants health boost, saturation, and regeneration.',
-          },
-        },
-        {
-          id: 'goldenCourse',
+          id: 'cheeseFountain',
           icon: 'sun',
           element: 'fire',
+          chainOf: 'dessertBee',
           ko: {
-            name: '황금코스',
-            description: '화려한 식사가 피해와 회복 지역을 표시합니다.',
+            name: '치즈분수',
+            description: '디저트벌에 녹아내린 치즈가 추가 화염 피해를 줍니다.',
           },
           en: {
-            name: 'Golden Course',
-            description: 'Grand meal particles mark the damage and heal area.',
+            name: 'Cheese Fountain',
+            description: 'Dessert Bee adds molten cheese fire damage.',
           },
         },
         {
-          id: 'kitchenRally',
-          icon: 'book',
+          id: 'maillard',
+          icon: 'flame',
           element: 'fire',
+          chainOf: 'grilledDish',
           ko: {
-            name: '주방집결',
-            description: '요리사의 핵심은 파티 지원입니다.',
+            name: '마이야르',
+            description: '구운요리의 지속 화염 피해가 강화됩니다.',
           },
           en: {
-            name: 'Kitchen Rally',
-            description: 'Party support remains the Cook identity.',
+            name: 'Maillard',
+            description: 'Grilled Dish burn damage is empowered.',
           },
         },
         {
-          id: 'saturationLimit2',
+          id: 'bigEater',
           icon: 'book',
           element: 'fire',
           passive: true,
+          guiColumn: 25,
           ko: {
-            name: '포만감',
-            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+            name: '대식가',
+            description: '공격력이 증가합니다. 특별메뉴 대기시간이 절반으로 감소합니다.',
           },
           en: {
-            name: 'Saturation',
-            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
+            name: 'Big Eater',
+            description: 'Increases damage. Special Menu cooldown is halved.',
           },
         },
         {
           id: 'hellKitchen',
           icon: 'lava',
           element: 'fire',
-          chainOf: 'specialMenu',
+          ultimate: true,
+          guiColumn: 26,
           ko: {
             name: '헬키친',
+            input: '삽 + 웅크리기 + 전투 숫자키 5(핫바 5번)',
             description:
-              '특별메뉴와 같은 입력(별도 단축키 없음). 피해 수치는 특별메뉴 슬롯에 표시됩니다.',
+              '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
           },
           en: {
             name: 'Hell Kitchen',
-            description:
-              'Same inputs as Special Menu (no extra keybind). Damage values shown on the Special Menu slot.',
+            input: 'Shovel + sneak + combat hotbar 5',
+            description: 'Combat mode only. Damage scales with your level.',
           },
         },
       ],

@@ -87,6 +87,70 @@ export const cavalrymanDetail: ClassDetailDef = {
           masterLevel: 50,
         },
         {
+          id: 'galeRip',
+          icon: 'wind-slash',
+          element: 'wind',
+          guiColumn: 4,
+          ko: {
+            name: '풍연 베기',
+            input: '웅크리기 + 좌클릭',
+            description: '전방 직선 베기를 합니다.',
+          },
+          en: {
+            name: 'Gale Rip',
+            input: 'Sneak + left-click',
+            description: 'Forward line slash.',
+          },
+        },
+        {
+          id: 'drawCut',
+          icon: 'slash',
+          element: 'wind',
+          guiColumn: 5,
+          ko: {
+            name: '인출 베기',
+            input: '비웅크리기 + 좌클릭',
+            description: '짧은 추가 베기를 합니다. 피해량은 기마 찌르기 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Draw Cut',
+            input: 'No sneak + left-click',
+            description: 'A short extra slash. Damage scales with Tilt Pass level.',
+          },
+        },
+        {
+          id: 'bridleStamp',
+          icon: 'stab',
+          element: 'wind',
+          guiColumn: 6,
+          ko: {
+            name: '고삐 낙인',
+            input: '웅크리기 + 좌클릭',
+            description: '전방 소범위 피해를 줍니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Bridle Stamp',
+            input: 'Sneak + left-click',
+            description: 'Small forward stomp damage. Damage scales with Bridle Slam level.',
+          },
+        },
+        {
+          id: 'mount',
+          icon: 'spear',
+          element: 'wind',
+          guiColumn: 8,
+          ko: {
+            name: '기마승',
+            input: '웅크리기 + 좌클릭',
+            description: '말을 소환해 탑승합니다. 탑승 중 웅크리기 스킬 사용 시 하마합니다.',
+          },
+          en: {
+            name: 'Mount',
+            input: 'Sneak + left-click',
+            description: 'Summon and mount a horse. Sneak skills dismount you.',
+          },
+        },
+        {
           id: 'lancerDiscipline',
           icon: 'book',
           element: 'wind',
@@ -112,6 +176,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           icon: 'spear',
           element: 'wind',
           followUp: true,
+          chainOf: 'tiltPass',
           ko: {
             name: '찌르기 파고',
             input: '기마 찌르기 직후 재우클릭',
@@ -128,6 +193,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           icon: 'sword-drive',
           element: 'wind',
           followUp: true,
+          chainOf: 'bridleSlam',
           ko: {
             name: '낙마 찍기',
             input: '고삐 내려 직후 웅크리기 + 재우클릭',
@@ -140,58 +206,11 @@ export const cavalrymanDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'stampedeFeint',
-          icon: 'rush',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '쏜살 추격',
-            input: '질주 찌르 적중 직후 전투 모드 기술 0',
-            description: '전방 직선 베기입니다. 피해량은 질주 찌르 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Stampede Feint',
-            input: 'Combat skill 0 after Gallop Spur hits',
-            description: 'Forward line slash. Damage scales with Gallop Spur level.',
-          },
-        },
-        {
-          id: 'heraldSkewer',
-          icon: 'spear',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '기병 찌르기',
-            input: '마상 돌격 직후 전투 모드 기술 1',
-            description: '전방 직선 관통입니다. 피해량은 마상 돌격 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Herald Skewer',
-            input: 'Combat skill 1 after Ride Herald',
-            description: 'Forward line pierce. Damage scales with Ride Herald level.',
-          },
-        },
-        {
-          id: 'galeRip',
-          icon: 'wind-slash',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '풍연 베기',
-            input: '돌풍창 직후 웅크리기 + 좌클릭',
-            description: '전방 직선 베기를 합니다.',
-          },
-          en: {
-            name: 'Gale Rip',
-            input: 'Sneak + left-click after Wind Lance',
-            description: 'Forward line slash.',
-          },
-        },
-        {
-          id: 'drawCut',
+          id: 'drawCutCombo',
           icon: 'slash',
           element: 'wind',
           followUp: true,
+          chainOf: 'tiltPass',
           ko: {
             name: '인출 베기',
             input: '찌르기 파고 직후 비웅크리기 + 좌클릭',
@@ -204,10 +223,11 @@ export const cavalrymanDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'bridleStamp',
+          id: 'bridleStampCombo',
           icon: 'stab',
           element: 'wind',
           followUp: true,
+          chainOf: 'bridleSlam',
           ko: {
             name: '고삐 낙인',
             input: '낙마 찍기 직후 웅크리기 + 좌클릭',
@@ -217,6 +237,22 @@ export const cavalrymanDetail: ClassDetailDef = {
             name: 'Bridle Stamp',
             input: 'Sneak + left-click after Bridle Drive',
             description: 'Small forward stomp damage.',
+          },
+        },
+        {
+          id: 'windLance',
+          icon: 'storm',
+          element: 'wind',
+          ultimate: true,
+          ko: {
+            name: '돌풍창',
+            input: '웅크리기 + 숫자키 4 (전투 모드)',
+            description: '주변 적에게 큰 피해를 줍니다.',
+          },
+          en: {
+            name: 'Wind Lance',
+            input: 'Sneak + hotkey 4 (combat mode)',
+            description: 'Heavy area damage.',
           },
         },
         {
@@ -234,6 +270,176 @@ export const cavalrymanDetail: ClassDetailDef = {
       requiredProficiency: 2,
       skills: [
         {
+          id: 'stampedeFeint',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'gallopSpur',
+          ko: {
+            name: '쏜살 추격',
+            input: '질주 찌르 적중 직후 손 바꾸기',
+            description: '전방 직선 베기입니다. 피해량은 질주 찌르 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Stampede Feint',
+            input: 'Swap hands after Gallop Spur hits',
+            description: 'Forward line slash. Damage scales with Gallop Spur level.',
+          },
+        },
+        {
+          id: 'heraldSkewer',
+          icon: 'spear',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'rideHerald',
+          ko: {
+            name: '기병 찌르기',
+            input: '마상 돌격 직후 웅크리기 + 손 바꾸기',
+            description: '전방 직선 관통입니다. 피해량은 마상 돌격 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Herald Skewer',
+            input: 'Sneak + swap hands after Ride Herald',
+            description: 'Forward line pierce. Damage scales with Ride Herald level.',
+          },
+        },
+        {
+          id: 'galeRipCombo',
+          icon: 'wind-slash',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'windLance',
+          ko: {
+            name: '풍연 베기',
+            input: '돌풍창 직후 웅크리기 + 좌클릭',
+            description: '전방 직선 베기를 합니다.',
+          },
+          en: {
+            name: 'Gale Rip',
+            input: 'Sneak + left-click after Wind Lance',
+            description: 'Forward line slash.',
+          },
+        },
+        {
+          id: 'tiltFinish',
+          icon: 'spear',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'tiltPass',
+          ko: {
+            name: '찌르기 마무리',
+            input: '찌르기 파고 직후 재우클릭',
+            description: '짧은 시간 안에만 사용 가능합니다.',
+          },
+          en: {
+            name: 'Tilt Finish',
+            input: 'Right-click again after Tilt Rend',
+            description: 'Only within a short window.',
+          },
+        },
+        {
+          id: 'bridleFinish',
+          icon: 'sword-drive',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'bridleSlam',
+          ko: {
+            name: '낙마 마무리',
+            input: '낙마 찍기 직후 웅크리기 + 재우클릭',
+            description: '짧은 시간 안에만 사용 가능합니다.',
+          },
+          en: {
+            name: 'Bridle Finish',
+            input: 'Sneak + right-click again after Bridle Drive',
+            description: 'Only within a short window.',
+          },
+        },
+        {
+          id: 'stampedeFinish',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'gallopSpur',
+          ko: {
+            name: '쏜살 마무리',
+            input: '쏜살 추격 직후 손 바꾸기',
+            description: '짧은 시간 안에만 사용 가능합니다.',
+          },
+          en: {
+            name: 'Stampede Finish',
+            input: 'Swap hands after Stampede Feint',
+            description: 'Only within a short window.',
+          },
+        },
+        {
+          id: 'heraldFinish',
+          icon: 'spear',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'rideHerald',
+          ko: {
+            name: '기병 마무리',
+            input: '기병 찌르기 직후 웅크리기 + 손 바꾸기',
+            description: '짧은 시간 안에만 사용 가능합니다.',
+          },
+          en: {
+            name: 'Herald Finish',
+            input: 'Sneak + swap hands after Herald Skewer',
+            description: 'Only within a short window.',
+          },
+        },
+        {
+          id: 'drawFinish',
+          icon: 'slash',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'tiltPass',
+          ko: {
+            name: '인출 마무리',
+            input: '인출 베기(연계) 직후 비웅크리기 + 좌클릭',
+            description: '짧은 시간 안에만 사용 가능합니다.',
+          },
+          en: {
+            name: 'Draw Finish',
+            input: 'No sneak + left-click after Draw Cut combo',
+            description: 'Only within a short window.',
+          },
+        },
+        {
+          id: 'windRush',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'windLance',
+          ko: {
+            name: '역풍 질주',
+            input: '풍연 베기(연계) 직후 비웅크리기 + 손 바꾸기',
+            description: '짧은 돌진 베기입니다. 피해량은 질주 찌르 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Wind Rush',
+            input: 'Swap hands (no sneak) after Gale Rip combo',
+            description: 'Short rush slash. Damage scales with Gallop Spur level.',
+          },
+        },
+        {
+          id: 'skyRake',
+          icon: 'air-cut',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'skyPass',
+          ko: {
+            name: '천마 긁기',
+            input: '천마 통과 직후 웅크리기 + 좌클릭',
+            description: '긴 직선 긁기 공격입니다.',
+          },
+          en: {
+            name: 'Sky Rake',
+            input: 'Sneak + left-click after Sky Pass',
+            description: 'Long line rake attack.',
+          },
+        },
+        {
           id: 'lancerDisciplineLimit2',
           icon: 'book',
           element: 'wind',
@@ -245,54 +451,6 @@ export const cavalrymanDetail: ClassDetailDef = {
           en: {
             name: 'Lancer Discipline',
             description: 'Increases damage. First limit-break ultimate cooldown is halved.',
-          },
-        },
-        {
-          id: 'skyRake',
-          icon: 'air-cut',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '천마 긁기',
-            input: '천마 통과 직후 웅크리기 + 전투 숫자키 8',
-            description: '긴 직선 긁기 공격입니다.',
-          },
-          en: {
-            name: 'Sky Rake',
-            input: 'Sneak + combat hotkey 8 after Sky Pass',
-            description: 'Long line rake attack.',
-          },
-        },
-        {
-          id: 'windRush',
-          icon: 'rush',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '역풍 질주',
-            input: '풍연 베기 직후 비웅크리기 + 손 바꾸기',
-            description: '짧은 돌진 베기입니다. 피해량은 질주 찌르 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Wind Rush',
-            input: 'Swap hands (no sneak) after Gale Rip',
-            description: 'Short rush slash. Damage scales with Gallop Spur level.',
-          },
-        },
-        {
-          id: 'windLance',
-          icon: 'storm',
-          element: 'wind',
-          ultimate: true,
-          ko: {
-            name: '돌풍창',
-            input: '웅크리기 + 숫자키 4 (전투 모드)',
-            description: '주변 적에게 큰 피해를 줍니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
-          },
-          en: {
-            name: 'Wind Lance',
-            input: 'Sneak + hotkey 4 (combat mode)',
-            description: 'Heavy area damage. Cooldown is shorter at second limit break.',
           },
         },
         {

@@ -77,12 +77,12 @@ export const vanguardDetail: ClassDetailDef = {
           ko: {
             name: '창 휘두르기',
             input: '좌클릭',
-            description: '전방 호를 휘둘러 광역 피해를 줍니다(창고착 레벨 적용).',
+            description: '전방 호를 휘둘러 광역 피해를 줍니다. 피해량은 마스터 레벨에 비례합니다.',
           },
           en: {
             name: 'Spear Sweep',
             input: 'Left-click',
-            description: 'Sweeps in an arc ahead for AoE damage (uses Skewering Charge level).',
+            description: 'Sweeps in an arc ahead for AoE damage. Damage scales with master level.',
           },
           masterLevel: 50,
         },
@@ -232,6 +232,24 @@ export const vanguardDetail: ClassDetailDef = {
           ko: { name: '창술', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
           en: { name: 'Spear Discipline', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
         },
+        {
+          id: 'ironPhalanx',
+          icon: 'shield',
+          element: 'earth',
+          ultimate: true,
+          ko: {
+            name: '철벽진영',
+            input: '웅크리기 + 숫자키 4 (전투 모드)',
+            description:
+              '주변 적에게 피해를 주고 가까운 파티원에게 흡수를 부여합니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
+          },
+          en: {
+            name: 'Iron Phalanx',
+            input: 'Sneak + hotkey 4 (combat mode)',
+            description:
+              'Damages nearby foes and grants Absorption to nearby party members. Cooldown is shorter at second limit break.',
+          },
+        },
       ],
     },
     {
@@ -250,24 +268,6 @@ export const vanguardDetail: ClassDetailDef = {
           en: {
             name: 'Spear Discipline',
             description: 'Increases damage. First limit-break ultimate cooldown is halved.',
-          },
-        },
-        {
-          id: 'ironPhalanx',
-          icon: 'shield',
-          element: 'earth',
-          ultimate: true,
-          ko: {
-            name: '철벽진영',
-            input: '웅크리기 + 숫자키 4 (전투 모드)',
-            description:
-              '웅크린 상태에서 핫바 4번으로 전환합니다. 주변 적에게 피해를 주고 가까운 파티원에게 흡수를 부여합니다.',
-          },
-          en: {
-            name: 'Iron Phalanx',
-            input: 'Sneak + hotkey 4 (combat mode)',
-            description:
-              'While sneaking, switch to hotbar slot 4. Damages nearby foes and grants Absorption to nearby party members.',
           },
         },
         {

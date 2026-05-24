@@ -102,12 +102,14 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '포고',
             input: '웅크리기 + 손 바꾸기',
-            description: '주변 적에게 지원 피해(85%)와 포섭을 줍니다.',
+            description:
+              '주변 적에게 지원 피해와 포섭을 줍니다. 범위 타격은 proclaimAtks 계수에 0.85를 곱해 atks()로 적용됩니다(Bearerskills.java).',
           },
           en: {
             name: 'Proclaim',
             input: 'Sneak + swap hands',
-            description: 'Nearby support damage (85% power) and coerce.',
+            description:
+              'Nearby support damage and coerce. AoE hits multiply proclaimAtksPrimary/Flat by 0.85 before atks() in Bearerskills.java.',
           },
           masterLevel: 50,
         },
@@ -158,12 +160,12 @@ export const standardBearerDetail: ClassDetailDef = {
           chainOf: 'warBanner',
           ko: {
             name: '깃봉추적',
-            input: '전장기 맥동 종료 직후 비웅크리기 + 좌클릭',
+            input: '전장기 맥동 종료 직후 우클릭',
             description: '전방 직선 지원 피해. 계수는 전장기 레벨에 비례합니다.',
           },
           en: {
             name: 'Flag Fall',
-            input: 'No sneak + left-click after War Banner pulses end',
+            input: 'Right-click after War Banner pulses end',
             description: 'Forward support line. Scales with War Banner level.',
           },
         },
@@ -175,12 +177,12 @@ export const standardBearerDetail: ClassDetailDef = {
           chainOf: 'demoralize',
           ko: {
             name: '기세분쇄',
-            input: '기세꺾기 직후 웅크리기 + 좌클릭',
+            input: '기세꺾기 직후 웅크리기 + 우클릭',
             description: '전방 직선 지원 피해. 계수는 기세꺾기 레벨에 비례합니다.',
           },
           en: {
             name: 'Dirge Cut',
-            input: 'Sneak + left-click after Demoralize',
+            input: 'Sneak + right-click after Demoralize',
             description: 'Forward support line. Scales with Demoralize level.',
           },
         },
@@ -192,15 +194,13 @@ export const standardBearerDetail: ClassDetailDef = {
           chainOf: 'signalCall',
           ko: {
             name: '신호반향',
-            input: '신호 직후 비웅크리기 + 우클릭',
-            description:
-              '전방 직선 지원 피해. 신호 창이 있을 때 전장기 대신 발동합니다. 계수는 신호 레벨에 비례합니다.',
+            input: '신호 직후 손 바꾸기',
+            description: '전방 직선 지원 피해. 계수는 신호 레벨에 비례합니다.',
           },
           en: {
             name: 'Recall Ping',
-            input: 'No sneak + right-click after Signal Call',
-            description:
-              'Forward line; takes priority over War Banner when the recall window is open. Scales with Signal Call.',
+            input: 'Swap hands after Signal Call',
+            description: 'Forward support line. Scales with Signal Call level.',
           },
         },
         {
@@ -211,13 +211,30 @@ export const standardBearerDetail: ClassDetailDef = {
           chainOf: 'proclaim',
           ko: {
             name: '포고각인',
-            input: '포고 직후 비웅크리기 + 좌클릭',
+            input: '포고 직후 웅크리기 + 손 바꾸기',
             description: '전방 직선 지원 피해. 계수는 포고 레벨에 비례합니다.',
           },
           en: {
             name: 'Edict Mark',
-            input: 'No sneak + left-click after Proclaim',
+            input: 'Sneak + swap hands after Proclaim',
             description: 'Forward support line. Scales with Proclaim level.',
+          },
+        },
+        {
+          id: 'battleDirge',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'warHorn',
+          ko: {
+            name: '전장장송',
+            input: '전투나팔 직후 웅크리기 + 좌클릭',
+            description: '전방 직선 지원 피해와 사기 갱신. 계수는 신호 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Battle Dirge',
+            input: 'Sneak + left-click after War Horn',
+            description: 'Forward support line and morale refresh. Scales with Signal Call level.',
           },
         },
         {
@@ -225,8 +242,8 @@ export const standardBearerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'wind',
           passive: true,
-          ko: { name: '기병깃술', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
-          en: { name: 'Heraldry', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+          ko: { name: '기병깃술강화', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Heraldry Ascendant', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
         },
         {
           id: 'decreeOfRuin',
@@ -247,17 +264,108 @@ export const standardBearerDetail: ClassDetailDef = {
               'Long line support damage and heavy coerce. Cooldown is shorter at second limit break.',
           },
         },
+      ],
+    },
+    {
+      id: 'limit2',
+      requiredProficiency: 2,
+      skills: [
+        {
+          id: 'highCommand',
+          icon: 'slash',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'warBanner',
+          ko: {
+            name: '기운파달',
+            input: '깃봉추적 직후 우클릭',
+            description: '긴 전방 직선 지원 피해를 줍니다.',
+          },
+          en: {
+            name: 'High Command',
+            input: 'Right-click after Flag Fall',
+            description: 'Long forward support line damage.',
+          },
+        },
+        {
+          id: 'lowCrush',
+          icon: 'storm',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'demoralize',
+          ko: {
+            name: '기세압축',
+            input: '기세분쇄 직후 웅크리기 + 우클릭',
+            description: '주변 지원 피해를 줍니다.',
+          },
+          en: {
+            name: 'Low Crush',
+            input: 'Sneak + right-click after Dirge Cut',
+            description: 'Nearby support burst damage.',
+          },
+        },
+        {
+          id: 'surgeRecall',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'signalCall',
+          ko: {
+            name: '파열호각',
+            input: '신호반향 직후 손 바꾸기',
+            description: '전방 직선 지원 피해를 줍니다.',
+          },
+          en: {
+            name: 'Surge Recall',
+            input: 'Swap hands after Recall Ping',
+            description: 'Forward support line damage.',
+          },
+        },
+        {
+          id: 'lawPurge',
+          icon: 'stab',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'proclaim',
+          ko: {
+            name: '율격종결',
+            input: '포고각인 직후 웅크리기 + 손 바꾸기',
+            description: '주변 지원 피해를 줍니다.',
+          },
+          en: {
+            name: 'Law Purge',
+            input: 'Sneak + swap hands after Edict Mark',
+            description: 'Nearby support burst damage.',
+          },
+        },
+        {
+          id: 'ruinDirge',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'warHorn',
+          ko: {
+            name: '결전장송',
+            input: '전장장송 직후 웅크리기 + 좌클릭',
+            description: '주변 지원 피해와 강화된 사기 갱신을 줍니다.',
+          },
+          en: {
+            name: 'Ruin Dirge',
+            input: 'Sneak + left-click after Battle Dirge',
+            description: 'Nearby support burst and stronger morale refresh.',
+          },
+        },
         {
           id: 'heraldryLimit2',
           icon: 'book',
           element: 'wind',
           passive: true,
           ko: {
-            name: '기병깃술',
+            name: '진기병깃술',
             description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
           },
           en: {
-            name: 'Heraldry',
+            name: 'Grand Heraldry',
             description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
@@ -275,80 +383,6 @@ export const standardBearerDetail: ClassDetailDef = {
             name: 'Rally Standard',
             input: 'Sneak + hotkey 5 (combat mode)',
             description: 'Grants Absorption and Resistance to you and nearby party.',
-          },
-        },
-      ],
-    },
-    {
-      id: 'limit2',
-      requiredProficiency: 2,
-      skills: [
-        {
-          id: 'highCommand',
-          icon: 'slash',
-          element: 'wind',
-          followUp: true,
-          chainOf: 'warBanner',
-          ko: {
-            name: '기운파달',
-            input: '깃봉추적 직후 웅크리기 + 전투 숫자키 2',
-            description: '긴 전방 직선 지원 피해를 줍니다.',
-          },
-          en: {
-            name: 'High Command',
-            input: 'Sneak + combat hotkey 2 after Flag Fall',
-            description: 'Long forward support line damage.',
-          },
-        },
-        {
-          id: 'lowCrush',
-          icon: 'storm',
-          element: 'wind',
-          followUp: true,
-          chainOf: 'demoralize',
-          ko: {
-            name: '기세압축',
-            input: '기세분쇄 직후 웅크리기 + 전투 숫자키 3',
-            description: '주변 지원 피해를 줍니다.',
-          },
-          en: {
-            name: 'Low Crush',
-            input: 'Sneak + combat hotkey 3 after Dirge Cut',
-            description: 'Nearby support burst damage.',
-          },
-        },
-        {
-          id: 'surgeRecall',
-          icon: 'rush',
-          element: 'wind',
-          followUp: true,
-          chainOf: 'signalCall',
-          ko: {
-            name: '파열호각',
-            input: '신호반향 직후 웅크리기 + 전투 숫자키 8',
-            description: '전방 직선 지원 피해를 줍니다.',
-          },
-          en: {
-            name: 'Surge Recall',
-            input: 'Sneak + combat hotkey 8 after Recall Ping',
-            description: 'Forward support line damage.',
-          },
-        },
-        {
-          id: 'lawPurge',
-          icon: 'stab',
-          element: 'wind',
-          followUp: true,
-          chainOf: 'proclaim',
-          ko: {
-            name: '율격종결',
-            input: '포고각인 직후 웅크리기 + 전투 숫자키 7',
-            description: '주변 지원 피해를 줍니다.',
-          },
-          en: {
-            name: 'Law Purge',
-            input: 'Sneak + combat hotkey 7 after Edict Mark',
-            description: 'Nearby support burst damage.',
           },
         },
       ],
