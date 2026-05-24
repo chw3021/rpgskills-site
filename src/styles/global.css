@@ -206,23 +206,36 @@ ul {
   color: var(--accent);
 }
 
-.nav-link--cta {
-  background: var(--accent);
-  color: #0a1612 !important;
-  padding: 0.35rem 0.85rem !important;
+.site-nav .nav-link.nav-link--cta {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #1a1200 !important;
+  padding: 0.4rem 0.95rem !important;
   border-radius: 8px;
   font-weight: 700;
+  border: 1px solid rgba(251, 191, 36, 0.55);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
 }
 
-.nav-link--cta:hover,
-.nav-link--cta.active {
-  background: var(--accent-dim);
-  color: #0a1612 !important;
+.site-nav .nav-link.nav-link--cta:hover,
+.site-nav .nav-link.nav-link--cta.active {
+  background: linear-gradient(135deg, #fbbf24, #fde68a);
+  color: #1a1200 !important;
   text-decoration: none;
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.45);
 }
 
 .nav-dropdown {
   position: relative;
+}
+
+/* 트리거 ↔ 하위 메뉴 사이 간격에서 hover가 끊기지 않도록 보이지 않는 브릿지 */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max(100%, 10rem);
+  height: 0.45rem;
 }
 
 .nav-dropdown__caret {
@@ -999,8 +1012,25 @@ ul {
   outline-offset: 2px;
 }
 
-.class-card__portrait-wrap {
+.class-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   margin-bottom: 0.75rem;
+}
+
+.class-card__portrait-wrap {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.class-card__top .class-stat-radar {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  max-width: 168px;
+  height: auto;
+  aspect-ratio: 1;
 }
 
 .class-card__portrait-btn {
@@ -1156,20 +1186,8 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-.class-stats-panel {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
-}
-
-.class-stats-panel .class-stats {
-  flex: 1;
-  min-width: 0;
-}
-
 .class-stat-radar {
-  flex-shrink: 0;
+  display: block;
 }
 
 .class-stat-radar__grid {
@@ -1195,7 +1213,7 @@ ul {
 }
 
 .class-stat-radar__label {
-  font-size: 0.55rem;
+  font-size: 0.62rem;
   fill: var(--text-muted);
   font-weight: 500;
 }
@@ -1204,7 +1222,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.35rem 0.75rem;
-  margin: 0;
+  margin: 0.25rem 0 0;
   font-size: 0.8rem;
 }
 

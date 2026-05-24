@@ -12,12 +12,30 @@ const STAT_KEYS: (keyof ClassStats)[] = [
 
 const SIDES = STAT_KEYS.length;
 
+const LABEL_PAD = 22;
+
 type ClassStatRadarProps = {
   stats: ClassStats;
   labels: Record<keyof ClassStats, string>;
   max?: number;
   size?: number;
 };
+
+function labelAnchor(index: number, cx: number, x: number, y: number) {
+  if (index === 0) {
+    return { textAnchor: 'middle' as const, dominantBaseline: 'hanging' as const };
+  }
+  if (index === 4) {
+    return { textAnchor: 'middle' as const, dominantBaseline: 'auto' as const };
+  }
+  if (x > cx + 4) {
+    return { textAnchor: 'start' as const, dominantBaseline: 'middle' as const };
+  }
+  if (x < cx - 4) {
+    return { textAnchor: 'end' as const, dominantBaseline: 'middle' as const };
+  }
+  return { textAnchor: 'middle' as const, dominantBaseline: y > cx ? 'hanging' as const : 'auto' as const };
+}
 
 function vertex(cx: number, cy: number, radius: number, index: number) {
   const angle = -Math.PI / 2 + (2 * Math.PI * index) / SIDES;
@@ -34,11 +52,12 @@ function ringPoints(cx: number, cy: number, radius: number) {
   }).join(' ');
 }
 
-export function ClassStatRadar({ stats, labels, max = 5, size = 128 }: ClassStatRadarProps) {
+export function ClassStatRadar({ stats, labels, max = 5, size = 136 }: ClassStatRadarProps) {
   const cx = size / 2;
   const cy = size / 2;
-  const outerR = size * 0.36;
-  const labelR = size * 0.47;
+  const outerR = size * 0.34;
+  const labelR = size * 0.44;
+  const viewSize = size + LABEL_PAD * 2;
 
   const dataPoints = STAT_KEYS.map((key, i) => {
     const r = (Math.min(stats[key], max) / max) * outerR;
@@ -53,9 +72,8 @@ export function ClassStatRadar({ stats, labels, max = 5, size = 128 }: ClassStat
   return (
     <svg
       className="class-stat-radar"
-      viewBox={`0 0 ${size} ${size}`}
-      width={size}
-      height={size}
+      viewBox={`${-LABEL_PAD} ${-LABEL_PAD} ${viewSize} ${viewSize}`}
+      preserveAspectRatio="xMidYMid meet"
       role="img"
       aria-label={summary}
     >
@@ -83,14 +101,15 @@ export function ClassStatRadar({ stats, labels, max = 5, size = 128 }: ClassStat
       <polygon points={dataPoints} className="class-stat-radar__stroke" />
       {STAT_KEYS.map((key, i) => {
         const p = vertex(cx, cy, labelR, i);
+        const anchor = labelAnchor(i, cx, p.x, p.y);
         return (
           <text
             key={key}
             x={p.x}
             y={p.y}
             className="class-stat-radar__label"
-            textAnchor="middle"
-            dominantBaseline="middle"
+            textAnchor={anchor.textAnchor}
+            dominantBaseline={anchor.dominantBaseline}
           >
             <title>{`${labels[key]} ${stats[key]}/${max}`}</title>
             {labels[key]}

@@ -31,19 +31,22 @@ export function ClassCard({ cls }: ClassCardProps) {
 
   const body = (
     <>
-      {iconSrc && (
-        <div className="class-card__portrait-wrap">
-          <img
-            src={iconSrc}
-            alt=""
-            className="class-card__portrait"
-            width={96}
-            height={96}
-            loading="lazy"
-            onError={() => setIconIndex((i) => i + 1)}
-          />
-        </div>
-      )}
+      <div className="class-card__top">
+        {iconSrc && (
+          <div className="class-card__portrait-wrap">
+            <img
+              src={iconSrc}
+              alt=""
+              className="class-card__portrait"
+              width={96}
+              height={96}
+              loading="lazy"
+              onError={() => setIconIndex((i) => i + 1)}
+            />
+          </div>
+        )}
+        <ClassStatRadar stats={s} labels={t.classes.stats} />
+      </div>
       <header className="class-card__head">
         <h3>{copy.name}</h3>
         <span className="class-card__badges">
@@ -56,13 +59,11 @@ export function ClassCard({ cls }: ClassCardProps) {
         <strong>{t.classes.equipmentLabel}:</strong> {copy.equipment}
       </p>
       <p className="class-card__summary">{copy.summary}</p>
-      <div className="class-stats-panel">
-        <ClassStatRadar stats={s} labels={t.classes.stats} />
-        <dl className="class-stats">
-          <div>
-            <dt>{t.classes.stats.attack}</dt>
-            <dd>{s.attack}/5</dd>
-          </div>
+      <dl className="class-stats">
+        <div>
+          <dt>{t.classes.stats.attack}</dt>
+          <dd>{s.attack}/5</dd>
+        </div>
         <div>
           <dt>{t.classes.stats.defence}</dt>
           <dd>{s.defence}/5</dd>
@@ -87,8 +88,7 @@ export function ClassCard({ cls }: ClassCardProps) {
           <dt>{t.classes.stats.mobility}</dt>
           <dd>{s.mobility}/5</dd>
         </div>
-        </dl>
-      </div>
+      </dl>
     </>
   );
 
