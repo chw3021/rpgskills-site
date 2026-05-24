@@ -7,6 +7,5 @@ export const downloads = {
   },
   resourcePack: {
     githubZip: `${site.resourcePackRepo}/archive/refs/heads/main.zip`,
-    googleDrive: site.resourcePackGDrive,
   },
 } as const;

@@ -2,7 +2,7 @@ export const site = {
   name: 'RPGSkills',
   tagline: 'Transform your Minecraft server into an RPG adventure',
   /** Minecraft line — use with matching Spigot/Paper API */
-  mcVersion: '1.21.x',
+  mcVersion: '26.1.2',
   /** Matches rpgskills.github.io pom.xml spigot-api */
   spigotApiVersion: '26.1.2',
   spigotUrl: 'https://www.spigotmc.org/resources/rpgskills.122034/',
@@ -13,8 +13,6 @@ export const site = {
   pluginPublicRepoUrl: 'https://github.com/chw3021/rpgskills-releases',
   pluginReleasesUrl: 'https://github.com/chw3021/rpgskills-releases/releases',
   resourcePackRepo: 'https://github.com/chw3021/RpgSkills',
-  resourcePackGDrive:
-    'https://drive.google.com/drive/folders/1R15Wa20upC6G7iPtvptJF0fONp8Os8dH?usp=sharing',
   githubOrg: 'chw3021',
   siteUrl: 'https://chw3021.github.io/rpgskills-site',
   paypalDonateUrl: 'https://www.paypal.com/ncp/payment/4E3ZVDBYBCW62',

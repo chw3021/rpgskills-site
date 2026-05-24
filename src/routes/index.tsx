@@ -9,6 +9,7 @@ import { DownloadPage } from '../pages/DownloadPage';
 import { SupportPage } from '../pages/SupportPage';
 import { DonatePage } from '../pages/DonatePage';
 import { StoryPage } from '../pages/StoryPage';
+import { CommunityBoardPage } from '../pages/community/CommunityBoardPage';
 
 export function AppRoutes() {
   return (
@@ -21,6 +22,10 @@ export function AppRoutes() {
         <Route path="/classes/:classId" element={<ClassDetailPage />} />
         <Route path="/install" element={<InstallPage />} />
         <Route path="/download" element={<DownloadPage />} />
+        <Route path="/community/free" element={<CommunityBoardPage boardId="free" />} />
+        <Route path="/community/free/:postId" element={<CommunityBoardPage boardId="free" />} />
+        <Route path="/community/qna" element={<CommunityBoardPage boardId="qna" />} />
+        <Route path="/community/qna/:postId" element={<CommunityBoardPage boardId="qna" />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/donate" element={<DonatePage />} />
       </Route>

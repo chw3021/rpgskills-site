@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { site } from '../../config/site';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { VisitorBadge } from '../community/VisitorBadge';
 import { Nav } from './Nav';
 
 export function Header() {
@@ -18,6 +19,7 @@ export function Header() {
           {site.name}
         </Link>
         <div className="header-actions">
+          <VisitorBadge />
           <LanguageSwitcher />
           <Nav />
         </div>

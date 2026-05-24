@@ -4,6 +4,7 @@ import type { ClassDef } from '../../data/classCatalog';
 import { getClassDetail } from '../../data/classDetails';
 import { useI18n } from '../../i18n/useI18n';
 import { classIconFile } from '../../utils/classIcon';
+import { ClassStatRadar } from './ClassStatRadar';
 
 type ClassCardProps = {
   cls: ClassDef;
@@ -55,11 +56,13 @@ export function ClassCard({ cls }: ClassCardProps) {
         <strong>{t.classes.equipmentLabel}:</strong> {copy.equipment}
       </p>
       <p className="class-card__summary">{copy.summary}</p>
-      <dl className="class-stats">
-        <div>
-          <dt>{t.classes.stats.attack}</dt>
-          <dd>{s.attack}/5</dd>
-        </div>
+      <div className="class-stats-panel">
+        <ClassStatRadar stats={s} labels={t.classes.stats} />
+        <dl className="class-stats">
+          <div>
+            <dt>{t.classes.stats.attack}</dt>
+            <dd>{s.attack}/5</dd>
+          </div>
         <div>
           <dt>{t.classes.stats.defence}</dt>
           <dd>{s.defence}/5</dd>
@@ -84,7 +87,8 @@ export function ClassCard({ cls }: ClassCardProps) {
           <dt>{t.classes.stats.mobility}</dt>
           <dd>{s.mobility}/5</dd>
         </div>
-      </dl>
+        </dl>
+      </div>
     </>
   );
 

@@ -102,6 +102,26 @@ export type ClassDetailTranslations = {
   masterLevel: string;
 };
 
+export type CommunityBoardCopy = {
+  pageTitle: string;
+  pageDescription: string;
+  newPost: string;
+  empty: string;
+  titlePlaceholder: string;
+  bodyPlaceholder: string;
+  submit: string;
+  back: string;
+  comments: string;
+  commentPlaceholder: string;
+  addComment: string;
+  deletePost: string;
+  deleteComment: string;
+  solved: string;
+  markSolved: string;
+  markOpen: string;
+  solvedBadge: string;
+};
+
 export type StoryChapter = {
   title: string;
   paragraphs: string[];
@@ -143,14 +163,31 @@ export type Translations = {
   };
   nav: {
     home: string;
+    groupBackground: string;
+    groupDownload: string;
+    groupCommunity: string;
     story: string;
     features: string;
     classes: string;
     install: string;
     download: string;
+    boardFree: string;
+    boardQna: string;
     support: string;
     donate: string;
     ariaMain: string;
+  };
+  community: {
+    firebaseNotConfigured: string;
+    authLoading: string;
+    signInHint: string;
+    signInGoogle: string;
+    signOut: string;
+    todayVisitors: string;
+    loading: string;
+    errorGeneric: string;
+    free: CommunityBoardCopy;
+    qna: CommunityBoardCopy;
   };
   lang: {
     label: string;
@@ -202,9 +239,6 @@ export type Translations = {
     resourcePackGithubMeta: string;
     downloadZip: string;
     repository: string;
-    resourcePackDrive: string;
-    resourcePackDriveMeta: string;
-    openDrive: string;
     noGithubReleaseHint: string;
     getJarFromSpigot: string;
   };

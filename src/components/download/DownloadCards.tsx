@@ -79,21 +79,6 @@ export function DownloadCards() {
           </a>
         </div>
       </article>
-
-      <article className="card">
-        <h3>{d.resourcePackDrive}</h3>
-        <p className="meta">{d.resourcePackDriveMeta}</p>
-        <div className="btn-row" style={{ marginTop: '1rem' }}>
-          <a
-            href={downloads.resourcePack.googleDrive}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            {d.openDrive}
-          </a>
-        </div>
-      </article>
     </div>
   );
 }
