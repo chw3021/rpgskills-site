@@ -94,11 +94,11 @@ export const cavalrymanDetail: ClassDetailDef = {
           guiColumn: 7,
           ko: {
             name: '기마 창술',
-            description: '근접 피해가 증가합니다. 탈것 위 창 돌격에도 적용됩니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
+            description: '공격력이 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
           },
           en: {
             name: 'Lancer Discipline',
-            description: 'Increases melee damage, including mounted lance charges. Cannot use skills with shield or trident in off-hand.',
+            description: 'Increases damage. Cannot use skills with shield or trident in off-hand.',
           },
         },
       ],
@@ -139,60 +139,6 @@ export const cavalrymanDetail: ClassDetailDef = {
             description: 'Only within a short window. Damage scales with Bridle Slam level.',
           },
         },
-        {
-          id: 'drawCut',
-          icon: 'slash',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '인출 베기',
-            input: '찌르기 파고 직후 비웅크리기 + 좌클릭',
-            description: '짧은 추가 베기를 합니다.',
-          },
-          en: {
-            name: 'Draw Cut',
-            input: 'No sneak + left-click after Tilt Rend',
-            description: 'A short extra slash.',
-          },
-        },
-        {
-          id: 'bridleStamp',
-          icon: 'stab',
-          element: 'wind',
-          followUp: true,
-          ko: {
-            name: '고삐 낙인',
-            input: '낙마 찍기 직후 웅크리기 + 좌클릭',
-            description: '전방 소범위 피해를 줍니다.',
-          },
-          en: {
-            name: 'Bridle Stamp',
-            input: 'Sneak + left-click after Bridle Drive',
-            description: 'Small forward stomp damage.',
-          },
-        },
-        {
-          id: 'windLance',
-          icon: 'storm',
-          element: 'wind',
-          ultimate: true,
-          ko: {
-            name: '돌풍창',
-            input: '웅크리기 + 숫자키 4 (전투 모드)',
-            description: '주변 적에게 큰 피해를 줍니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
-          },
-          en: {
-            name: 'Wind Lance',
-            input: 'Sneak + hotkey 4 (combat mode)',
-            description: 'Heavy area damage. Cooldown is shorter at second limit break.',
-          },
-        },
-      ],
-    },
-    {
-      id: 'limit2',
-      requiredProficiency: 2,
-      skills: [
         {
           id: 'stampedeFeint',
           icon: 'rush',
@@ -242,6 +188,66 @@ export const cavalrymanDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'drawCut',
+          icon: 'slash',
+          element: 'wind',
+          followUp: true,
+          ko: {
+            name: '인출 베기',
+            input: '찌르기 파고 직후 비웅크리기 + 좌클릭',
+            description: '짧은 추가 베기를 합니다.',
+          },
+          en: {
+            name: 'Draw Cut',
+            input: 'No sneak + left-click after Tilt Rend',
+            description: 'A short extra slash.',
+          },
+        },
+        {
+          id: 'bridleStamp',
+          icon: 'stab',
+          element: 'wind',
+          followUp: true,
+          ko: {
+            name: '고삐 낙인',
+            input: '낙마 찍기 직후 웅크리기 + 좌클릭',
+            description: '전방 소범위 피해를 줍니다.',
+          },
+          en: {
+            name: 'Bridle Stamp',
+            input: 'Sneak + left-click after Bridle Drive',
+            description: 'Small forward stomp damage.',
+          },
+        },
+        {
+          id: 'lancerDisciplineLimit1',
+          icon: 'book',
+          element: 'wind',
+          passive: true,
+          ko: { name: '기마 창술', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Lancer Discipline', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+      ],
+    },
+    {
+      id: 'limit2',
+      requiredProficiency: 2,
+      skills: [
+        {
+          id: 'lancerDisciplineLimit2',
+          icon: 'book',
+          element: 'wind',
+          passive: true,
+          ko: {
+            name: '기마 창술',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Lancer Discipline',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
+          },
+        },
+        {
           id: 'skyRake',
           icon: 'air-cut',
           element: 'wind',
@@ -271,6 +277,22 @@ export const cavalrymanDetail: ClassDetailDef = {
             name: 'Wind Rush',
             input: 'Swap hands (no sneak) after Gale Rip',
             description: 'Short rush slash. Damage scales with Gallop Spur level.',
+          },
+        },
+        {
+          id: 'windLance',
+          icon: 'storm',
+          element: 'wind',
+          ultimate: true,
+          ko: {
+            name: '돌풍창',
+            input: '웅크리기 + 숫자키 4 (전투 모드)',
+            description: '주변 적에게 큰 피해를 줍니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
+          },
+          en: {
+            name: 'Wind Lance',
+            input: 'Sneak + hotkey 4 (combat mode)',
+            description: 'Heavy area damage. Cooldown is shorter at second limit break.',
           },
         },
         {

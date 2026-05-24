@@ -36,12 +36,12 @@ export const daggerlistDetail: ClassDetailDef = {
           element: 'dark',
           ko: {
             name: '절개',
-            input: '가위 + 비웅크리기 + 우클릭',
+            input: '단검 + 비웅크리기 + 우클릭',
             description: '짧게 베어 출혈을 쌓습니다. 분신이 좁은 범위를 약하게 따라 타격합니다.',
           },
           en: {
             name: 'Slash',
-            input: 'Shears + not sneaking + right-click',
+            input: 'Dagger + not sneaking + right-click',
             description: 'Quick slash that stacks bleed. Your clone echoes a weaker slash in a small arc.',
           },
           masterLevel: 50,
@@ -50,16 +50,16 @@ export const daggerlistDetail: ClassDetailDef = {
           id: 'shadowDash',
           icon: 'rush',
           element: 'dark',
-          ko: { name: '그림자 질주', input: '가위 + 웅크리기 + 우클릭', description: '전방으로 돌진하며 벱니다.' },
-          en: { name: 'Shadow Dash', input: 'Shears + sneak + right-click', description: 'Dashes forward and cuts.' },
+          ko: { name: '그림자 질주', input: '단검 + 웅크리기 + 우클릭', description: '전방으로 돌진하며 벱니다.' },
+          en: { name: 'Shadow Dash', input: 'Dagger + sneak + right-click', description: 'Dashes forward and cuts.' },
           masterLevel: 50,
         },
         {
           id: 'fanOfBlades',
           icon: 'stab',
           element: 'dark',
-          ko: { name: '칼날 부채', input: '가위 + 비웅크리기 + 좌클릭', description: '주변으로 칼날을 흩뿌립니다.' },
-          en: { name: 'Fan of Blades', input: 'Shears + not sneaking + left-click', description: 'Scatters blades around you.' },
+          ko: { name: '칼날 부채', input: '단검 + 비웅크리기 + 좌클릭', description: '주변으로 칼날을 흩뿌립니다.' },
+          en: { name: 'Fan of Blades', input: 'Dagger + not sneaking + left-click', description: 'Scatters blades around you.' },
           masterLevel: 50,
         },
         {
@@ -68,12 +68,12 @@ export const daggerlistDetail: ClassDetailDef = {
           element: 'dark',
           ko: {
             name: '그림자 분신',
-            input: '가위 + 비웅크리기 + 손 바꾸기',
+            input: '단검 + 비웅크리기 + 손 바꾸기',
             description: '분신을 소환하고 절개·칼날 부채를 복제합니다.',
           },
           en: {
             name: 'Shadow Clone',
-            input: 'Shears + not sneaking + swap hands',
+            input: 'Dagger + not sneaking + swap hands',
             description: 'Summons a clone that echoes Slash and Fan of Blades.',
           },
           masterLevel: 50,
@@ -84,12 +84,12 @@ export const daggerlistDetail: ClassDetailDef = {
           element: 'dark',
           ko: {
             name: '처형',
-            input: '가위 + 웅크리기 + 손 바꾸기',
+            input: '단검 + 웅크리기 + 손 바꾸기',
             description: '출혈 대상에게 큰 피해를 줍니다. 출혈 1중첩마다 보너스 +1(최대 5).',
           },
           en: {
             name: 'Execution',
-            input: 'Shears + sneak + swap hands',
+            input: 'Dagger + sneak + swap hands',
             description: 'Heavy damage to bleeding targets. +1 bonus per bleed stack (max 5).',
           },
           masterLevel: 50,
@@ -113,6 +113,7 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'slash',
           element: 'dark',
           followUp: true,
+          chainOf: 'slash',
           ko: {
             name: '그림자 절단',
             input: '절개 후 재우클릭',
@@ -189,18 +190,26 @@ export const daggerlistDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'assassinLimit1',
+          icon: 'book',
+          element: 'dark',
+          passive: true,
+          ko: { name: '암살자', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Assassin', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+        {
           id: 'deathMark',
           icon: 'target-shot',
           element: 'dark',
           ultimate: true,
           ko: {
             name: '죽음의 표식',
-            input: '가위 + 웅크리기 + 가위 버리기(Q)',
+            input: '단검 + 웅크리기 + 단검 버리기(Q)',
             description: '전투 모드에서만 발동합니다. 광역 표식과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
           },
           en: {
             name: 'Death Mark',
-            input: 'Shears + sneak + drop shears (Q)',
+            input: 'Dagger + sneak + drop dagger (Q)',
             description: 'Combat mode only. Deals area mark and bleed damage (multiplier × panel attack damage).',
           },
         },
@@ -210,6 +219,20 @@ export const daggerlistDetail: ClassDetailDef = {
       id: 'limit2',
       requiredProficiency: 2,
       skills: [
+        {
+          id: 'assassinLimit2',
+          icon: 'book',
+          element: 'dark',
+          passive: true,
+          ko: {
+            name: '암살자',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Assassin',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
+          },
+        },
         {
           id: 'shadowCutII',
           icon: 'slash',
@@ -257,12 +280,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ultimate: true,
           ko: {
             name: '최후의 절단',
-            input: '가위 + 웅크리기 + 전투 숫자키 4',
+            input: '단검 + 웅크리기 + 전투 숫자키 4',
             description: '전투 모드에서만 발동합니다. 광역 절단과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
           },
           en: {
             name: 'Final Cut',
-            input: 'Shears + sneak + combat hotkey 4',
+            input: 'Dagger + sneak + combat hotkey 4',
             description: 'Combat mode only. Wide slash and bleed damage (multiplier × panel attack damage).',
           },
         },

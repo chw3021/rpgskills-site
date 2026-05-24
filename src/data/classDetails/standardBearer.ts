@@ -137,11 +137,11 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 7,
           ko: {
             name: '기병깃술',
-            description: '깃발 또는 검으로 근접 공격 시 최종 피해에 곱해집니다.',
+            description: '공격력이 증가합니다. 깃발 또는 검으로 근접 공격 시 최종 피해에 곱해집니다.',
           },
           en: {
             name: 'Heraldry',
-            description: 'Multiplies final melee damage with banner or sword.',
+            description: 'Increases damage. Multiplies final melee damage with banner or sword.',
           },
         },
       ],
@@ -221,6 +221,14 @@ export const standardBearerDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'heraldryLimit1',
+          icon: 'book',
+          element: 'wind',
+          passive: true,
+          ko: { name: '기병깃술', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Heraldry', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+        {
           id: 'decreeOfRuin',
           icon: 'axe',
           element: 'wind',
@@ -237,6 +245,20 @@ export const standardBearerDetail: ClassDetailDef = {
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
               'Long line support damage and heavy coerce. Cooldown is shorter at second limit break.',
+          },
+        },
+        {
+          id: 'heraldryLimit2',
+          icon: 'book',
+          element: 'wind',
+          passive: true,
+          ko: {
+            name: '기병깃술',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Heraldry',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {

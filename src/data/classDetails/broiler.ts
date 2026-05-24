@@ -149,6 +149,14 @@ export const broilerDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'enduranceLimit1',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: { name: '감내', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Endurance', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+        {
           id: 'bedrockBarrage',
           icon: 'bomb',
           element: 'earth',
@@ -234,6 +242,20 @@ export const broilerDetail: ClassDetailDef = {
             name: 'Stratum Bloom',
             input: 'Combat skill 1 after Chasm Drive ends',
             description: 'Ring of ground bursts. Damage scales with Fissure level.',
+          },
+        },
+        {
+          id: 'enduranceLimit2',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: {
+            name: '감내',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Endurance',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {

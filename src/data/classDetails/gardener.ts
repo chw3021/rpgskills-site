@@ -131,6 +131,7 @@ export const gardenerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
+          guiColumn: 7,
           ko: {
             name: '성장',
             description: '공격력이 증가합니다.',
@@ -225,6 +226,14 @@ export const gardenerDetail: ClassDetailDef = {
             input: 'Swap hands again after Spore Cloud',
             description: 'Within a short window after Spore Cloud, swap hands again. Damage scales with Spore Cloud level.',
           },
+        },
+        {
+          id: 'growthLimit1',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: { name: '성장', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Growth', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
         },
         {
           id: 'overgrowth',
@@ -328,6 +337,20 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Spore Bloom II',
             input: 'Spore Cloud follow-up (proficiency 2)',
             description: 'Empowered Spore Bloom at proficiency 2. Damage scales with Spore Cloud level.',
+          },
+        },
+        {
+          id: 'growthLimit2',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: {
+            name: '성장',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Growth',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import type { ClassDef } from '../../data/classCatalog';
 import { getClassDetail } from '../../data/classDetails';
 import { useI18n } from '../../i18n/useI18n';
+import { classIconFile } from '../../utils/classIcon';
 
 type ClassCardProps = {
   cls: ClassDef;
@@ -24,7 +25,7 @@ export function ClassCard({ cls }: ClassCardProps) {
 
   const iconSrc =
     iconIndex < iconExtensions.length
-      ? `${iconBase}${cls.id}.${iconExtensions[iconIndex]}`
+      ? `${iconBase}${classIconFile(cls.id)}.${iconExtensions[iconIndex]}`
       : null;
 
   const body = (

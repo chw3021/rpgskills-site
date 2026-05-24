@@ -117,7 +117,7 @@ export const cookDetail: ClassDetailDef = {
           icon: 'book',
           element: 'fire',
           passive: true,
-          guiColumn: 6,
+          guiColumn: 7,
           ko: {
             name: '포만감',
             description: '공격력이 증가합니다. 치료받은 파티원의 피해도 증가합니다.',
@@ -210,6 +210,14 @@ export const cookDetail: ClassDetailDef = {
             name: 'Banquet Prep',
             description: 'Fire-themed meals keep the support rhythm active.',
           },
+        },
+        {
+          id: 'saturationLimit1',
+          icon: 'book',
+          element: 'fire',
+          passive: true,
+          ko: { name: '포만감', description: '공격력이 증가합니다. 치료받은 파티원의 피해도 증가합니다.' },
+          en: { name: 'Saturation', description: 'Increases damage; healed allies also deal more damage.' },
         },
         {
           id: 'specialMenu',
@@ -311,6 +319,20 @@ export const cookDetail: ClassDetailDef = {
           en: {
             name: 'Kitchen Rally',
             description: 'Party support remains the Cook identity.',
+          },
+        },
+        {
+          id: 'saturationLimit2',
+          icon: 'book',
+          element: 'fire',
+          passive: true,
+          ko: {
+            name: '포만감',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Saturation',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {

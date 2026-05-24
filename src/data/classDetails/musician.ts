@@ -232,6 +232,14 @@ export const musicianDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'harmonyLimit1',
+          icon: 'book',
+          element: 'lightning',
+          passive: true,
+          ko: { name: '화음', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Harmony', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+        {
           id: 'concert',
           icon: 'storm',
           element: 'lightning',
@@ -338,6 +346,20 @@ export const musicianDetail: ClassDetailDef = {
             name: 'Fortissimo II',
             input: 'Re-input after Crescendo (limit 2)',
             description: 'Stronger follow-up sound pressure.',
+          },
+        },
+        {
+          id: 'harmonyLimit2',
+          icon: 'book',
+          element: 'lightning',
+          passive: true,
+          ko: {
+            name: '화음',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Harmony',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {

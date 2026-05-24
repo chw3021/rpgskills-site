@@ -109,11 +109,11 @@ export const vanguardDetail: ClassDetailDef = {
           passive: true,
           ko: {
             name: '창술',
-            description: '근접 피해가 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
+            description: '공격력이 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
           },
           en: {
             name: 'Spear Discipline',
-            description: 'Increases melee damage. Cannot use skills with shield or trident in off-hand.',
+            description: 'Increases damage. Cannot use skills with shield or trident in off-hand.',
           },
         },
       ],
@@ -127,6 +127,7 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'spear',
           element: 'earth',
           followUp: true,
+          chainOf: 'phalanxJab',
           ko: {
             name: '돌진찌르기',
             input: '포진찌르기 후 재우클릭',
@@ -143,6 +144,7 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'sword-drive',
           element: 'earth',
           followUp: true,
+          chainOf: 'spearBrace',
           ko: {
             name: '맹렬창격',
             input: '창격돌 후 웅크리기 + 재우클릭',
@@ -159,6 +161,7 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'rush',
           element: 'earth',
           followUp: true,
+          chainOf: 'skeweringCharge',
           ko: {
             name: '연속창고',
             input: '창고착 후 손 바꾸기',
@@ -175,6 +178,7 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'spear',
           element: 'earth',
           followUp: true,
+          chainOf: 'rallyingCall',
           ko: {
             name: '함성잔향',
             input: '전열 함성 후 웅크리기 + 손 바꾸기',
@@ -191,6 +195,7 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'slash',
           element: 'earth',
           followUp: true,
+          chainOf: 'spearSweep',
           ko: {
             name: '휘두르기연격',
             input: '창 휘두르기 후 좌클릭',
@@ -207,6 +212,7 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'stab',
           element: 'earth',
           followUp: true,
+          chainOf: 'downwardSlam',
           ko: {
             name: '내려찍기연격',
             input: '내려찍기 후 웅크리기 + 좌클릭',
@@ -216,6 +222,34 @@ export const vanguardDetail: ClassDetailDef = {
             name: 'Slam Burst',
             input: 'Sneak + left-click again after Downward Slam',
             description: 'Within a short window after Downward Slam, sneak and left-click for a ground burst.',
+          },
+        },
+        {
+          id: 'spearDisciplineLimit1',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: { name: '창술', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Spear Discipline', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+      ],
+    },
+    {
+      id: 'limit2',
+      requiredProficiency: 2,
+      skills: [
+        {
+          id: 'spearDisciplineLimit2',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: {
+            name: '창술',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Spear Discipline',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {
@@ -236,12 +270,6 @@ export const vanguardDetail: ClassDetailDef = {
               'While sneaking, switch to hotbar slot 4. Damages nearby foes and grants Absorption to nearby party members.',
           },
         },
-      ],
-    },
-    {
-      id: 'limit2',
-      requiredProficiency: 2,
-      skills: [
         {
           id: 'phalanxRendII',
           icon: 'spear',

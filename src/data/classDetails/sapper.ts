@@ -102,11 +102,11 @@ export const sapperDetail: ClassDetailDef = {
           guiColumn: 7,
           ko: {
             name: '야전공성',
-            description: '삽으로 근접 공격 시 피해가 증가합니다.',
+            description: '공격력이 증가합니다. 삽으로 근접 공격 시 피해가 증가합니다.',
           },
           en: {
             name: 'Fieldworks',
-            description: 'Increases melee damage with shovels.',
+            description: 'Increases damage. Also boosts melee damage with shovels.',
           },
         },
       ],
@@ -216,6 +216,14 @@ export const sapperDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'fieldworksLimit1',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: { name: '야전공성', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Fieldworks', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+        },
+        {
           id: 'bombardment',
           icon: 'bomb',
           element: 'earth',
@@ -303,6 +311,20 @@ export const sapperDetail: ClassDetailDef = {
             name: 'Grand Expose',
             input: 'Sneak + combat hotkey 7 after Grand Battery volley',
             description: 'Ring powder burst around you.',
+          },
+        },
+        {
+          id: 'fieldworksLimit2',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: {
+            name: '야전공성',
+            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Fieldworks',
+            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
         {
