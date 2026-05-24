@@ -337,6 +337,8 @@ export const witchDoctorDetail: ClassDetailDef = {
           id: 'frighten',
           icon: 'soul',
           element: 'earth',
+          followUp: true,
+          chainOf: 'harvest',
           ko: {
             name: '공포',
             description: '수확 사용 시 적을 제압합니다.',
@@ -369,6 +371,8 @@ export const witchDoctorDetail: ClassDetailDef = {
           id: 'totemOfBravery',
           icon: 'recovery',
           element: 'earth',
+          followUp: true,
+          chainOf: 'totemOfAbundant',
           ko: {
             name: '용기의토템',
             description: '파티의 해로운 효과를 제거합니다.',
@@ -382,6 +386,8 @@ export const witchDoctorDetail: ClassDetailDef = {
           id: 'immortality',
           icon: 'soul',
           element: 'earth',
+          followUp: true,
+          chainOf: 'astralProjection',
           ko: {
             name: '불멸',
             description: '유체이탈 사용 시 자신의 소생 대기시간이 초기화됩니다.',
