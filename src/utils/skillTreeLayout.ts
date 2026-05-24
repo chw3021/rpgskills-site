@@ -75,19 +75,6 @@ function inferGuiSlot(
   return sectionRow * SKILL_TREE_COLS + Math.max(0, col);
 }
 
-/** classGuiSlots lists sorted slot indices; legacy flatten-order arrays skip strict sort check. */
-function isSortedAscending(slots: readonly number[]): boolean {
-  for (let i = 1; i < slots.length; i++) {
-    if (slots[i]! < slots[i - 1]!) return false;
-  }
-  return true;
-}
-
-function usesFlattenIndexMap(slots: readonly number[] | undefined, flatLength: number): boolean {
-  if (!slots || slots.length !== flatLength) return false;
-  return !isSortedAscending(slots);
-}
-
 export function buildSkillTree(detail: ClassDetailDef): PlacedSkill[] {
   const flat = flattenSkills(detail);
   const slots = CLASS_GUI_SLOTS[detail.id];
@@ -95,8 +82,8 @@ export function buildSkillTree(detail: ClassDetailDef): PlacedSkill[] {
 
   const placed: PlacedSkill[] = flat.map((entry, index) => {
     let guiSlot: number;
-    if (usesFlattenIndexMap(slots, flat.length)) {
-      guiSlot = slots![index]!;
+    if (slots && slots.length === flat.length && slots[index] != null) {
+      guiSlot = slots[index]!;
     } else {
       guiSlot = inferGuiSlot(entry, index, flat, detail, slotBySkillId);
     }

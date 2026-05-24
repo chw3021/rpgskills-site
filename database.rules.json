@@ -2,10 +2,12 @@
   "rules": {
     "boards": {
       "$boardId": {
+        ".read": true,
         "$postId": {
           ".read": true,
           ".write": "auth != null && (!data.exists() ? newData.child('authorUid').val() === auth.uid : data.child('authorUid').val() === auth.uid)",
           "comments": {
+            ".read": true,
             "$commentId": {
               ".read": true,
               ".write": "auth != null && (!data.exists() ? newData.child('authorUid').val() === auth.uid : data.child('authorUid').val() === auth.uid)"
