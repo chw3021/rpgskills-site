@@ -30,14 +30,14 @@ export const standardBearerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '흰 깃발과 단검으로 전열을 다지는 기수입니다. 전장기·기세꺾기·신호·포고로 적을 포섭하고, 기병깃술로 근접 피해를 키웁니다.',
-      '기장으로 승진하며 깃봉추적·기세분쇄·신호반향·포고각인 연계와 패업령으로 군진을 이끕니다.',
-      '진기는 연대기와 기운파달·율격종결로 군기를 정점에 올리며, 전장 전체를 깃발 아래 통일합니다.',
+      '흰 깃발과 단검으로 전열을 다지는 기수입니다. 전장기·기세꺾기·신호·포고로 적을 포섭하고, 깃기돌진으로 전장을 가로지릅니다.',
+      '기장으로 승진하며 깃봉추적·깃기교환 연계와 패업령으로 군진을 이끕니다.',
+      '진기는 연대기와 전장돌파·율격종결로 군기를 정점에 올리며, 전장 전체를 깃발 아래 통일합니다.',
     ],
     en: [
-      'A standard bearer who holds the line with white banner and dagger. War Banner, Demoralize, Signal Call, and Proclaim coerce foes while Heraldry boosts melee damage.',
-      'Promotion to Ensign unlocks flag fall, dirge cut, recall ping, and edict mark before Decree of Ruin leads the formation.',
-      'The Grand Ensign commands with Rally Standard and high command chains until the whole army marches under one banner.',
+      'A standard bearer who holds the line with white banner and dagger. War Banner, Demoralize, Signal Call, and Proclaim coerce foes while Banner Charge cuts across the field.',
+      'Promotion to Ensign unlocks flag fall, standard swap, and Decree of Ruin to lead the formation.',
+      'The Grand Ensign commands with Rally Standard and field breakthrough chains until the whole army marches under one banner.',
     ],
   },
   skillSections: [
@@ -49,6 +49,7 @@ export const standardBearerDetail: ClassDetailDef = {
           id: 'warBanner',
           icon: 'spear',
           element: 'wind',
+          guiColumn: 0,
           ko: {
             name: '전장기',
             input: '우클릭',
@@ -67,6 +68,7 @@ export const standardBearerDetail: ClassDetailDef = {
           id: 'demoralize',
           icon: 'slash',
           element: 'wind',
+          guiColumn: 1,
           ko: {
             name: '기세꺾기',
             input: '웅크리기 + 우클릭',
@@ -83,6 +85,7 @@ export const standardBearerDetail: ClassDetailDef = {
           id: 'signalCall',
           icon: 'rush',
           element: 'wind',
+          guiColumn: 2,
           ko: {
             name: '신호',
             input: '손 바꾸기',
@@ -99,17 +102,33 @@ export const standardBearerDetail: ClassDetailDef = {
           id: 'proclaim',
           icon: 'stab',
           element: 'wind',
+          guiColumn: 3,
           ko: {
             name: '포고',
             input: '웅크리기 + 손 바꾸기',
-            description:
-              '주변 적에게 지원 피해와 포섭을 줍니다. 범위 타격은 proclaimAtks 계수에 0.85를 곱해 atks()로 적용됩니다(Bearerskills.java).',
+            description: '주변 적에게 지원 피해와 포섭을 줍니다.',
           },
           en: {
             name: 'Proclaim',
             input: 'Sneak + swap hands',
-            description:
-              'Nearby support damage and coerce. AoE hits multiply proclaimAtksPrimary/Flat by 0.85 before atks() in Bearerskills.java.',
+            description: 'Deals nearby support damage and coerces foes.',
+          },
+          masterLevel: 50,
+        },
+        {
+          id: 'bannerCharge',
+          icon: 'rush',
+          element: 'wind',
+          guiColumn: 4,
+          ko: {
+            name: '깃기돌진',
+            input: '공중 우클릭',
+            description: '깃발을 들고 전방으로 돌진하며 경로상 적에게 지원 피해와 포섭을 줍니다.',
+          },
+          en: {
+            name: 'Banner Charge',
+            input: 'Right-click in air',
+            description: 'Dash forward with your banner, dealing support damage and coerce along the path.',
           },
           masterLevel: 50,
         },
@@ -158,6 +177,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'warBanner',
+          guiColumn: 9,
           ko: {
             name: '깃봉추적',
             input: '전장기 맥동 종료 직후 우클릭',
@@ -175,6 +195,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'demoralize',
+          guiColumn: 10,
           ko: {
             name: '기세분쇄',
             input: '기세꺾기 직후 웅크리기 + 우클릭',
@@ -192,6 +213,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'signalCall',
+          guiColumn: 11,
           ko: {
             name: '신호반향',
             input: '신호 직후 손 바꾸기',
@@ -209,6 +231,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'proclaim',
+          guiColumn: 12,
           ko: {
             name: '포고각인',
             input: '포고 직후 웅크리기 + 손 바꾸기',
@@ -221,11 +244,30 @@ export const standardBearerDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'standardSwap',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'bannerCharge',
+          guiColumn: 13,
+          ko: {
+            name: '깃기교환',
+            input: '깃기돌진 직후 우클릭',
+            description: '전방 적과 위치를 교환하거나 전방으로 도약합니다. 착지 시 주변 적에게 지원 피해를 줍니다.',
+          },
+          en: {
+            name: 'Standard Swap',
+            input: 'Right-click after Banner Charge',
+            description: 'Swap places with a forward foe or leap ahead. Deals support damage on landing.',
+          },
+        },
+        {
           id: 'battleDirge',
           icon: 'rush',
           element: 'wind',
           followUp: true,
           chainOf: 'warHorn',
+          guiColumn: 14,
           ko: {
             name: '전장장송',
             input: '전투나팔 직후 웅크리기 + 좌클릭',
@@ -242,6 +284,7 @@ export const standardBearerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'wind',
           passive: true,
+          guiColumn: 16,
           ko: { name: '기병깃술강화', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
           en: { name: 'Heraldry Ascendant', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
         },
@@ -250,7 +293,7 @@ export const standardBearerDetail: ClassDetailDef = {
           icon: 'axe',
           element: 'wind',
           ultimate: true,
-          guiColumn: 8,
+          guiColumn: 17,
           ko: {
             name: '패업령',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
@@ -276,6 +319,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'warBanner',
+          guiColumn: 18,
           ko: {
             name: '기운파달',
             input: '깃봉추적 직후 우클릭',
@@ -293,6 +337,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'demoralize',
+          guiColumn: 19,
           ko: {
             name: '기세압축',
             input: '기세분쇄 직후 웅크리기 + 우클릭',
@@ -310,6 +355,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'signalCall',
+          guiColumn: 20,
           ko: {
             name: '파열호각',
             input: '신호반향 직후 손 바꾸기',
@@ -327,6 +373,7 @@ export const standardBearerDetail: ClassDetailDef = {
           element: 'wind',
           followUp: true,
           chainOf: 'proclaim',
+          guiColumn: 21,
           ko: {
             name: '율격종결',
             input: '포고각인 직후 웅크리기 + 손 바꾸기',
@@ -339,11 +386,30 @@ export const standardBearerDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'fieldBreakthrough',
+          icon: 'rush',
+          element: 'wind',
+          followUp: true,
+          chainOf: 'bannerCharge',
+          guiColumn: 22,
+          ko: {
+            name: '전장돌파',
+            input: '깃기교환 직후 우클릭',
+            description: '전장을 가로지르는 긴 돌진으로 경로상 적에게 지원 피해와 포섭을 줍니다.',
+          },
+          en: {
+            name: 'Field Breakthrough',
+            input: 'Right-click after Standard Swap',
+            description: 'Long dash across the battlefield with support damage and coerce along the path.',
+          },
+        },
+        {
           id: 'ruinDirge',
           icon: 'rush',
           element: 'wind',
           followUp: true,
           chainOf: 'warHorn',
+          guiColumn: 23,
           ko: {
             name: '결전장송',
             input: '전장장송 직후 웅크리기 + 좌클릭',
@@ -360,13 +426,16 @@ export const standardBearerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'wind',
           passive: true,
+          guiColumn: 25,
           ko: {
             name: '진기병깃술',
-            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+            description:
+              '공격력·방어력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
           },
           en: {
             name: 'Grand Heraldry',
-            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
+            description:
+              'Increases damage and defense. First limit-break ultimate cooldown is halved.',
           },
         },
         {
@@ -374,15 +443,18 @@ export const standardBearerDetail: ClassDetailDef = {
           icon: 'shield',
           element: 'wind',
           ultimate: true,
+          guiColumn: 26,
           ko: {
             name: '연대기',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
-            description: '본인과 가까운 파티원에게 흡수·저항을 부여합니다.',
+            description:
+              '본인과 가까운 파티원에게 흡수·저항을 부여하고, 주변 적에게 지원 피해와 포섭을 줍니다.',
           },
           en: {
             name: 'Rally Standard',
             input: 'Sneak + hotkey 5 (combat mode)',
-            description: 'Grants Absorption and Resistance to you and nearby party.',
+            description:
+              'Grants Absorption and Resistance to you and nearby party, and deals support damage to nearby foes.',
           },
         },
       ],

@@ -16,12 +16,12 @@ export const broilerDetail: ClassDetailDef = {
   story: {
     ko: [
       '상의를 벗은 근육질 투사가 철퇴로 전열을 무너뜨립니다. 지진강타·충격파·방어 분쇄·대지 쐐기·균열·먼지 폭발로 대지를 흔듭니다.',
-      '감내는 공격력을 올리고 가까운 적을 도전 상대로 지정합니다. 여진으로 지진강타를 이어갑니다.',
+      '전투본능은 공격력을 올리고 가까운 적을 도전 상대로 지정합니다. 여진으로 지진강타를 이어갑니다.',
       '감내자는 대지를 분쇄하는 암석 낙하를, 역전가는 태산 꼭대기에서 아래를 내려다보듯 전장을 지배하며 단층 완파로 끝냅니다.',
     ],
     en: [
       'A shirtless, muscular brawler who breaks formations with a mace. Seismic slam, shockwave, armor crack, earth spikes, fissures, and dust bursts shake the ground.',
-      'Endurance raises damage and marks a nearby foe for a duel. Afterpulse chains off seismic slam.',
+      'Combat Instinct raises damage and marks a nearby foe for a duel. Afterpulse chains off seismic slam.',
       'Risk Taker shatters the earth with bedrock barrage; Game Changer stands atop the mountain, looking down on the field before faultline finisher ends the fight.',
     ],
   },
@@ -115,13 +115,14 @@ export const broilerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
+          guiColumn: 7,
           ko: {
-            name: '감내',
+            name: '전투본능',
             input: '숫자키 3 (전투 모드)',
             description: '공격력이 증가하고 가까운 대상을 도전 상대로 지정합니다.',
           },
           en: {
-            name: 'Endurance',
+            name: 'Combat Instinct',
             input: 'Hotkey 3 (combat mode)',
             description: 'Increases damage and marks a nearby foe for a duel.',
           },
@@ -138,6 +139,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'seismicSlam',
+          guiColumn: 9,
           ko: {
             name: '여진',
             input: '지진강타 직후 웅크리기 + 손 바꾸기',
@@ -155,6 +157,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'shockwave',
+          guiColumn: 10,
           ko: {
             name: '충격 잔향',
             input: '충격파 직후 손 바꾸기',
@@ -172,6 +175,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'earthSpike',
+          guiColumn: 12,
           ko: {
             name: '대지 고정',
             input: '대지 쐐기 직후 웅크리기 + 우클릭',
@@ -189,6 +193,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'fissure',
+          guiColumn: 13,
           ko: {
             name: '균열 확산',
             input: '균열 직후 좌클릭',
@@ -206,6 +211,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'dustBurst',
+          guiColumn: 14,
           ko: {
             name: '먼지 파동',
             input: '먼지 폭발 직후 우클릭',
@@ -222,14 +228,16 @@ export const broilerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
-          ko: { name: '감내강화', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
-          en: { name: 'Endurance+', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+          guiColumn: 16,
+          ko: { name: '감내', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Endurance', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
         },
         {
           id: 'bedrockBarrage',
           icon: 'bomb',
           element: 'earth',
           ultimate: true,
+          guiColumn: 17,
           ko: {
             name: '암석 낙하',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
@@ -255,6 +263,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'seismicSlam',
+          guiColumn: 18,
           ko: {
             name: '단층 주행',
             input: '여진 성공 직후 웅크리기 + 좌클릭',
@@ -272,6 +281,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'shockwave',
+          guiColumn: 19,
           ko: {
             name: '환류격',
             input: '충격 잔향 직후 손 바꾸기',
@@ -289,6 +299,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'earthSpike',
+          guiColumn: 21,
           ko: {
             name: '응결 지반',
             input: '대지 고정 직후 웅크리기 + 우클릭',
@@ -306,6 +317,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'fissure',
+          guiColumn: 22,
           ko: {
             name: '판층 개화',
             input: '단층 주행 종료 직후 좌클릭',
@@ -323,6 +335,7 @@ export const broilerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'dustBurst',
+          guiColumn: 23,
           ko: {
             name: '먼지 폭풍',
             input: '먼지 파동 직후 우클릭',
@@ -339,12 +352,13 @@ export const broilerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
+          guiColumn: 25,
           ko: {
-            name: '감내',
+            name: '역전',
             description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
           },
           en: {
-            name: 'Endurance',
+            name: 'Reversal',
             description: 'Increases damage. First limit-break ultimate cooldown is halved.',
           },
         },
@@ -353,6 +367,7 @@ export const broilerDetail: ClassDetailDef = {
           icon: 'fist-serious',
           element: 'earth',
           ultimate: true,
+          guiColumn: 26,
           ko: {
             name: '단층 완파',
             input: '웅크리기 + 숫자키 5 (전투 모드)',

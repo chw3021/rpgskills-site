@@ -17,12 +17,12 @@ export const wrestlerDetail: ClassDetailDef = {
     ko: [
       '깃발무늬 무기와 금빛 갑옷으로 싸우는 유술가입니다. 앞목 조르기·들이치기·안아넘기기·업어치기·풍차 돌리기·목잡아 메치기로 한 명을 붙잡습니다.',
       '팔뚝 내려치기는 높이에 비례해 강해지고, 낙상은 피해와 넉백 저항을 올립니다. 연계기로 상위 난타·뒤메치기·머리꽂기를 이어갑니다.',
-      '고수는 무릎 비틀기로 상대를 묶고, 패왕은 뒤공중돌기 뒤 회오리 내려꽂기로 전장을 끝냅니다.',
+      '고수는 무릎 비틀기로 상대를 묶고, 패왕은 낙상 충격파 범위와 회오리 내려꽂기로 전장을 끝냅니다.',
     ],
     en: [
       'A wrestler who fights with banner-pattern weapons and golden armor. Guillotine choke, tackle, suplex, arm throw, giant swing, and choke slam lock down one target.',
       'Forearm smash scales with jump height; takedown raises damage and knockback resistance. Follow-ups chain into pounding, backdrop, and pile driver.',
-      'Adept applies the heel hook leg lock; Champion leaps from the ring with a backflip into cyclone driver to finish the fight.',
+      'Adept applies the heel hook leg lock; Champion widens takedown shockwaves before cyclone driver finishes the fight.',
     ],
   },
   skillSections: [
@@ -263,8 +263,9 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
-          ko: { name: '제압', description: '연계기의 구속 시간이 증가합니다.' },
-          en: { name: 'Submission', description: 'Increases follow-up lock duration.' },
+          guiColumn: 16,
+          ko: { name: '제압', description: '공격력이 증가합니다. 연계기의 구속(홀딩) 시간이 증가합니다.' },
+          en: { name: 'Submission', description: 'Increases damage. Follow-up lock duration is increased.' },
         },
         {
           id: 'heelHook',
@@ -332,13 +333,16 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
+          guiColumn: 25,
           ko: {
             name: '진정한 싸움꾼',
-            description: '추가 피해 배율이 오릅니다(낙상 레벨 반영).',
+            description:
+              '공격력·방어력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다. 낙상(지면 충격) 효과의 충격파 범위가 증가합니다(낙상 LV당 +4%).',
           },
           en: {
             name: 'Fighter on the Ring',
-            description: 'Extra damage multiplier scales with Takedown level.',
+            description:
+              'Increases damage and defense. First limit-break ultimate cooldown is halved. Shockwave radius of takedown ground impacts increases (+4% per TakeDown level).',
           },
         },
         {

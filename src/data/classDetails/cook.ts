@@ -15,14 +15,14 @@ export const cookDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '삽으로 전장에 요리를 펼치는 요리사입니다. 디저트벌·버섯탕·나눔밥상·셰프가드·구운요리로 아군을 돕고, 포만감으로 공격력을 키웁니다.',
-      '셰프는 슈가러시·스톡팟·한상차림으로 지원을 강화하고, 특별메뉴로 화려한 일격을 냅니다.',
-      '대가는 치즈분수·마이야르·헬키친으로 전장을 뜨거운 주방처럼 지배합니다.',
+      '삽으로 전장에 요리를 펼치는 요리사입니다. 디저트비·버섯탕·나눔밥상·멜론벽·구운요리·프라이팬 휘두르기로 아군을 돕고, 포만감으로 공격력을 키웁니다.',
+      '셰프는 슈가러시·스톡팟·한상차림·식칼 연속 베기로 지원을 강화하고, 특별메뉴로 화려한 일격을 냅니다.',
+      '대가는 치즈분수·마이야르·국자 휘두르기·헬키친으로 전장을 뜨거운 주방처럼 지배합니다.',
     ],
     en: [
-      'A cook who feeds the front line with a shovel. Dessert Bee, Mushroom Soup, Shared Table, Chef Guard, and Grilled Dish support allies while Saturation raises damage.',
-      'The Chef adds Sugar Rush, Stockpot, and Feast Spread, then finishes with Special Menu in combat mode.',
-      'The Demeter rules the field with Cheese Fountain, Maillard, and Hell Kitchen.',
+      'A cook who feeds the front line with a shovel. Dessert Rain, Mushroom Soup, Shared Table, Melon Wall, Grilled Dish, and Pan Whirl support allies while Saturation raises damage.',
+      'The Chef adds Sugar Rush, Stockpot, Feast Spread, and Knife Flurry, then finishes with Special Menu in combat mode.',
+      'The Demeter rules the field with Cheese Fountain, Maillard, Ladle Swing, and Hell Kitchen.',
     ],
   },
   skillSections: [
@@ -34,13 +34,14 @@ export const cookDetail: ClassDetailDef = {
           id: 'dessertBee',
           icon: 'pickaxe',
           element: 'fire',
+          guiColumn: 0,
           ko: {
-            name: '디저트벌',
+            name: '디저트비',
             input: '삽 + 손 바꾸기',
             description: '달콤한 비로 아군을 강화합니다.',
           },
           en: {
-            name: 'Dessert Bee',
+            name: 'Dessert Rain',
             input: 'Shovel + swap hands',
             description: 'Sweet rain buffs allies.',
           },
@@ -50,6 +51,7 @@ export const cookDetail: ClassDetailDef = {
           id: 'mushroomSoup',
           icon: 'recovery',
           element: 'fire',
+          guiColumn: 1,
           ko: {
             name: '버섯탕',
             input: '삽 + 웅크리기 + 우클릭',
@@ -66,6 +68,7 @@ export const cookDetail: ClassDetailDef = {
           id: 'sharedTable',
           icon: 'potion',
           element: 'fire',
+          guiColumn: 2,
           ko: {
             name: '나눔밥상',
             input: '삽 + 우클릭',
@@ -84,14 +87,15 @@ export const cookDetail: ClassDetailDef = {
           id: 'chefGuard',
           icon: 'shield',
           element: 'fire',
+          guiColumn: 3,
           ko: {
-            name: '셰프가드',
+            name: '멜론벽',
             input: '삽 + 좌클릭',
             description:
               '주변 아군에게 잠시 피해 저항을 부여하고, 충돌한 몹을 기절시킵니다.',
           },
           en: {
-            name: 'Chef Guard',
+            name: 'Melon Wall',
             input: 'Shovel + left-click',
             description:
               'Briefly grants nearby allies damage resistance and stuns colliding mobs.',
@@ -102,6 +106,7 @@ export const cookDetail: ClassDetailDef = {
           id: 'grilledDish',
           icon: 'flame',
           element: 'fire',
+          guiColumn: 4,
           ko: {
             name: '구운요리',
             input: '삽 + 웅크리기 + 손 바꾸기',
@@ -111,6 +116,23 @@ export const cookDetail: ClassDetailDef = {
             name: 'Grilled Dish',
             input: 'Shovel + sneak + swap hands',
             description: 'Drops grilled meals around the target.',
+          },
+          masterLevel: 50,
+        },
+        {
+          id: 'panWhirl',
+          icon: 'flame',
+          element: 'fire',
+          guiColumn: 5,
+          ko: {
+            name: '프라이팬 휘두르기',
+            input: '삽 + 웅크리기 + 좌클릭',
+            description: '전방에 화염 피해를 줍니다. 숙련도에 따라 식칼·국자로 연계됩니다.',
+          },
+          en: {
+            name: 'Pan Whirl',
+            input: 'Shovel + sneak + left-click',
+            description: 'Deals flame damage in front. Chains into knife and ladle at higher proficiency.',
           },
           masterLevel: 50,
         },
@@ -139,20 +161,22 @@ export const cookDetail: ClassDetailDef = {
           id: 'sugarRush',
           icon: 'rush',
           element: 'fire',
+          guiColumn: 9,
           chainOf: 'dessertBee',
           ko: {
             name: '슈가러시',
-            description: '디저트벌이 속도·점프력·야간 투시를 부여합니다.',
+            description: '디저트비가 속도·점프력·야간 투시를 부여합니다.',
           },
           en: {
             name: 'Sugar Rush',
-            description: 'Dessert Bee grants speed, jump boost, and night vision.',
+            description: 'Dessert Rain grants speed, jump boost, and night vision.',
           },
         },
         {
           id: 'stockpot',
           icon: 'recovery',
           element: 'fire',
+          guiColumn: 10,
           chainOf: 'mushroomSoup',
           ko: {
             name: '스톡팟',
@@ -167,6 +191,7 @@ export const cookDetail: ClassDetailDef = {
           id: 'feastSpread',
           icon: 'recovery',
           element: 'fire',
+          guiColumn: 11,
           chainOf: 'sharedTable',
           ko: {
             name: '한상차림',
@@ -181,20 +206,22 @@ export const cookDetail: ClassDetailDef = {
           id: 'chefsGuard',
           icon: 'shield',
           element: 'fire',
+          guiColumn: 12,
           chainOf: 'chefGuard',
           ko: {
             name: '셰프의수호',
-            description: '셰프가드 사용 시 주변 아군에게 흡수 체력을 추가로 부여합니다.',
+            description: '멜론벽 사용 시 주변 아군에게 흡수 체력을 추가로 부여합니다.',
           },
           en: {
             name: "Chef's Guard",
-            description: 'Chef Guard also grants nearby allies absorption.',
+            description: 'Melon Wall also grants nearby allies absorption.',
           },
         },
         {
           id: 'spicyPlating',
           icon: 'flame',
           element: 'fire',
+          guiColumn: 13,
           chainOf: 'grilledDish',
           ko: {
             name: '매콤한플레이팅',
@@ -203,6 +230,24 @@ export const cookDetail: ClassDetailDef = {
           en: {
             name: 'Spicy Plating',
             description: 'Healed allies gain extra damage through Saturation.',
+          },
+        },
+        {
+          id: 'knifeFlurry',
+          icon: 'fist',
+          element: 'fire',
+          guiColumn: 14,
+          chainOf: 'panWhirl',
+          followUp: true,
+          ko: {
+            name: '식칼 연속 베기',
+            input: '삽 + 웅크리기 + 좌클릭 (연계)',
+            description: '프라이팬 휘두르기 직후 전방 적에게 연속 화염 베기를 가합니다.',
+          },
+          en: {
+            name: 'Knife Flurry',
+            input: 'Shovel + sneak + left-click (chain)',
+            description: 'After Pan Whirl, slashes nearby foes with rapid flame cuts.',
           },
         },
         {
@@ -248,20 +293,22 @@ export const cookDetail: ClassDetailDef = {
           id: 'cheeseFountain',
           icon: 'sun',
           element: 'fire',
+          guiColumn: 18,
           chainOf: 'dessertBee',
           ko: {
             name: '치즈분수',
-            description: '디저트벌에 녹아내린 치즈가 추가 화염 피해를 줍니다.',
+            description: '디저트비에 녹아내린 치즈가 추가 화염 피해를 줍니다.',
           },
           en: {
             name: 'Cheese Fountain',
-            description: 'Dessert Bee adds molten cheese fire damage.',
+            description: 'Dessert Rain adds molten cheese fire damage.',
           },
         },
         {
           id: 'maillard',
           icon: 'flame',
           element: 'fire',
+          guiColumn: 22,
           chainOf: 'grilledDish',
           ko: {
             name: '마이야르',
@@ -270,6 +317,24 @@ export const cookDetail: ClassDetailDef = {
           en: {
             name: 'Maillard',
             description: 'Grilled Dish burn damage is empowered.',
+          },
+        },
+        {
+          id: 'ladleSwing',
+          icon: 'flame',
+          element: 'fire',
+          guiColumn: 23,
+          chainOf: 'panWhirl',
+          followUp: true,
+          ko: {
+            name: '국자 휘두르기',
+            input: '삽 + 웅크리기 + 좌클릭 (연계)',
+            description: '식칼 연속 베기 직후 넓은 범위의 강화 화염 타격을 가합니다.',
+          },
+          en: {
+            name: 'Ladle Swing',
+            input: 'Shovel + sneak + left-click (chain)',
+            description: 'After Knife Flurry, sweeps a wide empowered flame strike.',
           },
         },
         {
