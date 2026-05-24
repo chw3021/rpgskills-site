@@ -101,12 +101,12 @@ export const gardenerDetail: ClassDetailDef = {
           ko: {
             name: '포자구름',
             input: '삽 + 웅크리기 + 손 바꾸기',
-            description: '포자로 적의 시야를 가립니다. 피해는 패널 공격력에 곱해지는 배율입니다.',
+            description: '포자로 적의 시야를 가립니다',
           },
           en: {
             name: 'Spore Cloud',
             input: 'Shovel + sneak + swap hands',
-            description: 'Blinds enemies with spores. Damage is a multiplier × panel attack damage.',
+            description: 'Blinds enemies with spores',
           },
           masterLevel: 50,
         },
@@ -244,13 +244,13 @@ export const gardenerDetail: ClassDetailDef = {
             name: '과성장',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '전투 모드에서만 발동합니다. 광역 뿌리 폭발로 적을 오래 묶습니다(배율 × 패널 공격력). 숙련 2에서 재사용 대기 35초/70초.',
+              '전투 모드에서만 발동합니다. 광역 뿌리 폭발로 적을 오래 묶습니다. 숙련 2에서 재사용 대기 35초/70초.',
           },
           en: {
             name: 'Overgrowth',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Combat mode only. Large root burst with a long hold (multiplier × panel attack damage). Proficiency 2 shortens cooldown to 35s / 70s.',
+              'Combat mode only. Large root burst with a long hold. Proficiency 2 shortens cooldown to 35s / 70s.',
           },
         },
       ],
@@ -362,13 +362,13 @@ export const gardenerDetail: ClassDetailDef = {
             name: '세계수',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '전투 모드에서만 발동합니다. 더 넓은 범위 피해와 장시간 제압(배율 × 패널 공격력).',
+              '전투 모드에서만 발동합니다. 더 넓은 범위 피해와 장시간 제압.',
           },
           en: {
             name: 'World Tree',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Combat mode only. Wider damage and longer suppression (multiplier × panel attack damage).',
+              'Combat mode only. Wider damage and longer suppression.',
           },
         },
       ],

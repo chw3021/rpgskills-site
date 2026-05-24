@@ -15,7 +15,7 @@ export const wrestlerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '깃발무늬 무기와 금빛 갑옷으로 싸우는 유술가입니다. 앞목 조르기·들이치기·안아넘기기·업어치기·풍차 돌리기·목잡아 메치기로 한 명을 붙잡습니다.',
+      '너클와 금빛 갑옷으로 싸우는 유술가입니다. 앞목 조르기·들이치기·안아넘기기·업어치기·풍차 돌리기·목잡아 메치기로 한 명을 붙잡습니다.',
       '팔뚝 내려치기는 높이에 비례해 강해지고, 낙상은 피해와 넉백 저항을 올립니다. 연계기로 상위 난타·뒤메치기·머리꽂기를 이어갑니다.',
       '고수는 무릎 비틀기로 상대를 묶고, 패왕은 낙상 충격파 범위와 회오리 내려꽂기로 전장을 끝냅니다.',
     ],
@@ -36,7 +36,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '앞목 조르기',
-            input: '깃발무늬 무기 + 점프 + 좌클릭',
+            input: '너클 + 점프 + 좌클릭',
             description: '적을 잡고 조른 뒤 피해를 줍니다.',
           },
           en: {
@@ -52,7 +52,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '들이치기',
-            input: '깃발무늬 + 웅크리기 + 우클릭',
+            input: '너클 + 웅크리기 + 우클릭',
             description: '적을 넘어뜨리고 상위 난타 연계를 엽니다.',
           },
           en: {
@@ -68,7 +68,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '안아넘기기',
-            input: '깃발무늬 + 비웅크리기 + 우클릭',
+            input: '너클 + 비웅크리기 + 우클릭',
             description: '잡은 적을 뒤로 넘기고 뒤메치기 연계를 엽니다.',
           },
           en: {
@@ -84,7 +84,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '업어치기',
-            input: '깃발무늬 + 웅크리기 + 손 바꾸기',
+            input: '너클 + 웅크리기 + 손 바꾸기',
             description: '업어치기로 던지고 머리꽂기 연계를 엽니다.',
           },
           en: {
@@ -100,7 +100,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '풍차 돌리기',
-            input: '깃발무늬 + 웅크리기 + 근접 공격',
+            input: '너클 + 웅크리기 + 근접 공격',
             description: '다른 스킬 사용 시 잡은 적을 던집니다.',
           },
           en: {
@@ -116,7 +116,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '목잡아 메치기',
-            input: '깃발무늬 + 비웅크리기 + 손 바꾸기',
+            input: '너클 + 비웅크리기 + 손 바꾸기',
             description: '잡은 적을 내려찍고 손바닥 치기 연계를 엽니다.',
           },
           en: {
@@ -132,7 +132,7 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           ko: {
             name: '팔뚝 내려치기',
-            input: '깃발무늬 + 점프 + 근접 공격',
+            input: '너클 + 점프 + 근접 공격',
             description: '점프 높이에 비례해 피해가 증가합니다.',
           },
           en: {
