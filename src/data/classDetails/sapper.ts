@@ -101,6 +101,22 @@ export const sapperDetail: ClassDetailDef = {
           masterLevel: 50,
         },
         {
+          id: 'tntRush',
+          icon: 'bomb',
+          element: 'earth',
+          guiColumn: 4,
+          ko: {
+            name: 'TNT 돌격',
+            input: '웅크리기 + 좌클릭',
+            description: 'TNT 수레를 적에게 돌진시켜 피해·제압합니다.',
+          },
+          en: {
+            name: 'TNT Rush',
+            input: 'Sneak + left-click',
+            description: 'Rushes a TNT minecart at foes for damage and suppression.',
+          },
+        },
+        {
           id: 'tacticalWithdrawal',
           icon: 'rush',
           element: 'earth',
@@ -117,6 +133,7 @@ export const sapperDetail: ClassDetailDef = {
             description:
               'Detonates and clears all deployables, damages nearby foes, then leaps forward. Blast radius and damage scale with proficiency.',
           },
+          masterLevel: 1,
         },
         {
           id: 'fieldworks',
@@ -139,22 +156,6 @@ export const sapperDetail: ClassDetailDef = {
       id: 'limit1',
       requiredProficiency: 1,
       skills: [
-        {
-          id: 'tntRush',
-          icon: 'bomb',
-          element: 'earth',
-          guiColumn: 4,
-          ko: {
-            name: 'TNT 돌격',
-            input: '웅크리기 + 좌클릭',
-            description: 'TNT 수레를 적에게 돌진시켜 피해·제압합니다.',
-          },
-          en: {
-            name: 'TNT Rush',
-            input: 'Sneak + left-click',
-            description: 'Rushes a TNT minecart at foes for damage and suppression.',
-          },
-        },
         {
           id: 'catapultBrace',
           icon: 'bomb',
