@@ -16,13 +16,13 @@ export const daggerlistDetail: ClassDetailDef = {
   story: {
     ko: [
       '양손 단검과 그림자로 싸우는 기동형 암살자입니다. 절개·그림자 질주·칼날 부채로 출혈을 쌓고, 분신이 기술을 따라 칩니다.',
-      '처형은 출혈 중첩마다 피해가 커지고, 암살자 패시브로 공격력과 최대 5중첩 출혈을 노립니다.',
-      '암살자는 어둠 속 급습과 죽음의 표식으로 적을 사냥하고, 암영은 다섯 개 넘는 그림자 분신과 최후의 절단으로 전장을 가릅니다.',
+      '숙련 1부터 연계 기술(그림자 절단, 잔상 베기, 칼날 폭풍, 쌍격습, 마무리 일격)이 열립니다.',
+      '암살자는 죽음의 표식으로 적을 사냥하고, 암영은 2차 연계와 최후의 절단으로 전장을 가릅니다.',
     ],
     en: [
       'A mobile assassin who fights with twin daggers and shadow. Slash, shadow dash, and fan of blades stack bleed while clones echo your strikes.',
-      'Execution hits harder per bleed stack; the Assassin passive raises damage and caps bleed at five stacks.',
-      'The Assassin tier strikes from darkness with Death Mark; Shade commands five or more shadow clones and finishes with Final Cut.',
+      'Proficiency 1 unlocks combo follow-ups: Shadow Cut, Afterimage, Blade Storm, Twin Assault, and Finisher.',
+      'Assassin tier hunts with Death Mark; Shade tier adds empowered limit-2 combos and Final Cut.',
     ],
   },
   skillSections: [
@@ -50,32 +50,16 @@ export const daggerlistDetail: ClassDetailDef = {
           id: 'shadowDash',
           icon: 'rush',
           element: 'dark',
-          ko: {
-            name: '그림자 질주',
-            input: '가위 + 웅크리기 + 우클릭',
-            description: '전방으로 돌진하며 벱니다.',
-          },
-          en: {
-            name: 'Shadow Dash',
-            input: 'Shears + sneak + right-click',
-            description: 'Dashes forward and cuts.',
-          },
+          ko: { name: '그림자 질주', input: '가위 + 웅크리기 + 우클릭', description: '전방으로 돌진하며 벱니다.' },
+          en: { name: 'Shadow Dash', input: 'Shears + sneak + right-click', description: 'Dashes forward and cuts.' },
           masterLevel: 50,
         },
         {
           id: 'fanOfBlades',
           icon: 'stab',
           element: 'dark',
-          ko: {
-            name: '칼날 부채',
-            input: '가위 + 비웅크리기 + 좌클릭',
-            description: '주변으로 칼날을 흩뿌립니다.',
-          },
-          en: {
-            name: 'Fan of Blades',
-            input: 'Shears + not sneaking + left-click',
-            description: 'Scatters blades around you.',
-          },
+          ko: { name: '칼날 부채', input: '가위 + 비웅크리기 + 좌클릭', description: '주변으로 칼날을 흩뿌립니다.' },
+          en: { name: 'Fan of Blades', input: 'Shears + not sneaking + left-click', description: 'Scatters blades around you.' },
           masterLevel: 50,
         },
         {
@@ -115,14 +99,8 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'book',
           element: 'dark',
           passive: true,
-          ko: {
-            name: '암살자',
-            description: '공격력이 증가합니다. 출혈은 최대 5중첩까지 쌓입니다.',
-          },
-          en: {
-            name: 'Assassin',
-            description: 'Increases damage. Bleed stacks up to 5 times.',
-          },
+          ko: { name: '암살자', description: '공격력이 증가합니다. 출혈은 최대 5중첩까지 쌓입니다.' },
+          en: { name: 'Assassin', description: 'Increases damage. Bleed stacks up to 5 times.' },
         },
       ],
     },
@@ -131,6 +109,86 @@ export const daggerlistDetail: ClassDetailDef = {
       requiredProficiency: 1,
       skills: [
         {
+          id: 'shadowCut',
+          icon: 'slash',
+          element: 'dark',
+          followUp: true,
+          ko: {
+            name: '그림자 절단',
+            input: '절개 후 재우클릭',
+            description: '절개 사용 후 짧은 시간 안에 재우클릭으로 그림자 절단을 이어갑니다.',
+          },
+          en: {
+            name: 'Shadow Cut',
+            input: 'Right-click again after Slash',
+            description: 'Within a short window after Slash, right-click again for a shadow cut.',
+          },
+        },
+        {
+          id: 'afterimage',
+          icon: 'rush',
+          element: 'dark',
+          followUp: true,
+          ko: {
+            name: '잔상 베기',
+            input: '그림자 질주 후 웅크리기 + 재우클릭',
+            description: '그림자 질주 직후 웅크리기+재우클릭으로 잔상 베기를 이어갑니다.',
+          },
+          en: {
+            name: 'Afterimage',
+            input: 'Sneak + right-click again after Shadow Dash',
+            description: 'Within a short window after Shadow Dash, sneak and right-click again.',
+          },
+        },
+        {
+          id: 'bladeStorm',
+          icon: 'stab',
+          element: 'dark',
+          followUp: true,
+          ko: {
+            name: '칼날 폭풍',
+            input: '칼날 부채 후 좌클릭',
+            description: '칼날 부채 직후 좌클릭으로 칼날 폭풍을 이어갑니다.',
+          },
+          en: {
+            name: 'Blade Storm',
+            input: 'Left-click again after Fan of Blades',
+            description: 'Within a short window after Fan of Blades, left-click for a blade storm.',
+          },
+        },
+        {
+          id: 'twinAssault',
+          icon: 'stealth',
+          element: 'dark',
+          followUp: true,
+          ko: {
+            name: '쌍격습',
+            input: '그림자 분신 후 손 바꾸기',
+            description: '그림자 분신 직후 손 바꾸기로 분신과 함께 쌍격습을 이어갑니다.',
+          },
+          en: {
+            name: 'Twin Assault',
+            input: 'Swap hands again after Shadow Clone',
+            description: 'Within a short window after Shadow Clone, swap hands for a twin assault.',
+          },
+        },
+        {
+          id: 'finisher',
+          icon: 'stab',
+          element: 'dark',
+          followUp: true,
+          ko: {
+            name: '마무리 일격',
+            input: '처형 후 웅크리기 + 손 바꾸기',
+            description: '처형 직후 웅크리기+손 바꾸기로 마무리 일격을 이어갑니다.',
+          },
+          en: {
+            name: 'Finisher',
+            input: 'Sneak + swap again after Execution',
+            description: 'Within a short window after Execution, sneak and swap for a finisher.',
+          },
+        },
+        {
           id: 'deathMark',
           icon: 'target-shot',
           element: 'dark',
@@ -138,14 +196,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '죽음의 표식',
             input: '가위 + 웅크리기 + 가위 버리기(Q)',
-            description:
-              '전투 모드에서만 발동합니다. 광역 표식과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
+            description: '전투 모드에서만 발동합니다. 광역 표식과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
           },
           en: {
             name: 'Death Mark',
             input: 'Shears + sneak + drop shears (Q)',
-            description:
-              'Combat mode only. Deals area mark and bleed damage (multiplier × panel attack damage).',
+            description: 'Combat mode only. Deals area mark and bleed damage (multiplier × panel attack damage).',
           },
         },
       ],
@@ -155,6 +211,46 @@ export const daggerlistDetail: ClassDetailDef = {
       requiredProficiency: 2,
       skills: [
         {
+          id: 'shadowCutII',
+          icon: 'slash',
+          element: 'dark',
+          followUp: true,
+          ko: { name: '암영 절단', input: '절개 연계(2차)', description: '2차 한계에서 절개 연계가 강화됩니다.' },
+          en: { name: 'Shadow Cut II', input: 'Limit 2 Slash combo', description: 'Empowered follow-up after Slash.' },
+        },
+        {
+          id: 'afterimageII',
+          icon: 'rush',
+          element: 'dark',
+          followUp: true,
+          ko: { name: '암영 잔상', input: '그림자 질주 연계(2차)', description: '2차 한계에서 그림자 질주 연계가 강화됩니다.' },
+          en: { name: 'Afterimage II', input: 'Limit 2 Shadow Dash combo', description: 'Empowered follow-up after Shadow Dash.' },
+        },
+        {
+          id: 'bladeStormII',
+          icon: 'stab',
+          element: 'dark',
+          followUp: true,
+          ko: { name: '암영 칼날 폭풍', input: '칼날 부채 연계(2차)', description: '2차 한계에서 칼날 부채 연계가 강화됩니다.' },
+          en: { name: 'Blade Storm II', input: 'Limit 2 Fan of Blades combo', description: 'Empowered follow-up after Fan of Blades.' },
+        },
+        {
+          id: 'twinAssaultII',
+          icon: 'stealth',
+          element: 'dark',
+          followUp: true,
+          ko: { name: '쌍영 습격', input: '그림자 분신 연계(2차)', description: '2차 한계에서 그림자 분신 연계가 강화됩니다.' },
+          en: { name: 'Twin Assault II', input: 'Limit 2 Shadow Clone combo', description: 'Empowered follow-up after Shadow Clone.' },
+        },
+        {
+          id: 'finisherII',
+          icon: 'stab',
+          element: 'dark',
+          followUp: true,
+          ko: { name: '암영 처단', input: '처형 연계(2차)', description: '2차 한계에서 처형 연계가 강화됩니다.' },
+          en: { name: 'Finisher II', input: 'Limit 2 Execution combo', description: 'Empowered follow-up after Execution.' },
+        },
+        {
           id: 'finalCut',
           icon: 'slash',
           element: 'dark',
@@ -162,14 +258,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '최후의 절단',
             input: '가위 + 웅크리기 + 전투 숫자키 4',
-            description:
-              '전투 모드에서만 발동합니다. 광역 절단과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
+            description: '전투 모드에서만 발동합니다. 광역 절단과 출혈 피해를 입힙니다(배율 × 패널 공격력).',
           },
           en: {
             name: 'Final Cut',
             input: 'Shears + sneak + combat hotkey 4',
-            description:
-              'Combat mode only. Wide slash and bleed damage (multiplier × panel attack damage).',
+            description: 'Combat mode only. Wide slash and bleed damage (multiplier × panel attack damage).',
           },
         },
       ],

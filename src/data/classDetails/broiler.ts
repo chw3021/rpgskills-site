@@ -17,7 +17,7 @@ export const broilerDetail: ClassDetailDef = {
     ko: [
       '상의를 벗은 근육질 투사가 철퇴로 전열을 무너뜨립니다. 지진강타·충격파·방어 분쇄·대지 쐐기·균열·먼지 폭발로 대지를 흔듭니다.',
       '감내는 공격력을 올리고 가까운 적을 도전 상대로 지정합니다. 여진으로 지진강타를 이어갑니다.',
-      '감내자는 대지를 개박살내는 암석 낙하를, 역전가는 태산 꼭대기에서 아래를 내려다보듯 전장을 지배하며 단층 완파로 끝냅니다.',
+      '감내자는 대지를 분쇄하는 암석 낙하를, 역전가는 태산 꼭대기에서 아래를 내려다보듯 전장을 지배하며 단층 완파로 끝냅니다.',
     ],
     en: [
       'A shirtless, muscular brawler who breaks formations with a mace. Seismic slam, shockwave, armor crack, earth spikes, fissures, and dust bursts shake the ground.',
@@ -157,7 +157,7 @@ export const broilerDetail: ClassDetailDef = {
             name: '암석 낙하',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '낙석 연출 후 연속 지진으로 대지를 개박살냅니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
+              '낙석 연출 후 연속 지진으로 대지를 분쇄합니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
           },
           en: {
             name: 'Bedrock Barrage',
@@ -205,22 +205,6 @@ export const broilerDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'stratumBloom',
-          icon: 'storm',
-          element: 'earth',
-          followUp: true,
-          ko: {
-            name: '판층 개화',
-            input: '단층 주행 종료 직후 전투 모드 기술 1',
-            description: '주변 링 형태로 지반을 폭발시킵니다. 피해량은 균열 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Stratum Bloom',
-            input: 'Combat skill 1 after Chasm Drive ends',
-            description: 'Ring of ground bursts. Damage scales with Fissure level.',
-          },
-        },
-        {
           id: 'earthBond',
           icon: 'spike',
           element: 'earth',
@@ -234,6 +218,22 @@ export const broilerDetail: ClassDetailDef = {
             name: 'Earth Bond',
             input: 'Sneak + left-click after Earth Spike',
             description: 'Quakes in a ring at targeted ground. Damage scales with Earth Spike level.',
+          },
+        },
+        {
+          id: 'stratumBloom',
+          icon: 'storm',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '판층 개화',
+            input: '단층 주행 종료 직후 전투 모드 기술 1',
+            description: '주변 링 형태로 지반을 폭발시킵니다. 피해량은 균열 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Stratum Bloom',
+            input: 'Combat skill 1 after Chasm Drive ends',
+            description: 'Ring of ground bursts. Damage scales with Fissure level.',
           },
         },
         {

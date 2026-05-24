@@ -1,7 +1,7 @@
 import type { ClassDetailDef } from './types';
 
-export const wreltlerDetail: ClassDetailDef = {
-  id: 'wreltler',
+export const wrestlerDetail: ClassDetailDef = {
+  id: 'wrestler',
   order: 19,
   element: { en: 'Earth', ko: '대지' },
   proficiency: {
@@ -15,9 +15,9 @@ export const wreltlerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '깃발무늬 무기와 금빛 갑옷으로 싸우는 유술가입니다. 길로틴 초크·태클·수플렉스·업어치기·자이언트 스윙·초크 슬램으로 한 명을 붙잡습니다.',
-      '포어암 스매시는 높이에 비례해 강해지고, 테이크다운은 피해와 넉백 저항을 올립니다. 연계기로 파운딩·백드롭·파일 드라이버를 이어갑니다.',
-      '고수는 힐 훅(다리 꺾기)으로 상대를 묶고, 패왕은 링 위에서 백플립 뒤 사이클론 드라이버로 전장을 끝냅니다.',
+      '깃발무늬 무기와 금빛 갑옷으로 싸우는 유술가입니다. 앞목 조르기·들이치기·안아넘기기·업어치기·풍차 돌리기·목잡아 메치기로 한 명을 붙잡습니다.',
+      '팔뚝 내려치기는 높이에 비례해 강해지고, 낙상은 피해와 넉백 저항을 올립니다. 연계기로 상위 난타·뒤메치기·머리꽂기를 이어갑니다.',
+      '고수는 무릎 비틀기로 상대를 묶고, 패왕은 뒤공중돌기 뒤 회오리 내려꽂기로 전장을 끝냅니다.',
     ],
     en: [
       'A wrestler who fights with banner-pattern weapons and golden armor. Guillotine choke, tackle, suplex, arm throw, giant swing, and choke slam lock down one target.',
@@ -35,7 +35,7 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'fist',
           element: 'earth',
           ko: {
-            name: '길로틴 초크',
+            name: '앞목 조르기',
             input: '깃발무늬 무기 + 점프 + 좌클릭',
             description: '적을 잡고 조른 뒤 피해를 줍니다.',
           },
@@ -51,9 +51,9 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'rush',
           element: 'earth',
           ko: {
-            name: '태클',
+            name: '들이치기',
             input: '깃발무늬 + 웅크리기 + 우클릭',
-            description: '적을 넘어뜨리고 파운딩 연계를 엽니다.',
+            description: '적을 넘어뜨리고 상위 난타 연계를 엽니다.',
           },
           en: {
             name: 'Tackle',
@@ -67,9 +67,9 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'fist-serious',
           element: 'earth',
           ko: {
-            name: '수플렉스',
+            name: '안아넘기기',
             input: '깃발무늬 + 비웅크리기 + 우클릭',
-            description: '잡은 적을 뒤로 넘기고 백드롭 연계를 엽니다.',
+            description: '잡은 적을 뒤로 넘기고 뒤메치기 연계를 엽니다.',
           },
           en: {
             name: 'Suplex',
@@ -85,7 +85,7 @@ export const wreltlerDetail: ClassDetailDef = {
           ko: {
             name: '업어치기',
             input: '깃발무늬 + 웅크리기 + 손 바꾸기',
-            description: '업어치기로 던지고 파일 드라이버 연계를 엽니다.',
+            description: '업어치기로 던지고 머리꽂기 연계를 엽니다.',
           },
           en: {
             name: 'Arm Throw',
@@ -99,7 +99,7 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'cycle',
           element: 'earth',
           ko: {
-            name: '자이언트 스윙',
+            name: '풍차 돌리기',
             input: '깃발무늬 + 웅크리기 + 근접 공격',
             description: '다른 스킬 사용 시 잡은 적을 던집니다.',
           },
@@ -115,9 +115,9 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'sword-drive',
           element: 'earth',
           ko: {
-            name: '초크 슬램',
+            name: '목잡아 메치기',
             input: '깃발무늬 + 비웅크리기 + 손 바꾸기',
-            description: '잡은 적을 내려찍고 슬랩 연계를 엽니다.',
+            description: '잡은 적을 내려찍고 손바닥 치기 연계를 엽니다.',
           },
           en: {
             name: 'Choke Slam',
@@ -131,7 +131,7 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'knuckle',
           element: 'earth',
           ko: {
-            name: '포어암 스매시',
+            name: '팔뚝 내려치기',
             input: '깃발무늬 + 점프 + 근접 공격',
             description: '점프 높이에 비례해 피해가 증가합니다.',
           },
@@ -148,7 +148,7 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           passive: true,
           ko: {
-            name: '테이크다운',
+            name: '낙상',
             description: '피해량과 넉백 저항이 증가합니다.',
           },
           en: {
@@ -168,9 +168,9 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           ko: {
-            name: '전위',
-            input: '길로틴 초크 적중 후 같은 키로 재사용',
-            description: '전위 기술을 사용합니다.',
+            name: '앞공중돌기',
+            input: '앞목 조르기 적중 후 같은 키로 재사용',
+            description: '앞공중돌기 기술을 사용합니다.',
           },
           en: {
             name: 'Somersault',
@@ -184,9 +184,9 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           ko: {
-            name: '파운딩',
-            input: '태클 적중 후 같은 키로 재사용',
-            description: '파운딩 연타를 가합니다.',
+            name: '상위 난타',
+            input: '들이치기 적중 후 같은 키로 재사용',
+            description: '상위 난타 연타를 가합니다.',
           },
           en: {
             name: 'Pounding',
@@ -200,9 +200,9 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           ko: {
-            name: '백드롭',
-            input: '수플렉스 적중 후 같은 키로 재사용',
-            description: '백드롭 피해를 줍니다.',
+            name: '뒤메치기',
+            input: '안아넘기기 적중 후 같은 키로 재사용',
+            description: '뒤메치기 피해를 줍니다.',
           },
           en: {
             name: 'Back Drop',
@@ -216,9 +216,9 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           ko: {
-            name: '파일 드라이버',
+            name: '머리꽂기',
             input: '업어치기 적중 후 같은 키로 재사용',
-            description: '파일 드라이버 피해를 줍니다.',
+            description: '머리꽂기 피해를 줍니다.',
           },
           en: {
             name: 'Pile Driver',
@@ -233,7 +233,7 @@ export const wreltlerDetail: ClassDetailDef = {
           followUp: true,
           ko: {
             name: '회오리',
-            input: '자이언트 스윙 적중 후 같은 키로 재사용',
+            input: '풍차 돌리기 적중 후 같은 키로 재사용',
             description: '주변 적을 끌어당기며 연타합니다.',
           },
           en: {
@@ -248,8 +248,8 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           ko: {
-            name: '슬랩',
-            input: '초크 슬램 적중 후 같은 키로 재사용',
+            name: '손바닥 치기',
+            input: '목잡아 메치기 적중 후 같은 키로 재사용',
             description: '적을 짧게 묶습니다.',
           },
           en: {
@@ -263,7 +263,7 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
-          ko: { name: '서브미션', description: '연계기의 구속 시간이 증가합니다.' },
+          ko: { name: '제압', description: '연계기의 구속 시간이 증가합니다.' },
           en: { name: 'Submission', description: 'Increases follow-up lock duration.' },
         },
         {
@@ -272,9 +272,9 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           ultimate: true,
           ko: {
-            name: '다리 꺾기 (힐 훅)',
+            name: '무릎 비틀기',
             input: '전투 모드 + 깃발무늬 + 웅크리기 + 전투 숫자키 4',
-            description: '힐 훅으로 주변 적을 제압한 뒤 연계 피해를 입힙니다.',
+            description: '무릎 비틀기로 주변 적을 제압한 뒤 연계 피해를 입힙니다.',
           },
           en: {
             name: 'Heel Hook',
@@ -293,8 +293,8 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'rush',
           element: 'earth',
           ko: {
-            name: '문쏠트',
-            description: '전위가 강화된 문쏠트 기술입니다.',
+            name: '뒤공중돌기',
+            description: '앞공중돌기가 강화된 뒤공중돌기 기술입니다.',
           },
           en: {
             name: 'Moonsault',
@@ -306,8 +306,8 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'bomb',
           element: 'earth',
           ko: {
-            name: '머슬 밤',
-            description: '문쏠트 적중 시 추가 폭발 피해를 줍니다(×공격력).',
+            name: '금강쇄',
+            description: '뒤공중돌기 적중 시 추가 폭발 피해를 줍니다(×공격력).',
           },
           en: {
             name: 'Muscle Bomb',
@@ -319,8 +319,8 @@ export const wreltlerDetail: ClassDetailDef = {
           icon: 'fist',
           element: 'earth',
           ko: {
-            name: '슬램 투 블로',
-            description: '문쏠트 이후 적을 띄웁니다(×공격력).',
+            name: '메치고 띄우기',
+            description: '뒤공중돌기 이후 적을 띄웁니다(×공격력).',
           },
           en: {
             name: 'Slam to Blow',
@@ -333,8 +333,8 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           passive: true,
           ko: {
-            name: '링의 파이터',
-            description: '추가 피해 배율이 오릅니다(테이크다운 레벨 반영).',
+            name: '진정한 싸움꾼',
+            description: '추가 피해 배율이 오릅니다(낙상 레벨 반영).',
           },
           en: {
             name: 'Fighter on the Ring',
@@ -347,9 +347,9 @@ export const wreltlerDetail: ClassDetailDef = {
           element: 'earth',
           ultimate: true,
           ko: {
-            name: '사이클론 드라이버',
+            name: '회오리 내려꽂기',
             input: '전투 모드 + 깃발무늬 + 웅크리기 + 전투 숫자키 5',
-            description: '공중 회전 후 강하게 내려찍습니다. 피해는 패널 공격력에 곱해집니다.',
+            description: '공중 회전 후 강하게 내려찍습니다. 피해는 패널에 곱해집니다.',
           },
           en: {
             name: 'Cyclone Driver',

@@ -112,11 +112,29 @@ export const standardBearerDetail: ClassDetailDef = {
           masterLevel: 50,
         },
         {
+          id: 'warHorn',
+          icon: 'rush',
+          element: 'wind',
+          guiColumn: 5,
+          ko: {
+            name: '전투나팔',
+            input: '웅크리기 + 좌클릭',
+            description:
+              '염소 뿔 소리와 함께 본인·가까운 파티원에게 힘·성급을 부여합니다. 신호 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'War Horn',
+            input: 'Sneak + left-click',
+            description:
+              'Plays a goat horn and grants Strength and Haste to you and nearby party. Scales with Signal Call level.',
+          },
+        },
+        {
           id: 'heraldry',
           icon: 'book',
           element: 'wind',
           passive: true,
-          guiColumn: 6,
+          guiColumn: 7,
           ko: {
             name: '기병깃술',
             description: '깃발 또는 검으로 근접 공격 시 최종 피해에 곱해집니다.',
@@ -207,6 +225,7 @@ export const standardBearerDetail: ClassDetailDef = {
           icon: 'axe',
           element: 'wind',
           ultimate: true,
+          guiColumn: 8,
           ko: {
             name: '패업령',
             input: '웅크리기 + 숫자키 4 (전투 모드)',

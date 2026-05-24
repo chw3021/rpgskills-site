@@ -16,13 +16,13 @@ export const musicianDetail: ClassDetailDef = {
   story: {
     ko: [
       '완드로 연주하며 아군 사기를 올리는 예술가입니다. 음파·치유의 노래·앰프·혼란 연주·크레센도로 전장을 다루고, 화음으로 공격력을 키웁니다.',
-      '연출가는 음악과 예술에 통달해 콘서트로 광역 공연을 펼치며 아군을 강화하고 적을 제압합니다.',
-      '거장은 마에스트로의 경지에 달해 콘서트 무대 위 음악의 신처럼 연주하며 전장을 지배합니다.',
+      '연출가는 5종 연계 연주와 음표 연주, 콘서트로 광역 공연을 펼치며 아군을 강화하고 적을 제압합니다.',
+      '거장은 마에스트로의 경지에 달해 2차 연계와 콘서트 무대 위 음악의 신처럼 연주하며 전장을 지배합니다.',
     ],
     en: [
       'A musician who raises morale with a wand. Sonic wave, healing song, amp, confusion, and crescendo shape the fight while Harmony boosts damage for healed allies.',
-      'The Producer masters music and art, unleashing Concert to buff allies and suppress foes across the field.',
-      'The Maestro ascends like a muse of music on stage, commanding the battlefield with a divine performance.',
+      'The Producer unlocks five combo follow-ups, Note Burst, and Concert to buff allies and suppress foes across the field.',
+      'The Maestro ascends with stronger limit-2 combos and a divine performance that commands the battlefield.',
     ],
   },
   skillSections: [
@@ -111,11 +111,26 @@ export const musicianDetail: ClassDetailDef = {
           masterLevel: 50,
         },
         {
+          id: 'noteBurst',
+          icon: 'wand',
+          element: 'lightning',
+          ko: {
+            name: '음표연주',
+            input: '핫바 6번 슬롯 선택 (숙련 1+)',
+            description: '음표 파티클로 적에게 피해를 주고 아군을 회복·강화합니다.',
+          },
+          en: {
+            name: 'Note Burst',
+            input: 'Select hotbar slot 6 (Proficiency 1+)',
+            description: 'Note particles damage foes and heal/buff allies.',
+          },
+        },
+        {
           id: 'harmony',
           icon: 'book',
           element: 'lightning',
           passive: true,
-          guiColumn: 6,
+          guiColumn: 7,
           ko: {
             name: '화음',
             description: '공격력이 증가합니다. 치유받은 아군의 공격력도 증가합니다.',
@@ -131,6 +146,91 @@ export const musicianDetail: ClassDetailDef = {
       id: 'limit1',
       requiredProficiency: 1,
       skills: [
+        {
+          id: 'waveEcho',
+          icon: 'wand',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'sonicWave',
+          ko: {
+            name: '음파잔향',
+            input: '음파 직후 재우클릭',
+            description: '짧은 음파 잔향 피해를 줍니다.',
+          },
+          en: {
+            name: 'Wave Echo',
+            input: 'Right-click again after Sonic Wave',
+            description: 'Short echo wave damage.',
+          },
+        },
+        {
+          id: 'chorus',
+          icon: 'recovery',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'healingSong',
+          ko: {
+            name: '합창',
+            input: '치유의노래 직후 재입력',
+            description: '아군 회복과 적 피해를 동시에 줍니다.',
+          },
+          en: {
+            name: 'Chorus',
+            input: 'Re-input after Healing Song',
+            description: 'Heals allies and damages foes.',
+          },
+        },
+        {
+          id: 'ampRipple',
+          icon: 'storm',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'amp',
+          ko: {
+            name: '앰프파문',
+            input: '앰프설치 직후 재손바꾸기',
+            description: '앰프 장판을 재폭발시킵니다.',
+          },
+          en: {
+            name: 'Amp Ripple',
+            input: 'Swap hands again after Amp',
+            description: 'Re-triggers the amp field burst.',
+          },
+        },
+        {
+          id: 'dissonance',
+          icon: 'wand',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'confusion',
+          ko: {
+            name: '불협화음',
+            input: '혼란연주 직후 재좌클릭',
+            description: '추가 혼란·제압 피해를 줍니다.',
+          },
+          en: {
+            name: 'Dissonance',
+            input: 'Left-click again after Confusion',
+            description: 'Extra confusion and suppression damage.',
+          },
+        },
+        {
+          id: 'fortissimo',
+          icon: 'wind-slash',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'crescendo',
+          ko: {
+            name: '포르티시모',
+            input: '크레센도 직후 재입력',
+            description: '강한 음압 연속 피해를 줍니다.',
+          },
+          en: {
+            name: 'Fortissimo',
+            input: 'Re-input after Crescendo',
+            description: 'Follow-up sound pressure damage.',
+          },
+        },
         {
           id: 'concert',
           icon: 'storm',
@@ -155,6 +255,91 @@ export const musicianDetail: ClassDetailDef = {
       id: 'limit2',
       requiredProficiency: 2,
       skills: [
+        {
+          id: 'waveEchoII',
+          icon: 'wand',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'sonicWave',
+          ko: {
+            name: '음파잔향 II',
+            input: '음파 직후 재우클릭 (2차)',
+            description: '강화된 음파 잔향 피해를 줍니다.',
+          },
+          en: {
+            name: 'Wave Echo II',
+            input: 'Right-click again after Sonic Wave (limit 2)',
+            description: 'Stronger echo wave damage.',
+          },
+        },
+        {
+          id: 'chorusII',
+          icon: 'recovery',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'healingSong',
+          ko: {
+            name: '합창 II',
+            input: '치유의노래 직후 재입력 (2차)',
+            description: '강화된 합창 피해·회복을 줍니다.',
+          },
+          en: {
+            name: 'Chorus II',
+            input: 'Re-input after Healing Song (limit 2)',
+            description: 'Stronger chorus heal and damage.',
+          },
+        },
+        {
+          id: 'ampRippleII',
+          icon: 'storm',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'amp',
+          ko: {
+            name: '앰프파문 II',
+            input: '앰프설치 직후 재손바꾸기 (2차)',
+            description: '강화된 앰프 장판 재폭발입니다.',
+          },
+          en: {
+            name: 'Amp Ripple II',
+            input: 'Swap hands again after Amp (limit 2)',
+            description: 'Stronger amp field burst.',
+          },
+        },
+        {
+          id: 'dissonanceII',
+          icon: 'wand',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'confusion',
+          ko: {
+            name: '불협화음 II',
+            input: '혼란연주 직후 재좌클릭 (2차)',
+            description: '강화된 불협화음 피해·제압입니다.',
+          },
+          en: {
+            name: 'Dissonance II',
+            input: 'Left-click again after Confusion (limit 2)',
+            description: 'Stronger dissonance and suppression.',
+          },
+        },
+        {
+          id: 'fortissimoII',
+          icon: 'wind-slash',
+          element: 'lightning',
+          followUp: true,
+          chainOf: 'crescendo',
+          ko: {
+            name: '포르티시모 II',
+            input: '크레센도 직후 재입력 (2차)',
+            description: '강화된 음압 연속 피해입니다.',
+          },
+          en: {
+            name: 'Fortissimo II',
+            input: 'Re-input after Crescendo (limit 2)',
+            description: 'Stronger follow-up sound pressure.',
+          },
+        },
         {
           id: 'maestro',
           icon: 'wand',

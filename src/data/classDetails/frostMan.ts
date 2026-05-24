@@ -100,13 +100,15 @@ export const frostManDetail: ClassDetailDef = {
           element: 'frost',
           ko: {
             name: '균열',
-            input: '웅크리기 + 좌클릭',
-            description: '시야 안의 적에게만 피해를 줍니다.',
+            input: '가위 + 웅크리기 + 좌클릭',
+            description:
+              '눈바람을 익힌 뒤 가위를 들고 사용합니다. 동상 상태인 적에게만 피해를 주며, 시야에 닿은 대상만 타격합니다.',
           },
           en: {
             name: 'Crack',
-            input: 'Sneak + left-click',
-            description: 'Damages only enemies within line of sight.',
+            input: 'Shears + sneak + left-click',
+            description:
+              'Requires Snow Breeze training. Only damages frozen enemies within line of sight.',
           },
           masterLevel: 50,
         },

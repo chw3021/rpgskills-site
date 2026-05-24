@@ -15,13 +15,13 @@ export const gardenerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '삽으로 땅을 다루며 식물로 적을 묶는 원예가입니다. 덩굴채찍·씨앗폭탄·뿌리감옥·가시밭·포자구름으로 제압하고, 성장으로 공격력을 키웁니다.',
-      '과성장은 광역 뿌리 폭발로 오래 묶으며, 숙련 2에서 재사용 대기가 짧아집니다(35초/70초).',
-      '조물주는 식물을 자유자재로 다루고, 자연신은 세계수 꼭대기에서 숲 전체를 거느리듯 더 넓은 세계수로 전장을 지배합니다.',
+      '삽으로 땅을 다루며 식물로 적을 묶는 원예가입니다. 덩굴채찍·씨앗폭탄·뿌리감옥·가시밭·포자구름으로 제압하고, 식물소환과 성장으로 전장을 지킵니다.',
+      '숙련 1에서 기본 스킬 재입력 연계가 열리고 과성장으로 광역 뿌리 폭발을 씁니다. 숙련 2에서 연계가 강화되고 세계수로 더 넓은 제압이 가능합니다.',
+      '조물주는 식물을 자유자재로 다루고, 자연신은 세계수 꼭대기에서 숲 전체를 거느리듯 전장을 지배합니다.',
     ],
     en: [
-      'A horticulturist who binds foes with plants wielding a shovel. Vine whip, seed bomb, root prison, thorn field, and spore cloud suppress while Growth raises damage.',
-      'Overgrowth unleashes a wide root burst with a long hold; at proficiency 2 its cooldown shortens (35s / 70s).',
+      'A horticulturist who binds foes with plants wielding a shovel. Vine whip, seed bomb, root prison, thorn field, and spore cloud suppress while Plant Guard and Growth hold the line.',
+      'Proficiency 1 unlocks follow-up combos on base skills and Overgrowth for a wide root burst. Proficiency 2 empowers combos and adds World Tree for wider suppression.',
       'The Flower Mage commands plants at will; Flora sits atop the world tree, ruling the battlefield with an even wider World Tree.',
     ],
   },
@@ -111,6 +111,22 @@ export const gardenerDetail: ClassDetailDef = {
           masterLevel: 50,
         },
         {
+          id: 'plantGuard',
+          icon: 'leaf',
+          element: 'earth',
+          ko: {
+            name: '식물소환',
+            input: '삽 + 비웅크리기 + 점프 + 좌클릭',
+            description: '식물 수호자를 소환해 주변 적에게 피해를 주고 묶습니다.',
+          },
+          en: {
+            name: 'Plant Guard',
+            input: 'Shovel + not sneaking + jump + left-click',
+            description: 'Summons a plant guardian that damages and roots nearby foes.',
+          },
+          masterLevel: 50,
+        },
+        {
           id: 'growth',
           icon: 'book',
           element: 'earth',
@@ -130,6 +146,86 @@ export const gardenerDetail: ClassDetailDef = {
       id: 'limit1',
       requiredProficiency: 1,
       skills: [
+        {
+          id: 'vineLash',
+          icon: 'leaf',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '덩굴연타',
+            input: '덩굴채찍 후 재우클릭',
+            description: '덩굴채찍 사용 후 짧은 시간 안에 재우클릭. 피해량은 덩굴채찍 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Vine Lash',
+            input: 'Right-click again after Vine Whip',
+            description: 'Within a short window after Vine Whip, right-click again. Damage scales with Vine Whip level.',
+          },
+        },
+        {
+          id: 'seedBurst',
+          icon: 'storm',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '씨앗연쇄',
+            input: '씨앗폭탄 후 손 바꾸기',
+            description: '씨앗폭탄 사용 후 짧은 시간 안에 손 바꾸기. 피해량은 씨앗폭탄 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Seed Burst',
+            input: 'Swap hands again after Seed Bomb',
+            description: 'Within a short window after Seed Bomb, swap hands again. Damage scales with Seed Bomb level.',
+          },
+        },
+        {
+          id: 'rootSnare',
+          icon: 'spike',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '뿌리덫',
+            input: '뿌리감옥 후 재우클릭',
+            description: '뿌리감옥 사용 후 짧은 시간 안에 재우클릭. 피해량은 뿌리감옥 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Root Snare',
+            input: 'Right-click again after Root Prison',
+            description: 'Within a short window after Root Prison, right-click again. Damage scales with Root Prison level.',
+          },
+        },
+        {
+          id: 'thornBurst',
+          icon: 'slash',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '가시폭발',
+            input: '가시밭 후 좌클릭',
+            description: '가시밭 사용 후 짧은 시간 안에 좌클릭. 피해량은 가시밭 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Thorn Burst',
+            input: 'Left-click again after Thorn Field',
+            description: 'Within a short window after Thorn Field, left-click again. Damage scales with Thorn Field level.',
+          },
+        },
+        {
+          id: 'sporeBloom',
+          icon: 'aura',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '포자만개',
+            input: '포자구름 후 손 바꾸기',
+            description: '포자구름 사용 후 짧은 시간 안에 손 바꾸기. 피해량은 포자구름 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Spore Bloom',
+            input: 'Swap hands again after Spore Cloud',
+            description: 'Within a short window after Spore Cloud, swap hands again. Damage scales with Spore Cloud level.',
+          },
+        },
         {
           id: 'overgrowth',
           icon: 'leaf',
@@ -154,6 +250,86 @@ export const gardenerDetail: ClassDetailDef = {
       id: 'limit2',
       requiredProficiency: 2,
       skills: [
+        {
+          id: 'vineLashII',
+          icon: 'leaf',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '맹렬덩굴',
+            input: '덩굴채찍 연계(숙련2)',
+            description: '숙련 2에서 덩굴연타가 강화됩니다. 피해량은 덩굴채찍 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Vine Lash II',
+            input: 'Vine Whip follow-up (proficiency 2)',
+            description: 'Empowered Vine Lash at proficiency 2. Damage scales with Vine Whip level.',
+          },
+        },
+        {
+          id: 'seedBurstII',
+          icon: 'storm',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '격렬씨앗연쇄',
+            input: '씨앗폭탄 연계(숙련2)',
+            description: '숙련 2에서 씨앗연쇄가 강화됩니다. 피해량은 씨앗폭탄 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Seed Burst II',
+            input: 'Seed Bomb follow-up (proficiency 2)',
+            description: 'Empowered Seed Burst at proficiency 2. Damage scales with Seed Bomb level.',
+          },
+        },
+        {
+          id: 'rootSnareII',
+          icon: 'spike',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '대지감옥',
+            input: '뿌리감옥 연계(숙련2)',
+            description: '숙련 2에서 뿌리덫이 강화됩니다. 피해량은 뿌리감옥 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Root Snare II',
+            input: 'Root Prison follow-up (proficiency 2)',
+            description: 'Empowered Root Snare at proficiency 2. Damage scales with Root Prison level.',
+          },
+        },
+        {
+          id: 'thornBurstII',
+          icon: 'slash',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '가시폭풍',
+            input: '가시밭 연계(숙련2)',
+            description: '숙련 2에서 가시폭발이 강화됩니다. 피해량은 가시밭 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Thorn Burst II',
+            input: 'Thorn Field follow-up (proficiency 2)',
+            description: 'Empowered Thorn Burst at proficiency 2. Damage scales with Thorn Field level.',
+          },
+        },
+        {
+          id: 'sporeBloomII',
+          icon: 'aura',
+          element: 'earth',
+          followUp: true,
+          ko: {
+            name: '독포자구름',
+            input: '포자구름 연계(숙련2)',
+            description: '숙련 2에서 포자만개가 강화됩니다. 피해량은 포자구름 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Spore Bloom II',
+            input: 'Spore Cloud follow-up (proficiency 2)',
+            description: 'Empowered Spore Bloom at proficiency 2. Damage scales with Spore Cloud level.',
+          },
+        },
         {
           id: 'worldTree',
           icon: 'leaf',

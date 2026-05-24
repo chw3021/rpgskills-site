@@ -12,7 +12,7 @@ const CLASS_TO_GUI = {
   sniper: 'SnipSkillsGui',
   launcher: 'LaunSkillsGui',
   boxer: 'BoxSkillsGui',
-  wreltler: 'WreSkillsGui',
+  wrestler: 'WrestlerSkillsGui',
   tamer: 'TamSkillsGui',
   illusionist: 'IllSkillsGui',
   fireMage: 'FireSkillsGui',

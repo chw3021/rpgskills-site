@@ -272,7 +272,7 @@ export const CLASSES: ClassDef[] = [
     ko: { name: '원소술사', equipment: '활', summary: '여러 속성의 화살로 적을 제압합니다.' },
   },
   {
-    id: 'wreltler',
+    id: 'wrestler',
     archetype: 'fighter',
     role: 'suppressor',
     difficulty: 'normal',

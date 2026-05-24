@@ -16,12 +16,12 @@ export const sapperDetail: ClassDetailDef = {
   story: {
     ko: [
       '삽으로 야전을 다지는 공병입니다. 투석기·스프링갈드·그리스불·비등유로 적을 억제하고, 야전공성으로 근접 화력을 키웁니다.',
-      '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기·유조긁기 연계가 열리고, 난격으로 거대 포탄을 투하합니다.',
+      '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기·유조긁기 연계와 TNT·선인장 돌격이 열리고, 난격으로 거대 포탄을 투하합니다.',
       '포성장은 함정봉인·포격난류·노출장약으로 함정과 포탄술을 완성하고, 포대열로 전장을 쓸어 버립니다. 계급이 오를수록 군기와 화력이 거대해집니다.',
     ],
     en: [
       'A sapper who fortifies the field with a shovel. Catapult, springald, Greek fire, and boiling oil suppress foes while Fieldworks raises melee damage.',
-      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, and oil scour chains before Bombardment drops a massive shell.',
+      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, oil scour, and TNT/cactus rushes before Bombardment drops a massive shell.',
       'The Battery Captain masters Pit Seal, Shell Drift, and Grand Expose before Grand Battery clears the field. Rank rises with banners, siege lines, and heavier ordnance.',
     ],
   },
@@ -99,6 +99,7 @@ export const sapperDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
+          guiColumn: 7,
           ko: {
             name: '야전공성',
             description: '삽으로 근접 공격 시 피해가 증가합니다.',
@@ -185,6 +186,36 @@ export const sapperDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'tntRush',
+          icon: 'bomb',
+          element: 'earth',
+          ko: {
+            name: 'TNT 돌격',
+            input: '웅크리기 + 숫자키 6 (전투 모드)',
+            description: 'TNT 수레를 적에게 돌진시켜 피해·제압합니다.',
+          },
+          en: {
+            name: 'TNT Rush',
+            input: 'Sneak + hotkey 6 (combat mode)',
+            description: 'Rushes a TNT minecart at foes for damage and suppression.',
+          },
+        },
+        {
+          id: 'cactusRush',
+          icon: 'spike',
+          element: 'earth',
+          ko: {
+            name: '선인장 돌격',
+            input: '웅크리기 + 숫자키 7 (전투 모드)',
+            description: '선인장 기둥을 굴려 적에게 피해·제압합니다. 피해량은 비등유 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Cactus Rush',
+            input: 'Sneak + hotkey 7 (combat mode)',
+            description: 'Rolls a cactus column at foes for damage and suppression. Damage scales with Boiling Oil level.',
+          },
+        },
+        {
           id: 'bombardment',
           icon: 'bomb',
           element: 'earth',
@@ -207,23 +238,6 @@ export const sapperDetail: ClassDetailDef = {
       requiredProficiency: 2,
       skills: [
         {
-          id: 'blazeWeave',
-          icon: 'flame',
-          element: 'fire',
-          followUp: true,
-          chainOf: 'greekFire',
-          ko: {
-            name: '잔화편조',
-            input: '잔화씻기 직후 웅크리기 + 전투 숫자키 2',
-            description: '부채꼴 재점화. 피해량은 그리스불 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Blaze Weave',
-            input: 'Sneak + combat hotkey 2 after Greek Wash',
-            description: 'Reignites a cone. Damage scales with Greek Fire level.',
-          },
-        },
-        {
           id: 'shellDrift',
           icon: 'bomb',
           element: 'earth',
@@ -241,20 +255,20 @@ export const sapperDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'grandExpose',
-          icon: 'bomb',
-          element: 'earth',
+          id: 'blazeWeave',
+          icon: 'flame',
+          element: 'fire',
           followUp: true,
-          chainOf: 'fieldworks',
+          chainOf: 'greekFire',
           ko: {
-            name: '노출장약',
-            input: '포대열 연출 직후 웅크리기 + 전투 숫자키 7',
-            description: '주변 장약 폭발 피해를 줍니다.',
+            name: '잔화편조',
+            input: '잔화씻기 직후 웅크리기 + 전투 숫자키 2',
+            description: '부채꼴 재점화. 피해량은 그리스불 레벨에 비례합니다.',
           },
           en: {
-            name: 'Grand Expose',
-            input: 'Sneak + combat hotkey 7 after Grand Battery volley',
-            description: 'Ring powder burst around you.',
+            name: 'Blaze Weave',
+            input: 'Sneak + combat hotkey 2 after Greek Wash',
+            description: 'Reignites a cone. Damage scales with Greek Fire level.',
           },
         },
         {
@@ -272,6 +286,23 @@ export const sapperDetail: ClassDetailDef = {
             name: 'Pit Seal',
             input: 'Sneak + combat hotkey 3 after Oil Scour',
             description: 'Short-range seal burst. Damage scales with Boiling Oil level.',
+          },
+        },
+        {
+          id: 'grandExpose',
+          icon: 'bomb',
+          element: 'earth',
+          followUp: true,
+          chainOf: 'grandBattery',
+          ko: {
+            name: '노출장약',
+            input: '포대열 연출 직후 웅크리기 + 전투 숫자키 7',
+            description: '주변 장약 폭발 피해를 줍니다.',
+          },
+          en: {
+            name: 'Grand Expose',
+            input: 'Sneak + combat hotkey 7 after Grand Battery volley',
+            description: 'Ring powder burst around you.',
           },
         },
         {

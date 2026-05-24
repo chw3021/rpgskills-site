@@ -16,7 +16,7 @@ import { daggerlistDetail } from './daggerlist';
 import { cavalrymanDetail } from './cavalryman';
 import { broilerDetail } from './broiler';
 import { launcherDetail } from './launcher';
-import { wreltlerDetail } from './wreltler';
+import { wrestlerDetail } from './wrestler';
 import { vanguardDetail } from './vanguard';
 import { gardenerDetail } from './gardener';
 import { engineerDetail } from './engineer';
@@ -51,7 +51,7 @@ const CLASS_DETAILS_LIST: ClassDetailDef[] = [
   cavalrymanDetail,
   broilerDetail,
   launcherDetail,
-  wreltlerDetail,
+  wrestlerDetail,
   gardenerDetail,
   engineerDetail,
   frostManDetail,

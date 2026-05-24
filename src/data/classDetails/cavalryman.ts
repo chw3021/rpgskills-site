@@ -91,13 +91,14 @@ export const cavalrymanDetail: ClassDetailDef = {
           icon: 'book',
           element: 'wind',
           passive: true,
+          guiColumn: 7,
           ko: {
             name: '기마 창술',
-            description: '근접 피해가 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
+            description: '근접 피해가 증가합니다. 탈것 위 창 돌격에도 적용됩니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
           },
           en: {
             name: 'Lancer Discipline',
-            description: 'Increases melee damage. Cannot use skills with shield or trident in off-hand.',
+            description: 'Increases melee damage, including mounted lance charges. Cannot use skills with shield or trident in off-hand.',
           },
         },
       ],

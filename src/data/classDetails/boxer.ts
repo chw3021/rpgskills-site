@@ -279,7 +279,7 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '촌경',
             input: '같은 스킬 재입력',
-            description: '존나센(촌경) 일격. 피해량은 붕권 레벨에 비례합니다.',
+            description: '강력한 촌경 일격. 피해량은 붕권 레벨에 비례합니다.',
           },
           en: {
             name: 'One-Inch Punch',
