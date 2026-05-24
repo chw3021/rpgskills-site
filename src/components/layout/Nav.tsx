@@ -17,7 +17,7 @@ type NavEntry =
   | { type: 'cta'; to: string; labelKey: 'donate' };
 
 const navStructure: NavEntry[] = [
-  { type: 'link', to: '/', labelKey: 'home', end: true },
+  // { type: 'link', to: '/', labelKey: 'home', end: true },
   {
     type: 'group',
     labelKey: 'groupBackground',
