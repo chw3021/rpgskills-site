@@ -1,7 +1,9 @@
-// Auto-generated from *SkillsGui.java (Korean, fully unlocked layout).
+// Auto-generated. Sorted GUI slot indices per class (pro≥2 full unlock).
+// Priority baseline: existing classGuiSlots.ts (kept when Java extraction differs).
 // Regenerate: node scripts/generate-gui-slot-maps.mjs
+// Force Java: FORCE_GUI_SLOTS_FROM_JAVA=1 node scripts/generate-gui-slot-maps.mjs
 
-/** Inventory slot (loc) per skill in flatten order: base → limit1 → limit2 */
+/** Sorted inventory slot indices used by each class at full proficiency */
 export const CLASS_GUI_SLOTS: Record<string, readonly number[]> = {
   swordman: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 25, 26],
   berserker: [0, 1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 22, 23, 25, 26],
@@ -18,14 +20,14 @@ export const CLASS_GUI_SLOTS: Record<string, readonly number[]> = {
   forger: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 23, 25, 26],
   nobility: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 25, 26],
   oceanKnight: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 20, 22, 23, 25, 26],
-  daggerlist: [0, 1, 2, 3, 4, 7, 9, 10, 11, 12, 13, 16, 17, 25, 18, 19, 20, 21, 22, 26],
-  broiler: [0, 1, 2, 3, 4, 5, 7, 9, 16, 17, 18, 19, 10, 21, 12, 13, 14, 23, 22, 25, 26],
-  vanguard: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 25, 17, 18, 19, 20, 21, 22, 23, 26],
-  cavalryman: [0, 1, 2, 3, 4, 5, 7, 9, 11, 20, 16, 17, 18, 25, 26],
+  daggerlist: [0, 1, 2, 3, 4, 7, 9, 10, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22, 25, 26],
+  broiler: [0, 1, 2, 3, 4, 5, 7, 9, 10, 12, 13, 14, 16, 17, 18, 19, 21, 22, 23, 25, 26],
+  vanguard: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 25, 26],
+  cavalryman: [0, 1, 2, 3, 4, 5, 7, 9, 11, 16, 17, 18, 20, 25, 26],
   gardener: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22, 25, 26],
   engineer: [0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 23, 24, 26],
   frostMan: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 25, 26],
-  witherist: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 22, 23, 21, 18, 25, 26],
+  witherist: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 21, 22, 23, 25, 26],
   sapper: [0, 1, 2, 3, 4, 5, 7, 9, 10, 11, 13, 14, 16, 17, 20, 21, 23, 25, 26],
   paladin: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 25, 26],
   medic: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 26],

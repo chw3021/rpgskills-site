@@ -46,6 +46,8 @@ const profFooterRe = /itemset\s*\(\s*"현재 숙련도"/;
 const limit2ElseRe =
   /\}\s*else\s*if\s*\(\s*(?:Proficiency\.getpro\s*\(\s*p\s*\)|pro)\s*<\s*2(?:\s*&&\s*(?:Proficiency\.getpro\s*\(\s*p\s*\)|pro)\s*>=\s*1)?\s*\)\s*\{[\s\S]*?\}\s*else\s*\{([\s\S]*?)(?=\n\s*itemset\s*\(\s*"현재 숙련도")/;
 
+const forceFromJava = process.env.FORCE_GUI_SLOTS_FROM_JAVA === '1';
+
 function findGuiPath(basename) {
   for (const d of fs.readdirSync(javaRoot, { withFileTypes: true })) {
     if (!d.isDirectory()) continue;
@@ -53,6 +55,31 @@ function findGuiPath(basename) {
     if (fs.existsSync(path.join(javaRoot, p))) return p;
   }
   return `${basename}.java`;
+}
+
+function sortSlots(slots) {
+  return [...slots].sort((a, b) => a - b);
+}
+
+function slotsEqual(a, b) {
+  const sa = sortSlots(a);
+  const sb = sortSlots(b);
+  return sa.length === sb.length && sa.every((v, i) => v === sb[i]);
+}
+
+function loadExistingClassGuiSlots() {
+  if (!fs.existsSync(outFile)) return {};
+  const text = fs.readFileSync(outFile, 'utf8');
+  const out = {};
+  const re = /^\s+(\w+):\s*\[([^\]]+)\]/gm;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    out[m[1]] = m[2]
+      .split(',')
+      .map((s) => Number(s.trim()))
+      .filter((n) => !Number.isNaN(n));
+  }
+  return out;
 }
 
 function slotsFrom(text) {
@@ -86,30 +113,65 @@ function extractSlots(guiFile) {
   if (gate < 0) {
     const footer = ko.search(profFooterRe);
     const flat = footer >= 0 ? ko.slice(0, footer) : ko;
-    return slotsFrom(flat);
+    return sortSlots(slotsFrom(flat));
   }
   const basePart = ko.slice(0, gate);
   const limitMatch = ko.match(limit2ElseRe);
   const limitPart = limitMatch?.[1] ?? '';
-  return [...slotsFrom(basePart), ...slotsFrom(limitPart)];
+  return sortSlots([...slotsFrom(basePart), ...slotsFrom(limitPart)]);
 }
 
+function resolveSlots(classId, sortedJava, baseline) {
+  if (!baseline?.length) {
+    return { slots: sortedJava, source: 'java' };
+  }
+
+  const sortedBaseline = sortSlots(baseline);
+
+  if (forceFromJava) {
+    if (!slotsEqual(sortedJava, sortedBaseline)) {
+      console.warn(`${classId}: FORCE_GUI_SLOTS_FROM_JAVA — using Java extraction`);
+      console.warn(`  baseline: [${sortedBaseline.join(', ')}]`);
+      console.warn(`  java:     [${sortedJava.join(', ')}]`);
+    }
+    return { slots: sortedJava, source: 'java(forced)' };
+  }
+
+  if (!slotsEqual(sortedJava, sortedBaseline)) {
+    console.warn(`${classId}: keeping classGuiSlots.ts baseline (Java differed)`);
+    console.warn(`  baseline: [${sortedBaseline.join(', ')}]`);
+    console.warn(`  java:     [${sortedJava.join(', ')}]`);
+  }
+
+  return { slots: sortedBaseline, source: 'baseline' };
+}
+
+const existing = loadExistingClassGuiSlots();
+
 const lines = [
-  '// Auto-generated from *SkillsGui.java (Korean, fully unlocked layout).',
+  '// Auto-generated. Sorted GUI slot indices per class (pro≥2 full unlock).',
+  '// Priority baseline: existing classGuiSlots.ts (kept when Java extraction differs).',
   '// Regenerate: node scripts/generate-gui-slot-maps.mjs',
+  '// Force Java: FORCE_GUI_SLOTS_FROM_JAVA=1 node scripts/generate-gui-slot-maps.mjs',
   '',
-  '/** Inventory slot (loc) per skill in flatten order: base → limit1 → limit2 */',
+  '/** Sorted inventory slot indices used by each class at full proficiency */',
   'export const CLASS_GUI_SLOTS: Record<string, readonly number[]> = {',
 ];
 
 for (const [classId, gui] of Object.entries(CLASS_TO_GUI)) {
-  const slots = extractSlots(gui);
-  if (!slots?.length) {
+  const sortedJava = extractSlots(gui);
+  if (!sortedJava?.length) {
     console.warn('Missing', gui);
+    if (existing[classId]?.length) {
+      lines.push(`  ${classId}: [${sortSlots(existing[classId]).join(', ')}],`);
+      console.log(classId, existing[classId].length, '(baseline, java missing)');
+    }
     continue;
   }
+
+  const { slots, source } = resolveSlots(classId, sortedJava, existing[classId]);
   lines.push(`  ${classId}: [${slots.join(', ')}],`);
-  console.log(classId, slots.length);
+  console.log(classId, slots.length, `(${source})`);
 }
 
 lines.push('};', '');

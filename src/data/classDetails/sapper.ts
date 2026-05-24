@@ -276,6 +276,24 @@ export const sapperDetail: ClassDetailDef = {
       requiredProficiency: 2,
       skills: [
         {
+          id: 'blazeWeave',
+          icon: 'flame',
+          element: 'fire',
+          guiColumn: 20,
+          followUp: true,
+          chainOf: 'greekWash',
+          ko: {
+            name: '잔화편조',
+            input: '잔화씻기 직후 손 바꾸기',
+            description: '부채꼴 재점화. 피해량은 그리스불 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Blaze Weave',
+            input: 'Swap hands after Greek Wash',
+            description: 'Reignites a cone. Damage scales with Greek Fire level.',
+          },
+        },
+        {
           id: 'cactusRush',
           icon: 'spike',
           element: 'earth',
@@ -292,24 +310,6 @@ export const sapperDetail: ClassDetailDef = {
             input: 'Sneak + swap hands after Boiling Oil',
             description:
               'Rolls a cactus column at foes for damage and suppression. Damage scales with Boiling Oil level.',
-          },
-        },
-        {
-          id: 'blazeWeave',
-          icon: 'flame',
-          element: 'fire',
-          guiColumn: 20,
-          followUp: true,
-          chainOf: 'greekWash',
-          ko: {
-            name: '잔화편조',
-            input: '잔화씻기 직후 손 바꾸기',
-            description: '부채꼴 재점화. 피해량은 그리스불 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Blaze Weave',
-            input: 'Swap hands after Greek Wash',
-            description: 'Reignites a cone. Damage scales with Greek Fire level.',
           },
         },
         {
