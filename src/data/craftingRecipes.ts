@@ -11,7 +11,7 @@ export const CRAFTING_RECIPES: CraftRecipe[] = [
     id: 'knuckle',
     grid: [
       ['material', 'stick', 'material'],
-      ['empty', 'stick', 'empty'],
+      ['empty', 'material', 'empty'],
     ],
   },
   {
