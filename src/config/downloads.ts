@@ -6,6 +6,6 @@ export const downloads = {
     assetNamePattern: /^RPGskills(-.*)?\.jar$/i,
   },
   resourcePack: {
-    githubZip: `${site.resourcePackRepo}/archive/refs/heads/main.zip`,
+    githubZip: `${site.resourcePackRepo}/archive/refs/heads/master.zip`,
   },
 } as const;
