@@ -179,7 +179,6 @@ export const cookDetail: ClassDetailDef = {
             description:
               'Chocolate pillars damage foes and grant Speed and Night Vision to allies and yourself.',
           },
-          masterLevel: 40,
         },
         {
           id: 'stockpot',
@@ -200,7 +199,6 @@ export const cookDetail: ClassDetailDef = {
             description:
               'Boiling stock damages foes and heals allies above you and yourself.',
           },
-          masterLevel: 40,
         },
         {
           id: 'feastSpread',
@@ -238,7 +236,6 @@ export const cookDetail: ClassDetailDef = {
             input: 'Shovel + left-click after Melon Wall',
             description: 'A giant melon falls for explosive damage and stun.',
           },
-          masterLevel: 40,
         },
         {
           id: 'fireShow',
@@ -257,7 +254,6 @@ export const cookDetail: ClassDetailDef = {
             input: 'Shovel + sneak + swap hands after Grilled Dish',
             description: 'Flame performance deals damage in 8 hits.',
           },
-          masterLevel: 40,
         },
         {
           id: 'knifeFlurry',
@@ -334,7 +330,6 @@ export const cookDetail: ClassDetailDef = {
             description:
               'Cheese fountain damages foes and grants Speed and Night Vision to allies and yourself.',
           },
-          masterLevel: 50,
         },
         {
           id: 'overflow',
@@ -355,7 +350,6 @@ export const cookDetail: ClassDetailDef = {
             description:
               'Overflowing broth damages foes and heals allies above you and yourself.',
           },
-          masterLevel: 50,
         },
         {
           id: 'melonTornado',
@@ -375,7 +369,6 @@ export const cookDetail: ClassDetailDef = {
             input: 'Shovel + left-click after Giant Melon',
             description: 'A melon tornado moves forward dealing sustained damage.',
           },
-          masterLevel: 50,
         },
         {
           id: 'maillard',
@@ -394,7 +387,6 @@ export const cookDetail: ClassDetailDef = {
             input: 'Shovel + sneak + swap hands after Fire Show',
             description: 'Maillard flame deals damage in 10 hits.',
           },
-          masterLevel: 50,
         },
         {
           id: 'ladleSwing',
