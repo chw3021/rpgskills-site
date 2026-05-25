@@ -11,22 +11,22 @@ export const CRAFTING_RECIPES: CraftRecipe[] = [
     id: 'knuckle',
     grid: [
       ['material', 'stick', 'material'],
-      ['empty', 'material', 'empty'],
+      ['empty', 'stick', 'empty'],
     ],
   },
   {
     id: 'wand',
     grid: [
-      ['material', 'empty', 'empty'],
-      ['stick', 'empty', 'empty'],
+      ['empty', 'stick', 'material'],
+      ['empty', 'stick', 'stick'],
       ['stick', 'empty', 'empty'],
     ],
   },
   {
     id: 'dagger',
     grid: [
-      ['material', 'empty', 'empty'],
-      ['stick', 'empty', 'empty'],
+      ['material', 'empty'],
+      ['empty', 'stick'],
     ],
   },
 ];
