@@ -97,7 +97,29 @@ export function subscribePost(
       return;
     }
     const val = snap.val() as Record<string, unknown>;
+    if (!val.title) {
+      onData(null);
+      return;
+    }
     onData(mapPost(postId, val));
+  });
+}
+
+export async function updatePost(
+  boardId: BoardId,
+  postId: string,
+  user: User,
+  input: NewPostInput,
+): Promise<void> {
+  const snap = await get(postRef(boardId, postId));
+  if (!snap.exists()) throw new Error('Not found');
+  const data = snap.val() as { authorUid?: string };
+  if (data.authorUid !== user.uid) throw new Error('Not allowed');
+
+  await update(postRef(boardId, postId), {
+    title: input.title.trim(),
+    body: input.body.trim(),
+    updatedAt: Date.now(),
   });
 }
 

@@ -106,10 +106,16 @@ export type CommunityBoardCopy = {
   pageTitle: string;
   pageDescription: string;
   newPost: string;
+  writePost: string;
+  editPost: string;
   empty: string;
+  noSearchResults: string;
+  notFound: string;
+  searchPlaceholder: string;
   titlePlaceholder: string;
   bodyPlaceholder: string;
   submit: string;
+  saveEdit: string;
   back: string;
   comments: string;
   commentPlaceholder: string;
@@ -120,6 +126,8 @@ export type CommunityBoardCopy = {
   markSolved: string;
   markOpen: string;
   solvedBadge: string;
+  prevPage: string;
+  nextPage: string;
 };
 
 export type StoryChapter = {
@@ -186,6 +194,7 @@ export type Translations = {
     todayVisitors: string;
     loading: string;
     errorGeneric: string;
+    pageOf: string;
     free: CommunityBoardCopy;
     qna: CommunityBoardCopy;
   };

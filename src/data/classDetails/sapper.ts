@@ -16,12 +16,12 @@ export const sapperDetail: ClassDetailDef = {
   story: {
     ko: [
       '삽으로 야전을 다지는 공병입니다. 투석기·스프링갈드·그리스불·비등유·전술철수로 적을 억제하고, TNT 돌격과 야전공성으로 화력을 키웁니다.',
-      '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기 연계와 포격난류가 열리고, 난격으로 거대 포탄을 투하합니다.',
+      '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기·기름함정 연계와 포격난류 대포 설치가 열리고, 난격으로 거대 포탄을 투하합니다.',
       '포성장은 선인장 돌격·잔화편조·포성 교리로 포탄술을 완성하고, 포대열로 전장을 쓸어 버립니다. 비등유 위 그리스불은 화염 지대를 만듭니다.',
     ],
     en: [
       'A sapper who fortifies the field with a shovel. Catapult, springald, Greek fire, boiling oil, and tactical withdrawal suppress foes while TNT Rush and Fieldworks raise pressure.',
-      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, and Shell Drift before Bombardment drops a massive shell.',
+      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, oil snares, and a shell cannon before Bombardment drops a massive shell.',
       'The Battery Captain masters Cactus Rush, Blaze Weave, and Siege Doctrine before Grand Battery clears the field. Greek fire on oil puddles leaves a burning zone.',
     ],
   },
@@ -115,6 +115,7 @@ export const sapperDetail: ClassDetailDef = {
             input: 'Sneak + left-click',
             description: 'Rushes a TNT minecart at foes for damage and suppression.',
           },
+          masterLevel: 50,
         },
         {
           id: 'tacticalWithdrawal',
@@ -211,6 +212,26 @@ export const sapperDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'oilSnare',
+          icon: 'spike',
+          element: 'earth',
+          guiColumn: 12,
+          followUp: true,
+          chainOf: 'boilingOil',
+          ko: {
+            name: '기름함정',
+            input: '비등유 직후 웅크리기 + 손 바꾸기',
+            description:
+              '전방에 기름 함정 3개를 설치해 지속 피해·제압합니다. 전술철수 시 함정이 폭발·철거됩니다. 피해량은 비등유 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Oil Snare',
+            input: 'Sneak + swap hands after Boiling Oil',
+            description:
+              'Deploys three oil traps ahead for sustained damage and suppression. Detonates with Tactical Withdrawal. Damage scales with Boiling Oil level.',
+          },
+        },
+        {
           id: 'shellDrift',
           icon: 'bomb',
           element: 'earth',
@@ -220,12 +241,14 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '포격난류',
             input: 'TNT 돌격 직후 웅크리기 + 좌클릭',
-            description: '전방 하향 포격선 피해를 줍니다.',
+            description:
+              '전방에 포격 대포를 설치해 지속 포격합니다. 피해량은 TNT 돌격 레벨에 비례합니다. 전술철수 시 대포가 폭발·철거됩니다.',
           },
           en: {
             name: 'Shell Drift',
             input: 'Sneak + left-click after TNT Rush',
-            description: 'Downward bombing line damage.',
+            description:
+              'Deploys a shell cannon for sustained bombardment. Damage scales with TNT Rush level. Detonates with Tactical Withdrawal.',
           },
         },
         {

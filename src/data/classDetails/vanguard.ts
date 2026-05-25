@@ -16,12 +16,12 @@ export const vanguardDetail: ClassDetailDef = {
   story: {
     ko: [
       '창과 방패로 최전선을 지키는 선봉병입니다. 포진찌르기·창격돌·창고착·전열함성으로 진형을 뚫고, 창 휘두르기·내려찍기로 근접 광역을 커버합니다.',
-      '창술은 근접 피해를 키우며, 방패·삼지창 보조 슬롯에서는 스킬을 쓸 수 없습니다. 숙련이 오르면 연계 창술이 열립니다.',
+      '창술은 창 근접 피해를 키웁니다. 진형 숙련은 스킬 피해와 연계를, 선봉 교리는 궁극기 대기·연계 창을 강화합니다. 방패·삼지창 보조 슬롯에서는 스킬을 쓸 수 없습니다.',
       '철벽진영과 관통진으로 전장의 중심이 됩니다. 진군장에서는 2차 연계가 강화됩니다.',
     ],
     en: [
       'A frontline soldier who holds the line with spear and shield. Phalanx jab, spear brace, skewering charge, and rallying call break ranks; spear sweep and downward slam cover melee AoE.',
-      'Spear Discipline raises melee damage; skills cannot be used with a shield or trident in the off-hand. Higher proficiency unlocks combo follow-ups.',
+      'Spear Discipline boosts spear melee damage. Phalanx Training adds skill damage and combos; Vanguard Doctrine shortens the first ultimate cooldown and widens combo windows. No skills with shield or trident off-hand.',
       'Iron Phalanx and Piercing Array anchor the fight. Line Marshal tier empowers limit-2 combo skills.',
     ],
   },
@@ -109,11 +109,13 @@ export const vanguardDetail: ClassDetailDef = {
           passive: true,
           ko: {
             name: '창술',
-            description: '공격력이 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
+            description:
+              '창으로 하는 근접 공격 피해가 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
           },
           en: {
             name: 'Spear Discipline',
-            description: 'Increases damage. Cannot use skills with shield or trident in off-hand.',
+            description:
+              'Increases spear melee attack damage. Cannot use skills with shield or trident in off-hand.',
           },
         },
       ],
@@ -225,12 +227,20 @@ export const vanguardDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'spearDisciplineLimit1',
+          id: 'phalanxTraining',
           icon: 'book',
           element: 'earth',
           passive: true,
-          ko: { name: '창술', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
-          en: { name: 'Spear Discipline', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+          ko: {
+            name: '진형 숙련',
+            description:
+              '창 스킬 피해가 증가합니다(창술 레벨에 비례). 숙련 1 연계 기술이 해제됩니다.',
+          },
+          en: {
+            name: 'Phalanx Training',
+            description:
+              'Increases spear skill damage (scales with Spear Discipline level). Unlocks limit-1 combo follow-ups.',
+          },
         },
         {
           id: 'ironPhalanx',
@@ -256,20 +266,6 @@ export const vanguardDetail: ClassDetailDef = {
       id: 'limit2',
       requiredProficiency: 2,
       skills: [
-        {
-          id: 'spearDisciplineLimit2',
-          icon: 'book',
-          element: 'earth',
-          passive: true,
-          ko: {
-            name: '창술',
-            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
-          },
-          en: {
-            name: 'Spear Discipline',
-            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
-          },
-        },
         {
           id: 'phalanxRendII',
           icon: 'spear',
@@ -325,6 +321,22 @@ export const vanguardDetail: ClassDetailDef = {
           followUp: true,
           ko: { name: '대지분쇄', input: '내려찍기 연계(2차)', description: '2차 한계에서 내려찍기 연계가 강화됩니다.' },
           en: { name: 'Slam Burst II', input: 'Limit 2 Downward Slam combo', description: 'Empowered follow-up after Downward Slam.' },
+        },
+        {
+          id: 'vanguardDoctrine',
+          icon: 'book',
+          element: 'earth',
+          passive: true,
+          ko: {
+            name: '선봉 교리',
+            description:
+              '창 스킬·근접 피해가 추가로 증가하고, 연계 입력 가능 시간이 길어집니다. 1차 돌파 궁극기(철벽진영)의 대기시간이 절반으로 감소합니다.',
+          },
+          en: {
+            name: 'Vanguard Doctrine',
+            description:
+              'Further increases spear skill and melee damage, and extends combo input windows. Halves the first limit-break ultimate cooldown (Iron Phalanx).',
+          },
         },
         {
           id: 'piercingArray',

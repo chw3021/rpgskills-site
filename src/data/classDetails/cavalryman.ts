@@ -16,13 +16,13 @@ export const cavalrymanDetail: ClassDetailDef = {
   story: {
     ko: [
       '창과 말로 전장을 가르는 기마병입니다. 탑승 스킬은 자동으로 말을 소환하고, 하마 스킬은 전방 돌진·연속 찌르기·내려찍기로 이어집니다.',
-      '창기장으로 승진하며 찌르기 파고 연계와 돌풍창이 열리고, 질주는 파티 신속을 부여합니다.',
-      '질풍기사는 쏜살 추격·찌르기 마무리와 천마의 가호로 기동전을 완성하고, 천마 통과로 전장을 관통합니다.',
+      '창기장으로 승진하며 찌르기 파고·고삐질타·돌격관통·심장파열·찍기이음 연계와 돌풍창이 열리고, 질주는 파티 신속을 부여합니다.',
+      '질풍기사는 쏜살 추격·찌르기 마무리·천지내려·질풍돌파·심장쇄도·지면파쇄로 기동전을 완성하고, 천마 통과로 전장을 관통합니다.',
     ],
     en: [
       'A lancer who fights mounted and dismounted. Mount skills auto-summon a horse; dismount skills charge, multi-thrust, or slam ahead.',
-      'Promotion to Lance Warden unlocks Tilt Rend and Wind Lance; Gallop grants party Speed.',
-      'The Gale Knight masters Stampede Feint, Tilt Finish, and Heavenly Steed before Sky Pass pierces the field.',
+      'Promotion to Lance Warden unlocks Tilt Rend, Bridle Lash, Herald Pierce, Heart Burst, Drive Echo, and Wind Lance.',
+      'The Gale Knight masters Heaven Drop, Gale Break, Heart Flurry, Ground Break, Stampede chains, and Sky Pass.',
     ],
   },
   skillSections: [
@@ -106,13 +106,14 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '심장 관통',
             input: '웅크리기 + 손 바꾸기',
-            description: '하마 후 연속 찌르기를 하고 마지막 타에 제압합니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+            description: '하마 후 연속 찌르기를 하고 마지막 타에 제압합니다.',
           },
           en: {
             name: 'Heart Lunge',
             input: 'Sneak + swap hands',
-            description: 'Dismounts for multi-thrust hits and a hold on the last strike. Damage scales with Bridle Slam level.',
+            description: 'Dismounts for multi-thrust hits and a hold on the last strike.',
           },
+          masterLevel: 50,
         },
         {
           id: 'bridleDrive',
@@ -122,13 +123,14 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '낙마 찍기',
             input: '웅크리기 + 우클릭',
-            description: '하마 후 전방에 내려찍습니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+            description: '하마 후 전방에 내려찍습니다.',
           },
           en: {
             name: 'Bridle Drive',
             input: 'Sneak + right-click',
-            description: 'Dismounts and slams down ahead. Damage scales with Bridle Slam level.',
+            description: 'Dismounts and slams down ahead.',
           },
+          masterLevel: 50,
         },
         {
           id: 'lancerDiscipline',
@@ -172,6 +174,78 @@ export const cavalrymanDetail: ClassDetailDef = {
           },
         },
         {
+          id: 'bridleLash',
+          icon: 'sword-drive',
+          element: 'wind',
+          guiColumn: 6,
+          followUp: true,
+          chainOf: 'bridleSlam',
+          ko: {
+            name: '고삐질타',
+            input: '고삐 내려 직후 좌클릭',
+            description: '전방 짧은 찌르기입니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Bridle Lash',
+            input: 'Left-click after Bridle Slam',
+            description: 'Short forward thrust. Damage scales with Bridle Slam level.',
+          },
+        },
+        {
+          id: 'heraldPierce',
+          icon: 'spear',
+          element: 'wind',
+          guiColumn: 12,
+          followUp: true,
+          chainOf: 'rideHerald',
+          ko: {
+            name: '돌격 관통',
+            input: '마상 돌격 직후 웅크리기 + 좌클릭',
+            description: '전방 관통 찌르기입니다. 피해량은 마상 돌격 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Herald Pierce',
+            input: 'Sneak + left-click after Ride Herald',
+            description: 'Piercing line thrust. Damage scales with Ride Herald level.',
+          },
+        },
+        {
+          id: 'heartBurst',
+          icon: 'spear',
+          element: 'wind',
+          guiColumn: 14,
+          followUp: true,
+          chainOf: 'heartLunge',
+          ko: {
+            name: '심장 파열',
+            input: '심장 관통 직후 웅크리기 + 손 바꾸기',
+            description: '강한 마무리 일격입니다. 피해량은 심장 관통 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Heart Burst',
+            input: 'Sneak + swap hands after Heart Lunge',
+            description: 'Heavy finishing thrust. Damage scales with Heart Lunge level.',
+          },
+        },
+        {
+          id: 'driveEcho',
+          icon: 'sword-drive',
+          element: 'wind',
+          guiColumn: 19,
+          followUp: true,
+          chainOf: 'bridleDrive',
+          ko: {
+            name: '찍기 이음',
+            input: '낙마 찍기 직후 웅크리기 + 우클릭',
+            description: '전방 추가 내려찍기입니다. 피해량은 낙마 찍기 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Drive Echo',
+            input: 'Sneak + right-click after Bridle Drive',
+            description: 'Follow-up slam ahead. Damage scales with Bridle Drive level.',
+          },
+        },
+        {
           id: 'lancerDisciplineLimit1',
           icon: 'book',
           element: 'wind',
@@ -209,6 +283,78 @@ export const cavalrymanDetail: ClassDetailDef = {
       id: 'limit2',
       requiredProficiency: 2,
       skills: [
+        {
+          id: 'bridleHeavenDrop',
+          icon: 'sword-drive',
+          element: 'wind',
+          guiColumn: 8,
+          followUp: true,
+          chainOf: 'bridleLash',
+          ko: {
+            name: '천지 내려',
+            input: '고삐질타 직후 좌클릭',
+            description: '넓은 내려찍기입니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Heaven Drop',
+            input: 'Left-click after Bridle Lash',
+            description: 'Wide slam ahead. Damage scales with Bridle Slam level.',
+          },
+        },
+        {
+          id: 'heraldGaleBreak',
+          icon: 'spear',
+          element: 'wind',
+          guiColumn: 13,
+          followUp: true,
+          chainOf: 'heraldPierce',
+          ko: {
+            name: '질풍 돌파',
+            input: '돌격 관통 직후 웅크리기 + 좌클릭',
+            description: '긴 돌진 관통입니다. 피해량은 마상 돌격 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Gale Break',
+            input: 'Sneak + left-click after Herald Pierce',
+            description: 'Long charge pierce. Damage scales with Ride Herald level.',
+          },
+        },
+        {
+          id: 'heartFlurry',
+          icon: 'spear',
+          element: 'wind',
+          guiColumn: 15,
+          followUp: true,
+          chainOf: 'heartBurst',
+          ko: {
+            name: '심장 쇄도',
+            input: '심장 파열 직후 웅크리기 + 손 바꾸기',
+            description: '연속 찌르기입니다. 피해량은 심장 관통 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Heart Flurry',
+            input: 'Sneak + swap hands after Heart Burst',
+            description: 'Rapid thrust flurry. Damage scales with Heart Lunge level.',
+          },
+        },
+        {
+          id: 'groundBreak',
+          icon: 'sword-drive',
+          element: 'wind',
+          guiColumn: 21,
+          followUp: true,
+          chainOf: 'driveEcho',
+          ko: {
+            name: '지면 파쇄',
+            input: '찍기 이음 직후 웅크리기 + 우클릭',
+            description: '주변 지면을 파쇄해 피해를 줍니다. 피해량은 낙마 찍기 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Ground Break',
+            input: 'Sneak + right-click after Drive Echo',
+            description: 'Shockwave around you. Damage scales with Bridle Drive level.',
+          },
+        },
         {
           id: 'stampedeFeint',
           icon: 'rush',

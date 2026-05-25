@@ -16,13 +16,13 @@ export const cookDetail: ClassDetailDef = {
   story: {
     ko: [
       '삽으로 전장에 요리를 펼치는 요리사입니다. 디저트비·버섯탕·나눔밥상·멜론벽·구운요리·프라이팬 휘두르기로 아군을 돕고, 포만감으로 공격력을 키웁니다.',
-      '셰프는 슈가러시·스톡팟·한상차림·식칼 연속 베기로 지원을 강화하고, 특별메뉴로 화려한 일격을 냅니다.',
-      '대가는 치즈분수·마이야르·국자 휘두르기·헬키친으로 전장을 뜨거운 주방처럼 지배합니다.',
+      '셰프는 초코타워·스톡팟·한상차림·식칼 연속 베기로 지원과 화력을 강화하고, 특별메뉴로 화려한 일격을 냅니다.',
+      '대가는 치즈분수·끓어넘침·거대멜론·멜론토네이도·불쇼·마이야르·국자 휘두르기·헬키친으로 전장을 뜨거운 주방처럼 지배합니다.',
     ],
     en: [
       'A cook who feeds the front line with a shovel. Dessert Rain, Mushroom Soup, Shared Table, Melon Wall, Grilled Dish, and Pan Whirl support allies while Saturation raises damage.',
-      'The Chef adds Sugar Rush, Stockpot, Feast Spread, and Knife Flurry, then finishes with Special Menu in combat mode.',
-      'The Demeter rules the field with Cheese Fountain, Maillard, Ladle Swing, and Hell Kitchen.',
+      'The Chef adds Chocolate Tower, Stockpot, Feast Spread, and Knife Flurry, then finishes with Special Menu in combat mode.',
+      'The Demeter rules the field with Cheese Fountain, Overflow, Giant Melon, Melon Tornado, Fire Show, Maillard, Ladle Swing, and Hell Kitchen.',
     ],
   },
   skillSections: [
@@ -38,12 +38,14 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '디저트비',
             input: '삽 + 손 바꾸기',
-            description: '달콤한 비로 아군을 강화합니다.',
+            description:
+              '달콤한 비로 적에게 피해를 주고, 주변 아군과 본인에게 속도·야간 투시를 부여합니다.',
           },
           en: {
             name: 'Dessert Rain',
             input: 'Shovel + swap hands',
-            description: 'Sweet rain buffs allies.',
+            description:
+              'Sweet rain damages foes and grants Speed and Night Vision to nearby allies and yourself.',
           },
           masterLevel: 50,
         },
@@ -55,12 +57,14 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '버섯탕',
             input: '삽 + 웅크리기 + 우클릭',
-            description: '뜨거운 버섯탕으로 아군을 회복합니다.',
+            description:
+              '뜨거운 버섯탕으로 적에게 피해를 주고, 위쪽에 있는 아군과 본인을 회복합니다.',
           },
           en: {
             name: 'Mushroom Soup',
             input: 'Shovel + sneak + right-click',
-            description: 'Hot mushroom soup heals allies.',
+            description:
+              'Hot mushroom soup damages foes and heals allies above you and yourself.',
           },
           masterLevel: 50,
         },
@@ -73,15 +77,15 @@ export const cookDetail: ClassDetailDef = {
             name: '나눔밥상',
             input: '삽 + 우클릭',
             description:
-              '주변에 음식을 나눠 아군·적에게 서서히 효과를 줍니다. 몬스터에게는 불타는 덤불 공격을 합니다.',
+              'Snowball 투사체를 발사합니다. 적에게 2초 화상, 아군에게 2초 재생을 부여합니다.',
           },
           en: {
             name: 'Shared Table',
             input: 'Shovel + right-click',
             description:
-              'Gradually shares food effects with nearby allies and foes. Burns mobs with a flaming brush.',
+              'Launches a food snowball. Enemies burn for 2s; allies regenerate for 2s.',
           },
-          masterLevel: 50,
+          masterLevel: 10,
         },
         {
           id: 'chefGuard',
@@ -92,15 +96,14 @@ export const cookDetail: ClassDetailDef = {
             name: '멜론벽',
             input: '삽 + 좌클릭',
             description:
-              '주변 아군에게 잠시 피해 저항을 부여하고, 충돌한 몹을 기절시킵니다.',
+              '주변 아군을 회복하고 적에게 피해·기절을 줍니다.',
           },
           en: {
             name: 'Melon Wall',
             input: 'Shovel + left-click',
-            description:
-              'Briefly grants nearby allies damage resistance and stuns colliding mobs.',
+            description: 'Heals nearby allies and damages and stuns enemies.',
           },
-          masterLevel: 1,
+          masterLevel: 50,
         },
         {
           id: 'grilledDish',
@@ -110,12 +113,12 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '구운요리',
             input: '삽 + 웅크리기 + 손 바꾸기',
-            description: '목표 주변에 구운 요리를 떨어뜨립니다.',
+            description: '목표 주변에 구운 요리를 떨어뜨려 다단히트 피해를 줍니다.',
           },
           en: {
             name: 'Grilled Dish',
             input: 'Shovel + sneak + swap hands',
-            description: 'Drops grilled meals around the target.',
+            description: 'Drops grilled meals around the target for multi-hit damage.',
           },
           masterLevel: 50,
         },
@@ -158,87 +161,111 @@ export const cookDetail: ClassDetailDef = {
       requiredProficiency: 1,
       skills: [
         {
-          id: 'sugarRush',
+          id: 'chocolateTower',
           icon: 'rush',
           element: 'fire',
           guiColumn: 9,
+          followUp: true,
           chainOf: 'dessertBee',
           ko: {
-            name: '슈가러시',
-            description: '디저트비가 속도·점프력·야간 투시를 부여합니다.',
+            name: '초코타워',
+            input: '디저트비 직후 삽 + 손 바꾸기',
+            description:
+              '초콜릿 기둥으로 적에게 피해를 주고, 아군·본인에게 속도·야간 투시를 부여합니다.',
           },
           en: {
-            name: 'Sugar Rush',
-            description: 'Dessert Rain grants speed, jump boost, and night vision.',
+            name: 'Chocolate Tower',
+            input: 'Shovel + swap hands after Dessert Rain',
+            description:
+              'Chocolate pillars damage foes and grant Speed and Night Vision to allies and yourself.',
           },
+          masterLevel: 40,
         },
         {
           id: 'stockpot',
           icon: 'recovery',
           element: 'fire',
           guiColumn: 10,
+          followUp: true,
           chainOf: 'mushroomSoup',
           ko: {
             name: '스톡팟',
-            description: '버섯탕이 주변 아군을 강화하고 적을 불태웁니다.',
+            input: '버섯탕 직후 삽 + 웅크리기 + 우클릭',
+            description:
+              '끓는 스톡으로 적에게 피해를 주고, 위쪽 아군·본인을 회복합니다.',
           },
           en: {
             name: 'Stockpot',
-            description: 'Mushroom Soup strengthens allies and burns enemies.',
+            input: 'Shovel + sneak + right-click after Mushroom Soup',
+            description:
+              'Boiling stock damages foes and heals allies above you and yourself.',
           },
+          masterLevel: 40,
         },
         {
           id: 'feastSpread',
           icon: 'recovery',
           element: 'fire',
           guiColumn: 11,
+          passive: true,
           chainOf: 'sharedTable',
           ko: {
             name: '한상차림',
-            description: '나눔밥상이 더 넓은 범위로 천천히 회복·해로운 효과를 나눕니다.',
+            description:
+              '나눔밥상 투사체가 맞은 대상 기준 반경 3블록, 2초간 확산합니다. 아군 1초 무적, 적 1초 기절.',
           },
           en: {
             name: 'Feast Spread',
-            description: 'Shared Table spreads gradual heals and debuffs farther.',
+            description:
+              'On Shared Table hit, spreads in a 3-block radius for 2s. Allies gain 1s invulnerability; enemies are stunned for 1s.',
           },
         },
         {
-          id: 'chefsGuard',
+          id: 'giantMelon',
           icon: 'shield',
           element: 'fire',
           guiColumn: 12,
+          followUp: true,
           chainOf: 'chefGuard',
           ko: {
-            name: '셰프의수호',
-            description: '멜론벽 사용 시 주변 아군에게 흡수 체력을 추가로 부여합니다.',
+            name: '거대멜론',
+            input: '멜론벽 직후 삽 + 좌클릭',
+            description:
+              '거대 멜론이 낙하하며 폭발 피해와 기절을 줍니다.',
           },
           en: {
-            name: "Chef's Guard",
-            description: 'Melon Wall also grants nearby allies absorption.',
+            name: 'Giant Melon',
+            input: 'Shovel + left-click after Melon Wall',
+            description: 'A giant melon falls for explosive damage and stun.',
           },
+          masterLevel: 40,
         },
         {
-          id: 'spicyPlating',
+          id: 'fireShow',
           icon: 'flame',
           element: 'fire',
           guiColumn: 13,
+          followUp: true,
           chainOf: 'grilledDish',
           ko: {
-            name: '매콤한플레이팅',
-            description: '치료받은 파티원이 포만감으로 추가 피해를 얻습니다.',
+            name: '불쇼',
+            input: '구운요리 직후 삽 + 웅크리기 + 손 바꾸기',
+            description: '화염 연출로 8회 타격 피해를 줍니다.',
           },
           en: {
-            name: 'Spicy Plating',
-            description: 'Healed allies gain extra damage through Saturation.',
+            name: 'Fire Show',
+            input: 'Shovel + sneak + swap hands after Grilled Dish',
+            description: 'Flame performance deals damage in 8 hits.',
           },
+          masterLevel: 40,
         },
         {
           id: 'knifeFlurry',
           icon: 'fist',
           element: 'fire',
           guiColumn: 14,
-          chainOf: 'panWhirl',
           followUp: true,
+          chainOf: 'panWhirl',
           ko: {
             name: '식칼 연속 베기',
             input: '삽 + 웅크리기 + 좌클릭 (연계)',
@@ -258,11 +285,11 @@ export const cookDetail: ClassDetailDef = {
           guiColumn: 16,
           ko: {
             name: '요리솜씨',
-            description: '공격력이 증가합니다. 치료받은 파티원의 피해도 증가합니다.',
+            description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.',
           },
           en: {
             name: 'Culinary Knack',
-            description: 'Increases damage; healed allies also deal more damage.',
+            description: 'Increases damage. Limit 1 combo skills unlocked.',
           },
         },
         {
@@ -274,8 +301,7 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '특별메뉴',
             input: '삽 + 웅크리기 + 전투 숫자키 4(핫바 4번)',
-            description:
-              '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
+            description: '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
           },
           en: {
             name: 'Special Menu',
@@ -294,38 +320,89 @@ export const cookDetail: ClassDetailDef = {
           icon: 'sun',
           element: 'fire',
           guiColumn: 18,
-          chainOf: 'dessertBee',
+          followUp: true,
+          chainOf: 'chocolateTower',
           ko: {
             name: '치즈분수',
-            description: '디저트비에 녹아내린 치즈가 추가 화염 피해를 줍니다.',
+            input: '초코타워 직후 삽 + 손 바꾸기',
+            description:
+              '치즈 분수로 적에게 피해를 주고, 아군·본인에게 속도·야간 투시를 부여합니다.',
           },
           en: {
             name: 'Cheese Fountain',
-            description: 'Dessert Rain adds molten cheese fire damage.',
+            input: 'Shovel + swap hands after Chocolate Tower',
+            description:
+              'Cheese fountain damages foes and grants Speed and Night Vision to allies and yourself.',
           },
+          masterLevel: 50,
+        },
+        {
+          id: 'overflow',
+          icon: 'lava',
+          element: 'fire',
+          guiColumn: 20,
+          followUp: true,
+          chainOf: 'stockpot',
+          ko: {
+            name: '끓어넘침',
+            input: '스톡팟 직후 삽 + 웅크리기 + 우클릭',
+            description:
+              '끓어 넘친 국물로 적에게 피해를 주고, 위쪽 아군·본인을 회복합니다.',
+          },
+          en: {
+            name: 'Overflow',
+            input: 'Shovel + sneak + right-click after Stockpot',
+            description:
+              'Overflowing broth damages foes and heals allies above you and yourself.',
+          },
+          masterLevel: 50,
+        },
+        {
+          id: 'melonTornado',
+          icon: 'storm',
+          element: 'fire',
+          guiColumn: 21,
+          followUp: true,
+          chainOf: 'giantMelon',
+          ko: {
+            name: '멜론토네이도',
+            input: '거대멜론 직후 삽 + 좌클릭',
+            description:
+              '멜론 토네이도가 이동하며 지속 피해를 줍니다.',
+          },
+          en: {
+            name: 'Melon Tornado',
+            input: 'Shovel + left-click after Giant Melon',
+            description: 'A melon tornado moves forward dealing sustained damage.',
+          },
+          masterLevel: 50,
         },
         {
           id: 'maillard',
           icon: 'flame',
           element: 'fire',
           guiColumn: 22,
-          chainOf: 'grilledDish',
+          followUp: true,
+          chainOf: 'fireShow',
           ko: {
             name: '마이야르',
-            description: '구운요리의 지속 화염 피해가 강화됩니다.',
+            input: '불쇼 직후 삽 + 웅크리기 + 손 바꾸기',
+            description: '마이야르 반응 화염으로 10회 타격 피해를 줍니다.',
           },
           en: {
             name: 'Maillard',
-            description: 'Grilled Dish burn damage is empowered.',
+            input: 'Shovel + sneak + swap hands after Fire Show',
+            description: 'Maillard flame deals damage in 10 hits.',
           },
+          masterLevel: 50,
         },
         {
           id: 'ladleSwing',
           icon: 'flame',
           element: 'fire',
           guiColumn: 23,
-          chainOf: 'panWhirl',
           followUp: true,
+          chainOf: 'panWhirl',
           ko: {
             name: '국자 휘두르기',
             input: '삽 + 웅크리기 + 좌클릭 (연계)',
@@ -361,8 +438,7 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '헬키친',
             input: '삽 + 웅크리기 + 전투 숫자키 5(핫바 5번)',
-            description:
-              '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
+            description: '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
           },
           en: {
             name: 'Hell Kitchen',

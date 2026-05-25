@@ -382,8 +382,54 @@ ul {
   min-height: 5rem;
 }
 
+.community-list-actions {
+  margin-bottom: 1rem;
+}
+
+.community-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.community-toolbar__search {
+  flex: 1 1 14rem;
+  max-width: 22rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.community-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.community-pagination__info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  min-width: 5rem;
+  text-align: center;
+}
+
+.community-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  margin: 0;
+}
+
 .community-list {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .community-posts {

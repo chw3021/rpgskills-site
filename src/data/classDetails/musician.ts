@@ -60,7 +60,7 @@ export const musicianDetail: ClassDetailDef = {
             input: 'Sneak + right-click',
             description: 'Heals and buffs allies ahead while cleansing harmful effects.',
           },
-          masterLevel: 50,
+          masterLevel: 10,
         },
         {
           id: 'amp',
@@ -127,6 +127,7 @@ export const musicianDetail: ClassDetailDef = {
             input: 'Sneak + left-click',
             description: 'Note particles damage foes and heal/buff allies.',
           },
+          masterLevel: 50,
         },
         {
           id: 'harmony',
