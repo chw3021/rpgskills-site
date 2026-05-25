@@ -77,13 +77,13 @@ export const cookDetail: ClassDetailDef = {
             name: '나눔밥상',
             input: '삽 + 우클릭',
             description:
-              'Snowball 투사체를 발사합니다. 적에게 2초 화상, 아군에게 2초 재생을 부여합니다.',
+              '밥상을 던져 주변에 음식을 나눕니다. 아군은 회복, 적은 화상을 입습니다.',
           },
           en: {
             name: 'Shared Table',
             input: 'Shovel + right-click',
             description:
-              'Launches a food snowball. Enemies burn for 2s; allies regenerate for 2s.',
+              'Throws tables to share food. Heals allies, burns enemies.',
           },
           masterLevel: 10,
         },
@@ -340,7 +340,7 @@ export const cookDetail: ClassDetailDef = {
           id: 'overflow',
           icon: 'lava',
           element: 'fire',
-          guiColumn: 20,
+          guiColumn: 19,
           followUp: true,
           chainOf: 'stockpot',
           ko: {

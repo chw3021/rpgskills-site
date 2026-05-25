@@ -177,7 +177,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'bridleLash',
           icon: 'sword-drive',
           element: 'wind',
-          guiColumn: 6,
+          guiColumn: 10,
           followUp: true,
           chainOf: 'bridleSlam',
           ko: {
@@ -189,6 +189,24 @@ export const cavalrymanDetail: ClassDetailDef = {
             name: 'Bridle Lash',
             input: 'Left-click after Bridle Slam',
             description: 'Short forward thrust. Damage scales with Bridle Slam level.',
+          },
+        },
+        {
+          id: 'stampedeFeint',
+          icon: 'rush',
+          element: 'wind',
+          guiColumn: 11,
+          followUp: true,
+          chainOf: 'gallopSpur',
+          ko: {
+            name: '쏜살 추격',
+            input: '질주 적중 직후 손 바꾸기',
+            description: '전방 직선 베기입니다. 피해량은 질주 레벨에 비례합니다.',
+          },
+          en: {
+            name: 'Stampede Feint',
+            input: 'Swap hands after Gallop hits',
+            description: 'Forward line slash. Damage scales with Gallop level.',
           },
         },
         {
@@ -213,7 +231,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'heartBurst',
           icon: 'spear',
           element: 'wind',
-          guiColumn: 14,
+          guiColumn: 13,
           followUp: true,
           chainOf: 'heartLunge',
           ko: {
@@ -231,7 +249,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'driveEcho',
           icon: 'sword-drive',
           element: 'wind',
-          guiColumn: 19,
+          guiColumn: 14,
           followUp: true,
           chainOf: 'bridleDrive',
           ko: {
@@ -287,7 +305,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'bridleHeavenDrop',
           icon: 'sword-drive',
           element: 'wind',
-          guiColumn: 8,
+          guiColumn: 19,
           followUp: true,
           chainOf: 'bridleLash',
           ko: {
@@ -305,7 +323,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'heraldGaleBreak',
           icon: 'spear',
           element: 'wind',
-          guiColumn: 13,
+          guiColumn: 21,
           followUp: true,
           chainOf: 'heraldPierce',
           ko: {
@@ -323,7 +341,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'heartFlurry',
           icon: 'spear',
           element: 'wind',
-          guiColumn: 15,
+          guiColumn: 22,
           followUp: true,
           chainOf: 'heartBurst',
           ko: {
@@ -341,7 +359,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           id: 'groundBreak',
           icon: 'sword-drive',
           element: 'wind',
-          guiColumn: 21,
+          guiColumn: 23,
           followUp: true,
           chainOf: 'driveEcho',
           ko: {
@@ -353,24 +371,6 @@ export const cavalrymanDetail: ClassDetailDef = {
             name: 'Ground Break',
             input: 'Sneak + right-click after Drive Echo',
             description: 'Shockwave around you. Damage scales with Bridle Drive level.',
-          },
-        },
-        {
-          id: 'stampedeFeint',
-          icon: 'rush',
-          element: 'wind',
-          guiColumn: 11,
-          followUp: true,
-          chainOf: 'gallopSpur',
-          ko: {
-            name: '쏜살 추격',
-            input: '질주 적중 직후 손 바꾸기',
-            description: '전방 직선 베기입니다. 피해량은 질주 레벨에 비례합니다.',
-          },
-          en: {
-            name: 'Stampede Feint',
-            input: 'Swap hands after Gallop hits',
-            description: 'Forward line slash. Damage scales with Gallop level.',
           },
         },
         {
