@@ -15,14 +15,16 @@ export const sapperDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '삽으로 야전을 다지는 공병입니다. 투석기·스프링갈드·그리스불·비등유·전술철수로 적을 억제하고, TNT 돌격과 야전공성으로 화력을 키웁니다.',
-      '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기·기름함정 연계와 포격난류 대포 설치가 열리고, 난격으로 거대 포탄을 투하합니다.',
-      '포성장은 선인장 돌격·잔화편조·포성 교리로 포탄술을 완성하고, 포대열로 전장을 쓸어 버립니다. 비등유 위 그리스불은 화염 지대를 만듭니다.',
+      '삽으로 야전을 다지는 공병입니다. 투석기·스프링갈드·그리스불·비등유로 적을 억제하고, TNT 돌격과 야전공성으로 화력을 키웁니다.',
+      '비등유는 적을 중심으로 끌어당겨 설치물의 집중 포화를 유도합니다. 투석기는 적 근처에서 자동 폭발해 공중전·물속에서도 유효합니다.',
+      '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기·기름함정 연계와 포격난류 대포가 열리고, 난격으로 포격 거점을 설치합니다.',
+      '포성장은 파쇄포격·철갑관통·선인장 돌격·잔화편조로 연계를 완성하고, 포대열로 전장을 포격 구역으로 재편합니다.',
     ],
     en: [
-      'A sapper who fortifies the field with a shovel. Catapult, springald, Greek fire, boiling oil, and tactical withdrawal suppress foes while TNT Rush and Fieldworks raise pressure.',
-      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, oil snares, and a shell cannon before Bombardment drops a massive shell.',
-      'The Battery Captain masters Cactus Rush, Blaze Weave, and Siege Doctrine before Grand Battery clears the field. Greek fire on oil puddles leaves a burning zone.',
+      'A sapper who fortifies the field with a shovel. Catapult, springald, Greek fire, and boiling oil suppress foes while TNT Rush and Fieldworks raise pressure.',
+      'Boiling oil pulls enemies inward for focused bombardment. Catapult stones auto-detonate near foes, staying effective in air and water.',
+      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, oil snares, and a shell cannon before Bombardment plants a fire battery.',
+      'The Battery Captain masters Siege Barrage, Piercing Salvo, Cactus Rush, and Blaze Weave before Grand Battery reshapes the battlefield into a bombardment zone.',
     ],
   },
   skillSections: [
@@ -38,12 +40,16 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '투석기',
             input: '우클릭',
-            description: '전방에 투석기를 설치해 돌탄을 날려 피해·제압합니다.',
+            description:
+              '전방에 투석기를 설치해 돌탄 3발을 포물선으로 발사합니다. 돌은 1초 후 자동 폭발하며, 적 근처에서도 즉시 터집니다.',
+            extra: ['착탄 시 광역 피해와 제압을 가합니다.', '투석기는 가장 가까운 적 방향으로 회전합니다.'],
           },
           en: {
             name: 'Catapult',
             input: 'Right-click',
-            description: 'Deploys a catapult that lobs stone for damage and suppression.',
+            description:
+              'Deploys a catapult that lobs 3 stone shots. Stones auto-detonate after 1 second or near enemies.',
+            extra: ['Deals area damage and suppression on impact.', 'Catapult rotates toward nearest enemy.'],
           },
           masterLevel: 50,
         },
@@ -55,12 +61,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '스프링갈드',
             input: '웅크리기 + 우클릭',
-            description: '석궁 거치대를 설치해 짧은 연사를 합니다.',
+            description: '전방에 석궁 거치대를 설치해 4발의 화살을 직선으로 관통 발사합니다. 화살은 근처 적을 자동 조준합니다.',
           },
           en: {
             name: 'Springald',
             input: 'Sneak + right-click',
-            description: 'Deploys a bolt-thrower for a short burst.',
+            description: 'Deploys a springald that fires 4 bolts in a line. Bolts auto-aim toward nearby enemies.',
           },
           masterLevel: 50,
         },
@@ -91,12 +97,16 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '비등유',
             input: '웅크리기 + 손 바꾸기',
-            description: '발밑에 기름을 부어 광역 피해·강한 제압을 줍니다.',
+            description:
+              '발밑에 끓는 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 웅덩이는 8초간 유지되며, 적을 중심으로 끌어당깁니다.',
+            extra: ['그리스불로 점화 가능합니다.'],
           },
           en: {
             name: 'Boiling Oil',
             input: 'Sneak + swap hands',
-            description: 'Pours oil around you for area damage and heavy slow.',
+            description:
+              'Pours boiling oil, dealing area damage and heavy suppression. The pool lasts 8 seconds and pulls enemies toward its center.',
+            extra: ['Can ignite with Greek fire.'],
           },
           masterLevel: 50,
         },
@@ -284,12 +294,16 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '난격',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
-            description: '거대 포탄을 낙하시킵니다. 2차 한계 돌파 시 재사용 대기가 감소합니다.',
+            description:
+              '거대 포탄을 떨어뜨려 착탄 지점에 포격 거점을 설치합니다. 거점은 8초간 주변 적에게 자동으로 포탄을 발사합니다.',
+            extra: ['전술철수로 즉시 폭파 가능합니다.', '좁은 통로나 거점 방어에 효과적입니다.'],
           },
           en: {
             name: 'Bombardment',
             input: 'Sneak + hotkey 4 (combat mode)',
-            description: 'Drops a massive shell. Cooldown is shorter at second limit break.',
+            description:
+              'Drops a massive shell that becomes a bombardment battery. The battery auto-fires shells at nearby enemies for 8 seconds.',
+            extra: ['Can be detonated with Tactical Withdrawal.', 'Effective for chokepoint defense.'],
           },
         },
       ],
@@ -298,6 +312,49 @@ export const sapperDetail: ClassDetailDef = {
       id: 'limit2',
       requiredProficiency: 2,
       skills: [
+        {
+          id: 'siegeBarrage',
+          icon: 'bomb',
+          element: 'earth',
+          guiColumn: 9,
+          followUp: true,
+          chainOf: 'catapultBrace',
+          ko: {
+            name: '파쇄포격',
+            input: '우클릭 (추침찍기 직후)',
+            description:
+              '추침찍기 직후 우클릭 시, 하늘에서 돌 파편 5발이 부채꼴로 떨어져 광역을 폭격합니다.',
+            extra: ['적중 시 광역 피해와 제압을 가합니다.'],
+          },
+          en: {
+            name: 'Siege Barrage',
+            input: 'Right-click (after Catapult Brace)',
+            description:
+              'Right-click after Catapult Brace to rain 5 stone fragments in a spread, bombarding the area.',
+            extra: ['Deals area damage and suppression on impact.'],
+          },
+        },
+        {
+          id: 'piercingSalvo',
+          icon: 'crossbow',
+          element: 'earth',
+          guiColumn: 10,
+          followUp: true,
+          chainOf: 'springRip',
+          ko: {
+            name: '철갑관통',
+            input: '웅크+우클릭 (노선강철 직후)',
+            description: '노선강철 직후 웅크+우클릭 시, 초대형 볼트로 적을 관통하며 벽으로 밀어붙입니다.',
+            extra: ['좁은 통로에서 사용하면 적을 벽에 꽂을 수 있습니다.'],
+          },
+          en: {
+            name: 'Piercing Salvo',
+            input: 'Sneak+right-click (after Spring Rip)',
+            description:
+              'Sneak+right-click after Spring Rip to fire a massive bolt that pierces and slams enemies into walls.',
+            extra: ['Most effective in narrow corridors.'],
+          },
+        },
         {
           id: 'blazeWeave',
           icon: 'flame',
@@ -374,12 +431,16 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '포대열',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
-            description: '주변에 연속 포탄을 낙하시킵니다.',
+            description:
+              '주변 12블록을 3초간 포격 구역으로 만들고 6방향에서 포탄을 투하합니다. 구역 내 적은 이동속도 감소·약화·발광 효과를 받습니다.',
+            extra: ['구역 내 적은 발광 효과로 표시됩니다.', '아군의 집중 공격 기회를 만듭니다.'],
           },
           en: {
             name: 'Grand Battery',
             input: 'Sneak + hotkey 5 (combat mode)',
-            description: 'Staggered shells fall around you.',
+            description:
+              'Turns the 12-block area into a bombardment zone for 3 seconds, raining shells from 6 directions. Enemies inside are slowed, weakened, and glowing.',
+            extra: ['Enemies glow for visibility.', 'Creates an opening for allied assaults.'],
           },
         },
       ],
