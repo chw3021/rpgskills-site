@@ -30,14 +30,14 @@ export const standardBearerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '흰 깃발과 단검으로 전열을 다지는 기수입니다. 전장기·기세꺾기·신호·포고로 적을 포섭하고, 깃기돌진으로 전장을 가로지릅니다.',
-      '기장으로 승진하며 깃봉추적·깃기교환 연계와 패업령으로 군진을 이끕니다.',
-      '진기는 연대기와 전장돌파·율격종결로 군기를 정점에 올리며, 전장 전체를 깃발 아래 통일합니다.',
+      '흰 깃발과 단검으로 전열을 다지는 기수입니다. 전장기·기세꺾기·신호·포고로 적을 포섭하고 받는 피해를 키우며, 깃기돌진으로 전장을 가로지릅니다.',
+      '기장으로 승진하며 깃봉추적·깃기교환 연계와 패업령으로 군진을 이끕니다. 전투나팔·신호는 파티원의 피해도 함께 올립니다.',
+      '진기는 연대기와 전장돌파·율격종결로 군기를 정점에 올리며, 기병깃술 스택과 포섭으로 전장 전체를 깃발 아래 통일합니다.',
     ],
     en: [
-      'A standard bearer who holds the line with white banner and dagger. War Banner, Demoralize, Signal Call, and Proclaim coerce foes while Banner Charge cuts across the field.',
-      'Promotion to Ensign unlocks flag fall, standard swap, and Decree of Ruin to lead the formation.',
-      'The Grand Ensign commands with Rally Standard and field breakthrough chains until the whole army marches under one banner.',
+      'A standard bearer who holds the line with white banner and dagger. War Banner, Demoralize, Signal Call, and Proclaim coerce foes and raise damage taken while Banner Charge cuts across the field.',
+      'Promotion to Ensign unlocks flag fall, standard swap, and Decree of Ruin to lead the formation. War Horn and Signal Call also amplify party damage.',
+      'The Grand Ensign commands with Rally Standard and field breakthrough chains, Heraldry stacks, and coercion until the whole army marches under one banner.',
     ],
   },
   skillSections: [
@@ -89,12 +89,14 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '신호',
             input: '손 바꾸기',
-            description: '본인과 가까운 파티원에게 신속을 부여합니다.',
+            description:
+              '본인과 가까운 파티원에게 신속과 피해 증가 버프를 부여합니다. 레벨이 높을수록 지속시간과 피해 보너스가 커집니다.',
           },
           en: {
             name: 'Signal Call',
             input: 'Swap hands',
-            description: 'Grants Speed to you and nearby party members.',
+            description:
+              'Grants Speed and a damage buff to you and nearby party members. Higher level extends duration and damage bonus.',
           },
           masterLevel: 50,
         },
@@ -141,13 +143,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '전투나팔',
             input: '웅크리기 + 좌클릭',
             description:
-              '염소 뿔 소리와 함께 본인·가까운 파티원에게 힘·성급을 부여합니다. 신호 레벨에 비례합니다.',
+              '염소 뿔 소리와 함께 본인·가까운 파티원에게 힘·성급과 피해 증가를 부여합니다. 신호 레벨에 비례합니다.',
           },
           en: {
             name: 'War Horn',
             input: 'Sneak + left-click',
             description:
-              'Plays a goat horn and grants Strength and Haste to you and nearby party. Scales with Signal Call level.',
+              'Plays a goat horn and grants Strength, Haste, and a damage buff to you and nearby party. Scales with Signal Call level.',
           },
         },
         {
@@ -158,11 +160,13 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 7,
           ko: {
             name: '기병깃술',
-            description: '공격력이 증가합니다. 깃발 또는 검으로 근접 공격 시 최종 피해에 곱해집니다.',
+            description:
+              '공격력이 증가합니다. 깃발 또는 검으로 근접 공격 시 최종 피해에 곱해지며, 지원 스킬 적중 시 깃술 스택을 쌓아 다음 공격 피해를 추가로 높입니다(최대 10스택).',
           },
           en: {
             name: 'Heraldry',
-            description: 'Increases damage. Multiplies final melee damage with banner or sword.',
+            description:
+              'Increases damage. Multiplies final melee damage with banner or sword. Support skill hits build Heraldry stacks for bonus damage on later attacks (max 10 stacks).',
           },
         },
       ],
