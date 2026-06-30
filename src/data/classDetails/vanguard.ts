@@ -15,14 +15,14 @@ export const vanguardDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '창과 방패로 최전선을 지키는 선봉병입니다. 포진찌르기·창격돌·창고착·전열함성으로 진형을 뚫고, 창 휘두르기·내려찍기로 근접 광역을 커버합니다.',
-      '창술은 창 근접 피해를 키웁니다. 진형 숙련은 스킬 피해와 연계를, 선봉 교리는 궁극기 대기·연계 창을 강화합니다. 방패·삼지창 보조 슬롯에서는 스킬을 쓸 수 없습니다.',
-      '철벽진영과 관통진으로 전장의 중심이 됩니다. 진군장에서는 2차 연계가 강화됩니다.',
+      '창으로 최전선을 뚫는 선봉병입니다. 포진찌르기로 전방을 돌진하고, 창격돌로 지면을 내려찍어 적을 중앙으로 모읍니다.',
+      '창고착은 거대 창을 회전 휘두르며 주위를 베고, 상승창격으로 적을 공중에 띄운 뒤 공중창격·천공창격으로 연계합니다.',
+      '창술·진형 숙련·선봉 교리로 근접·스킬 피해가 성장하며, 철벽진영과 관통진으로 전장의 중심이 됩니다. 보조에 방패·삼지창이 있으면 스킬을 쓸 수 없습니다.',
     ],
     en: [
-      'A frontline soldier who holds the line with spear and shield. Phalanx jab, spear brace, skewering charge, and rallying call break ranks; spear sweep and downward slam cover melee AoE.',
-      'Spear Discipline boosts spear melee damage. Phalanx Training adds skill damage and combos; Vanguard Doctrine shortens the first ultimate cooldown and widens combo windows. No skills with shield or trident off-hand.',
-      'Iron Phalanx and Piercing Array anchor the fight. Line Marshal tier empowers limit-2 combo skills.',
+      'A frontline soldier who breaks ranks with a spear. Phalanx Jab dashes forward; Spear Brace slams the ground and pulls foes inward.',
+      'Skewering Charge spins a giant spear arc around you; Rising Spear launches foes upward and chains into Aerial Spear and Skybound Spear.',
+      'Spear Discipline, Phalanx Training, and Vanguard Doctrine raise melee and skill damage. Iron Phalanx and Piercing Array anchor the fight. No skills with shield or trident off-hand.',
     ],
   },
   skillSections: [
@@ -34,39 +34,107 @@ export const vanguardDetail: ClassDetailDef = {
           id: 'phalanxJab',
           icon: 'spear',
           element: 'earth',
-          ko: { name: '포진찌르기', input: '우클릭', description: '전방 직선으로 길게 찌릅니다.' },
-          en: { name: 'Phalanx Jab', input: 'Right-click', description: 'A long thrust in a straight line.' },
+          guiColumn: 0,
+          ko: {
+            name: '포진찌르기',
+            input: '우클릭',
+            description:
+              '전방으로 최대 3블록 돌진(벽·블록 직전까지)한 뒤, 시선 방향 직선 5.5블록 범위에 1회 타격합니다.',
+            extra: [
+              '돌진 중 SWEEP_ATTACK 파티클. 피해 계수 0.55+Lv×0.038 (35% 기본 / 65% 보너스, 대지).',
+              '재사용 2.8초×(1−행운/1024)×일반쿨감소. 숙련 1 이상 시 돌진찌르기 연계 창이 열립니다.',
+            ],
+          },
+          en: {
+            name: 'Phalanx Jab',
+            input: 'Right-click',
+            description:
+              'Dash up to 3 blocks forward (stops before solid blocks), then strike once along a 5.5-block line in your view direction.',
+            extra: [
+              'SWEEP_ATTACK particles while dashing. Damage 0.55+Lv×0.038 (35% base / 65% bonus, earth).',
+              'Cooldown 2.8s×(1−luck/1024)×normal CD reduction. Unlocks Phalanx Rend combo at proficiency 1+.',
+            ],
+          },
           masterLevel: 50,
         },
         {
           id: 'spearBrace',
           icon: 'shield',
           element: 'earth',
-          ko: { name: '창격돌', input: '웅크리기 + 우클릭', description: '전방을 밀치며 피해를 줍니다.' },
-          en: { name: 'Spear Brace', input: 'Sneak + right-click', description: 'Shoves enemies ahead for damage.' },
+          guiColumn: 1,
+          ko: {
+            name: '창격돌',
+            input: '웅크리기 + 우클릭',
+            description:
+              '전방 2.2블록 지점에 창을 내려찍어 지진장을 설치합니다. 반경 2.8 권역에서 4회 다단히트(3틱 간격)하며 적을 중앙으로 끌어당깁니다.',
+            extra: [
+              '1타에 전방 넉백, 이후 매 틱 수렴 소용돌이·균열 파티클. 피해 0.62+Lv×0.042 (40%/60%).',
+              '재사용 5.5초×일반쿨감소. 숙련 1 이상 시 맹렬창격 연계 창이 열립니다.',
+            ],
+          },
+          en: {
+            name: 'Spear Brace',
+            input: 'Sneak + right-click',
+            description:
+              'Slams the spear 2.2 blocks ahead, creating an earthquake zone. Radius 2.8, 4 multi-hits every 3 ticks, pulling enemies inward.',
+            extra: [
+              'First hit knocks back; later ticks show converging vortex and crack particles. Damage 0.62+Lv×0.042 (40%/60%).',
+              'Cooldown 5.5s×normal CD reduction. Unlocks Spear Drive combo at proficiency 1+.',
+            ],
+          },
           masterLevel: 50,
         },
         {
           id: 'skeweringCharge',
           icon: 'rush',
           element: 'earth',
-          ko: { name: '창고착', input: '손 바꾸기', description: '전방으로 짧게 돌진하며 관통 피해를 줍니다.' },
-          en: { name: 'Skewering Charge', input: 'Swap hands', description: 'A short lunge that pierces enemies.' },
+          guiColumn: 2,
+          ko: {
+            name: '창고착',
+            input: '손 바꾸기',
+            description:
+              '시선은 고정한 채 거대 창 파티클이 주위를 3회 회전하며 휘둘러집니다. 반경 3.0 호 판정, 4틱 간격 3회 다단히트.',
+            extra: [
+              '피해 0.58+Lv×0.04 (40%/60%). 재사용 7초×일반쿨감소.',
+              '숙련 1 이상 시 연속창고 연계 창이 열립니다.',
+            ],
+          },
+          en: {
+            name: 'Skewering Charge',
+            input: 'Swap hands',
+            description:
+              'A giant spear arc spins around you 3 times (camera fixed). Radius 3.0 frontal arc, 3 multi-hits every 4 ticks.',
+            extra: [
+              'Damage 0.58+Lv×0.04 (40%/60%). Cooldown 7s×normal CD reduction.',
+              'Unlocks Charge Follow combo at proficiency 1+.',
+            ],
+          },
           masterLevel: 50,
         },
         {
           id: 'rallyingCall',
           icon: 'spear',
           element: 'earth',
+          guiColumn: 3,
           ko: {
             name: '전열 함성',
             input: '웅크리기 + 손 바꾸기',
-            description: '주변 적에게 피해를 주고, 파티원에게 신속·흡수를 부여합니다(솔로는 본인만).',
+            description:
+              '반경 4.8 권역의 적에게 1회 피해를 주고, 본인·파티원(반경 10)에게 신속·흡수를 부여합니다(솔로는 본인만).',
+            extra: [
+              '적 피해 0.48+Lv×0.03 (45%/55%). 지휘 링·비콘 사운드 연출.',
+              '재사용 14초×일반쿨감소. 숙련 1 이상 시 함성잔향 연계 창이 열립니다.',
+            ],
           },
           en: {
             name: 'Rallying Call',
             input: 'Sneak + swap hands',
-            description: 'Damages nearby foes; grants Speed and Absorption to party (solo: self only).',
+            description:
+              'Damages enemies in radius 4.8 once, then grants Speed and Absorption to self and party within 10 blocks (solo: self only).',
+            extra: [
+              'Enemy damage 0.48+Lv×0.03 (45%/55%). Command ring and horn FX.',
+              'Cooldown 14s×normal CD reduction. Unlocks Rally Echo combo at proficiency 1+.',
+            ],
           },
           masterLevel: 50,
         },
@@ -74,31 +142,53 @@ export const vanguardDetail: ClassDetailDef = {
           id: 'spearSweep',
           icon: 'slash',
           element: 'earth',
+          guiColumn: 4,
           ko: {
             name: '창 휘두르기',
             input: '좌클릭',
-            description: '전방 호를 휘둘러 광역 피해를 줍니다. 피해량은 마스터 레벨에 비례합니다.',
+            description:
+              '전방 호(반경 3.8, 시선 dot>0.35)를 1회 휘둘러 피해를 줍니다. 스윕 파티클 2단 연출만 추가되며 피해는 1회입니다.',
+            extra: [
+              '피해 = 창고착 계수×0.88 (40%/60%). 마스터 레벨은 창고착 레벨을 따릅니다.',
+              '재사용 4.2초×일반쿨감소. 숙련 1 이상 시 휘두르기연격 연계 창이 열립니다.',
+            ],
           },
           en: {
             name: 'Spear Sweep',
             input: 'Left-click',
-            description: 'Sweeps in an arc ahead for AoE damage. Damage scales with master level.',
+            description:
+              'One frontal arc hit (radius 3.8, view dot>0.35). Two extra sweep particle waves; no extra damage.',
+            extra: [
+              'Damage = Skewering Charge coeff×0.88 (40%/60%). Uses Skewering Charge master level.',
+              'Cooldown 4.2s×normal CD reduction. Unlocks Sweep Arc combo at proficiency 1+.',
+            ],
           },
           masterLevel: 50,
         },
         {
-          id: 'downwardSlam',
+          id: 'risingSpear',
           icon: 'stab',
           element: 'earth',
+          guiColumn: 5,
           ko: {
-            name: '내려찍기',
+            name: '상승창격',
             input: '웅크리기 + 좌클릭',
-            description: '발밑 광역 내려찍기(전열 함성 레벨 적용).',
+            description:
+              '상승 창격(어퍼 슬래시)으로 본인을 띄우고, 발밑 반경 3.4에서 4회 다단히트(2틱 간격)합니다. 적은 위로 뜹니다.',
+            extra: [
+              '피해 = 전열 함성 적 피해×1.12 (45%/55%). 마스터 레벨은 전열 함성 레벨을 따릅니다.',
+              '재사용 6.5초×일반쿨감소. 숙련 1 이상 시 공중창격 연계 창이 열립니다.',
+            ],
           },
           en: {
-            name: 'Downward Slam',
+            name: 'Rising Spear',
             input: 'Sneak + left-click',
-            description: 'Slams the ground around you (uses Rallying Call level).',
+            description:
+              'An upper slash launches you; 4 multi-hits at radius 3.4 every 2 ticks, knocking enemies upward.',
+            extra: [
+              'Damage = Rallying Call enemy damage×1.12 (45%/55%). Uses Rallying Call master level.',
+              'Cooldown 6.5s×normal CD reduction. Unlocks Aerial Spear combo at proficiency 1+.',
+            ],
           },
           masterLevel: 50,
         },
@@ -106,16 +196,17 @@ export const vanguardDetail: ClassDetailDef = {
           id: 'spearDiscipline',
           icon: 'book',
           element: 'earth',
+          guiColumn: 7,
           passive: true,
           ko: {
             name: '창술',
             description:
-              '창으로 하는 근접 공격 피해가 증가합니다. 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
+              '창 근접 공격 피해가 증가합니다(1.08+Lv×0.022, 2차 한계 시 ×1.06 추가). 보조 슬롯에 방패·삼지창이 있으면 스킬을 사용할 수 없습니다.',
           },
           en: {
             name: 'Spear Discipline',
             description:
-              'Increases spear melee attack damage. Cannot use skills with shield or trident in off-hand.',
+              'Increases spear melee damage (1.08+Lv×0.022; ×1.06 more at limit 2). Cannot use skills with shield or trident off-hand.',
           },
         },
       ],
@@ -130,15 +221,26 @@ export const vanguardDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'phalanxJab',
+          guiColumn: 0,
           ko: {
             name: '돌진찌르기',
             input: '포진찌르기 후 재우클릭',
-            description: '포진찌르기 사용 후 짧은 시간 안에 재우클릭으로 돌진 찌르기를 이어갑니다.',
+            description:
+              '최대 5블록 돌진 후 직선 4.8블록 범위에 5회 다단히트(2틱 간격). 총 피해는 포진찌르기×0.72를 5회 분할합니다.',
+            extra: [
+              '연계 창 3.5초. 연계 재사용 0.55초×일반쿨감소.',
+              '진형 숙련(창술 레벨)에 따라 스킬 피해 배율 적용.',
+            ],
           },
           en: {
             name: 'Phalanx Rend',
             input: 'Right-click again after Phalanx Jab',
-            description: 'Within a short window after Phalanx Jab, right-click again to lunge-thrust.',
+            description:
+              'Dash up to 5 blocks, then 5 line hits along 4.8 blocks every 2 ticks. Total damage = Phalanx Jab×0.72 split across hits.',
+            extra: [
+              'Combo window 3.5s. Combo cooldown 0.55s×normal CD reduction.',
+              'Skill damage scales with Phalanx Training (Spear Discipline level).',
+            ],
           },
         },
         {
@@ -147,15 +249,24 @@ export const vanguardDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'spearBrace',
+          guiColumn: 1,
           ko: {
             name: '맹렬창격',
             input: '창격돌 후 웅크리기 + 재우클릭',
-            description: '창격돌 사용 후 짧은 시간 안에 웅크리기+재우클릭으로 맹렬 창격을 이어갑니다.',
+            description:
+              '전방 2.4블록 지진장. 반경 3.4, 6회 다단히트(3틱 간격). 매 틱 중앙 인력, 마지막 타에 4틱 제압.',
+            extra: [
+              '총 피해 = 창격돌×1.15를 6회 분할. 연계 창 3.5초, 재사용 0.65초×일반쿨감소.',
+            ],
           },
           en: {
             name: 'Spear Drive',
             input: 'Sneak + right-click again after Spear Brace',
-            description: 'Within a short window after Spear Brace, sneak and right-click again for a fierce drive.',
+            description:
+              'Earthquake at 2.4 blocks ahead. Radius 3.4, 6 multi-hits every 3 ticks with pull; final hit applies 4-tick suppression.',
+            extra: [
+              'Total damage = Spear Brace×1.15 split across hits. Combo window 3.5s; cooldown 0.65s×normal CD reduction.',
+            ],
           },
         },
         {
@@ -164,15 +275,20 @@ export const vanguardDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'skeweringCharge',
+          guiColumn: 2,
           ko: {
             name: '연속창고',
             input: '창고착 후 손 바꾸기',
-            description: '창고착 직후 손 바꾸기로 추가 관통 돌진을 이어갑니다.',
+            description:
+              '거대 창이 4회 회전 휘두르기(반경 3.4, 3틱 간격 4회 다단). 총 피해 = 창고착×0.82를 4회 분할.',
+            extra: ['연계 창 3.5초. 재사용 0.58초×일반쿨감소.'],
           },
           en: {
             name: 'Charge Follow',
             input: 'Swap hands again after Skewering Charge',
-            description: 'Within a short window after Skewering Charge, swap hands for another piercing lunge.',
+            description:
+              'Giant spear spins 4 times (radius 3.4, 4 multi-hits every 3 ticks). Total = Skewering Charge×0.82 split across hits.',
+            extra: ['Combo window 3.5s. Cooldown 0.58s×normal CD reduction.'],
           },
         },
         {
@@ -181,15 +297,20 @@ export const vanguardDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'rallyingCall',
+          guiColumn: 3,
           ko: {
             name: '함성잔향',
             input: '전열 함성 후 웅크리기 + 손 바꾸기',
-            description: '전열 함성 직후 웅크리기+손 바꾸기로 충격파를 이어갑니다.',
+            description:
+              '반경 4.8에서 1회 광역 피해(전열 함성×0.9). 6틱 후 함성 잔향 파티클·사운드(피해 없음).',
+            extra: ['연계 창 3.5초. 재사용 0.7초×일반쿨감소.'],
           },
           en: {
             name: 'Rally Echo',
             input: 'Sneak + swap again after Rallying Call',
-            description: 'Within a short window after Rallying Call, sneak and swap for a shockwave.',
+            description:
+              'One radial hit at radius 4.8 (Rallying Call×0.9). After 6 ticks, echo ripple FX only (no damage).',
+            extra: ['Combo window 3.5s. Cooldown 0.7s×normal CD reduction.'],
           },
         },
         {
@@ -198,48 +319,63 @@ export const vanguardDetail: ClassDetailDef = {
           element: 'earth',
           followUp: true,
           chainOf: 'spearSweep',
+          guiColumn: 4,
           ko: {
             name: '휘두르기연격',
             input: '창 휘두르기 후 좌클릭',
-            description: '창 휘두르기 직후 좌클릭으로 넓은 호 베기를 이어갑니다.',
+            description:
+              '반경 3.6 호 1회 타격 + 스윕 파티클 3단. 피해 = 창 휘두르기×0.78 (1회만).',
+            extra: ['연계 창 3.5초. 재사용 0.5초×일반쿨감소.'],
           },
           en: {
             name: 'Sweep Arc',
             input: 'Left-click again after Spear Sweep',
-            description: 'Within a short window after Spear Sweep, left-click for a wider arc.',
+            description:
+              'One arc hit at radius 3.6 plus 3 sweep FX waves. Damage = Spear Sweep×0.78 (single hit).',
+            extra: ['Combo window 3.5s. Cooldown 0.5s×normal CD reduction.'],
           },
         },
         {
-          id: 'slamBurst',
+          id: 'aerialSpear',
           icon: 'stab',
           element: 'earth',
           followUp: true,
-          chainOf: 'downwardSlam',
+          chainOf: 'risingSpear',
+          guiColumn: 5,
           ko: {
-            name: '내려찍기연격',
-            input: '내려찍기 후 웅크리기 + 좌클릭',
-            description: '내려찍기 직후 웅크리기+좌클릭으로 대지 분쇄를 이어갑니다.',
+            name: '공중창격',
+            input: '상승창격 후 웅크리기 + 좌클릭',
+            description:
+              '더 높이 상승한 뒤 반경 3.6에서 5회 공중 다단히트(2틱 간격). 마지막 타에 6틱 제압.',
+            extra: [
+              '총 피해 = 상승창격×0.85를 5회 분할. 연계 창 3.5초, 재사용 0.62초×일반쿨감소.',
+            ],
           },
           en: {
-            name: 'Slam Burst',
-            input: 'Sneak + left-click again after Downward Slam',
-            description: 'Within a short window after Downward Slam, sneak and left-click for a ground burst.',
+            name: 'Aerial Spear',
+            input: 'Sneak + left-click again after Rising Spear',
+            description:
+              'Higher launch, then 5 aerial multi-hits at radius 3.6 every 2 ticks; final hit applies 6-tick suppression.',
+            extra: [
+              'Total = Rising Spear×0.85 split across hits. Combo window 3.5s; cooldown 0.62s×normal CD reduction.',
+            ],
           },
         },
         {
           id: 'phalanxTraining',
           icon: 'book',
           element: 'earth',
+          guiColumn: 7,
           passive: true,
           ko: {
             name: '진형 숙련',
             description:
-              '창 스킬 피해가 증가합니다(창술 레벨에 비례). 숙련 1 연계 기술이 해제됩니다.',
+              '창 스킬 피해가 증가합니다(1+창술Lv×0.006). 1차 연계 기술이 해제되고 연계 창이 열립니다.',
           },
           en: {
             name: 'Phalanx Training',
             description:
-              'Increases spear skill damage (scales with Spear Discipline level). Unlocks limit-1 combo follow-ups.',
+              'Increases spear skill damage (1+Spear Discipline Lv×0.006). Unlocks limit-1 combo follow-ups.',
           },
         },
         {
@@ -247,17 +383,24 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'shield',
           element: 'earth',
           ultimate: true,
+          guiColumn: 8,
           ko: {
             name: '철벽진영',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '주변 적에게 피해를 주고 가까운 파티원에게 흡수를 부여합니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
+              '반경 5.5에 철벽 링 파티클과 함께 10회 다단 flat 피해(2틱 간격, 총 18.5를 분할). 가까운 파티원에게 흡수(반경 12).',
+            extra: [
+              '재사용 52초×궁극쿨감소(2차 한계 32초). 2차 한계 시 스킬 피해 ×1.1 추가.',
+            ],
           },
           en: {
             name: 'Iron Phalanx',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Damages nearby foes and grants Absorption to nearby party members. Cooldown is shorter at second limit break.',
+              'Iron wall ring FX at radius 5.5; 10 flat multi-hits every 2 ticks (18.5 total split). Grants Absorption to nearby party (radius 12).',
+            extra: [
+              'Cooldown 52s×ultimate CD reduction (32s at limit 2). Limit 2 adds ×1.1 skill damage.',
+            ],
           },
         },
       ],
@@ -271,15 +414,21 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'spear',
           element: 'earth',
           followUp: true,
+          chainOf: 'phalanxJab',
+          guiColumn: 0,
           ko: {
             name: '맹렬돌진찌르기',
             input: '포진찌르기 연계(2차)',
-            description: '2차 한계에서 포진찌르기 연계가 강화됩니다.',
+            description:
+              '5블록 돌진 후 직선 5.6블록, 12회 다단히트(2틱 간격). 총 피해 = 돌진찌르기×1.35를 12회 분할.',
+            extra: ['연계 창 4.0초.'],
           },
           en: {
             name: 'Phalanx Rend II',
             input: 'Limit 2 Phalanx Jab combo',
-            description: 'Empowered follow-up after Phalanx Jab at limit 2.',
+            description:
+              '5-block dash, then 12 line hits along 5.6 blocks every 2 ticks. Total = Phalanx Rend×1.35 split across hits.',
+            extra: ['Combo window 4.0s.'],
           },
         },
         {
@@ -287,55 +436,124 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'sword-drive',
           element: 'earth',
           followUp: true,
-          ko: { name: '극렬창격', input: '창격돌 연계(2차)', description: '2차 한계에서 창격돌 연계가 강화됩니다.' },
-          en: { name: 'Spear Drive II', input: 'Limit 2 Spear Brace combo', description: 'Empowered follow-up after Spear Brace.' },
+          chainOf: 'spearBrace',
+          guiColumn: 1,
+          ko: {
+            name: '극렬창격',
+            input: '창격돌 연계(2차)',
+            description:
+              '반경 3.8 지진장, 8회 다단히트(3틱 간격). 강한 인력, 마지막 타 8틱 제압. 총 피해 = 맹렬창격×1.35.',
+            extra: ['연계 창 4.0초.'],
+          },
+          en: {
+            name: 'Spear Drive II',
+            input: 'Limit 2 Spear Brace combo',
+            description:
+              'Radius 3.8 earthquake, 8 multi-hits every 3 ticks, heavy pull, 8-tick suppression on final hit. Total = Spear Drive×1.35.',
+            extra: ['Combo window 4.0s.'],
+          },
         },
         {
           id: 'chargeFollowII',
           icon: 'rush',
           element: 'earth',
           followUp: true,
-          ko: { name: '관통연착', input: '창고착 연계(2차)', description: '2차 한계에서 창고착 연계가 강화됩니다.' },
-          en: { name: 'Charge Follow II', input: 'Limit 2 Skewering Charge combo', description: 'Empowered follow-up after Skewering Charge.' },
+          chainOf: 'skeweringCharge',
+          guiColumn: 2,
+          ko: {
+            name: '관통연착',
+            input: '창고착 연계(2차)',
+            description:
+              '거대 창 6회 회전(반경 3.8, 3틱 간격 6회 다단). 총 피해 = 연속창고×1.35를 6회 분할.',
+            extra: ['연계 창 4.0초.'],
+          },
+          en: {
+            name: 'Charge Follow II',
+            input: 'Limit 2 Skewering Charge combo',
+            description:
+              'Giant spear spins 6 times (radius 3.8, 6 multi-hits every 3 ticks). Total = Charge Follow×1.35 split across hits.',
+            extra: ['Combo window 4.0s.'],
+          },
         },
         {
           id: 'rallyEchoII',
           icon: 'spear',
           element: 'earth',
           followUp: true,
-          ko: { name: '전열폭음', input: '전열 함성 연계(2차)', description: '2차 한계에서 전열 함성 연계가 강화됩니다.' },
-          en: { name: 'Rally Echo II', input: 'Limit 2 Rallying Call combo', description: 'Empowered follow-up after Rallying Call.' },
+          chainOf: 'rallyingCall',
+          guiColumn: 3,
+          ko: {
+            name: '전열폭음',
+            input: '전열 함성 연계(2차)',
+            description: '반경 5.4에서 1회 광역 피해(함성잔향×1.35). 6틱 후 잔향 연출.',
+            extra: ['연계 창 4.0초.'],
+          },
+          en: {
+            name: 'Rally Echo II',
+            input: 'Limit 2 Rallying Call combo',
+            description: 'One radial hit at radius 5.4 (Rally Echo×1.35). Echo ripple after 6 ticks.',
+            extra: ['Combo window 4.0s.'],
+          },
         },
         {
           id: 'sweepArcII',
           icon: 'slash',
           element: 'earth',
           followUp: true,
-          ko: { name: '광역창휘', input: '창 휘두르기 연계(2차)', description: '2차 한계에서 창 휘두르기 연계가 강화됩니다.' },
-          en: { name: 'Sweep Arc II', input: 'Limit 2 Spear Sweep combo', description: 'Empowered follow-up after Spear Sweep.' },
+          chainOf: 'spearSweep',
+          guiColumn: 4,
+          ko: {
+            name: '광역창휘',
+            input: '창 휘두르기 연계(2차)',
+            description:
+              '반경 4.2 호 1회 타격 + 스윕 3단. 피해 = 휘두르기연격×1.35 (1회).',
+            extra: ['연계 창 4.0초.'],
+          },
+          en: {
+            name: 'Sweep Arc II',
+            input: 'Limit 2 Spear Sweep combo',
+            description:
+              'One arc hit at radius 4.2 plus 3 sweep FX waves. Damage = Sweep Arc×1.35 (single hit).',
+            extra: ['Combo window 4.0s.'],
+          },
         },
         {
-          id: 'slamBurstII',
+          id: 'skyboundSpear',
           icon: 'stab',
           element: 'earth',
           followUp: true,
-          ko: { name: '대지분쇄', input: '내려찍기 연계(2차)', description: '2차 한계에서 내려찍기 연계가 강화됩니다.' },
-          en: { name: 'Slam Burst II', input: 'Limit 2 Downward Slam combo', description: 'Empowered follow-up after Downward Slam.' },
+          chainOf: 'risingSpear',
+          guiColumn: 5,
+          ko: {
+            name: '천공창격',
+            input: '상승창격 연계(2차)',
+            description:
+              '강한 상승 후 반경 4.2에서 8회 공중 다단(2틱 간격). 마지막 타 12틱 제압. 총 피해 = 공중창격×1.35.',
+            extra: ['연계 창 4.0초.'],
+          },
+          en: {
+            name: 'Skybound Spear',
+            input: 'Limit 2 Rising Spear combo',
+            description:
+              'Strong launch, 8 aerial multi-hits at radius 4.2 every 2 ticks; final hit 12-tick suppression. Total = Aerial Spear×1.35.',
+            extra: ['Combo window 4.0s.'],
+          },
         },
         {
           id: 'vanguardDoctrine',
           icon: 'book',
           element: 'earth',
+          guiColumn: 7,
           passive: true,
           ko: {
             name: '선봉 교리',
             description:
-              '창 스킬·근접 피해가 추가로 증가하고, 연계 입력 가능 시간이 길어집니다. 1차 돌파 궁극기(철벽진영)의 대기시간이 절반으로 감소합니다.',
+              '스킬 피해 ×1.1, 근접 피해 ×1.06, 연계 창 4.0초. 철벽진영 재사용이 절반(32초×궁극쿨감소)으로 감소합니다.',
           },
           en: {
             name: 'Vanguard Doctrine',
             description:
-              'Further increases spear skill and melee damage, and extends combo input windows. Halves the first limit-break ultimate cooldown (Iron Phalanx).',
+              '×1.1 skill damage, ×1.06 melee damage, 4.0s combo window. Iron Phalanx cooldown halved (32s×ultimate CD reduction).',
           },
         },
         {
@@ -343,15 +561,20 @@ export const vanguardDetail: ClassDetailDef = {
           icon: 'spear',
           element: 'earth',
           ultimate: true,
+          guiColumn: 8,
           ko: {
             name: '관통진',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
-            description: '웅크린 상태에서 핫바 5번으로 전환합니다. 시선 방향 직선에 막대한 피해를 줍니다.',
+            description:
+              '시선 방향 직선 9블록에 거대 창 형상 파티클과 함께 8회 다단히트(2틱 간격). 총 32를 8회 분할(30%/70%).',
+            extra: ['재사용 72초×궁극쿨감소. 2차 한계 전용 궁극기.'],
           },
           en: {
             name: 'Piercing Array',
             input: 'Sneak + hotkey 5 (combat mode)',
-            description: 'While sneaking, switch to hotbar slot 5. Deals massive line damage along your gaze.',
+            description:
+              'Giant spear FX along a 9-block line; 8 multi-hits every 2 ticks. 32 total split (30%/70%).',
+            extra: ['Cooldown 72s×ultimate CD reduction. Limit-2 ultimate only.'],
           },
         },
       ],

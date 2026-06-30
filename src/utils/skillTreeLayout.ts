@@ -6,6 +6,13 @@ import type {
   SkillIconId,
 } from '../data/classDetails';
 
+/**
+ * In-game skill tree layout for class detail pages.
+ * - Slot order: {@link CLASS_GUI_SLOTS} when its length matches flattened skills (e.g. vanguard).
+ * - Vertical combos: `guiColumn` on {@link ClassSkillDef} keeps base → limit1 → limit2 in one column
+ *   when slot maps are missing (see vanguard.ts, sapper.ts, gardener.ts).
+ */
+
 export type FlatSkill = {
   skill: ClassSkillDef;
   section: ClassSkillSection;
