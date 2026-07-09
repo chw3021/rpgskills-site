@@ -343,8 +343,16 @@ export const gardenerDetail: ClassDetailDef = {
           element: 'earth',
           passive: true,
           guiColumn: 7,
-          ko: { name: '성장', description: '공격력이 증가합니다. 숙련 1 연계 기술이 해제됩니다.' },
-          en: { name: 'Growth', description: 'Increases damage. Limit 1 combo follow-ups unlocked.' },
+          ko: {
+            name: '정원 숙련',
+            description:
+              '공격력이 증가합니다(성장 레벨 비례). 숙련 1 연계 기술이 해제되고 연계 창이 열립니다.',
+          },
+          en: {
+            name: 'Garden Training',
+            description:
+              'Increases damage (scales with Growth level). Unlocks limit-1 combo follow-ups.',
+          },
         },
         {
           id: 'overgrowth',
@@ -506,12 +514,14 @@ export const gardenerDetail: ClassDetailDef = {
           passive: true,
           guiColumn: 7,
           ko: {
-            name: '성장',
-            description: '공격력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
+            name: '자연 교리',
+            description:
+              '공격력이 증가합니다. 연계 입력 시간이 4.0초로 늘고, 1차 돌파 궁극기(과성장)의 대기시간이 절반으로 감소합니다.',
           },
           en: {
-            name: 'Growth',
-            description: 'Increases damage. First limit-break ultimate cooldown is halved.',
+            name: 'Nature Doctrine',
+            description:
+              'Increases damage. Combo window becomes 4.0s; first limit-break ultimate (Overgrowth) cooldown is halved.',
           },
         },
         {
