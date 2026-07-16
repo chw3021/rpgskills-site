@@ -15,14 +15,14 @@ export const sapperDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '삽으로 야전을 다지는 공병입니다. 투석기·스프링갈드·그리스불·비등유로 적을 억제하고, TNT 돌격과 야전공성으로 화력을 키웁니다.',
-      '비등유는 적을 중심으로 끌어당겨 설치물의 집중 포화를 유도합니다. 투석기는 적 근처에서 자동 폭발해 공중전·물속에서도 유효합니다.',
+      '삽으로 야전을 다지는 공병입니다. 투석기·스프링갈드·그리스불 방사기·비등유로 적을 억제하고, TNT 돌격과 야전공성으로 화력을 키웁니다.',
+      '그리스불은 지속 분사 방사기를 설치하며, 전술철수 시 다른 공성물과 함께 폭파됩니다. 비등유는 적을 끌어당겨 집중 포화를 유도합니다.',
       '공성기장으로 승진하며 추침찍기·노선강철·잔화씻기·기름함정 연계와 포격난류 대포가 열리고, 난격으로 포격 거점을 설치합니다.',
       '포성장은 파쇄포격·철갑관통·선인장 돌격·잔화편조로 연계를 완성하고, 포대열로 전장을 포격 구역으로 재편합니다.',
     ],
     en: [
-      'A sapper who fortifies the field with a shovel. Catapult, springald, Greek fire, and boiling oil suppress foes while TNT Rush and Fieldworks raise pressure.',
-      'Boiling oil pulls enemies inward for focused bombardment. Catapult stones auto-detonate near foes, staying effective in air and water.',
+      'A sapper who fortifies the field with a shovel. Catapult, springald, Greek-fire projectors, and boiling oil suppress foes while TNT Rush and Fieldworks raise pressure.',
+      'Greek Fire deploys a continuous flamethrower that detonates with Tactical Withdrawal. Boiling oil pulls enemies inward for focused bombardment.',
       'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, oil snares, and a shell cannon before Bombardment plants a fire battery.',
       'The Battery Captain masters Siege Barrage, Piercing Salvo, Cactus Rush, and Blaze Weave before Grand Battery reshapes the battlefield into a bombardment zone.',
     ],
@@ -79,13 +79,15 @@ export const sapperDetail: ClassDetailDef = {
             name: '그리스불',
             input: '손 바꾸기',
             description:
-              '전방 부채꼴로 화염을 분사해 피해·제압합니다. 비등유 웅덩이 위에서 사용하면 화염 지대가 생깁니다.',
+              '전방에 그리스불 방사기를 설치해 약 5초간 지속 분사합니다. 근처 적을 조준하며, 전술철수 시 폭파·철거됩니다.',
+            extra: ['비등유 웅덩이 근처면 화염 지대를 점화합니다.'],
           },
           en: {
             name: 'Greek Fire',
             input: 'Swap hands',
             description:
-              'Sprays a cone of clinging fire for damage and suppression. Ignites boiling-oil puddles into a fire zone.',
+              'Deploys a Greek-fire projector that sprays for about 5 seconds, auto-aims nearby foes, and detonates with Tactical Withdrawal.',
+            extra: ['Ignites nearby boiling-oil pools into a fire zone.'],
           },
           masterLevel: 50,
         },
@@ -213,12 +215,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '잔화씻기',
             input: '그리스불 직후 손 바꾸기',
-            description: '좁은 부채꼴 추가 피해. 피해량은 그리스불 레벨에 비례합니다.',
+            description: '기존 방사기가 좌우로 쓸며 과열 분사합니다. 방사기가 없으면 새로 설치한 뒤 과열합니다.',
           },
           en: {
             name: 'Greek Wash',
             input: 'Swap hands after Greek Fire',
-            description: 'Narrow cone follow-up. Damage scales with Greek Fire level.',
+            description: 'Overcharges your projector into a left-right sweeping wash. Redeploys one if missing.',
           },
         },
         {
@@ -365,12 +367,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '잔화편조',
             input: '잔화씻기 직후 손 바꾸기',
-            description: '부채꼴 재점화. 피해량은 그리스불 레벨에 비례합니다.',
+            description: '방사기에서 이중 나선 화염이 전방으로 뻗어나갑니다. 방사기가 없으면 설치 후 발사합니다.',
           },
           en: {
             name: 'Blaze Weave',
             input: 'Swap hands after Greek Wash',
-            description: 'Reignites a cone. Damage scales with Greek Fire level.',
+            description: 'Fires dual spiral flames from the projector. Redeploys one if missing.',
           },
         },
         {

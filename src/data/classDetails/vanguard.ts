@@ -15,13 +15,13 @@ export const vanguardDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '창으로 최전선을 뚫는 선봉병입니다. 포진찌르기로 전방을 돌진하고, 창격돌로 지면을 내려찍어 적을 중앙으로 모읍니다.',
-      '창고착은 거대 창을 회전 휘두르며 주위를 베고, 상승창격으로 적을 공중에 띄운 뒤 공중창격·천공창격으로 연계합니다.',
+      '창으로 최전선을 압박하는 선봉병입니다. 포진찌르기는 전방 원뿔을 연타하며 적을 붙잡고, 시전 중 무적 상태가 됩니다.',
+      '창격돌로 지면을 내려찍어 적을 중앙으로 모으고, 창고착은 거대 창을 회전 휘두르며 주위를 벱니다. 상승창격으로 적을 띄운 뒤 공중창격·천공창격으로 연계합니다.',
       '창술·진형 숙련·선봉 교리로 근접·스킬 피해가 성장하며, 철벽진영과 관통진으로 전장의 중심이 됩니다. 보조에 방패·삼지창이 있으면 스킬을 쓸 수 없습니다.',
     ],
     en: [
-      'A frontline soldier who breaks ranks with a spear. Phalanx Jab dashes forward; Spear Brace slams the ground and pulls foes inward.',
-      'Skewering Charge spins a giant spear arc around you; Rising Spear launches foes upward and chains into Aerial Spear and Skybound Spear.',
+      'A frontline soldier who pins foes with spear pressure. Phalanx Jab multi-hits a forward cone, super-holds enemies, and grants channel invulnerability.',
+      'Spear Brace slams the ground and pulls foes inward. Skewering Charge spins a giant spear arc; Rising Spear launches foes into Aerial Spear and Skybound Spear.',
       'Spear Discipline, Phalanx Training, and Vanguard Doctrine raise melee and skill damage. Iron Phalanx and Piercing Array anchor the fight. No skills with shield or trident off-hand.',
     ],
   },
@@ -39,9 +39,9 @@ export const vanguardDetail: ClassDetailDef = {
             name: '포진찌르기',
             input: '우클릭',
             description:
-              '전방으로 최대 3블록 돌진(벽·블록 직전까지)한 뒤, 시선 방향 직선 5.5블록 범위에 1회 타격합니다.',
+              '짧게 전방으로 파고든 뒤, 시선 방향 원뿔(~5.6블록)을 창으로 6회 연타합니다. 원뿔 안 적에게 슈퍼홀딩을 걸고, 시전 중 무적입니다.',
             extra: [
-              '돌진 중 SWEEP_ATTACK 파티클. 피해 계수 0.55+Lv×0.038 (35% 기본 / 65% 보너스, 대지).',
+              'CRIT·SWEEP 원뿔 파티클. 피해 계수 0.55+Lv×0.038 (40% 기본 / 60% 보너스, 대지).',
               '재사용 2.8초×(1−행운/1024)×일반쿨감소. 숙련 1 이상 시 돌진찌르기 연계 창이 열립니다.',
             ],
           },
@@ -49,9 +49,9 @@ export const vanguardDetail: ClassDetailDef = {
             name: 'Phalanx Jab',
             input: 'Right-click',
             description:
-              'Dash up to 3 blocks forward (stops before solid blocks), then strike once along a 5.5-block line in your view direction.',
+              'Step in, then multi-hit a forward cone (~5.6 blocks) six times. Super-holds enemies in the cone and grants channel invulnerability.',
             extra: [
-              'SWEEP_ATTACK particles while dashing. Damage 0.55+Lv×0.038 (35% base / 65% bonus, earth).',
+              'CRIT/SWEEP cone particles. Damage 0.55+Lv×0.038 (40% base / 60% bonus, earth).',
               'Cooldown 2.8s×(1−luck/1024)×normal CD reduction. Unlocks Phalanx Rend combo at proficiency 1+.',
             ],
           },
@@ -226,7 +226,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '돌진찌르기',
             input: '포진찌르기 후 재우클릭',
             description:
-              '최대 5블록 돌진 후 직선 4.8블록 범위에 5회 다단히트(2틱 간격). 총 피해는 포진찌르기×0.72를 5회 분할합니다.',
+              '더 깊게 파고들며 넓은 원뿔을 8회 연타합니다. 슈퍼홀딩·채널 무적이 유지됩니다. 총 피해는 포진찌르기×0.72입니다.',
             extra: [
               '연계 창 3.5초. 연계 재사용 0.55초×일반쿨감소.',
               '진형 숙련(창술 레벨)에 따라 스킬 피해 배율 적용.',
@@ -236,7 +236,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: 'Phalanx Rend',
             input: 'Right-click again after Phalanx Jab',
             description:
-              'Dash up to 5 blocks, then 5 line hits along 4.8 blocks every 2 ticks. Total damage = Phalanx Jab×0.72 split across hits.',
+              'Drive deeper and multi-hit a wider cone eight times with super-hold and channel invulnerability. Total damage = Phalanx Jab×0.72.',
             extra: [
               'Combo window 3.5s. Combo cooldown 0.55s×normal CD reduction.',
               'Skill damage scales with Phalanx Training (Spear Discipline level).',
@@ -420,15 +420,15 @@ export const vanguardDetail: ClassDetailDef = {
             name: '맹렬돌진찌르기',
             input: '포진찌르기 연계(2차)',
             description:
-              '5블록 돌진 후 직선 5.6블록, 12회 다단히트(2틱 간격). 총 피해 = 돌진찌르기×1.35를 12회 분할.',
-            extra: ['연계 창 4.0초.'],
+              '최전선까지 파고들어 넓은 원뿔을 12회 고속 연타합니다. 끝점 충격파·강화 슈퍼홀딩·채널 무적. 총 피해 = 돌진찌르기×1.35.',
+            extra: ['연계 창 4.0초. 숙련2에서는 본기 직후 이 연계만 발동(L1 대체).'],
           },
           en: {
             name: 'Phalanx Rend II',
             input: 'Limit 2 Phalanx Jab combo',
             description:
-              '5-block dash, then 12 line hits along 5.6 blocks every 2 ticks. Total = Phalanx Rend×1.35 split across hits.',
-            extra: ['Combo window 4.0s.'],
+              'Drive to the frontline and multi-hit a wide cone 12 times with tip shockwaves, stronger super-hold, and channel invulnerability. Total = Phalanx Rend×1.35.',
+            extra: ['Combo window 4.0s. At limit 2 this replaces L1 on the same input after the base skill.'],
           },
         },
         {
