@@ -41,7 +41,7 @@ export const vanguardDetail: ClassDetailDef = {
             description:
               '짧게 전방으로 파고든 뒤, 시선 방향 원뿔(~5.6블록)을 창으로 6회 연타합니다. 원뿔 안 적에게 슈퍼홀딩을 걸고, 시전 중 무적입니다.',
             extra: [
-              'CRIT·SWEEP 원뿔 파티클. 피해 계수 0.55+Lv×0.038 (40% 기본 / 60% 보너스, 대지).',
+              '피해 계수 0.55+Lv×0.038 (40% 기본 / 60% 보너스, 대지).',
               '재사용 2.8초×(1−행운/1024)×일반쿨감소. 숙련 1 이상 시 돌진찌르기 연계 창이 열립니다.',
             ],
           },
@@ -51,7 +51,7 @@ export const vanguardDetail: ClassDetailDef = {
             description:
               'Step in, then multi-hit a forward cone (~5.6 blocks) six times. Super-holds enemies in the cone and grants channel invulnerability.',
             extra: [
-              'CRIT/SWEEP cone particles. Damage 0.55+Lv×0.038 (40% base / 60% bonus, earth).',
+              'Damage 0.55+Lv×0.038 (40% base / 60% bonus, earth).',
               'Cooldown 2.8s×(1−luck/1024)×normal CD reduction. Unlocks Phalanx Rend combo at proficiency 1+.',
             ],
           },
@@ -68,7 +68,7 @@ export const vanguardDetail: ClassDetailDef = {
             description:
               '전방 2.2블록(수평) 지점에 창을 내려찍어 지진장을 설치합니다. 중심 Y는 해당 위치에서 아래로 찾은 로컬 지면입니다(동굴·실내 대응). 반경 2.8 권역에서 4회 다단히트(3틱 간격)하며 적을 중앙으로 끌어당깁니다.',
             extra: [
-              '1타에 전방 넉백, 이후 매 틱 수렴 소용돌이·균열 파티클. 피해 0.62+Lv×0.042 (40%/60%).',
+              '1타에 전방 넉백, 이후 매 틱 적을 중앙으로 끌어당깁니다. 피해 0.62+Lv×0.042 (40%/60%).',
               '재사용 5.5초×일반쿨감소. 숙련 1 이상 시 맹렬창격 연계 창이 열립니다.',
             ],
           },
@@ -78,7 +78,7 @@ export const vanguardDetail: ClassDetailDef = {
             description:
               'Slams the spear 2.2 blocks ahead on the horizontal plane (Y snapped to local floor below the point, cave-safe). Radius 2.8, 4 multi-hits every 3 ticks, pulling enemies inward.',
             extra: [
-              'First hit knocks back; later ticks show converging vortex and crack particles. Damage 0.62+Lv×0.042 (40%/60%).',
+              'First hit knocks back; later ticks pull foes inward. Damage 0.62+Lv×0.042 (40%/60%).',
               'Cooldown 5.5s×normal CD reduction. Unlocks Spear Drive combo at proficiency 1+.',
             ],
           },
@@ -93,7 +93,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '창고착',
             input: '손 바꾸기',
             description:
-              '시선은 고정한 채 거대 창 파티클이 주위를 3회 회전하며 휘둘러집니다. 반경 3.0 호 판정, 4틱 간격 3회 다단히트.',
+              '시선은 고정한 채 거대 창이 주위를 3회 회전하며 휘둘러집니다. 반경 3.0 호 판정, 4틱 간격 3회 다단히트.',
             extra: [
               '피해 0.58+Lv×0.04 (40%/60%). 재사용 7초×일반쿨감소.',
               '숙련 1 이상 시 연속창고 연계 창이 열립니다.',
@@ -302,7 +302,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '함성잔향',
             input: '전열 함성 후 웅크리기 + 손 바꾸기',
             description:
-              '반경 4.8에서 1회 광역 피해(전열 함성×0.9). 6틱 후 함성 잔향 파티클·사운드(피해 없음).',
+              '반경 4.8에서 1회 광역 피해(전열 함성×0.9). 6틱 후 잔향 연출(피해 없음).',
             extra: ['연계 창 3.5초. 재사용 0.7초×일반쿨감소.'],
           },
           en: {
@@ -324,7 +324,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '휘두르기연격',
             input: '창 휘두르기 후 좌클릭',
             description:
-              '소폭 전진 후 반경 5.5 호 1회 타격·중앙 집결·6틱 Holding + 스윕 파티클 3단. 피해 = 창 휘두르기×0.78 (1회만).',
+              '소폭 전진 후 반경 5.5 호 1회 타격·중앙 집결·6틱 Holding + 3단 휩쓸기. 피해 = 창 휘두르기×0.78 (1회만).',
             extra: ['연계 창 3.5초. 재사용 0.5초×일반쿨감소.'],
           },
           en: {
@@ -388,7 +388,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '철벽진영',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '반경 5.5에 철벽 링 파티클과 함께 10회 다단 flat 피해(2틱 간격, 총 18.5를 분할). 가까운 파티원에게 흡수(반경 12).',
+              '반경 5.5에서 10회 다단 flat 피해(2틱 간격, 총 18.5를 분할). 가까운 파티원에게 흡수(반경 12).',
             extra: [
               '재사용 52초×궁극쿨감소(2차 한계 32초). 2차 한계 시 스킬 피해 ×1.1 추가.',
             ],
@@ -566,7 +566,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '관통진',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '시선 방향 직선 9블록에 거대 창 형상 파티클과 함께 8회 다단히트(2틱 간격). 총 32를 8회 분할(30%/70%).',
+              '시선 방향 직선 9블록에 거대 창이 관통하며 8회 다단히트(2틱 간격). 총 32를 8회 분할(30%/70%).',
             extra: ['재사용 72초×궁극쿨감소. 2차 한계 전용 궁극기.'],
           },
           en: {

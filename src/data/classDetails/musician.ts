@@ -120,12 +120,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '음표연주',
             input: '웅크리기 + 좌클릭',
-            description: '음표 파티클로 적에게 피해를 주고 아군을 회복·강화합니다.',
+            description: '음표 연주로 적에게 피해를 주고 아군을 회복·강화합니다.',
           },
           en: {
             name: 'Note Burst',
             input: 'Sneak + left-click',
-            description: 'Note particles damage foes and heal/buff allies.',
+            description: 'Musical notes damage foes and heal/buff allies.',
           },
           masterLevel: 50,
         },

@@ -39,7 +39,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '덩굴채찍',
             input: '삽 + 비웅크리기 + 우클릭',
             description:
-              '전방 지점에 덩굴 뿌리(BlockDisplay) 장판을 설치합니다. 5초간 SWEEP·덩굴 파티클이 중앙으로 수렴하며 적을 끌어당기고 제압·틱 피해를 줍니다.',
+              '전방 지점에 덩굴 뿌리 장판을 설치합니다. 5초간 덩굴이 중앙으로 수렴하며 적을 끌어당기고 제압·틱 피해를 줍니다.',
             extra: [
               '반경 2.3, 10틱마다 판정. 재사용 5초×(1−행운/1024)×일반쿨감소.',
               '숙련 1 이상 시 식충 줄기 연계 창이 열립니다(3.5초 / 숙련2 4.0초).',
@@ -49,7 +49,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Vine Whip',
             input: 'Shovel + not sneaking + right-click',
             description:
-              'Deploys a vine root patch (BlockDisplay) ahead. For 5s, SWEEP and vine particles converge inward, pulling, suppressing, and ticking damage.',
+              'Deploys a vine root patch ahead. For 5s, vines converge inward, pulling, suppressing, and ticking damage.',
             extra: [
               'Radius 2.3, hit every 10 ticks. Cooldown 5s×(1−luck/1024)×normal CD reduction.',
               'Unlocks Carnivorous Stalk combo at proficiency 1+ (3.5s / 4.0s at proficiency 2).',
@@ -93,7 +93,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '뿌리감옥',
             input: '삽 + 웅크리기 + 우클릭',
             description:
-              'BlockDisplay 뿌리 감옥을 소환합니다. 내부 적에게 6회 다단히트와 superholding을 적용하며, 밖에서 들어온 적도 제압됩니다.',
+              '뿌리 감옥을 소환합니다. 내부 적에게 6회 다단히트와 superholding을 적용하며, 밖에서 들어온 적도 제압됩니다.',
             extra: [
               '반경 3.2, 8틱 간격 6타. 재사용 9초×일반쿨감소.',
               '숙련 1 이상 시 뿌리 올가미 연계 창이 열립니다.',
@@ -103,7 +103,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Root Prison',
             input: 'Shovel + sneak + right-click',
             description:
-              'Summons a BlockDisplay root cage. 6 multi-hits with superholding inside; enemies entering from outside are also suppressed.',
+              'Summons a root cage. 6 multi-hits with superholding inside; enemies entering from outside are also suppressed.',
             extra: [
               'Radius 3.2, 6 hits every 8 ticks. Cooldown 9s×normal CD reduction.',
               'Unlocks Root Lasso combo at proficiency 1+.',
@@ -120,7 +120,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '가시밭',
             input: '삽 + 비웅크리기 + 좌클릭',
             description:
-              '주력 공격기. 가시 BlockDisplay가 솟구치며 4회 다단히트합니다. 공격적으로 튀어 오르는 가시 파티클 연출.',
+              '주력 공격기. 가시가 솟구치며 4회 다단히트합니다.',
             extra: [
               '반경 3.1, 7틱 간격 4타(5회 미만). 재사용 7초×일반쿨감소.',
               '숙련 1 이상 시 가시 솟구침 연계 창이 열립니다.',
@@ -130,7 +130,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Thorn Field',
             input: 'Shovel + not sneaking + left-click',
             description:
-              'Main attack skill. Thorn BlockDisplays erupt for 4 multi-hits with aggressive upward spike particles.',
+              'Main attack skill. Thorns erupt for 4 multi-hits.',
             extra: [
               'Radius 3.1, 4 hits every 7 ticks (under 5 hits). Cooldown 7s×normal CD reduction.',
               'Unlocks Thorn Eruption combo at proficiency 1+.',
@@ -147,7 +147,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '포자구름',
             input: '삽 + 웅크리기 + 손 바꾸기',
             description:
-              '전방에 포자 구름을 펼칩니다. SPORE_BLOSSOM BlockDisplay와 함께 15회 다단히트, 실명, 간헐 제압.',
+              '전방에 포자 구름을 펼칩니다. 15회 다단히트, 실명, 간헐 제압.',
             extra: [
               '전방 4블록, 반경 3.4, 4틱 간격 15타. 재사용 8초×일반쿨감소.',
               '숙련 1 이상 시 포자 만화 연계 창이 열립니다.',
@@ -157,7 +157,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Spore Cloud',
             input: 'Shovel + sneak + swap hands',
             description:
-              'Spreads a spore cloud ahead with a BlockDisplay blossom. 15 multi-hits, blindness, and periodic suppression.',
+              'Spreads a spore cloud ahead. 15 multi-hits, blindness, and periodic suppression.',
             extra: [
               '4 blocks forward, radius 3.4, 15 hits every 4 ticks. Cooldown 8s×normal CD reduction.',
               'Unlocks Spore Flourish combo at proficiency 1+.',
@@ -174,7 +174,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '꽃소환',
             input: '삽 + 비웅크리기 + 점프 + 좌클릭',
             description:
-              '다양한 꽃 BlockDisplay 정원을 소환합니다. 10틱마다 주변 적에게 피해·제압 버프존을 유지합니다.',
+              '다양한 꽃 정원을 소환합니다. 10틱마다 주변 적에게 피해·제압 버프존을 유지합니다.',
             extra: [
               '반경 2.8, 지속 틱 피해. 재사용 12초×(1−행운/1024)×일반쿨감소.',
               '숙련 1 이상 시 꽃가루 폭풍 연계 창이 열립니다.',
@@ -184,7 +184,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Flower Garden',
             input: 'Shovel + not sneaking + jump + left-click',
             description:
-              'Summons a flower garden of varied BlockDisplays. Every 10 ticks, damages and suppresses nearby foes.',
+              'Summons a flower garden. Every 10 ticks, damages and suppresses nearby foes.',
             extra: [
               'Radius 2.8, sustained tick damage. Cooldown 12s×(1−luck/1024)×normal CD reduction.',
               'Unlocks Pollen Gale combo at proficiency 1+.',
@@ -364,7 +364,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '과성장',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '범위 내 설치 스킬·소환체의 크기와 장판 반경을 키우고, 성장 파티클 장판에서 8회 다단 피해를 줍니다.',
+              '범위 내 설치 스킬·소환체의 크기와 장판 반경을 키우고, 장판에서 8회 다단 피해를 줍니다.',
             extra: [
               '스캔 반경 6블록, 버프 배율 1.35(숙련2 1.45). 8타, 10틱 간격, 총 공격력×18 분배.',
               '전투 모드 전용. 재사용 숙련1 70초 / 숙련2 35초×궁극기쿨감소.',
@@ -374,7 +374,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'Overgrowth',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Buffs deployed skills and summons in range (size + radius), then deals 8-hit aura damage with growth particles.',
+              'Buffs deployed skills and summons in range (size + radius), then deals 8-hit aura damage.',
             extra: [
               'Scan radius 6 blocks, buff 1.35× (1.45× at proficiency 2). 8 hits every 10 ticks, 18× ATK total.',
               'Combat mode only. Cooldown 70s / 35s at proficiency 2 × ultimate CD reduction.',
@@ -398,14 +398,14 @@ export const gardenerDetail: ClassDetailDef = {
             name: '덩굴 교살',
             input: '덩굴채찍 연계(숙련2)',
             description:
-              '맹그로브 뿌리가 나선으로 감싸 오르는 교살 감옥을 소환합니다. 영혼·역포털 파티클이 위로 솟았다가 중앙으로 짓누르며 superholding합니다.',
+              '맹그로브 뿌리가 나선으로 감싸 오르는 교살 감옥을 소환합니다. 기류가 위로 솟았다가 중앙으로 짓누르며 superholding합니다.',
             extra: ['반경 2.5, 약 5초. 피해량은 덩굴채찍 레벨×1.35에 비례합니다.'],
           },
           en: {
             name: 'Vine Strangle',
             input: 'Vine Whip follow-up (proficiency 2)',
             description:
-              'Summons a mangrove-root helix cage. Soul and reverse-portal particles spiral up then crush inward with superholding.',
+              'Summons a mangrove-root helix cage. A whirling force spirals up then crushes inward with superholding.',
             extra: ['Radius 2.5, ~5s. Damage scales with Vine Whip level ×1.35.'],
           },
         },
@@ -536,7 +536,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: '세계수',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '거대 세계수(BlockDisplay)를 소환하고 수관에서 거대 씨앗 8개가 낙하·폭발합니다. 폭발마다 제압 45틱.',
+              '거대 세계수를 소환하고 수관에서 거대 씨앗 8개가 낙하·폭발합니다. 폭발마다 제압 45틱.',
             extra: [
               '자기 위치 중심. 폭발 반경 2.8, 총 공격력×30을 8폭발로 분배.',
               '전투 모드 전용. 재사용 80초×궁극기쿨감소.',
@@ -546,7 +546,7 @@ export const gardenerDetail: ClassDetailDef = {
             name: 'World Tree',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Summons a giant BlockDisplay world tree; 8 huge seeds fall from the canopy and explode. 45-tick suppression per blast.',
+              'Summons a giant world tree; 8 huge seeds fall from the canopy and explode. 45-tick suppression per blast.',
             extra: [
               'Centered on caster. Blast radius 2.8, 30× ATK split across 8 explosions.',
               'Combat mode only. Cooldown 80s × ultimate CD reduction.',
