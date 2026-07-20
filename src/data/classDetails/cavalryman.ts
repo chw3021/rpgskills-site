@@ -287,12 +287,14 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '돌풍창',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
-            description: '주변 적에게 큰 피해를 줍니다.',
+            description:
+              '말에 올라 무적 차징 후 전방으로 드릴 회오리 돌진하며 일직선 적을 공격하고, 도약하며 원위치로 복귀합니다.',
           },
           en: {
             name: 'Wind Lance',
             input: 'Sneak + hotkey 4 (combat mode)',
-            description: 'Heavy area damage.',
+            description:
+              'Mount, gain invulnerability while charging, drill-rush in a line, then leap and return to the start.',
           },
         },
       ],
@@ -433,12 +435,14 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '천마 통과',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
-            description: '시선 방향 직선으로 관통 피해를 줍니다.',
+            description:
+              '기마 돌진으로 적을 끌어모은 뒤 직경 8의 소용돌이로 중심에 수렴하며 피해를 주고, 도약 후 내려찍으며 경로를 재분출합니다.',
           },
           en: {
             name: 'Sky Pass',
             input: 'Sneak + hotkey 5 (combat mode)',
-            description: 'Massive line pierce along your gaze.',
+            description:
+              'Mounted rush pulls foes, spirals inward (diameter 8), then leaps and slams to erupt the path again.',
           },
         },
       ],
