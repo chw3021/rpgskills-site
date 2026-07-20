@@ -131,7 +131,7 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
-          guiColumn: 6,
+          guiColumn: 7,
           ko: {
             name: '낙상',
             description: '피해량과 넉백 저항이 증가합니다.',
