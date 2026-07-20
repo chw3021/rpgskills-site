@@ -30,14 +30,14 @@ export const standardBearerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '흰 깃발과 단검으로 전열을 다지는 기수입니다. 전장기·기세꺾기·신호·포고로 적을 포섭하고 받는 피해를 키우며, 깃기돌진으로 전장을 가로지릅니다.',
-      '기장으로 승진하며 깃봉추적·깃기교환 연계와 패업령으로 군진을 이끕니다. 전투나팔·신호는 파티원의 피해도 함께 올립니다.',
-      '진기는 연대기와 전장돌파·율격종결로 군기를 정점에 올리며, 기병깃술 스택과 포섭으로 전장 전체를 깃발 아래 통일합니다.',
+      '흰 깃발과 가위로 전열을 지휘하는 근접 지원가입니다. 적을 때릴수록 주변 아군을 격려 치유하고, 포섭으로 팀 딜 윈도우를 엽니다.',
+      '깃발 구역·기세 제압·신호 기동·포고 표식·나팔 사기로 라인이 갈리며, 기장은 연계와 패업령으로 전선을 이끕니다.',
+      '진기는 연대기와 전장돌파로 군기를 정점에 올리며, 문장 스택과 격려로 전장을 깃발 아래 유지합니다.',
     ],
     en: [
-      'A standard bearer who holds the line with white banner and dagger. War Banner, Demoralize, Signal Call, and Proclaim coerce foes and raise damage taken while Banner Charge cuts across the field.',
-      'Promotion to Ensign unlocks flag fall, standard swap, and Decree of Ruin to lead the formation. War Horn and Signal Call also amplify party damage.',
-      'The Grand Ensign commands with Rally Standard and field breakthrough chains, Heraldry stacks, and coercion until the whole army marches under one banner.',
+      'A frontline support who commands with banner and shears. Hitting foes inspires nearby allies, while coerce opens team damage windows.',
+      'Banner zones, demoralize CC, signal mobility, proclaim marks, and war-horn power split by lane. Ensigns lead with combos and Decree of Ruin.',
+      'Grand Ensigns peak with Rally Standard and Field Breakthrough, holding the line via Heraldry stacks and inspire heals.',
     ],
   },
   skillSections: [
@@ -54,13 +54,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '전장기',
             input: '우클릭',
             description:
-              '깃발을 거치합니다. 주기적으로 주변 적을 포섭하고 받는 피해를 키웁니다.',
+              '지휘 깃발 거점을 세웁니다. 구역 내 적을 포섭하고, 아군에게 신속과 소량 격려를 줍니다.',
           },
           en: {
             name: 'War Banner',
             input: 'Right-click',
             description:
-              'Deploys a banner stand that periodically coerces nearby foes and raises damage taken.',
+              'Plants a command banner zone that coerces foes and grants Speed plus light inspire to allies.',
           },
           masterLevel: 50,
         },
@@ -72,12 +72,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기세꺾기',
             input: '웅크리기 + 우클릭',
-            description: '전방 직선 지원 피해와 포섭을 줍니다.',
+            description: '전방 직선 피해와 포섭에 더해 짧은 감속·약화를 겁니다.',
           },
           en: {
             name: 'Demoralize',
             input: 'Sneak + right-click',
-            description: 'Forward line support damage and coerce.',
+            description: 'Forward line damage and coerce, plus brief Slowness and Weakness.',
           },
           masterLevel: 50,
         },
@@ -90,13 +90,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '신호',
             input: '손 바꾸기',
             description:
-              '본인과 가까운 파티원에게 신속과 피해 증가 버프를 부여합니다. 레벨이 높을수록 지속시간과 피해 보너스가 커집니다.',
+              '기동 지휘: 본인과 가까운 파티원에게 신속과 피해 버프를 줍니다.',
           },
           en: {
             name: 'Signal Call',
             input: 'Swap hands',
             description:
-              'Grants Speed and a damage buff to you and nearby party members. Higher level extends duration and damage bonus.',
+              'Mobility command: Speed and a damage buff for you and nearby party members.',
           },
           masterLevel: 50,
         },
@@ -108,12 +108,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '포고',
             input: '웅크리기 + 손 바꾸기',
-            description: '주변 적에게 지원 피해와 포섭을 줍니다.',
+            description: '인장 폭발로 주변 적에게 피해를 주고, 가장 강한 포섭·표식을 남깁니다.',
           },
           en: {
             name: 'Proclaim',
             input: 'Sneak + swap hands',
-            description: 'Deals nearby support damage and coerces foes.',
+            description: 'Seal burst with nearby damage and the strongest coerce mark.',
           },
           masterLevel: 50,
         },
@@ -125,12 +125,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '깃기돌진',
             input: '공중 우클릭',
-            description: '깃발을 들고 전방으로 돌진하며 경로상 적에게 지원 피해와 포섭을 줍니다.',
+            description: '깃발 잔상을 남기며 돌진합니다. 경로 피해·포섭과 함께 격려가 발동합니다.',
           },
           en: {
             name: 'Banner Charge',
             input: 'Right-click in air',
-            description: 'Dash forward with your banner, dealing support damage and coerce along the path.',
+            description: 'Dash with banner afterimages. Path damage, coerce, and inspire on hits.',
           },
           masterLevel: 50,
         },
@@ -143,13 +143,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '전투나팔',
             input: '웅크리기 + 좌클릭',
             description:
-              '염소 뿔 소리와 함께 본인·가까운 파티원에게 힘·성급과 피해 증가를 부여합니다. 신호 레벨에 비례합니다.',
+              '화음 나팔로 본인·파티에게 힘·성급과 격려 파동을 줍니다. 신호 레벨에 비례합니다.',
           },
           en: {
             name: 'War Horn',
             input: 'Sneak + left-click',
             description:
-              'Plays a goat horn and grants Strength, Haste, and a damage buff to you and nearby party. Scales with Signal Call level.',
+              'Chord fanfare grants Strength, Haste, and an inspire wave. Scales with Signal Call level.',
           },
         },
         {
@@ -161,12 +161,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기병깃술',
             description:
-              '공격력이 증가합니다. 깃발 또는 검으로 근접 공격 시 최종 피해에 곱해지며, 지원 스킬 적중 시 깃술 스택을 쌓아 다음 공격 피해를 추가로 높입니다(최대 10스택).',
+              '근접 최종 피해가 증가합니다. 스킬 적중 시 문장 스택을 쌓고, 주변 아군을 소량 격려 치유합니다(브리기테형).',
           },
           en: {
             name: 'Heraldry',
             description:
-              'Increases damage. Multiplies final melee damage with banner or sword. Support skill hits build Heraldry stacks for bonus damage on later attacks (max 10 stacks).',
+              'Increases melee final damage. Skill hits build Heraldry stacks and inspire-heal nearby allies (Brigitte-style).',
           },
         },
       ],
@@ -275,12 +275,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '전장장송',
             input: '전투나팔 직후 웅크리기 + 좌클릭',
-            description: '전방 직선 지원 피해와 사기 갱신. 계수는 신호 레벨에 비례합니다.',
+            description: '사기 재적용과 넓은 격려 파동. 연계 피해 비중은 낮습니다.',
           },
           en: {
             name: 'Battle Dirge',
             input: 'Sneak + left-click after War Horn',
-            description: 'Forward support line and morale refresh. Scales with Signal Call level.',
+            description: 'Morale refresh and a wide inspire wave. Follow-up damage is reduced.',
           },
         },
         {
@@ -417,12 +417,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '결전장송',
             input: '전장장송 직후 웅크리기 + 좌클릭',
-            description: '주변 지원 피해와 강화된 사기 갱신을 줍니다.',
+            description: '넓은 격려 파동과 강화 사기 재적용. 연계 피해 비중은 낮습니다.',
           },
           en: {
             name: 'Ruin Dirge',
             input: 'Sneak + left-click after Battle Dirge',
-            description: 'Nearby support burst and stronger morale refresh.',
+            description: 'Wide inspire wave and stronger morale refresh. Follow-up damage is reduced.',
           },
         },
         {
@@ -452,13 +452,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '연대기',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '본인과 가까운 파티원에게 흡수·저항을 부여하고, 주변 적에게 지원 피해와 포섭을 줍니다.',
+              '짧은 흡수·저항과 격려 대파동, 깃발 숲을 펼칩니다. 주변 적에게 피해와 포섭을 줍니다.',
           },
           en: {
             name: 'Rally Standard',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Grants Absorption and Resistance to you and nearby party, and deals support damage to nearby foes.',
+              'Short Absorption/Resistance, a large inspire wave, and a banner grove. Damages and coerces nearby foes.',
           },
         },
       ],

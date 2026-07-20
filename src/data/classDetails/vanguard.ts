@@ -64,9 +64,9 @@ export const vanguardDetail: ClassDetailDef = {
           guiColumn: 1,
           ko: {
             name: '창격돌',
-            input: '웅크리기 + 우클릭',
+            input: '웅크리기 + 좌클릭',
             description:
-              '전방 2.2블록 지점에 창을 내려찍어 지진장을 설치합니다. 반경 2.8 권역에서 4회 다단히트(3틱 간격)하며 적을 중앙으로 끌어당깁니다.',
+              '전방 2.2블록(수평) 지점에 창을 내려찍어 지진장을 설치합니다. 중심 Y는 해당 위치에서 아래로 찾은 로컬 지면입니다(동굴·실내 대응). 반경 2.8 권역에서 4회 다단히트(3틱 간격)하며 적을 중앙으로 끌어당깁니다.',
             extra: [
               '1타에 전방 넉백, 이후 매 틱 수렴 소용돌이·균열 파티클. 피해 0.62+Lv×0.042 (40%/60%).',
               '재사용 5.5초×일반쿨감소. 숙련 1 이상 시 맹렬창격 연계 창이 열립니다.',
@@ -74,9 +74,9 @@ export const vanguardDetail: ClassDetailDef = {
           },
           en: {
             name: 'Spear Brace',
-            input: 'Sneak + right-click',
+            input: 'Sneak + left-click',
             description:
-              'Slams the spear 2.2 blocks ahead, creating an earthquake zone. Radius 2.8, 4 multi-hits every 3 ticks, pulling enemies inward.',
+              'Slams the spear 2.2 blocks ahead on the horizontal plane (Y snapped to local floor below the point, cave-safe). Radius 2.8, 4 multi-hits every 3 ticks, pulling enemies inward.',
             extra: [
               'First hit knocks back; later ticks show converging vortex and crack particles. Damage 0.62+Lv×0.042 (40%/60%).',
               'Cooldown 5.5s×normal CD reduction. Unlocks Spear Drive combo at proficiency 1+.',
@@ -147,7 +147,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: '창 휘두르기',
             input: '좌클릭',
             description:
-              '전방 호(반경 3.8, 시선 dot>0.35)를 1회 휘둘러 피해를 줍니다. 스윕 파티클 2단 연출만 추가되며 피해는 1회입니다.',
+              '최대 1.0블록 소폭 전진(통과 가능 경로 텔레포트) 후, 전방 호(반경 5.0, 시선 수평 dot>0.2)를 1회 타격합니다. 호 안 적을 구역 중앙(전방 최소 2블록)으로 끌어모으며 6틱 Holding을 겁니다.',
             extra: [
               '피해 = 창고착 계수×0.88 (40%/60%). 마스터 레벨은 창고착 레벨을 따릅니다.',
               '재사용 4.2초×일반쿨감소. 숙련 1 이상 시 휘두르기연격 연계 창이 열립니다.',
@@ -157,7 +157,7 @@ export const vanguardDetail: ClassDetailDef = {
             name: 'Spear Sweep',
             input: 'Left-click',
             description:
-              'One frontal arc hit (radius 3.8, view dot>0.35). Two extra sweep particle waves; no extra damage.',
+              'Steps forward up to 1.0 block (passable-path teleports), then one frontal arc hit (radius 5.0, view flat dot>0.2). Pulls arc foes to the zone center (at least 2 blocks ahead) and applies 6-tick Holding.',
             extra: [
               'Damage = Skewering Charge coeff×0.88 (40%/60%). Uses Skewering Charge master level.',
               'Cooldown 4.2s×normal CD reduction. Unlocks Sweep Arc combo at proficiency 1+.',
@@ -172,7 +172,7 @@ export const vanguardDetail: ClassDetailDef = {
           guiColumn: 5,
           ko: {
             name: '상승창격',
-            input: '웅크리기 + 좌클릭',
+            input: '웅크리기 + 우클릭',
             description:
               '상승 창격(어퍼 슬래시)으로 본인을 띄우고, 발밑 반경 3.4에서 4회 다단히트(2틱 간격)합니다. 적은 위로 뜹니다.',
             extra: [
@@ -182,7 +182,7 @@ export const vanguardDetail: ClassDetailDef = {
           },
           en: {
             name: 'Rising Spear',
-            input: 'Sneak + left-click',
+            input: 'Sneak + right-click',
             description:
               'An upper slash launches you; 4 multi-hits at radius 3.4 every 2 ticks, knocking enemies upward.',
             extra: [
@@ -252,7 +252,7 @@ export const vanguardDetail: ClassDetailDef = {
           guiColumn: 1,
           ko: {
             name: '맹렬창격',
-            input: '창격돌 후 웅크리기 + 재우클릭',
+            input: '창격돌 후 웅크리기 + 재좌클릭',
             description:
               '전방 2.4블록 지진장. 반경 3.4, 6회 다단히트(3틱 간격). 매 틱 중앙 인력, 마지막 타에 4틱 제압.',
             extra: [
@@ -261,7 +261,7 @@ export const vanguardDetail: ClassDetailDef = {
           },
           en: {
             name: 'Spear Drive',
-            input: 'Sneak + right-click again after Spear Brace',
+            input: 'Sneak + left-click again after Spear Brace',
             description:
               'Earthquake at 2.4 blocks ahead. Radius 3.4, 6 multi-hits every 3 ticks with pull; final hit applies 4-tick suppression.',
             extra: [
@@ -280,14 +280,14 @@ export const vanguardDetail: ClassDetailDef = {
             name: '연속창고',
             input: '창고착 후 손 바꾸기',
             description:
-              '거대 창이 4회 회전 휘두르기(반경 3.4, 3틱 간격 4회 다단). 총 피해 = 창고착×0.82를 4회 분할.',
+              '전방 직선 다단 찌르기(도달 7.0, 4회/2틱). 총 피해 = 창고착×0.82를 4회 분할. 자기 이동 없음.',
             extra: ['연계 창 3.5초. 재사용 0.58초×일반쿨감소.'],
           },
           en: {
             name: 'Charge Follow',
             input: 'Swap hands again after Skewering Charge',
             description:
-              'Giant spear spins 4 times (radius 3.4, 4 multi-hits every 3 ticks). Total = Skewering Charge×0.82 split across hits.',
+              'Forward line multi-thrust (reach 7.0, 4 hits / 2 ticks). Total = Skewering Charge×0.82 split. No self movement.',
             extra: ['Combo window 3.5s. Cooldown 0.58s×normal CD reduction.'],
           },
         },
@@ -324,14 +324,14 @@ export const vanguardDetail: ClassDetailDef = {
             name: '휘두르기연격',
             input: '창 휘두르기 후 좌클릭',
             description:
-              '반경 3.6 호 1회 타격 + 스윕 파티클 3단. 피해 = 창 휘두르기×0.78 (1회만).',
+              '소폭 전진 후 반경 5.5 호 1회 타격·중앙 집결·6틱 Holding + 스윕 파티클 3단. 피해 = 창 휘두르기×0.78 (1회만).',
             extra: ['연계 창 3.5초. 재사용 0.5초×일반쿨감소.'],
           },
           en: {
             name: 'Sweep Arc',
             input: 'Left-click again after Spear Sweep',
             description:
-              'One arc hit at radius 3.6 plus 3 sweep FX waves. Damage = Spear Sweep×0.78 (single hit).',
+              'Step in, then one arc hit at radius 5.5 with gather + 6-tick Holding and 3 sweep FX waves. Damage = Spear Sweep×0.78 (single hit).',
             extra: ['Combo window 3.5s. Cooldown 0.5s×normal CD reduction.'],
           },
         },
@@ -344,7 +344,7 @@ export const vanguardDetail: ClassDetailDef = {
           guiColumn: 5,
           ko: {
             name: '공중창격',
-            input: '상승창격 후 웅크리기 + 좌클릭',
+            input: '상승창격 후 웅크리기 + 우클릭',
             description:
               '더 높이 상승한 뒤 반경 3.6에서 5회 공중 다단히트(2틱 간격). 마지막 타에 6틱 제압.',
             extra: [
@@ -353,7 +353,7 @@ export const vanguardDetail: ClassDetailDef = {
           },
           en: {
             name: 'Aerial Spear',
-            input: 'Sneak + left-click again after Rising Spear',
+            input: 'Sneak + right-click again after Rising Spear',
             description:
               'Higher launch, then 5 aerial multi-hits at radius 3.6 every 2 ticks; final hit applies 6-tick suppression.',
             extra: [
@@ -506,14 +506,14 @@ export const vanguardDetail: ClassDetailDef = {
             name: '광역창휘',
             input: '창 휘두르기 연계(2차)',
             description:
-              '반경 4.2 호 1회 타격 + 스윕 3단. 피해 = 휘두르기연격×1.35 (1회).',
+              '소폭 전진 후 반경 6.0 호 1회 타격·중앙 집결·6틱 Holding + 스윕 3단. 피해 = 휘두르기연격×1.35 (1회).',
             extra: ['연계 창 4.0초.'],
           },
           en: {
             name: 'Sweep Arc II',
             input: 'Limit 2 Spear Sweep combo',
             description:
-              'One arc hit at radius 4.2 plus 3 sweep FX waves. Damage = Sweep Arc×1.35 (single hit).',
+              'Step in, then one arc hit at radius 6.0 with gather + 6-tick Holding and 3 sweep FX waves. Damage = Sweep Arc×1.35 (single hit).',
             extra: ['Combo window 4.0s.'],
           },
         },

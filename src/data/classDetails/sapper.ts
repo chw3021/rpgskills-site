@@ -23,7 +23,7 @@ export const sapperDetail: ClassDetailDef = {
     en: [
       'A sapper who fortifies the field with a shovel. Catapult, springald, Greek-fire projectors, and boiling oil suppress foes while TNT Rush and Fieldworks raise pressure.',
       'Greek Fire deploys a continuous flamethrower that detonates with Tactical Withdrawal. Boiling oil pulls enemies inward for focused bombardment.',
-      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, oil snares, and a shell cannon before Bombardment plants a fire battery.',
+      'Promotion to Siege Warden unlocks brace, spring rip, Greek wash, net traps, and a shell cannon before Bombardment plants a fire battery.',
       'The Battery Captain masters Siege Barrage, Piercing Salvo, Cactus Rush, and Blaze Weave before Grand Battery reshapes the battlefield into a bombardment zone.',
     ],
   },
@@ -100,14 +100,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '비등유',
             input: '웅크리기 + 손 바꾸기',
             description:
-              '발밑에 끓는 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 웅덩이는 8초간 유지되며, 적을 중심으로 끌어당깁니다.',
+              '전방 가마에서 검은 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 웅덩이는 8초간 유지되며, 적을 중심으로 끌어당깁니다.',
             extra: ['그리스불로 점화 가능합니다.'],
           },
           en: {
             name: 'Boiling Oil',
             input: 'Sneak + swap hands',
             description:
-              'Pours boiling oil, dealing area damage and heavy suppression. The pool lasts 8 seconds and pulls enemies toward its center.',
+              'Pours black oil from a forward vat for area damage and heavy suppression. The pool lasts 8 seconds and pulls enemies toward its center.',
             extra: ['Can ignite with Greek fire.'],
           },
           masterLevel: 50,
@@ -138,13 +138,13 @@ export const sapperDetail: ClassDetailDef = {
             name: '전술철수',
             input: '좌클릭',
             description:
-              '설치한 공성물을 모두 폭파·철거하고 주변에 피해를 준 뒤 전방으로 도약합니다. 숙련도에 따라 폭발 범위·피해가 증가합니다.',
+              '설치한 공성물(구조물 1개당 1회)을 폭파·철거하고 주변에 피해를 준 뒤 전방으로 도약합니다. 궁극기 소환물은 제외됩니다. 숙련도에 따라 폭발 범위·피해가 증가하며, 숙련 2에서는 설치물이 본인 위치로 순간이동한 뒤 폭발합니다.',
           },
           en: {
             name: 'Tactical Withdrawal',
             input: 'Left-click',
             description:
-              'Detonates and clears all deployables, damages nearby foes, then leaps forward. Blast radius and damage scale with proficiency.',
+              'Detonates each deployable once (not per armor stand part), damages nearby foes, then leaps forward. Ultimate summons are excluded. Proficiency raises blast radius/damage; at proficiency 2, structures teleport to you before detonating.',
           },
           masterLevel: 1,
         },
@@ -224,23 +224,23 @@ export const sapperDetail: ClassDetailDef = {
           },
         },
         {
-          id: 'oilSnare',
+          id: 'netTrap',
           icon: 'spike',
           element: 'earth',
           guiColumn: 12,
           followUp: true,
           chainOf: 'boilingOil',
           ko: {
-            name: '기름함정',
+            name: '그물함정',
             input: '비등유 직후 웅크리기 + 손 바꾸기',
             description:
-              '전방에 기름 함정 3개를 설치해 지속 피해·제압합니다. 전술철수 시 함정이 폭발·철거됩니다. 피해량은 비등유 레벨에 비례합니다.',
+              '전방 바닥(약 3블록)에 5×5 Tripwire·Trapdoor 그물 장판을 깔아 Holding으로 붙잡고 지속 피해·제압합니다. 전술철수 시 함정이 폭발·철거됩니다. 피해량은 비등유 레벨에 비례합니다.',
           },
           en: {
-            name: 'Oil Snare',
+            name: 'Net Trap',
             input: 'Sneak + swap hands after Boiling Oil',
             description:
-              'Deploys three oil traps ahead for sustained damage and suppression. Detonates with Tactical Withdrawal. Damage scales with Boiling Oil level.',
+              'Deploys a 5x5 Tripwire/Trapdoor floor net about 3 blocks ahead that Holds foes and deals sustained damage. Detonates with Tactical Withdrawal. Damage scales with Boiling Oil level.',
           },
         },
         {
@@ -402,11 +402,11 @@ export const sapperDetail: ClassDetailDef = {
           guiColumn: 23,
           ko: {
             name: '전술철수 강화 II',
-            description: '전술철수 폭발 범위·피해가 더욱 증가합니다.',
+            description: '설치물이 본인 위치로 순간이동한 뒤 폭발합니다. 폭발 범위·피해가 더욱 증가합니다.',
           },
           en: {
             name: 'Tactical Withdrawal Boost II',
-            description: 'Further increases Tactical Withdrawal blast radius and damage.',
+            description: 'Structures teleport to you before detonating. Further increases blast radius and damage.',
           },
         },
         {

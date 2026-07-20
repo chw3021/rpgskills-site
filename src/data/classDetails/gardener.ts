@@ -224,15 +224,15 @@ export const gardenerDetail: ClassDetailDef = {
             name: '식충 줄기',
             input: '덩굴채찍 후 재우클릭',
             description:
-              '강화 덩굴 장판. 8틱 간격 타격, 끌어당김 강화, 이중 뿌리 소환. 6초 지속.',
-            extra: ['반경 2.7. 피해량은 덩굴채찍 레벨에 비례합니다.'],
+              '세로로 솟은 포식 줄기(이끼·슬라임·피처플랜트)를 소환합니다. 중심에서 바깥으로 채찍이 뻗으며 다단 타격합니다.',
+            extra: ['5방향 바깥 채찍. 피해량은 덩굴채찍 레벨에 비례합니다.'],
           },
           en: {
             name: 'Carnivorous Stalk',
             input: 'Right-click again after Vine Whip',
             description:
-              'Enhanced vine patch: hits every 8 ticks, stronger pull, double root cluster. Lasts 6s.',
-            extra: ['Radius 2.7. Damage scales with Vine Whip level.'],
+              'Summons tall carnivorous stalks (moss, slime, pitcher plant). Whips lash outward from the center in multi-hits.',
+            extra: ['5 outward lashes. Damage scales with Vine Whip level.'],
           },
         },
         {
@@ -397,14 +397,16 @@ export const gardenerDetail: ClassDetailDef = {
           ko: {
             name: '덩굴 교살',
             input: '덩굴채찍 연계(숙련2)',
-            description: '최강 덩굴 장판. superholding, 끌기 0.22, 6.5초 지속.',
-            extra: ['반경 3.0. 피해량은 덩굴채찍 레벨×1.35에 비례합니다.'],
+            description:
+              '맹그로브 뿌리가 나선으로 감싸 오르는 교살 감옥을 소환합니다. 영혼·역포털 파티클이 위로 솟았다가 중앙으로 짓누르며 superholding합니다.',
+            extra: ['반경 2.5, 약 5초. 피해량은 덩굴채찍 레벨×1.35에 비례합니다.'],
           },
           en: {
             name: 'Vine Strangle',
             input: 'Vine Whip follow-up (proficiency 2)',
-            description: 'Strongest vine patch: superholding, pull 0.22, lasts 6.5s.',
-            extra: ['Radius 3.0. Damage scales with Vine Whip level ×1.35.'],
+            description:
+              'Summons a mangrove-root helix cage. Soul and reverse-portal particles spiral up then crush inward with superholding.',
+            extra: ['Radius 2.5, ~5s. Damage scales with Vine Whip level ×1.35.'],
           },
         },
         {
