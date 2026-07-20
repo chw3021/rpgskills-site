@@ -131,6 +131,7 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
+          guiColumn: 6,
           ko: {
             name: '낙상',
             description: '피해량과 넉백 저항이 증가합니다.',
@@ -259,7 +260,7 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
-          guiColumn: 16,
+          guiColumn: 7,
           ko: { name: '제압', description: '공격력이 증가합니다. 연계기의 구속(홀딩) 시간이 증가합니다.' },
           en: { name: 'Submission', description: 'Increases damage. Follow-up lock duration is increased.' },
         },
@@ -268,6 +269,7 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'steady',
           element: 'earth',
           ultimate: true,
+          guiColumn: 8,
           ko: {
             name: '무릎 비틀기',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
@@ -398,7 +400,7 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'book',
           element: 'earth',
           passive: true,
-          guiColumn: 25,
+          guiColumn: 7,
           ko: {
             name: '진정한 싸움꾼',
             description:
@@ -415,6 +417,7 @@ export const wrestlerDetail: ClassDetailDef = {
           icon: 'storm',
           element: 'earth',
           ultimate: true,
+          guiColumn: 8,
           ko: {
             name: '회오리 내려꽂기',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
