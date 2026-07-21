@@ -316,7 +316,7 @@ export const broilerDetail: ClassDetailDef = {
           icon: 'storm',
           element: 'earth',
           followUp: true,
-          chainOf: 'fissure',
+          chainOf: 'chasmDrive',
           guiColumn: 22,
           ko: {
             name: '판층 개화',

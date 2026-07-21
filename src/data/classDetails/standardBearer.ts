@@ -52,13 +52,13 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 0,
           ko: {
             name: '전장기',
-            input: '우클릭',
+            input: '지상에서 비웅크리기 + 우클릭',
             description:
               '지휘 깃발 거점을 세웁니다. 구역 내 적을 포섭하고, 아군에게 신속과 소량 격려를 줍니다.',
           },
           en: {
             name: 'War Banner',
-            input: 'Right-click',
+            input: 'On ground + not sneaking + right-click',
             description:
               'Plants a command banner zone that coerces foes and grants Speed plus light inspire to allies.',
           },
@@ -124,12 +124,12 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 4,
           ko: {
             name: '깃기돌진',
-            input: '공중 우클릭',
+            input: '공중 + 비웅크리기 + 좌클릭',
             description: '깃발 잔상을 남기며 돌진합니다. 경로 피해·포섭과 함께 격려가 발동합니다.',
           },
           en: {
             name: 'Banner Charge',
-            input: 'Right-click in air',
+            input: 'While airborne + not sneaking + left-click',
             description: 'Dash with banner afterimages. Path damage, coerce, and inspire on hits.',
           },
           masterLevel: 50,
@@ -256,12 +256,12 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 13,
           ko: {
             name: '깃기교환',
-            input: '깃기돌진 직후 우클릭',
+            input: '깃기돌진 직후 공중 + 비웅크리기 + 좌클릭',
             description: '전방 적과 위치를 교환하거나 전방으로 도약합니다. 착지 시 주변 적에게 지원 피해를 줍니다.',
           },
           en: {
             name: 'Standard Swap',
-            input: 'Right-click after Banner Charge',
+            input: 'Airborne + not sneaking + left-click after Banner Charge',
             description: 'Swap places with a forward foe or leap ahead. Deals support damage on landing.',
           },
         },
@@ -398,12 +398,12 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 22,
           ko: {
             name: '전장돌파',
-            input: '깃기교환 직후 우클릭',
+            input: '깃기교환 직후 공중 + 비웅크리기 + 좌클릭',
             description: '전장을 가로지르는 긴 돌진으로 경로상 적에게 지원 피해와 포섭을 줍니다.',
           },
           en: {
             name: 'Field Breakthrough',
-            input: 'Right-click after Standard Swap',
+            input: 'Airborne + not sneaking + left-click after Standard Swap',
             description: 'Long dash across the battlefield with support damage and coerce along the path.',
           },
         },

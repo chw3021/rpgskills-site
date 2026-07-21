@@ -15,12 +15,12 @@ export const daggerlistDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '양손 단검과 그림자로 싸우는 기동형 암살자입니다. 절개·그림자 질주·칼날 부채로 출혈을 쌓고, 분신이 기술을 따라 칩니다.',
+      '양손 단검과 그림자로 싸우는 기동형 암살자입니다. 절개·동맥 절단·그림자 질주·칼날 부채로 출혈을 쌓고, 분신이 기술을 따라 칩니다.',
       '숙련 1부터 연계 기술(그림자 절단, 잔상 베기, 칼날 폭풍, 쌍격습, 마무리 일격)이 열립니다.',
       '암살자는 죽음의 표식으로 적을 사냥하고, 암영은 2차 연계와 최후의 절단으로 전장을 가릅니다.',
     ],
     en: [
-      'A mobile assassin who fights with twin daggers and shadow. Slash, shadow dash, and fan of blades stack bleed while clones echo your strikes.',
+      'A mobile assassin who fights with twin daggers and shadow. Slash, artery cut, shadow dash, and fan of blades stack bleed while clones echo your strikes.',
       'Proficiency 1 unlocks combo follow-ups: Shadow Cut, Afterimage, Blade Storm, Twin Assault, and Finisher.',
       'Assassin tier hunts with Death Mark; Shade tier adds empowered limit-2 combos and Final Cut.',
     ],
@@ -91,6 +91,22 @@ export const daggerlistDetail: ClassDetailDef = {
             name: 'Execution',
             input: 'Dagger + sneak + swap hands',
             description: 'Heavy damage to bleeding targets. +1 bonus per bleed stack (max 5).',
+          },
+          masterLevel: 50,
+        },
+        {
+          id: 'arteryCut',
+          icon: 'slash',
+          element: 'dark',
+          ko: {
+            name: '동맥 절단',
+            input: '단검 + 웅크리기 + 좌클릭',
+            description: '전방을 깊게 베어 피해를 주고 출혈을 2중첩 부여합니다.',
+          },
+          en: {
+            name: 'Artery Cut',
+            input: 'Dagger + sneak + left-click',
+            description: 'Deep frontal cut that deals damage and applies 2 bleed stacks.',
           },
           masterLevel: 50,
         },
