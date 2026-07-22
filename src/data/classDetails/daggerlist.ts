@@ -15,14 +15,14 @@ export const daggerlistDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '양손 단검과 그림자로 싸우는 기동형 암살자입니다. 절개·동맥 절단·그림자 질주·칼날 부채로 출혈 스택을 쌓고, 상처 패시브가 초당 출혈 피해를 키웁니다.',
-      '숙련 1부터 연계 기술(그림자 절단, 잔상 베기, 칼날 폭풍, 쌍격습, 마무리 일격)이 열립니다. 출혈은 스택별 만료이며 중첩 상한이 없습니다.',
-      '암살자는 죽음의 표식으로 적을 사냥하고, 암영은 2차 연계와 최후의 절단으로 전장을 가릅니다.',
+      '양손 단검과 그림자로 적진을 누비며 출혈을 쌓는 기동형 암살자입니다.',
+      '숙련이 오르면 모든 공격 기술과 동맥절단에 연계기가 추가되고, 그림자를 늘려 기술을 함께 사용합니다.',
+      '칼날낙인과 그림자원무로 출혈을 쌓아 폭발적으로 마무리합니다.',
     ],
     en: [
-      'A mobile assassin who fights with twin daggers and shadow. Slash, artery cut, shadow dash, and fan of blades stack bleed while Wound scales the per-second bleed DoT.',
-      'Proficiency 1 unlocks combo follow-ups: Shadow Cut, Afterimage, Blade Storm, Twin Assault, and Finisher. Bleed stacks expire individually with no cap.',
-      'Assassin tier hunts with Death Mark; Shade tier adds empowered limit-2 combos and Final Cut.',
+      'A mobile assassin who moves through enemy lines with twin daggers and shadows, stacking bleed.',
+      'Proficiency adds follow-ups to every attack skill, including ArteryCut, and expands the shadow echoes.',
+      'DeathMark and FinalCut rapidly build bleed stacks to finish the fight.',
     ],
   },
   skillSections: [
@@ -37,12 +37,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '절개',
             input: '단검 + 비웅크리기 + 우클릭',
-            description: '전방 원뿔을 베어 출혈 1을 부여합니다. 분신이 좁은 범위를 약하게 따라 타격합니다.',
+            description: '전방 원뿔을 베어 출혈 1을 부여합니다.',
           },
           en: {
             name: 'Slash',
             input: 'Dagger + not sneaking + right-click',
-            description: 'Forward cone slash that applies 1 bleed. Your clone echoes a weaker slash in a small arc.',
+            description: 'Slash a forward cone and apply 1 bleed.',
           },
           masterLevel: 50,
         },
@@ -51,14 +51,16 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'rush',
           element: 'dark',
           ko: {
-            name: '그림자 질주',
+            name: '그림자질주',
             input: '단검 + 웅크리기 + 우클릭',
-            description: '전방 질주 중 적중 시 등 뒤로 이동·시선을 고정한 뒤 타격하고 출혈 1을 부여하며 질주를 종료합니다.',
+            description:
+              '전방 질주 중 적중 시 대상 뒤로 이동해 시선을 고정하고 타격합니다. 출혈 1을 부여한 뒤 질주를 종료합니다.',
           },
           en: {
-            name: 'Shadow Dash',
+            name: 'ShadowDash',
             input: 'Dagger + sneak + right-click',
-            description: 'Dash forward; on hit, move behind the foe, face them, strike, apply 1 bleed, and end the dash.',
+            description:
+              'Dash forward; on hit, move behind the target, face and strike it, apply 1 bleed, then end the dash.',
           },
           masterLevel: 50,
         },
@@ -67,14 +69,16 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'stab',
           element: 'dark',
           ko: {
-            name: '칼날 부채',
+            name: '칼날부채',
             input: '단검 + 비웅크리기 + 좌클릭',
-            description: '원뿔로 관통 칼날을 투척한 뒤 되돌아옵니다. 왕복 각 1회 타격하며 타격당 출혈 1을 부여합니다.',
+            description:
+              '원뿔로 관통 칼날을 투척한 뒤 되돌아옵니다. 왕복 각 1회 타격하며 타격당 출혈 1을 부여합니다.',
           },
           en: {
-            name: 'Fan of Blades',
+            name: 'FanOfBlades',
             input: 'Dagger + not sneaking + left-click',
-            description: 'Throws piercing blades in a cone that return. Hits once each way and applies 1 bleed per hit.',
+            description:
+              'Throw piercing blades in a cone that return. They hit once each way and apply 1 bleed per hit.',
           },
           masterLevel: 50,
         },
@@ -83,16 +87,18 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'stealth',
           element: 'dark',
           ko: {
-            name: '그림자 분신',
+            name: '그림자소환',
             input: '단검 + 비웅크리기 + 손 바꾸기',
-            description: '시전자 머리가 장착된 분신을 소환하고 절개·칼날 부채를 복제합니다.',
+            description:
+              '시선 방향 3.5블록 앞에 플레이어를 바라보는 그림자를 소환합니다. 그림자는 기술을 50% 피해로 따라 사용합니다.',
           },
           en: {
-            name: 'Shadow Clone',
+            name: 'ShadowSummon',
             input: 'Dagger + not sneaking + swap hands',
-            description: 'Summons a clone wearing your head that echoes Slash and Fan of Blades.',
+            description:
+              'Summon a shadow 3.5 blocks ahead, facing you. The shadow echoes your skills at 50% damage.',
           },
-          masterLevel: 50,
+          masterLevel: 1,
         },
         {
           id: 'execution',
@@ -102,13 +108,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '처형',
             input: '단검 + 웅크리기 + 손 바꾸기',
             description:
-              '전방 4블록 돌진 후 경로의 적을 모아 Holding합니다. 출혈 스택당 +5% 배율의 8히트 후 출혈 지속을 전량 갱신하고 시전 위치로 복귀합니다.',
+              '전방 4블록을 돌진해 적을 모으고 Holding합니다. 밝고 어두운 X자 파티클과 함께 출혈 스택당 배율 +5%의 8회 타격 후 출혈을 갱신하고 복귀합니다.',
           },
           en: {
             name: 'Execution',
             input: 'Dagger + sneak + swap hands',
             description:
-              'Dash 4 blocks, pull path foes, and Holding. Deal 8 hits at +5% per bleed stack, refresh all bleed durations, then return to cast position.',
+              'Dash 4 blocks, gather foes, and Holding. Strike 8 times with bright and dark X particles at +5% per bleed stack, refresh bleed, then return.',
           },
           masterLevel: 50,
         },
@@ -117,14 +123,14 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'slash',
           element: 'dark',
           ko: {
-            name: '동맥 절단',
+            name: '동맥절단',
             input: '단검 + 웅크리기 + 좌클릭',
-            description: '짧게 전진하며 전방 3.5를 찌릅니다. 출혈 2와 Holding을 부여합니다. 연계는 없습니다.',
+            description: '짧게 전진하며 전방 3.5블록을 찌릅니다. 출혈 2와 Holding을 부여합니다.',
           },
           en: {
-            name: 'Artery Cut',
+            name: 'ArteryCut',
             input: 'Dagger + sneak + left-click',
-            description: 'Short advance and a 3.5-block stab. Applies 2 bleed and Holding. No follow-up chain.',
+            description: 'Advance briefly and stab 3.5 blocks ahead, applying 2 bleed and Holding.',
           },
           masterLevel: 50,
         },
@@ -136,7 +142,7 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '상처',
             description:
-              '공격력이 증가합니다. 스킬 타격 시 출혈을 부여합니다. 출혈은 스택별 4초(+숙련×1.5초) 만료이며, 초당 현재 체력 × (0.05% + 상처 LV×0.012%) × 스택 피해를 줍니다. 중첩 상한 없음.',
+              '공격력이 증가합니다. 스킬 타격 시 출혈을 부여합니다. 출혈은 스택별 4초(+숙련×1.5초) 동안 유지되며, 초당 현재 체력 × (0.05% + 상처 LV×0.012%) × 스택 피해를 줍니다. 중첩 상한은 없습니다.',
           },
           en: {
             name: 'Wound',
@@ -157,14 +163,14 @@ export const daggerlistDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'slash',
           ko: {
-            name: '그림자 절단',
+            name: '그림자절단',
             input: '절개 후 재우클릭',
-            description: '더 긴 원뿔로 재베고 출혈 2를 부여합니다.',
+            description: '반대 방향의 원호를 베며 CRIT 파티클과 출혈 2를 부여합니다.',
           },
           en: {
-            name: 'Shadow Cut',
+            name: 'ShadowCut',
             input: 'Right-click again after Slash',
-            description: 'Longer cone re-slash that applies 2 bleed.',
+            description: 'Slash an arc in the opposite direction with CRIT particles and apply 2 bleed.',
           },
         },
         {
@@ -174,14 +180,14 @@ export const daggerlistDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'shadowDash',
           ko: {
-            name: '잔상 베기',
-            input: '그림자 질주 후 웅크리기 + 재우클릭',
-            description: '같은 대상의 뒤로 다시 출현해 타격하고 출혈 1을 부여합니다.',
+            name: '잔상베기',
+            input: '그림자질주 후 웅크리기 + 재우클릭',
+            description: '공중에서 내려찍어 하강 보텍스를 만들고 4회 타격합니다. 타격당 출혈 1을 부여합니다.',
           },
           en: {
             name: 'Afterimage',
-            input: 'Sneak + right-click again after Shadow Dash',
-            description: 'Appear behind the same target again, strike, and apply 1 bleed.',
+            input: 'Sneak + right-click again after ShadowDash',
+            description: 'Aerial stomp with a downward vortex for 4 hits, applying 1 bleed per hit.',
           },
         },
         {
@@ -191,48 +197,67 @@ export const daggerlistDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'fanOfBlades',
           ko: {
-            name: '칼날 폭풍',
-            input: '칼날 부채 후 좌클릭',
-            description: '투사체 수와 폭이 늘어난 왕복 칼날을 투척합니다.',
+            name: '칼날폭풍',
+            input: '칼날부채 후 좌클릭',
+            description:
+              '칼날이 전방 3~4블록 이동한 뒤 회전 폭풍을 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
           },
           en: {
-            name: 'Blade Storm',
-            input: 'Left-click again after Fan of Blades',
-            description: 'Throws more and wider returning blades.',
+            name: 'BladeStorm',
+            input: 'Left-click after FanOfBlades',
+            description:
+              'Blades travel 3–4 blocks, then form a spinning storm that pulls enemies and applies 1 bleed per hit.',
           },
         },
         {
-          id: 'twinAssault',
+          id: 'shadowStep',
           icon: 'stealth',
           element: 'dark',
           followUp: true,
           chainOf: 'shadowClone',
           ko: {
-            name: '쌍격습',
-            input: '그림자 분신 후 손 바꾸기',
-            description: '본인과 분신이 동시에 원뿔을 벱니다.',
+            name: '그림자밟기',
+            input: '그림자소환 후 손 바꾸기',
+            description: '그림자와 위치를 바꾸고 그림자의 기술 피해를 50%에서 60%로 강화합니다.',
           },
           en: {
-            name: 'Twin Assault',
-            input: 'Swap hands again after Shadow Clone',
-            description: 'You and your clone cone-slash together.',
+            name: 'ShadowStep',
+            input: 'Swap hands after ShadowSummon',
+            description: 'Swap places with the shadow and increase its echo damage from 50% to 60%.',
           },
         },
         {
-          id: 'finisher',
+          id: 'shadowBurst',
           icon: 'stab',
           element: 'dark',
           followUp: true,
           chainOf: 'execution',
           ko: {
-            name: '마무리 일격',
+            name: '그림자폭발',
             input: '처형 후 웅크리기 + 손 바꾸기',
-            description: '복귀 없이 모아둔 적에게 추가 다단 히트를 가하고 출혈 지속을 전량 갱신합니다.',
+            description: '처형으로 모은 중심에서 폭발해 5회 타격하고 출혈 지속을 갱신합니다.',
           },
           en: {
-            name: 'Finisher',
-            input: 'Sneak + swap again after Execution',
-            description: 'Without returning, multi-hit gathered foes and refresh all bleed durations.',
+            name: 'ShadowBurst',
+            input: 'Sneak + swap hands after Execution',
+            description: "Explode at Execution's gather center for 5 hits and refresh bleed duration.",
+          },
+        },
+        {
+          id: 'bloodTrail',
+          icon: 'blood',
+          element: 'dark',
+          followUp: true,
+          chainOf: 'arteryCut',
+          ko: {
+            name: '혈흔연타',
+            input: '동맥절단 후 웅크리기 + 좌클릭',
+            description: '동맥절단에 맞은 각 대상에게 베기와 혈흔 파티클을 일으키며 3회 연속 타격합니다.',
+          },
+          en: {
+            name: 'BloodTrail',
+            input: 'Sneak + left-click after ArteryCut',
+            description: 'Create sweep and blood particles at every ArteryCut target and strike 3 times.',
           },
         },
         {
@@ -240,8 +265,8 @@ export const daggerlistDetail: ClassDetailDef = {
           icon: 'book',
           element: 'dark',
           passive: true,
-          ko: { name: '상처', description: '출혈 지속 +1.5초. 숙련 1 연계 기술이 해제됩니다.' },
-          en: { name: 'Wound', description: 'Bleed duration +1.5s. Limit 1 combo follow-ups unlocked.' },
+          ko: { name: '단검술 숙련', description: '출혈 지속 +1.5초. 숙련 1 연계 기술이 해제됩니다.' },
+          en: { name: 'Dagger Mastery', description: 'Bleed duration +1.5s. Unlocks Limit 1 follow-ups.' },
         },
         {
           id: 'deathMark',
@@ -249,16 +274,16 @@ export const daggerlistDetail: ClassDetailDef = {
           element: 'dark',
           ultimate: true,
           ko: {
-            name: '죽음의 표식',
+            name: '칼날낙인',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '전투 모드에서만 발동합니다. 광역 표식과 출혈 3스택을 부여합니다(배율 × 패널 공격력). 출혈은 스택별 만료·초당 DoT이며 중첩 상한이 없습니다.',
+              '공중으로 도약한 뒤 전방 적에게 칼날을 여러 번 박아 Holding과 출혈을 쌓습니다. 칼날은 적에게 항상 박히는 판정이며, 마무리로 칼날이 회귀하며 심장에서 피·어둠 폭발을 일으킵니다. 폭발 피해는 출혈 스택당 +3%입니다.',
           },
           en: {
-            name: 'Death Mark',
+            name: 'Blade Brand',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Combat mode only. Deals area mark damage and applies 3 bleed stacks (multiplier × panel attack damage). Bleed stacks expire individually and deal per-second DoT with no cap.',
+              'Leap and pin multiple blades into forward foes with Holding and bleed. Blades always land; the finale pulls them back for a blood/dark heart explosion that gains +3% per bleed stack.',
           },
         },
       ],
@@ -274,14 +299,14 @@ export const daggerlistDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'slash',
           ko: {
-            name: '암영 절단',
-            input: '절개 연계(2차)',
-            description: '십자 이중 원뿔과 짧은 Holding을 가하고 출혈 2를 부여합니다.',
+            name: '암영절단',
+            input: '그림자절단 후 재우클릭',
+            description: '십자 원뿔로 베어 Holding하고 흑요석 파티클을 일으킵니다.',
           },
           en: {
-            name: 'Shadow Cut II',
-            input: 'Limit 2 Slash combo',
-            description: 'Cross cones with short Holding and 2 bleed.',
+            name: 'ShadowCutII',
+            input: 'Right-click again after ShadowCut',
+            description: 'Slash cross-shaped cones with Holding and obsidian particles.',
           },
         },
         {
@@ -291,65 +316,88 @@ export const daggerlistDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'shadowDash',
           ko: {
-            name: '암영 잔상',
-            input: '그림자 질주 연계(2차)',
-            description: '질주·잔상에서 맞은 적 전원 뒤로 순간 출현해 연타하고 출혈 2를 부여합니다.',
+            name: '암영잔상',
+            input: '잔상베기 후 웅크리기 + 재우클릭',
+            description:
+              '질주로 맞힌 단일 대상 뒤에 그림자 2기를 세우고 포탈과 별 모양 베기 궤적으로 3회 타격합니다.',
           },
           en: {
-            name: 'Afterimage II',
-            input: 'Limit 2 Shadow Dash combo',
-            description: 'Appear behind every marked foe for a chain strike and apply 2 bleed.',
+            name: 'AfterimageII',
+            input: 'Sneak + right-click again after Afterimage',
+            description:
+              'Place 2 shadow stands behind the single dash-hit target and strike 3 times with portal and star-shaped swing trails.',
           },
         },
         {
-          id: 'bladeStormII',
+          id: 'shadowRush',
           icon: 'stab',
           element: 'dark',
           followUp: true,
           chainOf: 'fanOfBlades',
           ko: {
-            name: '암영 칼날 폭풍',
-            input: '칼날 부채 연계(2차)',
-            description: '짧은 선회 후 더 넓은 왕복 칼날을 투척합니다.',
+            name: '그림자쇄도',
+            input: '칼날폭풍 후 좌클릭',
+            description: '그림자 잔상이 전방으로 쇄도하며 경로를 4회 타격하고 타격마다 출혈 1을 부여합니다.',
           },
           en: {
-            name: 'Blade Storm II',
-            input: 'Limit 2 Fan of Blades combo',
-            description: 'Short orbit, then wider returning blades.',
+            name: 'ShadowRush',
+            input: 'Left-click after BladeStorm',
+            description: 'Shadow afterimages rush forward, hitting the path 4 times and applying 1 bleed per hit.',
           },
         },
         {
-          id: 'twinAssaultII',
+          id: 'twinShadow',
           icon: 'stealth',
           element: 'dark',
           followUp: true,
           chainOf: 'shadowClone',
           ko: {
-            name: '쌍영 습격',
-            input: '그림자 분신 연계(2차)',
-            description: '분신이 주 대상 뒤로 이동한 뒤 동시 강타하고 출혈 2를 부여합니다.',
+            name: '쌍영',
+            input: '그림자밟기 후 손 바꾸기',
+            description: '그림자를 다시 소환해 2기의 그림자가 동시에 존재하게 합니다.',
           },
           en: {
-            name: 'Twin Assault II',
-            input: 'Limit 2 Shadow Clone combo',
-            description: 'Clone moves behind the main target for a dual strike and applies 2 bleed.',
+            name: 'TwinShadow',
+            input: 'Swap hands after ShadowStep',
+            description: 'Resummon a shadow so 2 shadows exist at once.',
           },
         },
         {
-          id: 'finisherII',
+          id: 'finisher',
           icon: 'stab',
           element: 'dark',
           followUp: true,
           chainOf: 'execution',
           ko: {
-            name: '암영 처단',
-            input: '처형 연계(2차)',
-            description: 'Holding을 유지한 채 최종 처형 히트(스택 배율 강화)를 가하고 출혈을 갱신합니다.',
+            name: '마무리일격',
+            input: '그림자폭발 후 웅크리기 + 손 바꾸기',
+            description:
+              '화면을 어둡게 하고 선을 베며 끝까지 질주한 뒤 돌아옵니다. 경로의 적을 타격하고 출혈 지속을 갱신합니다.',
           },
           en: {
-            name: 'Finisher II',
-            input: 'Limit 2 Execution combo',
-            description: 'While Holding, deliver a final execute with stronger stack scaling and refresh bleed.',
+            name: 'Finisher',
+            input: 'Sneak + swap hands after ShadowBurst',
+            description:
+              'Darken the screen, line-strike, dash to the end, and return. Hit path enemies and refresh bleed.',
+          },
+        },
+        {
+          id: 'heartseeker',
+          icon: 'blood',
+          element: 'dark',
+          followUp: true,
+          chainOf: 'arteryCut',
+          ko: {
+            name: '심장추적자',
+            input: '혈흔연타 후 웅크리기 + 좌클릭',
+            description:
+              '각 대상에게 superHolding을 부여하고 심장에 X를 새긴 뒤 폭발시켜 1회 타격하고 출혈 지속을 갱신합니다.',
+          },
+          en: {
+            name: 'Heartseeker',
+            input: 'Sneak + left-click after BloodTrail',
+            description:
+              "Apply superHolding, mark an X at each target's heart, then explode for 1 hit and refresh bleed.",
           },
         },
         {
@@ -358,12 +406,12 @@ export const daggerlistDetail: ClassDetailDef = {
           element: 'dark',
           passive: true,
           ko: {
-            name: '상처',
+            name: '암영술',
             description: '출혈 지속 +1.5초. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다.',
           },
           en: {
-            name: 'Wound',
-            description: 'Bleed duration +1.5s. First limit-break ultimate cooldown is halved.',
+            name: 'Shade Arts',
+            description: 'Bleed duration +1.5s. Halves the first limit-break ultimate cooldown.',
           },
         },
         {
@@ -372,14 +420,16 @@ export const daggerlistDetail: ClassDetailDef = {
           element: 'dark',
           ultimate: true,
           ko: {
-            name: '최후의 절단',
+            name: '그림자원무',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
-            description: '전투 모드에서만 발동합니다. 광역 절단과 출혈 5스택을 부여합니다(배율 × 패널 공격력).',
+            description:
+              '전방 중심을 기준으로 그림자 6기가 원을 그리고, 플레이어는 중앙에서 도약해 원 안 적을 Holding하며 중앙으로 모읍니다. 마주보는 그림자들이 자리를 바꾸며 경로를 휩쓸고, 약 20회 타격과 출혈 10중첩 후 처음 위치로 회귀합니다. 그림자가 중앙으로 모여 폭발하며, 폭발 피해는 출혈 스택당 +5%입니다.',
           },
           en: {
-            name: 'Final Cut',
+            name: 'Shadow Waltz',
             input: 'Sneak + hotkey 5 (combat mode)',
-            description: 'Combat mode only. Wide slash and 5 bleed stacks (multiplier × panel attack damage).',
+            description:
+              'Six shadows form a ring ahead while you leap into the center, Holding and pulling foes inward. Opposite shadows swap and sweep the lanes for about 20 hits and 10 bleed stacks, then you return home as the shadows converge for an explosion that gains +5% per bleed stack.',
           },
         },
       ],
