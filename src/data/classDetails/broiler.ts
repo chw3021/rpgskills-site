@@ -174,13 +174,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '바위 투척',
             input: '충격파 직후 손 바꾸기',
             description:
-              '서로 다른 바위 6개를 부채꼴로 던지고 추가 상승합니다. 각 바위는 충돌 지점 주변의 적을 기절시킵니다.',
+              '시야 방향으로 서로 다른 바위 6개를 연발로 던지고 추가 상승합니다. 각 바위는 살짝 흔들리며 충돌 지점 주변의 적을 기절시킵니다.',
           },
           en: {
             name: 'Rock Throw',
             input: 'Swap hands after Shockwave',
             description:
-              'Throws six different rocks in a fan and rises again. Each impact stuns enemies in its area.',
+              'Throws six different rocks in rapid succession ahead and rises again. Each rock drifts slightly and stuns enemies at its impact.',
           },
         },
         {
