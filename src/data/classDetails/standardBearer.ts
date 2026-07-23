@@ -30,14 +30,14 @@ export const standardBearerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '흰 깃발과 가위로 전열을 지휘하는 근접 지원가입니다. 적을 때릴수록 주변 아군을 격려해 치유하고, 포섭으로 팀의 공격 기회를 엽니다.',
+      '흰 깃발과 가위로 전열을 지휘하는 근접 지원가입니다. 적을 때릴수록 주변 아군을 격려해 치유하고, 문양 스택으로 팀의 피해를 키웁니다.',
       '깃발 구역, 기세 제압, 신호 기동, 포고 표식, 나팔 사기로 전선이 갈리며, 기장은 연계와 패업령으로 전장을 이끕니다.',
-      '진기는 연대기와 전장돌파로 군기를 정점에 올리며, 문장 스택과 격려로 전장을 깃발 아래 유지합니다.',
+      '진기는 연대기와 전장돌파로 군기를 정점에 올리며, 문양 스택과 격려로 전장을 깃발 아래 유지합니다.',
     ],
     en: [
-      'A frontline support who commands with banner and shears. Hitting foes inspires and heals nearby allies, while coerce opens windows for the team to strike.',
+      'A frontline support who commands with banner and shears. Hitting foes inspires and heals nearby allies, while Sigil stacks raise outgoing damage.',
       'Banner zones, demoralizing pressure, signal mobility, proclaim marks, and war-horn morale split by lane. Ensigns lead with combos and Decree of Ruin.',
-      'Grand Ensigns peak with Rally Standard and Field Breakthrough, holding the line through Heraldry stacks and inspire heals.',
+      'Grand Ensigns peak with Rally Standard and Field Breakthrough, holding the line through Sigil stacks and inspire heals.',
     ],
   },
   skillSections: [
@@ -54,13 +54,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '전장기',
             input: '지상에서 비웅크리기 + 우클릭',
             description:
-              '지휘 깃발을 세워 구역을 표시합니다. 안의 적을 포섭하고, 아군에게 신속과 약간의 격려를 줍니다.',
+              '지휘 깃발을 세워 구역을 표시합니다. 안의 적을 붙잡고 약화시키며, 아군에게 신속과 약간의 격려를 줍니다.',
           },
           en: {
             name: 'War Banner',
             input: 'On ground + not sneaking + right-click',
             description:
-              'Plants a command banner that marks its zone. Coerces enemies inside and grants Speed with light inspire to allies.',
+              'Plants a command banner that marks its zone. Holds and weakens enemies inside, and grants Speed with light inspire to allies.',
           },
           masterLevel: 50,
         },
@@ -72,12 +72,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기세꺾기',
             input: '웅크리기 + 우클릭',
-            description: '전방을 가르며 피해와 포섭을 주고, 짧게 감속과 약화를 겁니다.',
+            description: '전방을 가르며 피해를 주고, 적을 붙잡아 약화시키며 짧게 감속도 겁니다.',
           },
           en: {
             name: 'Demoralize',
             input: 'Sneak + right-click',
-            description: 'Cuts forward to damage and coerce foes, then briefly slows and weakens them.',
+            description: 'Cuts forward to damage foes, then holds and weakens them while briefly slowing them.',
           },
           masterLevel: 50,
         },
@@ -108,12 +108,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '포고',
             input: '웅크리기 + 손 바꾸기',
-            description: '위로 떠오른 뒤 석조 망루를 소환해 올라섭니다. 주변 적에게 인장 피해와 강한 포섭·표식을 남깁니다.',
+            description: '위로 떠오른 뒤 석조 망루를 소환해 올라섭니다. 주변 적에게 인장 피해를 주고 붙잡아 약화시킵니다.',
           },
           en: {
             name: 'Proclaim',
             input: 'Sneak + swap hands',
-            description: 'Rises onto a summoned stone watchtower. Seals nearby foes with heavy damage and a strong coerce mark.',
+            description: 'Rises onto a summoned stone watchtower. Seals nearby foes with damage, then holds and weakens them.',
           },
           masterLevel: 50,
         },
@@ -125,12 +125,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '깃기돌진',
             input: '공중 + 비웅크리기 + 좌클릭',
-            description: '큰 깃발을 펼치며 돌진합니다. 지나가는 적에게 피해와 포섭을 주고 격려를 발동합니다.',
+            description: '큰 깃발을 펼치며 돌진합니다. 지나가는 적에게 피해를 주고 붙잡아 약화시키며 격려를 발동합니다.',
           },
           en: {
             name: 'Banner Charge',
             input: 'While airborne + not sneaking + left-click',
-            description: 'Charges forward with large banners, damaging and coercing foes along the path while inspiring allies.',
+            description: 'Charges forward with large banners, damaging foes along the path, holding and weakening them while inspiring allies.',
           },
           masterLevel: 50,
         },
@@ -162,12 +162,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기병깃술',
             description:
-              '근접 최종 피해가 증가합니다. 스킬이 적중할 때마다 문장 스택을 쌓고, 주변 아군을 조금 격려 치유합니다.',
+              '근접 최종 피해가 증가합니다. 스킬이 적중할 때마다 문양 스택을 쌓아 주는 피해를 키우고, 주변 아군을 조금 격려 치유합니다.',
           },
           en: {
             name: 'Heraldry',
             description:
-              'Increases melee final damage. Skill hits build Heraldry stacks and lightly inspire-heal nearby allies.',
+              'Increases melee final damage. Skill hits build Sigil stacks that raise outgoing damage, and lightly inspire-heal nearby allies.',
           },
         },
       ],
@@ -303,13 +303,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '패업령',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '긴 직선으로 밀어붙이며 강한 포섭을 겁니다. 2차 한계 돌파 시 재사용 대기가 줄어듭니다.',
+              '긴 직선으로 밀어붙이며 적을 붙잡고 약화시킵니다. 2차 한계 돌파 시 재사용 대기가 줄어듭니다.',
           },
           en: {
             name: 'Decree of Ruin',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Drives a long line assault with heavy coerce. Cooldown is shorter at second limit break.',
+              'Drives a long line assault that holds and weakens foes. Cooldown is shorter at second limit break.',
           },
         },
       ],
@@ -453,13 +453,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '연대기',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '짧게 흡수·저항을 얻고 큰 격려 파동과 깃발 숲을 펼칩니다. 주변 적에게 피해와 포섭을 줍니다.',
+              '짧게 흡수·저항을 얻고 큰 격려 파동과 깃발 숲을 펼칩니다. 주변 적에게 피해를 주고 붙잡아 약화시킵니다.',
           },
           en: {
             name: 'Rally Standard',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Briefly gains Absorption and Resistance, then unleashes a large inspire wave and a banner grove. Damages and coerces nearby foes.',
+              'Briefly gains Absorption and Resistance, then unleashes a large inspire wave and a banner grove. Damages nearby foes while holding and weakening them.',
           },
         },
       ],
