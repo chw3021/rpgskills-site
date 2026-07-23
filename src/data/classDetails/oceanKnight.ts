@@ -157,12 +157,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '회절',
             input: '같은 스킬 재입력',
-            description: '바다창술 후 재입력. 피해량은 바다창술 레벨에 비례합니다.',
+            description: '바다창술 후 재입력.',
           },
           en: {
             name: 'Diffraction',
             input: 'Use the same skill again',
-            description: 'Follow-up to Water Spear. Damage scales with Water Spear level.',
+            description: 'Follow-up to Water Spear.',
           },
         },
         {
@@ -173,12 +173,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '방패 강타',
             input: '같은 스킬 재입력',
-            description: '물의 방벽 후 재입력. 피해량은 물의 방벽 레벨에 비례합니다.',
+            description: '물의 방벽 후 재입력.',
           },
           en: {
             name: 'Shield Smite',
             input: 'Use the same skill again',
-            description: 'Follow-up to Water Barrier. Damage scales with Water Barrier level.',
+            description: 'Follow-up to Water Barrier.',
           },
         },
         {
@@ -189,12 +189,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '낙조',
             input: '삼지창 위치 기준',
-            description: '삼지창 위치로 주변 적을 모읍니다. 피해량은 투창 레벨에 비례합니다.',
+            description: '삼지창 위치로 주변 적을 모읍니다.',
           },
           en: {
             name: 'Crisp',
             input: 'At trident location',
-            description: 'Pulls nearby enemies to the trident. Damage scales with Javelin level.',
+            description: 'Pulls nearby enemies to the trident.',
           },
         },
         {
@@ -212,12 +212,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '삼지창 폭발',
             input: '꿰뚫기 후 재공격',
-            description: '삼지창 돌격 후 재공격. 피해량은 삼지창 돌격 레벨에 비례합니다.',
+            description: '삼지창 돌격 후 재공격.',
           },
           en: {
             name: 'Trident Explosion',
             input: 'After impale, attack again',
-            description: 'Follow-up to Ocean Charge. Damage scales with Ocean Charge level.',
+            description: 'Follow-up to Ocean Charge.',
           },
         },
         {
@@ -228,12 +228,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '역류',
             input: '같은 스킬 재입력',
-            description: '해풍참 후 재입력. 피해량은 해풍참 레벨에 비례합니다.',
+            description: '해풍참 후 재입력.',
           },
           en: {
             name: 'Backwash',
             input: 'Use the same skill again',
-            description: 'Follow-up to Wet Swing. Damage scales with Wet Swing level.',
+            description: 'Follow-up to Wet Swing.',
           },
         },
         {
@@ -280,12 +280,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '범람',
             input: '같은 스킬 재입력',
-            description: '바다창술 후 재입력. 피해량은 바다창술 레벨에 비례합니다.',
+            description: '바다창술 후 재입력.',
           },
           en: {
             name: 'Flood',
             input: 'Use the same skill again',
-            description: 'Follow-up to Water Spear. Damage scales with Water Spear level.',
+            description: 'Follow-up to Water Spear.',
           },
         },
         {
@@ -296,12 +296,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '급류',
             input: '같은 스킬 재입력',
-            description: '삼지창 위치로 이동합니다. 피해량은 투창 레벨에 비례합니다.',
+            description: '삼지창 위치로 이동합니다.',
           },
           en: {
             name: 'Torrent',
             input: 'Use the same skill again',
-            description: 'Warp to your trident. Damage scales with Javelin level.',
+            description: 'Warp to your trident.',
           },
         },
         {
@@ -312,12 +312,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '찌르기',
             input: '삼지창 폭발 후 재공격',
-            description: '삼지창 폭발 후 재공격. 피해량은 삼지창 돌격 레벨에 비례합니다.',
+            description: '삼지창 폭발 후 재공격.',
           },
           en: {
             name: 'Impale',
             input: 'After Trident Explosion, attack again',
-            description: 'Follow-up stab. Damage scales with Ocean Charge level.',
+            description: 'Follow-up stab.',
           },
         },
         {
@@ -328,12 +328,12 @@ export const oceanKnightDetail: ClassDetailDef = {
           ko: {
             name: '가르기',
             input: '같은 스킬 재입력',
-            description: '해풍참 후 재입력. 피해량은 해풍참 레벨에 비례합니다.',
+            description: '해풍참 후 재입력.',
           },
           en: {
             name: 'Cleave',
             input: 'Use the same skill again',
-            description: 'Follow-up to Wet Swing. Damage scales with Wet Swing level.',
+            description: 'Follow-up to Wet Swing.',
           },
         },
         {

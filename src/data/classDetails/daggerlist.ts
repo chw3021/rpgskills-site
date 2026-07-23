@@ -90,13 +90,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '그림자소환',
             input: '단검 + 비웅크리기 + 손 바꾸기',
             description:
-              '시선 방향 3.5블록 앞에 플레이어를 바라보는 그림자를 소환합니다. 그림자는 기술을 50% 피해로 따라 사용합니다.',
+              '시선 방향 앞에 그림자를 소환합니다. 그림자는 본인의 기술을 따라 사용합니다.',
           },
           en: {
             name: 'ShadowSummon',
             input: 'Dagger + not sneaking + swap hands',
             description:
-              'Summon a shadow 3.5 blocks ahead, facing you. The shadow echoes your skills at 50% damage.',
+              'Summons a shadow ahead, facing you. The shadow echoes your skills.',
           },
           masterLevel: 1,
         },
@@ -108,13 +108,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '처형',
             input: '단검 + 웅크리기 + 손 바꾸기',
             description:
-              '전방 4블록을 돌진해 적을 모으고 Holding합니다. 밝고 어두운 X자 파티클과 함께 출혈 스택당 배율 +5%의 8회 타격 후 출혈을 갱신하고 복귀합니다.',
+              '전방으로 돌진해 적을 모아 붙잡습니다. X자 광채와 함께 연속 타격을 가하고, 출혈이 쌓일수록 더 강해지며 마무리 후 출혈을 갱신하고 복귀합니다.',
           },
           en: {
             name: 'Execution',
             input: 'Dagger + sneak + swap hands',
             description:
-              'Dash 4 blocks, gather foes, and Holding. Strike 8 times with bright and dark X particles at +5% per bleed stack, refresh bleed, then return.',
+              'Dashes forward, gathers foes, and holds them. Strikes repeatedly with bright and dark X effects, growing stronger with bleed stacks, then refreshes bleed and returns.',
           },
           masterLevel: 50,
         },
@@ -125,12 +125,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '동맥절단',
             input: '단검 + 웅크리기 + 좌클릭',
-            description: '짧게 전진하며 전방 3.5블록을 찌릅니다. 출혈 2와 Holding을 부여합니다.',
+            description: '짧게 전진하며 전방을 찌릅니다. 출혈 2와 구속을 부여합니다.',
           },
           en: {
             name: 'ArteryCut',
             input: 'Dagger + sneak + left-click',
-            description: 'Advance briefly and stab 3.5 blocks ahead, applying 2 bleed and Holding.',
+            description: 'Advance briefly and stab ahead, applying 2 bleed and briefly holding the target.',
           },
           masterLevel: 50,
         },
@@ -142,12 +142,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '상처',
             description:
-              '공격력이 증가합니다. 스킬 타격 시 출혈을 부여합니다. 출혈은 스택별 4초(+숙련×1.5초) 동안 유지되며, 초당 현재 체력 × (0.05% + 상처 LV×0.012%) × 스택의 0.01% 피해를 줍니다. 중첩 상한은 20입니다.',
+              '공격력이 증가합니다. 스킬 타격 시 출혈을 부여하며, 출혈이 쌓일수록 현재 체력 비율로 지속 피해를 줍니다.',
           },
           en: {
             name: 'Wound',
             description:
-              'Increases damage. Skills apply bleed. Each stack lasts 4s (+1.5s per proficiency) and deals 0.01% of (current HP × (0.05% + Wound LV×0.012%) × stacks) per second. Stack cap is 20.',
+              'Increases damage. Skills apply bleed; stacked bleed deals ongoing damage based on the target’s current health.',
           },
         },
       ],
@@ -200,13 +200,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '칼날폭풍',
             input: '칼날부채 후 좌클릭',
             description:
-              '전방으로 칼날을 투척해 3.5~4블록(벽이 있으면 그 전)에서 소용돌이를 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
+              '전방으로 칼날을 투척해 벽 앞에서 소용돌이를 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
           },
           en: {
             name: 'BladeStorm',
             input: 'Left-click after FanOfBlades',
             description:
-              'Throw a blade forward 3.5–4 blocks (or until a wall), then spin a vortex that pulls enemies and applies 1 bleed per hit.',
+              'Throw a blade forward until it hits a wall, then spin a vortex that pulls enemies and applies 1 bleed per hit.',
           },
         },
         {
@@ -218,12 +218,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '그림자밟기',
             input: '그림자소환 후 손 바꾸기',
-            description: '그림자와 위치를 바꾸고 그림자의 기술 피해를 50%에서 60%로 강화합니다.',
+            description: '그림자와 위치를 바꾸고, 그림자의 연계 피해가 강해집니다.',
           },
           en: {
             name: 'ShadowStep',
             input: 'Swap hands after ShadowSummon',
-            description: 'Swap places with the shadow and increase its echo damage from 50% to 60%.',
+            description: 'Swap places with the shadow and empower its echoed attacks.',
           },
         },
         {
@@ -277,13 +277,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '칼날낙인',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '공중으로 도약한 뒤 전방 적에게 칼날을 여러 번 박아 Holding과 출혈을 쌓습니다. 칼날은 적에게 항상 박히는 판정이며, 마무리로 칼날이 회귀하며 심장에서 피·어둠 폭발을 일으킵니다. 폭발 피해는 출혈 스택당 +3%입니다.',
+              '공중으로 도약한 뒤 전방 적에게 칼날을 여러 번 박아 구속과 출혈을 쌓습니다. 마무리로 칼날이 회귀하며 심장에서 피·어둠 폭발을 일으키고, 출혈이 많을수록 더 강합니다.',
           },
           en: {
             name: 'Blade Brand',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Leap and pin multiple blades into forward foes with Holding and bleed. Blades always land; the finale pulls them back for a blood/dark heart explosion that gains +3% per bleed stack.',
+              'Leap and pin multiple blades into forward foes, binding them and stacking bleed. The finale pulls the blades back for a blood-and-dark heart explosion that grows stronger with bleed stacks.',
           },
         },
       ],
@@ -301,12 +301,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '암영절단',
             input: '그림자절단 후 재우클릭',
-            description: '십자 원뿔로 베어 Holding하고 흑요석 파티클을 일으킵니다.',
+            description: '십자 원뿔로 베어 적을 붙잡고 흑요석 파편을 일으킵니다.',
           },
           en: {
             name: 'ShadowCutII',
             input: 'Right-click again after ShadowCut',
-            description: 'Slash cross-shaped cones with Holding and obsidian particles.',
+            description: 'Slash cross-shaped cones, binding foes and raising obsidian shards.',
           },
         },
         {
@@ -337,12 +337,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '그림자쇄도',
             input: '칼날폭풍 후 좌클릭',
-            description: '그림자 ArmorStand가 전방으로 돌진하며 경로의 적을 타격하고 타격마다 출혈 1을 부여합니다.',
+            description: '그림자가 전방으로 돌진하며 경로의 적을 타격하고 출혈을 부여합니다.',
           },
           en: {
             name: 'ShadowRush',
             input: 'Left-click after BladeStorm',
-            description: 'Shadow ArmorStands rush forward, hitting foes on the path and applying 1 bleed per hit.',
+            description: 'Shadows rush forward, hitting foes on the path and applying bleed.',
           },
         },
         {
@@ -391,13 +391,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '심장추적자',
             input: '혈흔연타 후 웅크리기 + 좌클릭',
             description:
-              '각 대상에게 superHolding을 부여하고 심장에 X를 새긴 뒤 폭발시켜 1회 타격하고 출혈 지속을 갱신합니다.',
+              '각 대상을 강하게 붙잡고 심장에 X를 새긴 뒤 폭발시켜 타격하고 출혈 지속을 갱신합니다.',
           },
           en: {
             name: 'Heartseeker',
             input: 'Sneak + left-click after BloodTrail',
             description:
-              "Apply superHolding, mark an X at each target's heart, then explode for 1 hit and refresh bleed.",
+              'Strongly bind each target, mark an X at the heart, then explode for a hit and refresh bleed duration.',
           },
         },
         {
@@ -423,13 +423,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '그림자원무',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '전방 중심을 기준으로 그림자 6기가 원을 그리고, 플레이어는 중앙에서 도약해 원 안 적을 Holding하며 중앙으로 모읍니다. 마주보는 그림자들이 자리를 바꾸며 경로를 휩쓸고, 약 20회 타격과 출혈 10중첩 후 처음 위치로 회귀합니다. 그림자가 중앙으로 모여 폭발하며, 폭발 피해는 출혈 스택당 +5%입니다.',
+              '전방 중심을 기준으로 그림자들이 원을 그리고, 플레이어는 중앙에서 도약해 원 안 적을 붙잡으며 중앙으로 모읍니다. 그림자들이 경로를 휩쓸고 연속 타격과 출혈을 쌓은 뒤 중앙으로 모여 폭발하며, 출혈이 많을수록 더 강합니다.',
           },
           en: {
             name: 'Shadow Waltz',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Six shadows form a ring ahead while you leap into the center, Holding and pulling foes inward. Opposite shadows swap and sweep the lanes for about 20 hits and 10 bleed stacks, then you return home as the shadows converge for an explosion that gains +5% per bleed stack.',
+              'Shadows form a ring ahead while you leap into the center, binding and pulling foes inward. They sweep the lanes with repeated hits and heavy bleed, then converge for an explosion that grows stronger with bleed stacks.',
           },
         },
       ],

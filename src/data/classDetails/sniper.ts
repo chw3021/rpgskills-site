@@ -153,12 +153,12 @@ export const sniperDetail: ClassDetailDef = {
           ko: {
             name: '충격화살',
             input: '같은 스킬 재입력',
-            description: '철갑화살 후 재입력. 피해량은 철갑화살 레벨에 비례합니다.',
+            description: '철갑화살 후 재입력.',
           },
           en: {
             name: 'Shock Arrow',
             input: 'Use the same skill again',
-            description: 'Follow-up to armour-piercing arrow. Damage scales with its level.',
+            description: 'Follow-up to armour-piercing arrow.',
           },
         },
         {
@@ -174,7 +174,7 @@ export const sniperDetail: ClassDetailDef = {
           en: {
             name: 'Smoke Shell',
             input: 'Use the same skill again',
-            description: 'After flash bomb, throw smoke. Invulnerable while sneaking inside (duration scales with flash bomb).',
+            description: 'After flash bomb, throw smoke. Invulnerable while sneaking inside (duration',
           },
         },
         {
@@ -191,11 +191,11 @@ export const sniperDetail: ClassDetailDef = {
           followUp: true,
           ko: {
             name: '지원 사격',
-            description: '적중 시 후속 사격. 피해량은 공습 레벨에 비례합니다.',
+            description: '적중 시 후속 사격.',
           },
           en: {
             name: 'Backup',
-            description: 'Follow-up shots on hit. Damage scales with Air Strike level.',
+            description: 'Follow-up shots on hit.',
           },
         },
         {
@@ -277,7 +277,7 @@ export const sniperDetail: ClassDetailDef = {
           en: {
             name: 'Destroyer',
             input: 'Use the same skill again',
-            description: 'Follow-up rocket; more damage vs high armor. Scales with armour-piercing level.',
+            description: 'Follow-up rocket; more damage vs high armor.',
           },
         },
         {
@@ -288,12 +288,12 @@ export const sniperDetail: ClassDetailDef = {
           ko: {
             name: '근접 항공 지원',
             input: '같은 스킬 재입력',
-            description: '섬광탄 후 재입력. 피해량은 공습 레벨에 비례합니다.',
+            description: '섬광탄 후 재입력.',
           },
           en: {
             name: 'Danger Close',
             input: 'Use the same skill again',
-            description: 'Requests close air support. Damage scales with Air Strike level.',
+            description: 'Requests close air support.',
           },
         },
         {

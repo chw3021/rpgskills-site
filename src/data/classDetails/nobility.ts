@@ -150,12 +150,12 @@ export const nobilityDetail: ClassDetailDef = {
           ko: {
             name: '위치 사수',
             input: '같은 스킬 재입력',
-            description: '돌격을 중지합니다. 피해량은 돌격 레벨에 비례합니다.',
+            description: '돌격을 중지합니다.',
           },
           en: {
             name: 'Hold Position',
             input: 'Use the same skill again',
-            description: 'Stops assault. Damage scales with Assault level.',
+            description: 'Stops assault.',
           },
         },
         {
@@ -166,12 +166,12 @@ export const nobilityDetail: ClassDetailDef = {
           ko: {
             name: '해방',
             input: '같은 스킬 재입력',
-            description: '물바퀴 위치에 삼지창의 힘을 해방합니다. 피해량은 물바퀴 레벨에 비례합니다.',
+            description: '물바퀴 위치에 삼지창의 힘을 해방합니다.',
           },
           en: {
             name: 'Release',
             input: 'Use the same skill again',
-            description: 'Unleashes trident force at the water wheel. Damage scales with Water Wheel level.',
+            description: 'Unleashes trident force at the water wheel.',
           },
         },
         {
@@ -180,11 +180,11 @@ export const nobilityDetail: ClassDetailDef = {
           element: 'water',
           ko: {
             name: '거북 요원',
-            description: '거북이가 적을 휩씁니다. 피해량은 폭풍 레벨에 비례합니다.',
+            description: '거북이가 적을 휩씁니다.',
           },
           en: {
             name: 'Agent Turtle',
-            description: 'Turtles sweep enemies. Damage scales with Storm level.',
+            description: 'Turtles sweep enemies.',
           },
         },
         {
@@ -272,12 +272,12 @@ export const nobilityDetail: ClassDetailDef = {
           ko: {
             name: '분사 공격',
             input: '같은 스킬 재입력',
-            description: '분사 공격을 명령합니다. 피해량은 돌격 레벨에 비례합니다.',
+            description: '분사 공격을 명령합니다.',
           },
           en: {
             name: 'Spray Attack',
             input: 'Use the same skill again',
-            description: 'Orders a spray attack. Damage scales with Assault level.',
+            description: 'Orders a spray attack.',
           },
         },
         {
@@ -288,12 +288,12 @@ export const nobilityDetail: ClassDetailDef = {
           ko: {
             name: '바다의 눈',
             input: '같은 스킬 재입력',
-            description: '물바퀴 위치에 바다의 눈을 개안합니다. 피해량은 물바퀴 레벨에 비례합니다.',
+            description: '물바퀴 위치에 바다의 눈을 개안합니다.',
           },
           en: {
             name: 'Eyes of the Sea',
             input: 'Use the same skill again',
-            description: 'Awakens eyes of the sea at the water wheel. Damage scales with Water Wheel level.',
+            description: 'Awakens eyes of the sea at the water wheel.',
           },
         },
         {
@@ -311,12 +311,12 @@ export const nobilityDetail: ClassDetailDef = {
           ko: {
             name: '가디언 저주',
             input: '웅크리기 + 아이템 변경(휠)',
-            description: '가디언의 저주를 사용합니다. 피해량은 가디언 지원대 레벨에 비례합니다.',
+            description: '가디언의 저주를 사용합니다.',
           },
           en: {
             name: 'Guardian Curse',
             input: 'Sneak + change item (scroll)',
-            description: 'Casts guardian curse. Damage scales with Guardian Support level.',
+            description: 'Casts guardian curse.',
           },
         },
         {
@@ -325,11 +325,11 @@ export const nobilityDetail: ClassDetailDef = {
           element: 'water',
           ko: {
             name: '호우',
-            description: '삼지창 위치에 호우를 부립니다. 피해량은 전이 레벨에 비례합니다.',
+            description: '삼지창 위치에 호우를 부립니다.',
           },
           en: {
             name: 'Downpour',
-            description: 'Calls downpour at the trident. Damage scales with Transition level.',
+            description: 'Calls downpour at the trident.',
           },
         },
         {

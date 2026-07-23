@@ -141,12 +141,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '앙코르',
             input: '같은 스킬 재입력',
-            description: '속임수를 한 번 더 사용합니다. 피해량은 속임수 레벨에 비례합니다.',
+            description: '속임수를 한 번 더 사용합니다.',
           },
           en: {
             name: 'Encore',
             input: 'Use the same skill again',
-            description: 'Repeats Trick. Damage scales with Trick level.',
+            description: 'Repeats Trick.',
           },
         },
         {
@@ -157,12 +157,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '확대',
             input: '같은 스킬 재입력',
-            description: '잭오랜턴을 한 번 더 사용합니다. 피해량은 잭오랜턴 레벨에 비례합니다.',
+            description: '잭오랜턴을 한 번 더 사용합니다.',
           },
           en: {
             name: 'Magnify',
             input: 'Use the same skill again',
-            description: 'Repeats Jack-o-Lantern. Damage scales with its level.',
+            description: 'Repeats Jack-o-Lantern.',
           },
         },
         {
@@ -173,12 +173,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '뒤섞기',
             input: '같은 스킬 재입력',
-            description: '왜곡을 한 번 더 사용합니다. 피해량은 왜곡 레벨에 비례합니다.',
+            description: '왜곡을 한 번 더 사용합니다.',
           },
           en: {
             name: 'Shuffle',
             input: 'Use the same skill again',
-            description: 'Repeats Distortion. Damage scales with Distortion level.',
+            description: 'Repeats Distortion.',
           },
         },
         {
@@ -188,12 +188,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '기믹',
             input: '재입력',
-            description: '남아 있는 허수아비를 폭발시킵니다. 피해량은 속임수 레벨에 비례합니다.',
+            description: '남아 있는 허수아비를 폭발시킵니다.',
           },
           en: {
             name: 'Gimmick',
             input: 'Use again',
-            description: 'Detonates remaining fake dolls. Damage scales with Trick level.',
+            description: 'Detonates remaining fake dolls.',
           },
         },
         {
@@ -263,12 +263,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '관통',
             input: '같은 스킬 재입력',
-            description: '속임수 연계 관통 공격입니다. 피해량은 속임수 레벨에 비례합니다.',
+            description: '속임수 연계 관통 공격입니다.',
           },
           en: {
             name: 'Penetration',
             input: 'Use the same skill again',
-            description: 'Piercing follow-up to Trick. Damage scales with Trick level.',
+            description: 'Piercing follow-up to Trick.',
           },
         },
         {
@@ -279,12 +279,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '곡예',
             input: '같은 스킬 재입력',
-            description: '잭오랜턴 연계 곡예 공격입니다. 피해량은 잭오랜턴 레벨에 비례합니다.',
+            description: '잭오랜턴 연계 곡예 공격입니다.',
           },
           en: {
             name: 'Juggling',
             input: 'Use the same skill again',
-            description: 'Juggling follow-up to Jack-o-Lantern. Damage scales with its level.',
+            description: 'Juggling follow-up to Jack-o-Lantern.',
           },
         },
         {
@@ -295,12 +295,12 @@ export const illusionistDetail: ClassDetailDef = {
           ko: {
             name: '세뇌',
             input: '같은 스킬 재입력',
-            description: '왜곡 연계 세뇌 공격입니다. 피해량은 왜곡 레벨에 비례합니다.',
+            description: '왜곡 연계 세뇌 공격입니다.',
           },
           en: {
             name: 'Mind Control',
             input: 'Use the same skill again',
-            description: 'Mind-control follow-up to Distortion. Damage scales with Distortion level.',
+            description: 'Mind-control follow-up to Distortion.',
           },
         },
         {

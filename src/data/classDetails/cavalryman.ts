@@ -146,7 +146,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           en: {
             name: 'Lancer Discipline',
             description:
-              'Increases damage. Grants mount speed after boarding and damage reduction briefly after dismounting (scales with proficiency and level).',
+              'Increases damage. Grants mount speed after boarding and damage reduction briefly after dismounting (',
           },
         },
       ],
@@ -165,12 +165,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '찌르기 파고',
             input: '기마 찌르기 직후 재우클릭',
-            description: '짧은 시간 안에만 사용 가능합니다. 피해량은 기마 찌르기 레벨에 비례합니다.',
+            description: '짧은 시간 안에만 사용 가능합니다.',
           },
           en: {
             name: 'Tilt Rend',
             input: 'Right-click again after Tilt Pass',
-            description: 'Only within a short window. Damage scales with Tilt Pass level.',
+            description: 'Only within a short window.',
           },
         },
         {
@@ -183,12 +183,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '고삐질타',
             input: '고삐 내려 직후 좌클릭',
-            description: '전방 짧은 찌르기입니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+            description: '전방 짧은 찌르기입니다.',
           },
           en: {
             name: 'Bridle Lash',
             input: 'Left-click after Bridle Slam',
-            description: 'Short forward thrust. Damage scales with Bridle Slam level.',
+            description: 'Short forward thrust.',
           },
         },
         {
@@ -201,12 +201,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '쏜살 추격',
             input: '질주 적중 직후 손 바꾸기',
-            description: '전방 직선 베기입니다. 피해량은 질주 레벨에 비례합니다.',
+            description: '전방 직선 베기입니다.',
           },
           en: {
             name: 'Stampede Feint',
             input: 'Swap hands after Gallop hits',
-            description: 'Forward line slash. Damage scales with Gallop level.',
+            description: 'Forward line slash.',
           },
         },
         {
@@ -219,12 +219,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '돌격 관통',
             input: '마상 돌격 직후 웅크리기 + 좌클릭',
-            description: '전방 관통 찌르기입니다. 피해량은 마상 돌격 레벨에 비례합니다.',
+            description: '전방 관통 찌르기입니다.',
           },
           en: {
             name: 'Herald Pierce',
             input: 'Sneak + left-click after Ride Herald',
-            description: 'Piercing line thrust. Damage scales with Ride Herald level.',
+            description: 'Piercing line thrust.',
           },
         },
         {
@@ -237,12 +237,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '심장 파열',
             input: '심장 관통 직후 웅크리기 + 손 바꾸기',
-            description: '강한 마무리 일격입니다. 피해량은 심장 관통 레벨에 비례합니다.',
+            description: '강한 마무리 일격입니다.',
           },
           en: {
             name: 'Heart Burst',
             input: 'Sneak + swap hands after Heart Lunge',
-            description: 'Heavy finishing thrust. Damage scales with Heart Lunge level.',
+            description: 'Heavy finishing thrust.',
           },
         },
         {
@@ -255,12 +255,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '찍기 이음',
             input: '낙마 찍기 직후 웅크리기 + 우클릭',
-            description: '전방 추가 내려찍기입니다. 피해량은 낙마 찍기 레벨에 비례합니다.',
+            description: '전방 추가 내려찍기입니다.',
           },
           en: {
             name: 'Drive Echo',
             input: 'Sneak + right-click after Bridle Drive',
-            description: 'Follow-up slam ahead. Damage scales with Bridle Drive level.',
+            description: 'Follow-up slam ahead.',
           },
         },
         {
@@ -313,12 +313,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '천지 내려',
             input: '고삐질타 직후 좌클릭',
-            description: '넓은 내려찍기입니다. 피해량은 고삐 내려 레벨에 비례합니다.',
+            description: '넓은 내려찍기입니다.',
           },
           en: {
             name: 'Heaven Drop',
             input: 'Left-click after Bridle Lash',
-            description: 'Wide slam ahead. Damage scales with Bridle Slam level.',
+            description: 'Wide slam ahead.',
           },
         },
         {
@@ -331,12 +331,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '질풍 돌파',
             input: '돌격 관통 직후 웅크리기 + 좌클릭',
-            description: '긴 돌진 관통입니다. 피해량은 마상 돌격 레벨에 비례합니다.',
+            description: '긴 돌진 관통입니다.',
           },
           en: {
             name: 'Gale Break',
             input: 'Sneak + left-click after Herald Pierce',
-            description: 'Long charge pierce. Damage scales with Ride Herald level.',
+            description: 'Long charge pierce.',
           },
         },
         {
@@ -349,12 +349,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '심장 쇄도',
             input: '심장 파열 직후 웅크리기 + 손 바꾸기',
-            description: '연속 찌르기입니다. 피해량은 심장 관통 레벨에 비례합니다.',
+            description: '연속 찌르기입니다.',
           },
           en: {
             name: 'Heart Flurry',
             input: 'Sneak + swap hands after Heart Burst',
-            description: 'Rapid thrust flurry. Damage scales with Heart Lunge level.',
+            description: 'Rapid thrust flurry.',
           },
         },
         {
@@ -367,12 +367,12 @@ export const cavalrymanDetail: ClassDetailDef = {
           ko: {
             name: '지면 파쇄',
             input: '찍기 이음 직후 웅크리기 + 우클릭',
-            description: '주변 지면을 파쇄해 피해를 줍니다. 피해량은 낙마 찍기 레벨에 비례합니다.',
+            description: '주변 지면을 파쇄해 피해를 줍니다.',
           },
           en: {
             name: 'Ground Break',
             input: 'Sneak + right-click after Drive Echo',
-            description: 'Shockwave around you. Damage scales with Bridle Drive level.',
+            description: 'Shockwave around you.',
           },
         },
         {

@@ -41,14 +41,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '투석기',
             input: '우클릭',
             description:
-              '전방에 투석기를 설치해 돌탄 3발을 포물선으로 발사합니다. 돌은 1초 후 자동 폭발하며, 적 근처에서도 즉시 터집니다.',
+              '전방에 투석기를 설치해 돌탄 3발을 포물선으로 발사합니다. 돌은 잠시 후 자동 폭발하며, 적 근처에서도 즉시 터집니다.',
             extra: ['착탄 시 광역 피해와 제압을 가합니다.', '투석기는 가장 가까운 적 방향으로 회전합니다.'],
           },
           en: {
             name: 'Catapult',
             input: 'Right-click',
             description:
-              'Deploys a catapult that lobs 3 stone shots. Stones auto-detonate after 1 second or near enemies.',
+              'Deploys a catapult that lobs 3 stone shots. Stones auto-detonate shortly after launch or near enemies.',
             extra: ['Deals area damage and suppression on impact.', 'Catapult rotates toward nearest enemy.'],
           },
           masterLevel: 50,
@@ -79,14 +79,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '그리스불',
             input: '손 바꾸기',
             description:
-              '전방에 그리스불 방사기를 설치해 약 5초간 지속 분사합니다. 근처 적을 조준하며, 전술철수 시 폭파·철거됩니다.',
+              '전방에 그리스불 방사기를 설치해 잠시 지속 분사합니다. 근처 적을 조준하며, 전술철수 시 폭파·철거됩니다.',
             extra: ['비등유 웅덩이 근처면 화염 지대를 점화합니다.'],
           },
           en: {
             name: 'Greek Fire',
             input: 'Swap hands',
             description:
-              'Deploys a Greek-fire projector that sprays for about 5 seconds, auto-aims nearby foes, and detonates with Tactical Withdrawal.',
+              'Deploys a Greek-fire projector that sprays for a short time, auto-aims nearby foes, and detonates with Tactical Withdrawal.',
             extra: ['Ignites nearby boiling-oil pools into a fire zone.'],
           },
           masterLevel: 50,
@@ -100,14 +100,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '비등유',
             input: '웅크리기 + 손 바꾸기',
             description:
-              '전방 가마에서 검은 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 웅덩이는 8초간 유지되며, 적을 중심으로 끌어당깁니다.',
+              '전방 가마에서 검은 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 웅덩이는 잠시 유지되며, 적을 중심으로 끌어당깁니다.',
             extra: ['그리스불로 점화 가능합니다.'],
           },
           en: {
             name: 'Boiling Oil',
             input: 'Sneak + swap hands',
             description:
-              'Pours black oil from a forward vat for area damage and heavy suppression. The pool lasts 8 seconds and pulls enemies toward its center.',
+              'Pours black oil from a forward vat for area damage and heavy suppression. The pool lingers and pulls enemies toward its center.',
             extra: ['Can ignite with Greek fire.'],
           },
           masterLevel: 50,
@@ -138,13 +138,13 @@ export const sapperDetail: ClassDetailDef = {
             name: '전술철수',
             input: '좌클릭',
             description:
-              '설치한 공성물(구조물 1개당 1회)을 폭파·철거하고 주변에 피해를 준 뒤 전방으로 도약합니다. 궁극기 소환물은 제외됩니다. 숙련도에 따라 폭발 범위·피해가 증가하며, 숙련 2에서는 설치물이 본인 위치로 순간이동한 뒤 폭발합니다.',
+              '설치한 공성물을 폭파·철거하고 주변에 피해를 준 뒤 전방으로 도약합니다. 궁극기 소환물은 제외됩니다. 숙련도에 따라 폭발이 강해지며, 숙련 2에서는 설치물이 본인 위치로 순간이동한 뒤 폭발합니다.',
           },
           en: {
             name: 'Tactical Withdrawal',
             input: 'Left-click',
             description:
-              'Detonates each deployable once (not per armor stand part), damages nearby foes, then leaps forward. Ultimate summons are excluded. Proficiency raises blast radius/damage; at proficiency 2, structures teleport to you before detonating.',
+              'Detonates each deployable once, damages nearby foes, then leaps forward. Ultimate summons are excluded. Proficiency raises blast power; at proficiency 2, structures teleport to you before detonating.',
           },
           masterLevel: 1,
         },
@@ -179,12 +179,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '추침찍기',
             input: '투석기 설치 종료 직후 우클릭',
-            description: '전방 짧은 직선 파쇄. 피해량은 투석기 레벨에 비례합니다.',
+            description: '전방 짧은 직선 파쇄.',
           },
           en: {
             name: 'Catapult Brace',
             input: 'Right-click after Catapult ends',
-            description: 'Short forward smash line. Damage scales with Catapult level.',
+            description: 'Short forward smash line.',
           },
         },
         {
@@ -197,12 +197,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '노선강철',
             input: '스프링갈드 종료 직후 웅크리기 + 우클릭',
-            description: '전방 직선 피해. 피해량은 스프링갈드 레벨에 비례합니다.',
+            description: '전방 직선 피해.',
           },
           en: {
             name: 'Spring Rip',
             input: 'Sneak + right-click after Springald ends',
-            description: 'Forward line damage. Damage scales with Springald level.',
+            description: 'Forward line damage.',
           },
         },
         {
@@ -234,13 +234,13 @@ export const sapperDetail: ClassDetailDef = {
             name: '그물함정',
             input: '비등유 직후 웅크리기 + 손 바꾸기',
             description:
-              '전방 바닥(약 3블록)에 5×5 Tripwire·Trapdoor 그물 장판을 깔아 Holding으로 붙잡고 지속 피해·제압합니다. 전술철수 시 함정이 폭발·철거됩니다. 피해량은 비등유 레벨에 비례합니다.',
+              '전방 바닥에 그물 함정을 깔아 적을 붙잡고 지속 피해·제압합니다. 전술철수 시 함정이 폭발·철거됩니다.',
           },
           en: {
             name: 'Net Trap',
             input: 'Sneak + swap hands after Boiling Oil',
             description:
-              'Deploys a 5x5 Tripwire/Trapdoor floor net about 3 blocks ahead that Holds foes and deals sustained damage. Detonates with Tactical Withdrawal. Damage scales with Boiling Oil level.',
+              'Deploys a floor net ahead that holds foes and deals sustained damage. Detonates with Tactical Withdrawal.',
           },
         },
         {
@@ -254,13 +254,13 @@ export const sapperDetail: ClassDetailDef = {
             name: '포격난류',
             input: 'TNT 돌격 직후 웅크리기 + 좌클릭',
             description:
-              '전방에 포격 대포를 설치해 전방 적을 우선 조준하며 지속 포격합니다. 피해량은 TNT 돌격 레벨에 비례합니다. 전술철수 시 대포가 폭발·철거됩니다.',
+              '전방에 포격 대포를 설치해 전방 적을 우선 조준하며 지속 포격합니다. 전술철수 시 대포가 폭발·철거됩니다.',
           },
           en: {
             name: 'Shell Drift',
             input: 'Sneak + left-click after TNT Rush',
             description:
-              'Deploys a shell cannon that prioritizes forward foes for sustained bombardment. Damage scales with TNT Rush level. Detonates with Tactical Withdrawal.',
+              'Deploys a shell cannon that prioritizes forward foes for sustained bombardment. Detonates with Tactical Withdrawal.',
           },
         },
         {
@@ -297,14 +297,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '난격',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '거대 포탄을 떨어뜨려 착탄 지점에 포격 거점을 설치합니다. 거점은 8초간 주변 적에게 자동으로 포탄을 발사합니다.',
+              '거대 포탄을 떨어뜨려 착탄 지점에 포격 거점을 설치합니다. 거점은 잠시 동안 주변 적에게 자동으로 포탄을 발사합니다.',
             extra: ['전술철수로 즉시 폭파 가능합니다.', '좁은 통로나 거점 방어에 효과적입니다.'],
           },
           en: {
             name: 'Bombardment',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Drops a massive shell that becomes a bombardment battery. The battery auto-fires shells at nearby enemies for 8 seconds.',
+              'Drops a massive shell that becomes a bombardment battery. The battery auto-fires shells at nearby enemies for a short time.',
             extra: ['Can be detonated with Tactical Withdrawal.', 'Effective for chokepoint defense.'],
           },
         },
@@ -385,13 +385,13 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '선인장 돌격',
             input: '비등유 직후 웅크리기 + 손 바꾸기',
-            description: '선인장 기둥을 굴려 적에게 피해·제압합니다. 피해량은 비등유 레벨에 비례합니다.',
+            description: '선인장 기둥을 굴려 적에게 피해·제압합니다.',
           },
           en: {
             name: 'Cactus Rush',
             input: 'Sneak + swap hands after Boiling Oil',
             description:
-              'Rolls a cactus column at foes for damage and suppression. Damage scales with Boiling Oil level.',
+              'Rolls a cactus column at foes for damage and suppression.',
           },
         },
         {
@@ -434,14 +434,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '포대열',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '주변 12블록을 3초간 포격 구역으로 만들고 6방향에서 포탄을 투하합니다. 구역 내 적은 이동속도 감소·약화·발광 효과를 받습니다.',
+              '주변을 포격 구역으로 만들고 여러 방향에서 포탄을 투하합니다. 구역 내 적은 이동속도 감소·약화·발광 효과를 받습니다.',
             extra: ['구역 내 적은 발광 효과로 표시됩니다.', '아군의 집중 공격 기회를 만듭니다.'],
           },
           en: {
             name: 'Grand Battery',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Turns the 12-block area into a bombardment zone for 3 seconds, raining shells from 6 directions. Enemies inside are slowed, weakened, and glowing.',
+              'Turns the area into a bombardment zone, raining shells from multiple directions. Enemies inside are slowed, weakened, and glowing.',
             extra: ['Enemies glow for visibility.', 'Creates an opening for allied assaults.'],
           },
         },

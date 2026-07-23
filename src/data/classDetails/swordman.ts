@@ -52,13 +52,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '올려베기',
             input: '우클릭 + 웅크리기',
             description:
-              '검을 크게 들어 올려 베며 전방에 연속 타격을 가합니다. 스킬 레벨에 따라 피해량이 증가합니다.',
+              '검을 크게 들어 올려 베며 전방에 연속 타격을 가합니다.',
           },
           en: {
             name: 'Rising Blades',
             input: 'Right-click + Sneak',
             description:
-              'Raises the blade and slashes upward, dealing multiple hits in front. Damage scales with skill level.',
+              'Raises the blade and slashes upward, dealing multiple hits in front.',
           },
           masterLevel: 50,
         },
@@ -86,13 +86,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '지진',
             input: '손 바꾸기',
             description:
-              '대지의 힘을 끌어올려 범위 피해를 주고, 일정 시간 흡수 효과를 얻습니다. 스킬 레벨에 따라 흡수 지속 시간과 단계가 올라갑니다.',
+              '대지의 힘을 끌어올려 범위 피해를 주고, 일정 시간 흡수 효과를 얻습니다.',
           },
           en: {
             name: 'Sword Drive',
             input: 'Swap hands',
             description:
-              'Channels earth power for area damage and grants Absorption for a duration. Duration and amplifier scale with skill level.',
+              'Channels earth power for area damage and grants Absorption for a duration.',
           },
           masterLevel: 50,
         },
@@ -156,14 +156,12 @@ export const swordmanDetail: ClassDetailDef = {
             input: '웅크리기',
             description:
               '웅크리는 동안 받는 피해가 감소합니다. 막기 게이지는 일정 시간 막기를 쓰지 않으면 서서히 회복되며, 숙련도가 오를수록 회복 대기 시간이 줄어듭니다.',
-            extra: ['피해 감소율은 스킬 레벨에 비례합니다.'],
           },
           en: {
             name: 'Guard',
             input: 'Sneak',
             description:
               'Reduces damage taken while sneaking. Guard gauge slowly recovers when Guard is not used for a short period; higher proficiency shortens the recovery delay.',
-            extra: ['Damage reduction scales with skill level.'],
           },
           masterLevel: 10,
         },
@@ -196,13 +194,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '낙엽',
             input: '같은 스킬 재입력',
             description:
-              '올려베기 사용 후 다시 입력하면 낙엽을 발동합니다. 피해량은 올려베기 레벨에 비례합니다.',
+              '올려베기 사용 후 다시 입력하면 낙엽을 발동합니다.',
           },
           en: {
             name: 'Fallen Leaves',
             input: 'Use the same skill again',
             description:
-              'Follow-up to Rising Blades. Damage scales with Rising Blades level.',
+              'Follow-up to Rising Blades.',
           },
         },
         {
@@ -213,12 +211,12 @@ export const swordmanDetail: ClassDetailDef = {
           ko: {
             name: '검풍',
             input: '같은 스킬 재입력',
-            description: '일격 사용 후 다시 입력하면 검풍을 날립니다. 피해량은 일격 레벨에 비례합니다.',
+            description: '일격 사용 후 다시 입력하면 검풍을 날립니다.',
           },
           en: {
             name: 'Wind',
             input: 'Use the same skill again',
-            description: 'Follow-up to Strike. Damage scales with Strike level.',
+            description: 'Follow-up to Strike.',
           },
         },
         {
@@ -229,12 +227,12 @@ export const swordmanDetail: ClassDetailDef = {
           ko: {
             name: '충검',
             input: '같은 스킬 재입력',
-            description: '지진 사용 후 다시 입력하면 충검이 솟습니다. 피해량은 지진 레벨에 비례합니다.',
+            description: '지진 사용 후 다시 입력하면 충검이 솟습니다.',
           },
           en: {
             name: 'Spike',
             input: 'Use the same skill again',
-            description: 'Follow-up to Sword Drive. Damage scales with Sword Drive level.',
+            description: 'Follow-up to Sword Drive.',
           },
         },
         {
@@ -245,13 +243,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '자상',
             input: '적 명중 시',
             description:
-              '섬격으로 적을 잠시 제압한 뒤 추가 피해를 한 번 더 줍니다. 피해량은 섬격 레벨에 비례합니다.',
+              '섬격으로 적을 잠시 제압한 뒤 추가 피해를 한 번 더 줍니다.',
           },
           en: {
             name: 'Stab',
             input: 'On hit',
             description:
-              'Briefly locks down the target after Flashy Rush, then deals bonus damage. Scales with Flashy Rush level.',
+              'Briefly locks down the target after Flashy Rush, then deals bonus damage.',
           },
         },
         {
@@ -263,13 +261,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '검무',
             input: '같은 스킬 재입력',
             description:
-              '발도 사용 후 다시 입력하면 검무를 펼칩니다. 여러 단의 베기와 타격 후 마무리 일격이 이어지며, 피해량은 발도 레벨에 비례합니다.',
+              '발도 사용 후 다시 입력하면 검무를 펼칩니다. 여러 단의 베기와 타격 후 마무리 일격이 이어지며,',
           },
           en: {
             name: 'Sword Dance',
             input: 'Use the same skill again',
             description:
-              'Follow-up to Critical Draw: a combo of slashes and hits ending in a finisher. Damage scales with Critical Draw level.',
+              'Follow-up to Critical Draw: a combo of slashes and hits ending in a finisher.',
           },
         },
         {
@@ -344,13 +342,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '단공참',
             input: '같은 스킬 재입력',
             description:
-              '올려베기 후 재입력 시 공기를 가르며 베어 넘깁니다. 피해량은 올려베기 레벨에 비례합니다.',
+              '올려베기 후 재입력 시 공기를 가르며 베어 넘깁니다.',
           },
           en: {
             name: 'Dividing Air',
             input: 'Use the same skill again',
             description:
-              'Advanced follow-up to Rising Blades. Damage scales with Rising Blades level.',
+              'Advanced follow-up to Rising Blades.',
           },
         },
         {
@@ -361,12 +359,12 @@ export const swordmanDetail: ClassDetailDef = {
           ko: {
             name: '바람베기',
             input: '같은 스킬 재입력',
-            description: '일격 후 재입력 시 바람을 일으켜 넓게 베어 냅니다. 피해량은 일격 레벨에 비례합니다.',
+            description: '일격 후 재입력 시 바람을 일으켜 넓게 베어 냅니다.',
           },
           en: {
             name: 'Wind Brandish',
             input: 'Use the same skill again',
-            description: 'Advanced follow-up to Strike. Damage scales with Strike level.',
+            description: 'Advanced follow-up to Strike.',
           },
         },
         {
@@ -392,13 +390,13 @@ export const swordmanDetail: ClassDetailDef = {
             name: '영혼가르기',
             input: '같은 스킬 재입력',
             description:
-              '발도 후 재입력 시 영혼을 가르는 연속 베기를 펼칩니다. 피해량은 발도 레벨에 비례합니다.',
+              '발도 후 재입력 시 영혼을 가르는 연속 베기를 펼칩니다.',
           },
           en: {
             name: 'Soul Flourish',
             input: 'Use the same skill again',
             description:
-              'Advanced follow-up to Critical Draw. Damage scales with Critical Draw level.',
+              'Advanced follow-up to Critical Draw.',
           },
         },
         {

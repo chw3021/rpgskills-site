@@ -176,12 +176,12 @@ export const frostManDetail: ClassDetailDef = {
           ko: {
             name: '눈사태',
             input: '우박 재입력',
-            description: '눈사태를 사용합니다. 피해량은 우박 레벨에 비례합니다.',
+            description: '눈사태를 사용합니다.',
           },
           en: {
             name: 'Avalanche',
             input: 'Use Hailstones again',
-            description: 'Triggers an avalanche. Damage scales with Hailstones level.',
+            description: 'Triggers an avalanche.',
           },
         },
         {
@@ -193,12 +193,12 @@ export const frostManDetail: ClassDetailDef = {
           ko: {
             name: '눈덩이',
             input: '고드름화살 재입력',
-            description: '눈덩이를 사용합니다. 피해량은 고드름화살 레벨에 비례합니다.',
+            description: '눈덩이를 사용합니다.',
           },
           en: {
             name: 'Snowball',
             input: 'Use Icicle Shot again',
-            description: 'Throws snowballs. Damage scales with Icicle Shot level.',
+            description: 'Throws snowballs.',
           },
         },
         {
@@ -210,12 +210,12 @@ export const frostManDetail: ClassDetailDef = {
           ko: {
             name: '극소용돌이',
             input: '거대고드름 재입력',
-            description: '극소용돌이를 사용합니다. 피해량은 거대고드름 레벨에 비례합니다.',
+            description: '극소용돌이를 사용합니다.',
           },
           en: {
             name: 'Polar Vortex',
             input: 'Use Ice Spikes again',
-            description: 'Uses polar vortex. Damage scales with Ice Spikes level.',
+            description: 'Uses polar vortex.',
           },
         },
         {
@@ -315,12 +315,12 @@ export const frostManDetail: ClassDetailDef = {
           ko: {
             name: '극한의추위',
             input: '눈사태 재입력',
-            description: '극한의 추위를 사용합니다. 피해량은 우박 레벨에 비례합니다.',
+            description: '극한의 추위를 사용합니다.',
           },
           en: {
             name: 'Extreme Cold',
             input: 'Use Avalanche again',
-            description: 'Uses extreme cold. Damage scales with Hailstones level.',
+            description: 'Uses extreme cold.',
           },
         },
         {
@@ -332,12 +332,12 @@ export const frostManDetail: ClassDetailDef = {
           ko: {
             name: '서리칼날',
             input: '눈덩이 재입력',
-            description: '서리 칼날을 휘두릅니다. 피해량은 고드름화살 레벨에 비례합니다.',
+            description: '서리 칼날을 휘두릅니다.',
           },
           en: {
             name: 'Frost Blade',
             input: 'Use Snowball again',
-            description: 'Swings frost blades. Damage scales with Icicle Shot level.',
+            description: 'Swings frost blades.',
           },
         },
         {
@@ -349,12 +349,12 @@ export const frostManDetail: ClassDetailDef = {
           ko: {
             name: '빙적',
             input: '극소용돌이 재입력',
-            description: '빙적을 사용합니다. 피해량은 거대고드름 레벨에 비례합니다.',
+            description: '빙적을 사용합니다.',
           },
           en: {
             name: 'Glacial Drift',
             input: 'Use Polar Vortex again',
-            description: 'Uses glacial drift. Damage scales with Ice Spikes level.',
+            description: 'Uses glacial drift.',
           },
         },
         {

@@ -188,12 +188,12 @@ export const witchDoctorDetail: ClassDetailDef = {
           ko: {
             name: '조글린돌격',
             input: '독사의송곳니 재입력',
-            description: '조글린 돌격을 사용합니다. 피해량은 독사의송곳니 레벨에 비례합니다.',
+            description: '조글린 돌격을 사용합니다.',
           },
           en: {
             name: 'Zoglin Charge',
             input: 'Use Fangs again',
-            description: 'Zoglin charge follow-up. Damage scales with Fangs level.',
+            description: 'Zoglin charge follow-up.',
           },
         },
         {
@@ -206,13 +206,13 @@ export const witchDoctorDetail: ClassDetailDef = {
             name: '금술',
             input: '보수 로아 재입력',
             description:
-              '파티원 체력 20%를 소모해 재생을 주고 잠시 무적으로 만듭니다. 지속은 보수 레벨에 비례합니다.',
+              '파티원 체력 20%를 소모해 재생을 주고 잠시 무적으로 만듭니다.',
           },
           en: {
             name: 'Forbidden Hex',
             input: 'Use Bosou again',
             description:
-              'Consumes 20% party HP for regeneration and brief invulnerability. Duration scales with Bosou.',
+              'Consumes 20% party HP for regeneration and brief invulnerability. Duration',
           },
         },
         {
@@ -224,12 +224,12 @@ export const witchDoctorDetail: ClassDetailDef = {
           ko: {
             name: '원혼',
             input: '수확 재입력',
-            description: '원혼을 사용합니다. 피해량은 수확 레벨에 비례합니다.',
+            description: '원혼을 사용합니다.',
           },
           en: {
             name: 'Vengeful Spirit',
             input: 'Use Harvest again',
-            description: 'Vengeful spirit follow-up. Damage scales with Harvest level.',
+            description: 'Vengeful spirit follow-up.',
           },
         },
         {
@@ -241,12 +241,12 @@ export const witchDoctorDetail: ClassDetailDef = {
           ko: {
             name: '팬텀슴격',
             input: '망령 재입력',
-            description: '팬텀 슴격을 사용합니다. 피해량은 망령 레벨에 비례합니다.',
+            description: '팬텀 슴격을 사용합니다.',
           },
           en: {
             name: 'Phantom Swoop',
             input: 'Use Wraith again',
-            description: 'Phantom swoop follow-up. Damage scales with Wraith level.',
+            description: 'Phantom swoop follow-up.',
           },
         },
         {
@@ -324,13 +324,13 @@ export const witchDoctorDetail: ClassDetailDef = {
             name: '송곳니쇄도',
             input: '독사의송곳니 재입력',
             description:
-              '조글린이 즉시 돌격하고 송곳니·좀비가 해당 위치로 모입니다. 피해량은 독사의송곳니 레벨에 비례.',
+              '조글린이 즉시 돌격하고 송곳니·좀비가 해당 위치로 모입니다.',
           },
           en: {
             name: 'Fangs Rush',
             input: 'Use Fangs again',
             description:
-              'Instant zoglin charge; fangs and zombies converge on the spot. Damage scales with Fangs.',
+              'Instant zoglin charge; fangs and zombies converge on the spot.',
           },
         },
         {
@@ -358,13 +358,13 @@ export const witchDoctorDetail: ClassDetailDef = {
             name: '희생',
             input: '망령 재입력',
             description:
-              '좀비를 폭발시킵니다. 없으면 6마리 소환. 죽음의 기사는 유지되며 피해가 두 배. 피해량은 망령 레벨에 비례.',
+              '좀비를 폭발시킵니다. 없으면 6마리 소환. 죽음의 기사는 유지되며 피해가 두 배.',
           },
           en: {
             name: 'Sacrifice',
             input: 'Use Wraith again',
             description:
-              'Explodes zombies or summons six. Death knight persists with double damage. Scales with Wraith.',
+              'Explodes zombies or summons six. Death knight persists with double damage.',
           },
         },
         {

@@ -37,12 +37,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '분화구',
             input: '우클릭',
-            description: '분화구를 일으켜 피해를 줍니다. 스킬 레벨에 따라 피해량이 증가합니다.',
+            description: '분화구를 일으켜 피해를 줍니다.',
           },
           en: {
             name: 'Eruption',
             input: 'Right-click',
-            description: 'Triggers an eruption. Damage scales with skill level.',
+            description: 'Triggers an eruption.',
           },
           masterLevel: 50,
         },
@@ -156,12 +156,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '흐르는 용암',
             input: '같은 스킬 재입력',
-            description: '분화구 후 재입력 시 용암이 흐릅니다. 피해량은 분화구 레벨에 비례합니다.',
+            description: '분화구 후 재입력 시 용암이 흐릅니다.',
           },
           en: {
             name: 'Flowing Lava',
             input: 'Use the same skill again',
-            description: 'Follow-up to Eruption. Damage scales with Eruption level.',
+            description: 'Follow-up to Eruption.',
           },
         },
         {
@@ -172,12 +172,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '태양의 움켜쥠',
             input: '같은 스킬 재입력',
-            description: '불의고리 후 재입력. 피해량은 불의고리 레벨에 비례합니다.',
+            description: '불의고리 후 재입력.',
           },
           en: {
             name: 'Sun Clutch',
             input: 'Use the same skill again',
-            description: 'Follow-up to Ring. Damage scales with Ring level.',
+            description: 'Follow-up to Ring.',
           },
         },
         {
@@ -208,12 +208,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '용암 소나기',
             input: '같은 스킬 재입력',
-            description: '화염의 숨결 후 재입력. 피해량은 숨결 레벨에 비례합니다.',
+            description: '화염의 숨결 후 재입력.',
           },
           en: {
             name: 'Lava Shower',
             input: 'Use the same skill again',
-            description: 'Follow-up to Breath. Damage scales with Breath level.',
+            description: 'Follow-up to Breath.',
           },
         },
         {
@@ -224,12 +224,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '화염격',
             input: '같은 스킬 재입력',
-            description: '살아있는 불꽃 후 재입력. 피해량은 살아있는 불꽃 레벨에 비례합니다.',
+            description: '살아있는 불꽃 후 재입력.',
           },
           en: {
             name: 'Fire Strike',
             input: 'Use the same skill again',
-            description: 'Follow-up to Alive Flame. Damage scales with Alive Flame level.',
+            description: 'Follow-up to Alive Flame.',
           },
         },
         {
@@ -270,12 +270,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '화산 폭풍',
             input: '같은 스킬 재입력',
-            description: '불의고리 후 재입력 시 화산 폭풍. 피해량은 불의고리 레벨에 비례합니다.',
+            description: '불의고리 후 재입력 시 화산 폭풍.',
           },
           en: {
             name: 'Volcanic Storm',
             input: 'Use the same skill again',
-            description: 'Follow-up to Ring. Damage scales with Ring level.',
+            description: 'Follow-up to Ring.',
           },
         },
         {
@@ -286,12 +286,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '마그마 결정체',
             input: '같은 스킬 재입력',
-            description: '화염구 후 재입력. 피해량은 화염구 레벨에 비례합니다.',
+            description: '화염구 후 재입력.',
           },
           en: {
             name: 'Magma Block',
             input: 'Use the same skill again',
-            description: 'Follow-up to Fireball. Damage scales with Fireball level.',
+            description: 'Follow-up to Fireball.',
           },
         },
         {
@@ -302,12 +302,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '용암 폭발',
             input: '같은 스킬 재입력',
-            description: '화염의 숨결 후 재입력. 피해량은 숨결 레벨에 비례합니다.',
+            description: '화염의 숨결 후 재입력.',
           },
           en: {
             name: 'Lava Boom',
             input: 'Use the same skill again',
-            description: 'Follow-up to Breath. Damage scales with Breath level.',
+            description: 'Follow-up to Breath.',
           },
         },
         {
@@ -318,12 +318,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '햇빛의 창',
             input: '같은 스킬 재입력',
-            description: '살아있는 불꽃 후 재입력. 피해량은 살아있는 불꽃 레벨에 비례합니다.',
+            description: '살아있는 불꽃 후 재입력.',
           },
           en: {
             name: 'Sunlight Spear',
             input: 'Use the same skill again',
-            description: 'Follow-up to Alive Flame. Damage scales with Alive Flame level.',
+            description: 'Follow-up to Alive Flame.',
           },
         },
         {
@@ -348,12 +348,12 @@ export const fireMageDetail: ClassDetailDef = {
           ko: {
             name: '두 번째 태양',
             input: '웅크리기 + 숫자키 5',
-            description: '태양을 소환해 막대한 피해를 줍니다. 폭발 피해량은 마그마 결정체와 동일합니다.',
+            description: '태양을 소환해 막대한 피해를 줍니다.',
           },
           en: {
             name: 'New Sun Rise',
             input: 'Sneak + hotkey 5',
-            description: 'Summons a second sun for devastating damage. Explosion damage matches Magma Block.',
+            description: 'Summons a second sun for devastating damage.',
           },
         },
       ],

@@ -102,13 +102,13 @@ export const engineerDetail: ClassDetailDef = {
             name: '제트팩',
             input: '우클릭 + 점프',
             description:
-              '낙하 피해에 면역됩니다. 착지 시 주변 적에게 피해를 주며, 피해량은 낙하 높이에 비례합니다.',
+              '낙하 피해에 면역됩니다. 착지 시 주변 적에게 피해를 주며,',
           },
           en: {
             name: 'Jetpack',
             input: 'Right-click + jump',
             description:
-              'Immune to fall damage. Landing damages nearby foes; damage scales with fall height.',
+              'Immune to fall damage. Landing damages nearby foes;',
           },
           masterLevel: 1,
         },
@@ -159,12 +159,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '에너지구체',
             input: '중력자 재입력',
-            description: '에너지구체를 발사합니다. 피해량은 중력자 레벨에 비례합니다.',
+            description: '에너지구체를 발사합니다.',
           },
           en: {
             name: 'Energy Ball',
             input: 'Use Graviton again',
-            description: 'Launches an energy ball. Damage scales with Graviton level.',
+            description: 'Launches an energy ball.',
           },
         },
         {
@@ -176,12 +176,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: 'EMP',
             input: '엑스선 재입력',
-            description: 'EMP를 발사합니다. 피해량은 엑스선 레벨에 비례합니다.',
+            description: 'EMP를 발사합니다.',
           },
           en: {
             name: 'EMP',
             input: 'Use X-ray again',
-            description: 'Fires EMP. Damage scales with X-ray level.',
+            description: 'Fires EMP.',
           },
         },
         {
@@ -210,12 +210,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '썬더콜러',
             input: '정전기장 재입력',
-            description: '썬더콜러를 설치합니다. 피해량은 정전기장 레벨에 비례합니다.',
+            description: '썬더콜러를 설치합니다.',
           },
           en: {
             name: 'Thunder Caller',
             input: 'Use Electrostatic again',
-            description: 'Places a thunder caller. Damage scales with Electrostatic level.',
+            description: 'Places a thunder caller.',
           },
         },
         {
@@ -244,12 +244,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '관측기',
             input: '발사기 재입력',
-            description: '관측기를 설치합니다. 피해량은 발사기 레벨에 비례합니다.',
+            description: '관측기를 설치합니다.',
           },
           en: {
             name: 'Observer',
             input: 'Use Dispenser again',
-            description: 'Places an observer turret. Damage scales with Dispenser level.',
+            description: 'Places an observer turret.',
           },
         },
         {
@@ -300,12 +300,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '원자궤도',
             input: '에너지구체 재입력',
-            description: '원자궤도를 생성합니다. 피해량은 중력자 레벨에 비례합니다.',
+            description: '원자궤도를 생성합니다.',
           },
           en: {
             name: 'Orbital',
             input: 'Use Energy Ball again',
-            description: 'Creates an atomic orbital. Damage scales with Graviton level.',
+            description: 'Creates an atomic orbital.',
           },
         },
         {
@@ -317,12 +317,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '중력가속',
             input: 'EMP 재입력',
-            description: '중력가속을 사용합니다. 피해량은 엑스선 레벨에 비례합니다.',
+            description: '중력가속을 사용합니다.',
           },
           en: {
             name: 'Gravity Shift',
             input: 'Use EMP again',
-            description: 'Uses gravity shift. Damage scales with X-ray level.',
+            description: 'Uses gravity shift.',
           },
         },
         {
@@ -334,12 +334,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '역중력장',
             input: '썬더콜러 재입력',
-            description: '역중력장을 생성합니다. 피해량은 정전기장 레벨에 비례합니다.',
+            description: '역중력장을 생성합니다.',
           },
           en: {
             name: 'Anti-Gravity',
             input: 'Use Thunder Caller again',
-            description: 'Creates an anti-gravity field. Damage scales with Electrostatic level.',
+            description: 'Creates an anti-gravity field.',
           },
         },
         {
@@ -351,12 +351,12 @@ export const engineerDetail: ClassDetailDef = {
           ko: {
             name: '팩토리',
             input: '관측기 재입력',
-            description: '팩토리를 설치합니다. 피해량은 발사기 레벨에 비례합니다.',
+            description: '팩토리를 설치합니다.',
           },
           en: {
             name: 'Factory',
             input: 'Use Observer again',
-            description: 'Places a factory. Damage scales with Dispenser level.',
+            description: 'Places a factory.',
           },
         },
         {

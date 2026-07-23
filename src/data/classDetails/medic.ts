@@ -171,12 +171,12 @@ export const medicDetail: ClassDetailDef = {
           ko: {
             name: '진공',
             input: '치유로켓 재입력',
-            description: '주변 적을 끌어옵니다. 피해량은 치유로켓 레벨에 비례합니다.',
+            description: '주변 적을 끌어옵니다.',
           },
           en: {
             name: 'Vacuum',
             input: 'Use Remedying Rocket again',
-            description: 'Pulls nearby enemies. Damage scales with Remedying Rocket level.',
+            description: 'Pulls nearby enemies.',
           },
         },
         {
@@ -189,13 +189,13 @@ export const medicDetail: ClassDetailDef = {
             name: '보호막',
             input: '제독 재입력',
             description:
-              '보호막을 설치합니다. 안의 파티원은 무적입니다. 피해량은 제독 레벨에 비례합니다.',
+              '보호막을 설치합니다. 안의 파티원은 무적입니다.',
           },
           en: {
             name: 'Barrier',
             input: 'Use Decontamination again',
             description:
-              'Places a barrier; allies inside are invulnerable. Damage scales with Decontamination level.',
+              'Places a barrier; allies inside are invulnerable.',
           },
         },
         {
@@ -207,12 +207,12 @@ export const medicDetail: ClassDetailDef = {
           ko: {
             name: '지원사격',
             input: '보급카트 재입력',
-            description: '지원사격을 요청합니다. 피해량은 보급카트 레벨에 비례합니다.',
+            description: '지원사격을 요청합니다.',
           },
           en: {
             name: 'Support Fire',
             input: 'Use Supply Cart again',
-            description: 'Calls support fire. Damage scales with Supply Cart level.',
+            description: 'Calls support fire.',
           },
         },
         {
@@ -250,12 +250,12 @@ export const medicDetail: ClassDetailDef = {
           ko: {
             name: '미세바늘',
             input: '자동제세동기 재입력',
-            description: '미세바늘을 뿌립니다. 피해량은 자동제세동기 레벨에 비례합니다.',
+            description: '미세바늘을 뿌립니다.',
           },
           en: {
             name: 'Fine Needles',
             input: 'Use AED again',
-            description: 'Spreads fine needles. Damage scales with AED level.',
+            description: 'Spreads fine needles.',
           },
         },
         {
@@ -301,7 +301,7 @@ export const medicDetail: ClassDetailDef = {
             name: 'Caduceus Tower',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Deploys a Caduceus tower that pulses heal and saturation. Interval scales with Medicine level.',
+              'Deploys a Caduceus tower that pulses heal and saturation. Interval',
           },
         },
       ],
@@ -332,12 +332,12 @@ export const medicDetail: ClassDetailDef = {
           ko: {
             name: '회복펌프',
             input: '제독 재입력',
-            description: '회복펌프를 설치합니다. 피해량은 제독 레벨에 비례합니다.',
+            description: '회복펌프를 설치합니다.',
           },
           en: {
             name: 'Healing Pump',
             input: 'Use Decontamination again',
-            description: 'Places a healing pump. Damage scales with Decontamination level.',
+            description: 'Places a healing pump.',
           },
         },
         {
@@ -349,12 +349,12 @@ export const medicDetail: ClassDetailDef = {
           ko: {
             name: '집단치료',
             input: '보급카트 재입력',
-            description: '집단치료를 실시합니다. 피해량은 보급카트 레벨에 비례합니다.',
+            description: '집단치료를 실시합니다.',
           },
           en: {
             name: 'Mass Treatment',
             input: 'Use Supply Cart again',
-            description: 'Mass treatment burst. Damage scales with Supply Cart level.',
+            description: 'Mass treatment burst.',
           },
         },
         {
@@ -380,13 +380,13 @@ export const medicDetail: ClassDetailDef = {
             name: '초음파 분무기',
             input: '자동제세동기 재입력',
             description:
-              '초음파 분무기를 사용합니다. 부패 중첩이 늘고 피해량은 자동제세동기 레벨에 비례합니다.',
+              '초음파 분무기를 사용합니다. 부패 중첩이 늘고',
           },
           en: {
             name: 'Ultrasonic Nebulizer',
             input: 'Use AED again',
             description:
-              'Uses an ultrasonic nebulizer. Adds decay stacks; damage scales with AED level.',
+              'Uses an ultrasonic nebulizer. Adds decay stacks;',
           },
         },
         {

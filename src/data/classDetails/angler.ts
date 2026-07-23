@@ -86,13 +86,13 @@ export const anglerDetail: ClassDetailDef = {
             name: '산호주',
             input: '웅크리기 + 손 바꾸기',
             description:
-              '파티를 잠시 무적으로 만들고 피해·받는 피해를 조절합니다. 지속은 산호주 레벨에 비례합니다.',
+              '파티를 잠시 무적으로 만들고 피해·받는 피해를 조절합니다.',
           },
           en: {
             name: 'Coral Liquor',
             input: 'Sneak + swap hands',
             description:
-              'Brief party invulnerability with damage dealt/taken modifiers. Duration scales with skill level.',
+              'Brief party invulnerability with damage dealt/taken modifiers. Duration',
           },
           masterLevel: 20,
         },
@@ -158,12 +158,12 @@ export const anglerDetail: ClassDetailDef = {
           ko: {
             name: '떡밥',
             description:
-              '포만감을 주고 범위가 늘어납니다. 회수 시 주변 적을 끌어옵니다. 피해량은 미끼 레벨에 비례합니다.',
+              '포만감을 주고 범위가 늘어납니다. 회수 시 주변 적을 끌어옵니다.',
           },
           en: {
             name: 'Paste Bait',
             description:
-              'Grants saturation and wider range. Pulls nearby enemies on retrieve. Damage scales with Bait level.',
+              'Grants saturation and wider range. Pulls nearby enemies on retrieve.',
           },
         },
         {
@@ -215,13 +215,13 @@ export const anglerDetail: ClassDetailDef = {
             name: '산호감옥',
             input: '산호뿌리 재입력',
             description:
-              '산호감옥을 사용합니다. 안의 아군은 무적입니다. 피해량은 산호뿌리 레벨에 비례합니다.',
+              '산호감옥을 사용합니다. 안의 아군은 무적입니다.',
           },
           en: {
             name: 'Coral Prison',
             input: 'Use Coral Roots again',
             description:
-              'Summons coral prison; allies inside are invulnerable. Damage scales with Coral Roots level.',
+              'Summons coral prison; allies inside are invulnerable.',
           },
         },
         {
@@ -233,12 +233,12 @@ export const anglerDetail: ClassDetailDef = {
           ko: {
             name: '취보',
             input: '음주가무 재입력',
-            description: '취보를 사용합니다. 피해량은 음주가무 레벨에 비례합니다.',
+            description: '취보를 사용합니다.',
           },
           en: {
             name: 'Drunken Dash',
             input: 'Use Drunken Dance again',
-            description: 'Drunken dash follow-up. Damage scales with Drunken Dance level.',
+            description: 'Drunken dash follow-up.',
           },
         },
         {
@@ -287,12 +287,12 @@ export const anglerDetail: ClassDetailDef = {
           ko: {
             name: '내뿜기',
             input: '산호주 재입력',
-            description: '내뿜기를 사용합니다. 피해량은 산호주 레벨에 비례합니다.',
+            description: '내뿜기를 사용합니다.',
           },
           en: {
             name: 'Spout',
             input: 'Use Coral Liquor again',
-            description: 'Spout follow-up. Damage scales with Coral Liquor level.',
+            description: 'Spout follow-up.',
           },
         },
         {
@@ -304,12 +304,12 @@ export const anglerDetail: ClassDetailDef = {
           ko: {
             name: '복어폭탄',
             input: '산호뿌리 재입력',
-            description: '복어폭탄을 사용합니다. 피해량은 산호뿌리 레벨에 비례합니다.',
+            description: '복어폭탄을 사용합니다.',
           },
           en: {
             name: 'Pufferfish Bomb',
             input: 'Use Coral Roots again',
-            description: 'Pufferfish bomb follow-up. Damage scales with Coral Roots level.',
+            description: 'Pufferfish bomb follow-up.',
           },
         },
         {
@@ -321,12 +321,12 @@ export const anglerDetail: ClassDetailDef = {
           ko: {
             name: '취격',
             input: '음주가무 재입력',
-            description: '취격을 사용합니다. 피해량은 음주가무 레벨에 비례합니다.',
+            description: '취격을 사용합니다.',
           },
           en: {
             name: 'Drunken Smash',
             input: 'Use Drunken Dance again',
-            description: 'Drunken smash follow-up. Damage scales with Drunken Dance level.',
+            description: 'Drunken smash follow-up.',
           },
         },
         {

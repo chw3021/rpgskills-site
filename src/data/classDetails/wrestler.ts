@@ -102,13 +102,13 @@ export const wrestlerDetail: ClassDetailDef = {
             name: '풍차 돌리기',
             input: '너클 + 웅크리기 + 좌클릭',
             description:
-              '시야 전방 1.5블록 지점을 중심으로 2블록 범위의 적들을 붙잡아 돌립니다. 연계기나 다른 스킬 사용 시 동작을 즉시 중지하고 붙잡은 적들에게 피니시 피해를 준 뒤 다음 동작으로 넘어갑니다.',
+              '전방의 적들을 붙잡아 돌립니다. 연계기나 다른 스킬을 쓰면 즉시 마무리 타격을 가한 뒤 다음 동작으로 넘어갑니다.',
           },
           en: {
             name: 'Giant Swing',
             input: 'Banner-pattern + sneak + left-click',
             description:
-              'Grabs and swings enemies within 2 blocks of a point 1.5 blocks ahead. Using a follow-up or another skill immediately ends the swing, deals finisher damage to the grabbed enemies, and continues into the next action.',
+              'Grabs and swings nearby foes ahead of you. Using a follow-up or another skill immediately ends the swing with a finishing blow and continues into the next action.',
           },
           masterLevel: 50,
         },
@@ -263,8 +263,8 @@ export const wrestlerDetail: ClassDetailDef = {
           element: 'earth',
           passive: true,
           guiColumn: 7,
-          ko: { name: '제압', description: '공격력이 증가합니다. 연계기의 구속(홀딩) 시간이 증가합니다.' },
-          en: { name: 'Submission', description: 'Increases damage. Follow-up lock duration is increased.' },
+          ko: { name: '제압', description: '공격력이 증가합니다. 연계기로 붙잡는 시간이 길어집니다.' },
+          en: { name: 'Submission', description: 'Increases damage. Follow-up grabs last longer.' },
         },
         {
           id: 'heelHook',
@@ -276,15 +276,13 @@ export const wrestlerDetail: ClassDetailDef = {
             name: '이마나리롤',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '낮은 자세와 뒷구르기 방향으로 회전하는 시야로 최대 10틱/6블록을 고정된 직선 경로로 구릅니다. 처음 만난 주대상에게 진입 피해를 주고, 적중 순간 주변 적에게 충격파 피해와 홀딩을 가한 뒤 20틱 후 힐훅으로 마무리합니다.',
-            extra: ['진입 계수 3.5', '충격파 계수 5.5', '힐훅 계수 22.0', '재사용 대기시간 35초 (숙련 2에서 절반)'],
+              '낮은 자세로 뒤구르기하며 전방으로 굴러갑니다. 처음 맞힌 적에게 진입 타격을 가하고, 주변 적에게 충격파로 피해와 구속을 준 뒤 힐훅으로 마무리합니다.',
           },
           en: {
             name: 'Imanari Roll',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Rolls in a fixed straight line for up to 10 ticks/6 blocks with a low stance and back-roll camera rotation. The first target takes the entry hit, nearby enemies take shockwave damage and are held on impact, and a heel-hook finish lands 20 ticks later.',
-            extra: ['Entry coefficient 3.5', 'Shockwave coefficient 5.5', 'Heel-hook coefficient 22.0', 'Cooldown 35s (halved at proficiency 2)'],
+              'Rolls forward in a low stance. The first foe takes the entry hit, nearby enemies are shocked and held, then a heel-hook finishes the move.',
           },
         },
       ],
@@ -410,12 +408,12 @@ export const wrestlerDetail: ClassDetailDef = {
           ko: {
             name: '진정한 싸움꾼',
             description:
-              '공격력·방어력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다. 낙상(지면 충격) 효과의 충격파 범위가 증가합니다(낙상 LV당 +0.01%).',
+              '공격력·방어력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다. 낙상으로 일으키는 충격파 범위가 넓어집니다.',
           },
           en: {
             name: 'Fighter on the Ring',
             description:
-              'Increases damage and defense. First limit-break ultimate cooldown is halved. Shockwave radius of takedown ground impacts increases (+0.01% per TakeDown level).',
+              'Increases damage and defense. First limit-break ultimate cooldown is halved. Takedown ground impacts reach farther.',
           },
         },
         {

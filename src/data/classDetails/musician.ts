@@ -53,12 +53,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '치유의노래',
             input: '웅크리기 + 우클릭',
-            description: '하트 외곽 파티클로 전방 아군을 회복·정화하고 재생을 부여합니다.',
+            description: '하트 모양의 치유 파동으로 전방 아군을 회복·정화하고 재생을 부여합니다.',
           },
           en: {
             name: 'Healing Song',
             input: 'Sneak + right-click',
-            description: 'Heals and cleanses allies ahead, then grants regeneration without offensive buffs.',
+            description: 'Heals and cleanses allies ahead with a heart-shaped wave, then grants regeneration.',
           },
           masterLevel: 10,
         },
@@ -70,13 +70,13 @@ export const musicianDetail: ClassDetailDef = {
             name: '앰프설치',
             input: '손 바꾸기',
             description:
-              '전방에 주크박스 앰프를 설치합니다. 이후 연주 스킬이 앰프에서도 미러되며, 근처면 다른 연주 사거리가 늘어납니다. 숙련 2에서 앰프 지속이 늘어납니다.',
+              '전방에 앰프를 설치합니다. 이후 연주 스킬이 앰프에서도 함께 울리고, 근처면 다른 연주 사거리가 늘어납니다.',
           },
           en: {
             name: 'Amp',
             input: 'Swap hands',
             description:
-              'Places a jukebox amp that mirrors later skills at half effect. Nearby amp also extends other skill range; limit 2 extends amp duration.',
+              'Places an amp ahead that repeats later performances at reduced strength. A nearby amp also extends other skill range.',
           },
           masterLevel: 1,
         },
@@ -120,12 +120,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '퍼포먼스',
             input: '웅크리기 + 좌클릭',
-            description: '전방 3칸 순간이동 후 원형으로 적을 공격하고 아군에게 힘·신속·흡수를 부여합니다.',
+            description: '전방으로 짧게 순간이동한 뒤 원형으로 적을 공격하고 아군에게 힘·신속·흡수를 부여합니다.',
           },
           en: {
             name: 'Performance',
             input: 'Sneak + left-click',
-            description: 'Flash-dashes 3 blocks forward, then damages in a ring and buffs allies with Strength, Speed, and Absorption.',
+            description: 'Flash-dashes forward, then damages in a ring and buffs allies with Strength, Speed, and Absorption.',
           },
           masterLevel: 50,
         },
@@ -270,13 +270,13 @@ export const musicianDetail: ClassDetailDef = {
             name: '콘서트',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '단상을 소환하고 캐논 메인 멜로디를 연주합니다. 연주 중 아군을 회복·정화·강화하고 적에게 피해·둔화·짧은 제압을 줍니다. 2차 한계 돌파 시 재사용 대기 35초(기본 70초).',
+              '단상을 소환하고 캐논 메인 멜로디를 연주합니다. 연주 중 아군을 회복·정화·강화하고 적에게 피해·둔화·짧은 제압을 줍니다.',
           },
           en: {
             name: 'Concert',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Summons a platform and plays Canon main melody while pulsing heal, cleanse, and buffs for allies and damage, slow, and brief suppression for foes. Cooldown is 35s at limit 2 (70s base).',
+              'Summons a platform and plays Canon while pulsing heal, cleanse, and buffs for allies and damage, slow, and brief suppression for foes.',
           },
         },
       ],

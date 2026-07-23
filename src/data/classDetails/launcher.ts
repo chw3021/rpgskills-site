@@ -124,12 +124,12 @@ export const launcherDetail: ClassDetailDef = {
           ko: {
             name: '화살 분수',
             input: '같은 스킬 재입력',
-            description: '화살 분수를 사용합니다. 피해량은 화살 세례 레벨에 비례합니다.',
+            description: '화살 분수를 사용합니다.',
           },
           en: {
             name: 'Arrow Fountain',
             input: 'Use the same skill again',
-            description: 'Triggers arrow fountain. Damage scales with Arrow Rain level.',
+            description: 'Triggers arrow fountain.',
           },
         },
         {
@@ -156,12 +156,12 @@ export const launcherDetail: ClassDetailDef = {
           ko: {
             name: '운석',
             input: '같은 스킬 재입력',
-            description: '운석을 소환합니다. 피해량은 거대 화살 레벨에 비례합니다.',
+            description: '운석을 소환합니다.',
           },
           en: {
             name: 'Meteor',
             input: 'Use the same skill again',
-            description: 'Calls a meteor. Damage scales with Giant Arrow level.',
+            description: 'Calls a meteor.',
           },
         },
         {
@@ -170,11 +170,11 @@ export const launcherDetail: ClassDetailDef = {
           element: 'wind',
           ko: {
             name: '소용돌이',
-            description: '화살 적중 시 소용돌이를 일으킵니다. 피해량은 폭발 레벨에 비례합니다.',
+            description: '화살 적중 시 소용돌이를 일으킵니다.',
           },
           en: {
             name: 'Tornado',
-            description: 'Spawns a tornado on arrow hit. Damage scales with Explosion level.',
+            description: 'Spawns a tornado on arrow hit.',
           },
         },
         {
@@ -229,12 +229,12 @@ export const launcherDetail: ClassDetailDef = {
           ko: {
             name: '은하',
             input: '같은 스킬 재입력',
-            description: '은하를 소환합니다. 피해량은 화살 세례 레벨에 비례합니다.',
+            description: '은하를 소환합니다.',
           },
           en: {
             name: 'Galaxy',
             input: 'Use the same skill again',
-            description: 'Summons a galaxy. Damage scales with Arrow Rain level.',
+            description: 'Summons a galaxy.',
           },
         },
         {
@@ -243,11 +243,11 @@ export const launcherDetail: ClassDetailDef = {
           element: 'fire',
           ko: {
             name: '혜성',
-            description: '로켓 폭발 시 혜성을 소환합니다. 피해량은 방출 레벨에 비례합니다.',
+            description: '로켓 폭발 시 혜성을 소환합니다.',
           },
           en: {
             name: 'Comet',
-            description: 'Calls a comet when rockets explode. Damage scales with Discharge level.',
+            description: 'Calls a comet when rockets explode.',
           },
         },
         {
@@ -258,12 +258,12 @@ export const launcherDetail: ClassDetailDef = {
           ko: {
             name: '성운',
             input: '같은 스킬 재입력',
-            description: '성운을 소환합니다. 피해량은 거대 화살 레벨에 비례합니다.',
+            description: '성운을 소환합니다.',
           },
           en: {
             name: 'Nebula',
             input: 'Use the same skill again',
-            description: 'Summons a nebula. Damage scales with Giant Arrow level.',
+            description: 'Summons a nebula.',
           },
         },
         {

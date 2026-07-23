@@ -58,7 +58,7 @@ export const archerDetail: ClassDetailDef = {
           en: {
             name: 'Retrieve',
             input: 'Swap hands',
-            description: 'Damage scales with the number of arrows stuck in the target.',
+            description: '',
           },
           masterLevel: 1,
         },
@@ -69,12 +69,12 @@ export const archerDetail: ClassDetailDef = {
           ko: {
             name: '속사',
             input: '웅크리기 + 손 바꾸기',
-            description: '짧은 시간에 다발 화살을 쏩니다. 스킬 레벨에 따라 피해량이 증가합니다.',
+            description: '짧은 시간에 다발 화살을 쏩니다.',
           },
           en: {
             name: 'Rapid Fire',
             input: 'Sneak + swap hands',
-            description: 'Fires a burst of arrows. Damage scales with skill level.',
+            description: 'Fires a burst of arrows.',
           },
           masterLevel: 50,
         },
@@ -171,12 +171,12 @@ export const archerDetail: ClassDetailDef = {
           ko: {
             name: '나선화살',
             input: '같은 스킬 재입력',
-            description: '속사 후 재입력 시 나선화살을 쏩니다. 피해량은 속사 레벨에 비례합니다.',
+            description: '속사 후 재입력 시 나선화살을 쏩니다.',
           },
           en: {
             name: 'Spin Shots',
             input: 'Use the same skill again',
-            description: 'Follow-up to Rapid Fire. Damage scales with Rapid Fire level.',
+            description: 'Follow-up to Rapid Fire.',
           },
         },
         {
@@ -224,12 +224,12 @@ export const archerDetail: ClassDetailDef = {
           ko: {
             name: '광란의화살',
             input: '웅크리기 + 숫자키 4',
-            description: '광범위에 화살을 쏟아붓습니다. 피해량은 경험치 레벨에 영향을 받습니다.',
+            description: '광범위에 화살을 쏟아붓습니다.',
           },
           en: {
             name: 'Crazy Arrows',
             input: 'Sneak + hotkey 4',
-            description: 'Floods a wide area with arrows. Damage scales with your XP level.',
+            description: 'Floods a wide area with arrows.',
           },
         },
       ],
@@ -253,12 +253,12 @@ export const archerDetail: ClassDetailDef = {
           ko: {
             name: '곡사',
             input: '같은 스킬 재입력',
-            description: '속사 후 재입력 시 곡사 화살을 쏩니다. 피해량은 속사 레벨에 비례합니다.',
+            description: '속사 후 재입력 시 곡사 화살을 쏩니다.',
           },
           en: {
             name: 'Arc Shot',
             input: 'Use the same skill again',
-            description: 'Follow-up to Rapid Fire. Damage scales with Rapid Fire level.',
+            description: 'Follow-up to Rapid Fire.',
           },
         },
         {
@@ -292,12 +292,12 @@ export const archerDetail: ClassDetailDef = {
           ko: {
             name: '화살의춤',
             input: '웅크리기 + 숫자키 5',
-            description: '화살의 춤으로 막대한 피해를 줍니다. 피해량은 경험치 레벨에 영향을 받습니다.',
+            description: '화살의 춤으로 막대한 피해를 줍니다.',
           },
           en: {
             name: 'Arrow Arts',
             input: 'Sneak + hotkey 5',
-            description: 'A devastating arrow dance. Damage scales with your XP level.',
+            description: 'A devastating arrow dance.',
           },
         },
       ],

@@ -37,12 +37,12 @@ export const chemistDetail: ClassDetailDef = {
           ko: {
             name: '네이팜',
             input: '손 바꾸기',
-            description: '네이팜을 투척합니다. 스킬 레벨에 따라 피해량이 증가합니다.',
+            description: '네이팜을 투척합니다.',
           },
           en: {
             name: 'Napalm',
             input: 'Swap hands',
-            description: 'Throws napalm. Damage scales with skill level.',
+            description: 'Throws napalm.',
           },
           masterLevel: 50,
         },
@@ -156,12 +156,12 @@ export const chemistDetail: ClassDetailDef = {
           ko: {
             name: '백린',
             input: '같은 스킬 재입력',
-            description: '네이팜 후 재입력 시 백린탄. 피해량은 네이팜 레벨에 비례합니다.',
+            description: '네이팜 후 재입력 시 백린탄.',
           },
           en: {
             name: 'White Phosphorus',
             input: 'Use the same skill again',
-            description: 'Follow-up to Napalm. Damage scales with Napalm level.',
+            description: 'Follow-up to Napalm.',
           },
         },
         {
@@ -189,13 +189,13 @@ export const chemistDetail: ClassDetailDef = {
             name: '산성 폭풍',
             input: '돌진 종료 후 재입력',
             description:
-              '2초간 산성 구름이 강화되어 적을 중앙으로 모읍니다. 이동 속도가 감소합니다. 피해량은 돌진 레벨에 비례합니다.',
+              '2초간 산성 구름이 강화되어 적을 중앙으로 모읍니다. 이동 속도가 감소합니다.',
           },
           en: {
             name: 'Acid Storm',
             input: 'After ending charge, use again',
             description:
-              'Empowers acid cloud for 2s and pulls enemies to the center. You move slower. Damage scales with Charge level.',
+              'Empowers acid cloud for 2s and pulls enemies to the center. You move slower.',
           },
         },
         {
@@ -220,12 +220,12 @@ export const chemistDetail: ClassDetailDef = {
           ko: {
             name: '마그마볼',
             input: '같은 스킬 재입력',
-            description: '슬라임볼 후 재입력. 피해량은 슬라임볼 레벨에 비례합니다.',
+            description: '슬라임볼 후 재입력.',
           },
           en: {
             name: 'Magma Ball',
             input: 'Use the same skill again',
-            description: 'Follow-up to Slime Ball. Damage scales with Slime Ball level.',
+            description: 'Follow-up to Slime Ball.',
           },
         },
         {
@@ -272,12 +272,12 @@ export const chemistDetail: ClassDetailDef = {
           ko: {
             name: '환각제',
             input: '같은 스킬 재입력',
-            description: '네이팜 후 재입력. 피해량은 네이팜 레벨에 비례합니다.',
+            description: '네이팜 후 재입력.',
           },
           en: {
             name: 'Hallucinogen',
             input: 'Use the same skill again',
-            description: 'Follow-up to Napalm. Damage scales with Napalm level.',
+            description: 'Follow-up to Napalm.',
           },
         },
         {
@@ -301,12 +301,12 @@ export const chemistDetail: ClassDetailDef = {
           ko: {
             name: '산성 폭탄',
             input: '같은 스킬 재입력',
-            description: '돌진 후 재입력. 피해량은 돌진 레벨에 비례합니다.',
+            description: '돌진 후 재입력.',
           },
           en: {
             name: 'Acid Bomb',
             input: 'Use the same skill again',
-            description: 'Follow-up to Charge. Damage scales with Charge level.',
+            description: 'Follow-up to Charge.',
           },
         },
         {
@@ -337,12 +337,12 @@ export const chemistDetail: ClassDetailDef = {
           ko: {
             name: '발광구',
             input: '같은 스킬 재입력',
-            description: '슬라임볼 후 재입력. 피해량은 슬라임볼 레벨에 비례합니다.',
+            description: '슬라임볼 후 재입력.',
           },
           en: {
             name: 'Glowing Ball',
             input: 'Use the same skill again',
-            description: 'Follow-up to Slime Ball. Damage scales with Slime Ball level.',
+            description: 'Follow-up to Slime Ball.',
           },
         },
         {

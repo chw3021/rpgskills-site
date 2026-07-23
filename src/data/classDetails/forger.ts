@@ -126,12 +126,12 @@ export const forgerDetail: ClassDetailDef = {
           ko: {
             name: '압축공기',
             input: '같은 스킬 재입력',
-            description: '압축 공기로 위로 올라갑니다. 피해량은 TNT발사기 레벨에 비례합니다.',
+            description: '압축 공기로 위로 올라갑니다.',
           },
           en: {
             name: 'Compressor',
             input: 'Use the same skill again',
-            description: 'Launches compressed air upward. Damage scales with TNT Launcher level.',
+            description: 'Launches compressed air upward.',
           },
         },
         {
@@ -142,12 +142,12 @@ export const forgerDetail: ClassDetailDef = {
           ko: {
             name: '전자나선',
             input: '같은 스킬 재입력',
-            description: '전자 나선탄을 쏩니다. 피해량은 전자기관단총 레벨에 비례합니다.',
+            description: '전자 나선탄을 쏩니다.',
           },
           en: {
             name: 'Rail Screw',
             input: 'Use the same skill again',
-            description: 'Fires rail screws. Damage scales with Rail SMG level.',
+            description: 'Fires rail screws.',
           },
         },
         {
@@ -165,12 +165,12 @@ export const forgerDetail: ClassDetailDef = {
           ko: {
             name: '분광기',
             input: '같은 스킬 재입력',
-            description: '적들의 위치를 재정렬합니다. 피해량은 천둥포 레벨에 비례합니다.',
+            description: '적들의 위치를 재정렬합니다.',
           },
           en: {
             name: 'Spectral',
             input: 'Use the same skill again',
-            description: 'Repositions enemies. Damage scales with Lightning Cannon level.',
+            description: 'Repositions enemies.',
           },
         },
         {
@@ -247,12 +247,12 @@ export const forgerDetail: ClassDetailDef = {
           ko: {
             name: '플라즈마류탄',
             input: '같은 스킬 재입력',
-            description: '플라즈마 수류탄을 투척합니다. 피해량은 TNT발사기 레벨에 비례합니다.',
+            description: '플라즈마 수류탄을 투척합니다.',
           },
           en: {
             name: 'Plasma Grenade',
             input: 'Use the same skill again',
-            description: 'Throws a plasma grenade. Damage scales with TNT Launcher level.',
+            description: 'Throws a plasma grenade.',
           },
         },
         {
@@ -263,12 +263,12 @@ export const forgerDetail: ClassDetailDef = {
           ko: {
             name: '전자포',
             input: '같은 스킬 재입력',
-            description: '전자포를 발사합니다. 피해량은 전자기관단총 레벨에 비례합니다.',
+            description: '전자포를 발사합니다.',
           },
           en: {
             name: 'Rail Cannon',
             input: 'Use the same skill again',
-            description: 'Fires a rail cannon blast. Damage scales with Rail SMG level.',
+            description: 'Fires a rail cannon blast.',
           },
         },
         {
@@ -293,12 +293,12 @@ export const forgerDetail: ClassDetailDef = {
           ko: {
             name: '광자파도',
             input: '같은 스킬 재입력',
-            description: '광자 파도를 방출합니다. 피해량은 천둥포 레벨에 비례합니다.',
+            description: '광자 파도를 방출합니다.',
           },
           en: {
             name: 'Beam Wave',
             input: 'Use the same skill again',
-            description: 'Releases a photon wave. Damage scales with Lightning Cannon level.',
+            description: 'Releases a photon wave.',
           },
         },
         {

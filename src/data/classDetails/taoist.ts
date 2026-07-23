@@ -188,12 +188,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '기폭발',
             input: '연상 재입력',
-            description: '기폭발을 사용합니다. 피해량은 연상 레벨에 비례합니다.',
+            description: '기폭발을 사용합니다.',
           },
           en: {
             name: 'Blast',
             input: 'Use Imagery again',
-            description: 'Qi blast follow-up. Damage scales with Imagery level.',
+            description: 'Qi blast follow-up.',
           },
         },
         {
@@ -205,12 +205,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '기공참',
             input: '기공권 재입력',
-            description: '기공참을 사용합니다. 피해량은 기공권 레벨에 비례합니다.',
+            description: '기공참을 사용합니다.',
           },
           en: {
             name: 'Charm Slash',
             input: 'Use Wave again',
-            description: 'Charm slash follow-up. Damage scales with Wave level.',
+            description: 'Charm slash follow-up.',
           },
         },
         {
@@ -223,13 +223,13 @@ export const taoistDetail: ClassDetailDef = {
             name: '평온',
             input: '증폭 재입력',
             description:
-              '양의 기운: 주변 적 공격·제압. 음의 기운: 파티 무적. 공통: 해로운 효과 제거. 피해·지속은 증폭 레벨에 비례.',
+              '양의 기운: 주변 적 공격·제압. 음의 기운: 파티 무적. 공통: 해로운 효과 제거.',
           },
           en: {
             name: 'Serenity',
             input: 'Use Amplify again',
             description:
-              'Positive: attack and suppress nearby foes. Negative: party invulnerability. Both: clear debuffs. Scales with Amplify.',
+              'Positive: attack and suppress nearby foes. Negative: party invulnerability. Both: clear debuffs.',
           },
         },
         {
@@ -241,12 +241,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '속박진',
             input: '부적 재입력',
-            description: '속박진을 사용합니다. 피해량은 부적 레벨에 비례합니다.',
+            description: '속박진을 사용합니다.',
           },
           en: {
             name: 'Binding Formation',
             input: 'Use Charm again',
-            description: 'Binding formation follow-up. Damage scales with Charm level.',
+            description: 'Binding formation follow-up.',
           },
         },
         {
@@ -258,12 +258,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '순보',
             input: '공중제비 재입력',
-            description: '순보를 사용합니다. 피해량은 공중제비 레벨에 비례합니다.',
+            description: '순보를 사용합니다.',
           },
           en: {
             name: 'Shunpo',
             input: 'Use Flip again',
-            description: 'Shunpo follow-up. Damage scales with Flip level.',
+            description: 'Shunpo follow-up.',
           },
         },
         {
@@ -323,12 +323,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '승천',
             input: '연상 재입력',
-            description: '승천을 사용합니다. 피해량은 연상 레벨에 비례합니다.',
+            description: '승천을 사용합니다.',
           },
           en: {
             name: 'Ascension',
             input: 'Use Imagery again',
-            description: 'Ascension follow-up. Damage scales with Imagery level.',
+            description: 'Ascension follow-up.',
           },
         },
         {
@@ -340,12 +340,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '기공장',
             input: '기공권 재입력',
-            description: '기공장을 사용합니다. 피해량은 기공권 레벨에 비례합니다.',
+            description: '기공장을 사용합니다.',
           },
           en: {
             name: 'Spirit Storm',
             input: 'Use Wave again',
-            description: 'Spirit storm follow-up. Damage scales with Wave level.',
+            description: 'Spirit storm follow-up.',
           },
         },
         {
@@ -358,13 +358,13 @@ export const taoistDetail: ClassDetailDef = {
             name: '만트라',
             input: '증폭 재입력',
             description:
-              '만트라를 사용합니다. 기운을 바꿔도 5초간 효과가 유지되고 파티 허기를 채웁니다. 피해량은 증폭 레벨에 비례.',
+              '만트라를 사용합니다. 기운을 바꿔도 5초간 효과가 유지되고 파티 허기를 채웁니다.',
           },
           en: {
             name: 'Mantra',
             input: 'Use Amplify again',
             description:
-              'Mantra follow-up. Aura persists 5s after switching; fills party saturation. Damage scales with Amplify.',
+              'Mantra follow-up. Aura persists 5s after switching; fills party saturation.',
           },
         },
         {
@@ -376,12 +376,12 @@ export const taoistDetail: ClassDetailDef = {
           ko: {
             name: '기공파',
             input: '부적 재입력',
-            description: '기공파를 사용합니다. 피해량은 부적 레벨에 비례합니다.',
+            description: '기공파를 사용합니다.',
           },
           en: {
             name: 'Energy Blast',
             input: 'Use Charm again',
-            description: 'Energy blast follow-up. Damage scales with Charm level.',
+            description: 'Energy blast follow-up.',
           },
         },
         {

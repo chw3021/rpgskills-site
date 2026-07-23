@@ -56,12 +56,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '질풍권',
             input: '우클릭',
-            description: '빠른 잽으로 적을 공격합니다. 피해량은 붕권 레벨에 연동됩니다.',
+            description: '빠른 잽으로 적을 공격합니다.',
           },
           en: {
             name: 'Flicker Jab',
             input: 'Right-click',
-            description: 'A rapid jab. Damage scales with Straight level.',
+            description: 'A rapid jab.',
           },
           masterLevel: 50,
         },
@@ -143,18 +143,17 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '단련',
             description:
-              '공격력이 증가합니다. 패리·위빙 설명이 해금되며 바람 저항력이 올라갑니다.',
+              '공격력이 증가합니다. 패리·위빙이 해금되며 바람 저항력이 올라갑니다.',
             extra: [
-              '패리: 주먹을 휘두르는 중 피격 시 피해 70% 감소, 투사체 튕김.',
-              '위빙: 웅크리며 시선이 적 아래 사선일 때 공격 회피(재사용 0.5초).',
+              '패리: 주먹을 휘두르는 중 피격 시 받는 피해가 크게 줄고, 투사체를 튕깁니다.',
             ],
           },
           en: {
             name: 'Training',
-            description: 'Increases damage, unlocks parry/weaving notes, and wind resistance.',
+            description: 'Increases damage, unlocks parry and weaving, and raises wind resistance.',
             extra: [
-              'Parry: 70% damage reduction while punching; can deflect projectiles.',
-              'Weaving: evade while sneaking with eyes diagonally down from enemy (0.5s cooldown).',
+              'Parry: While punching, take far less damage and deflect projectiles.',
+              'Weaving: Evade while sneaking with eyes angled down toward the foe.',
             ],
           },
         },
@@ -179,12 +178,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '질풍쇄도',
             input: '같은 스킬 재입력',
-            description: '질풍권 후 재입력 시 연속 타격. 피해량은 질풍권 레벨에 비례합니다.',
+            description: '질풍권 후 재입력 시 연속 타격.',
           },
           en: {
             name: 'Jab Rush',
             input: 'Use the same skill again',
-            description: 'Follow-up to Flicker Jab. Damage scales with jab level.',
+            description: 'Follow-up to Flicker Jab.',
           },
         },
         {
@@ -195,12 +194,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '승천권',
             input: '같은 스킬 재입력',
-            description: '붕권 후 재입력 시 승천 타격. 피해량은 붕권 레벨에 비례합니다.',
+            description: '붕권 후 재입력 시 승천 타격.',
           },
           en: {
             name: 'Sky Crasher',
             input: 'Use the same skill again',
-            description: 'Follow-up to Straight. Damage scales with Straight level.',
+            description: 'Follow-up to Straight.',
           },
         },
         {
@@ -211,12 +210,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '반달권',
             input: '같은 스킬 재입력',
-            description: '철산고 후 재입력 시 반달 권격. 피해량은 철산고 레벨에 비례합니다.',
+            description: '철산고 후 재입력 시 반달 권격.',
           },
           en: {
             name: 'Momentum Smash',
             input: 'Use the same skill again',
-            description: 'Follow-up to Body Blow. Damage scales with Body Blow level.',
+            description: 'Follow-up to Body Blow.',
           },
         },
         {
@@ -279,12 +278,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '촌경',
             input: '같은 스킬 재입력',
-            description: '강력한 촌경 일격. 피해량은 붕권 레벨에 비례합니다.',
+            description: '강력한 촌경 일격.',
           },
           en: {
             name: 'One-Inch Punch',
             input: 'Use the same skill again',
-            description: 'A devastating inch punch. Damage scales with Straight level.',
+            description: 'A devastating inch punch.',
           },
         },
         {
@@ -295,12 +294,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '대지가르기',
             input: '같은 스킬 재입력',
-            description: '대지를 가르는 권격. 피해량은 붕권 레벨에 비례합니다.',
+            description: '대지를 가르는 권격.',
           },
           en: {
             name: 'Earth Quaker',
             input: 'Use the same skill again',
-            description: 'An earth-splitting blow. Damage scales with Straight level.',
+            description: 'An earth-splitting blow.',
           },
         },
         {
@@ -311,12 +310,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '권풍',
             input: '같은 스킬 재입력',
-            description: '연속 권풍 타격. 피해량은 철산고 레벨에 비례합니다.',
+            description: '연속 권풍 타격.',
           },
           en: {
             name: 'Fist Storm',
             input: 'Use the same skill again',
-            description: 'A storm of fists. Damage scales with Body Blow level.',
+            description: 'A storm of fists.',
           },
         },
         {
@@ -327,12 +326,12 @@ export const boxerDetail: ClassDetailDef = {
           ko: {
             name: '폭권',
             input: '뎀프시롤 후 재입력',
-            description: '뎀프시롤 이후 폭발하는 일격. 피해량은 뎀프시롤 레벨에 비례합니다.',
+            description: '뎀프시롤 이후 폭발하는 일격.',
           },
           en: {
             name: 'Exploding Fist',
             input: 'After Dempsey Roll, use again',
-            description: 'An explosive finisher. Damage scales with Dempsey Roll level.',
+            description: 'An explosive finisher.',
           },
         },
         {
@@ -369,7 +368,7 @@ export const boxerDetail: ClassDetailDef = {
           en: {
             name: 'Will of Ironman',
             input: 'Sneak + hotkey 5',
-            description: 'Unleashes a relentless fist barrage. Damage scales with XP level.',
+            description: 'Unleashes a relentless fist barrage.',
           },
         },
       ],

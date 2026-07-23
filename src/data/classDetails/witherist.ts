@@ -157,12 +157,12 @@ export const witheristDetail: ClassDetailDef = {
           ko: {
             name: '위더용 올가미',
             input: '위더해골 재입력',
-            description: '올가미를 투척합니다. 피해량은 위더해골 레벨에 비례합니다.',
+            description: '올가미를 투척합니다.',
           },
           en: {
             name: 'Wither Bola',
             input: 'Use Wither Skull again',
-            description: 'Throws a wither bola. Damage scales with Wither Skull level.',
+            description: 'Throws a wither bola.',
           },
         },
         {
@@ -208,12 +208,12 @@ export const witheristDetail: ClassDetailDef = {
           ko: {
             name: '밤의 고리',
             input: '저주 재입력',
-            description: '밤의 고리를 사용합니다. 피해량은 저주 레벨에 비례합니다.',
+            description: '밤의 고리를 사용합니다.',
           },
           en: {
             name: 'Circle of Night',
             input: 'Use Curse again',
-            description: 'Uses circle of night. Damage scales with Curse level.',
+            description: 'Uses circle of night.',
           },
         },
         {
@@ -242,12 +242,12 @@ export const witheristDetail: ClassDetailDef = {
           ko: {
             name: '파괴',
             input: '위더장미 재입력',
-            description: '파괴를 사용합니다. 피해량은 위더장미 레벨에 비례합니다.',
+            description: '파괴를 사용합니다.',
           },
           en: {
             name: 'Demolition',
             input: 'Use Wither Roses again',
-            description: 'Uses demolition. Damage scales with Wither Roses level.',
+            description: 'Uses demolition.',
           },
         },
         {
@@ -296,12 +296,12 @@ export const witheristDetail: ClassDetailDef = {
           ko: {
             name: '백색 석영',
             input: '위더용 올가미 재입력',
-            description: '백색 석영을 사용합니다. 피해량은 위더해골 레벨에 비례합니다.',
+            description: '백색 석영을 사용합니다.',
           },
           en: {
             name: 'White Quartz',
             input: 'Use Wither Bola again',
-            description: 'Uses white quartz. Damage scales with Wither Skull level.',
+            description: 'Uses white quartz.',
           },
         },
         {
@@ -313,12 +313,12 @@ export const witheristDetail: ClassDetailDef = {
           ko: {
             name: '수정 감옥',
             input: '밤의 고리 재입력',
-            description: '수정 감옥을 사용합니다. 피해량은 저주 레벨에 비례합니다.',
+            description: '수정 감옥을 사용합니다.',
           },
           en: {
             name: 'Crystal Cage',
             input: 'Use Circle of Night again',
-            description: 'Uses crystal cage. Damage scales with Curse level.',
+            description: 'Uses crystal cage.',
           },
         },
         {
@@ -347,12 +347,12 @@ export const witheristDetail: ClassDetailDef = {
           ko: {
             name: '정화 광선',
             input: '파괴 재입력',
-            description: '정화 광선을 쏩니다. 피해량은 위더장미 레벨에 비례합니다.',
+            description: '정화 광선을 쏩니다.',
           },
           en: {
             name: 'Purifier Beam',
             input: 'Use Demolition again',
-            description: 'Fires a purifier beam. Damage scales with Wither Roses level.',
+            description: 'Fires a purifier beam.',
           },
         },
         {

@@ -70,13 +70,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '방어 분쇄',
             input: '웅크리기 + 좌클릭',
             description:
-              '전방의 적을 공격하고 최대 3블록 밀칩니다. 대지 쐐기의 임시 돌벽에 충돌하면 추가 피해와 2.25초 기절을 부여합니다.',
+              '전방의 적을 공격하고 밀쳐냅니다. 대지 쐐기의 돌벽에 부딪히면 추가 피해와 기절을 부여합니다.',
           },
           en: {
             name: 'Armor Crack',
             input: 'Sneak + left-click',
             description:
-              'Strikes and pushes enemies up to 3 blocks. Colliding with Earth Spike’s temporary wall deals extra damage and stuns for 2.25 seconds.',
+              'Strikes and pushes enemies forward. Colliding with an Earth Spike wall deals extra damage and stuns them.',
           },
           masterLevel: 50,
         },
@@ -88,13 +88,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '대지 쐐기',
             input: '웅크리기 + 우클릭',
             description:
-              '지면에서 5초 동안 유지되는 임시 돌벽을 솟구칩니다. 방어 분쇄로 밀린 적이 충돌하면 추가 피해와 2.25초 기절을 받습니다.',
+              '지면에서 임시 돌벽을 솟구칩니다. 방어 분쇄로 밀린 적이 충돌하면 추가 피해와 기절을 받습니다.',
           },
           en: {
             name: 'Earth Spike',
             input: 'Sneak + right-click',
             description:
-              'Raises a temporary stone wall for 5 seconds. Armor Crack collisions deal extra damage and stun for 2.25 seconds.',
+              'Raises a temporary stone wall. Armor Crack collisions deal extra damage and stun foes.',
           },
           masterLevel: 50,
         },
@@ -105,12 +105,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '균열',
             input: '공중 철퇴 스매시 + 근접 적중',
-            description: '실제 스매시가 적중하면 균열을 일으킵니다. 기존 피해와 폭풍 도약 효과를 유지합니다.',
+            description: '공중 스매시가 적중하면 균열을 일으킵니다.',
           },
           en: {
             name: 'Fissure',
             input: 'Airborne mace smash + melee hit',
-            description: 'Creates fissures on a true smash hit while preserving normal damage and wind-powered rebound.',
+            description: 'Creates fissures when a smash hit lands.',
           },
           masterLevel: 50,
         },
@@ -153,12 +153,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '여진',
             input: '지진강타 직후 웅크리기 + 손 바꾸기',
-            description: '짧은 시간 안에만 사용 가능합니다. 피해량은 지진강타 레벨에 비례합니다.',
+            description: '짧은 시간 안에만 사용 가능합니다.',
           },
           en: {
             name: 'Afterpulse',
             input: 'Sneak + swap hands right after Seismic Slam',
-            description: 'Only within a short window. Damage scales with Seismic Slam level.',
+            description: 'Only within a short window.',
           },
         },
         {
@@ -172,13 +172,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '바위 투척',
             input: '충격파 직후 손 바꾸기',
             description:
-              '시야 방향으로 서로 다른 바위 6개를 연발로 던지고 추가 상승합니다. 각 바위는 살짝 흔들리며 충돌 지점 주변의 적을 기절시킵니다.',
+              '시야 방향으로 서로 다른 바위 여러 개를 연발로 던지고 추가 상승합니다. 각 바위는 충돌 지점 주변의 적을 기절시킵니다.',
           },
           en: {
             name: 'Rock Throw',
             input: 'Swap hands after Shockwave',
             description:
-              'Throws six different rocks in rapid succession ahead and rises again. Each rock drifts slightly and stuns enemies at its impact.',
+              'Throws several different rocks in rapid succession ahead and rises again. Each rock stuns enemies at its impact.',
           },
         },
         {
@@ -192,13 +192,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '쇄진파',
             input: '방어 분쇄 직후 웅크리기 + 좌클릭',
             description:
-              '전방으로 넓어지는 지진파를 단계적으로 전개해 각 적에게 한 번 피해를 주고 기절시킵니다. 피해량은 방어 분쇄 레벨에 비례합니다.',
+              '전방으로 넓어지는 지진파를 단계적으로 전개해 각 적에게 한 번 피해를 주고 기절시킵니다.',
           },
           en: {
             name: 'Seismic Breaker',
             input: 'Sneak + left-click after Armor Crack',
             description:
-              'Unleashes a widening quake in stages, damaging and stunning each enemy once. Damage scales with Armor Crack level.',
+              'Unleashes a widening quake in stages, damaging and stunning each enemy once.',
           },
         },
         {
@@ -211,12 +211,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '대지 고정',
             input: '대지 쐐기 직후 웅크리기 + 우클릭',
-            description: '짧은 시간 안에만 사용 가능합니다. 피해량은 대지 쐐기 레벨에 비례합니다.',
+            description: '짧은 시간 안에만 사용 가능합니다.',
           },
           en: {
             name: 'Earth Lock',
             input: 'Sneak + right-click after Earth Spike',
-            description: 'Only within a short window. Damage scales with Earth Spike level.',
+            description: 'Only within a short window.',
           },
         },
         {
@@ -230,13 +230,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '균열 확산',
             input: '균열 직후 좌클릭',
             description:
-              '공중에서는 급강하해 낙하 거리에 비례하는 착지 충격파를 일으키며 낙하 피해를 받지 않습니다. 피해량은 균열 레벨에 비례합니다.',
+              '공중에서는 급강하해 착지 충격파를 일으키며 낙하 피해를 받지 않습니다.',
           },
           en: {
             name: 'Fissure Spread',
             input: 'Left-click after Fissure',
             description:
-              'Dives when airborne, creating a landing shockwave scaled by fall distance and preventing fall damage. Damage scales with Fissure level.',
+              'Dives when airborne, creating a landing shockwave and preventing fall damage.',
           },
         },
         {
@@ -249,12 +249,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '먼지 파동',
             input: '먼지 폭발 직후 우클릭',
-            description: '짧은 시간 안에만 사용 가능합니다. 피해량은 먼지 폭발 레벨에 비례합니다.',
+            description: '짧은 시간 안에만 사용 가능합니다.',
           },
           en: {
             name: 'Dust Wave',
             input: 'Right-click after Dust Burst',
-            description: 'Only within a short window. Damage scales with Dust Burst level.',
+            description: 'Only within a short window.',
           },
         },
         {
@@ -276,13 +276,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '암석 낙하',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '중력에 따라 낙석이 떨어져 착탄 파편을 흩뿌리고 단계별 충격파로 대지를 분쇄합니다. 2차 한계 돌파 시 재사용 대기시간이 감소합니다.',
+              '중력에 따라 낙석이 떨어져 착탄 파편을 흩뿌리고 단계별 충격파로 대지를 분쇄합니다.',
           },
           en: {
             name: 'Bedrock Barrage',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Gravity-driven rocks scatter debris on impact while staged shockwaves shatter the earth. Cooldown is shorter at second limit break.',
+              'Gravity-driven rocks scatter debris on impact while staged shockwaves shatter the earth.',
           },
         },
       ],
@@ -301,12 +301,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '단층 주행',
             input: '여진 성공 직후 웅크리기 + 좌클릭',
-            description: '전방으로 지진을 긋습니다. 피해량은 지진강타 레벨에 비례합니다.',
+            description: '전방으로 지진을 긋습니다.',
           },
           en: {
             name: 'Chasm Drive',
             input: 'Sneak + left-click after Afterpulse',
-            description: 'Carves forward quakes. Damage scales with Seismic Slam level.',
+            description: 'Carves forward quakes.',
           },
         },
         {
@@ -339,13 +339,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '암반 융기',
             input: '쇄진파 직후 웅크리기 + 좌클릭',
             description:
-              '전방 지점의 넓은 범위에서 암석 기둥을 순차적으로 솟구쳐 적에게 피해를 주고 기절시킵니다. 피해량은 방어 분쇄 레벨에 비례합니다.',
+              '전방 지점의 넓은 범위에서 암석 기둥을 순차적으로 솟구쳐 적에게 피해를 주고 기절시킵니다.',
           },
           en: {
             name: 'Bedrock Uprising',
             input: 'Sneak + left-click after Seismic Breaker',
             description:
-              'Raises stone pillars in sequence across a wide area ahead, damaging and stunning enemies. Damage scales with Armor Crack level.',
+              'Raises stone pillars in sequence across a wide area ahead, damaging and stunning enemies.',
           },
         },
         {
@@ -358,12 +358,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '응결 지반',
             input: '대지 고정 직후 웅크리기 + 우클릭',
-            description: '시야 끝 지점 주위에 링 지진을 일으킵니다. 피해량은 대지 쐐기 레벨에 비례합니다.',
+            description: '시야 끝 지점 주위에 링 지진을 일으킵니다.',
           },
           en: {
             name: 'Earth Bond',
             input: 'Sneak + right-click after Earth Lock',
-            description: 'Quakes in a ring at targeted ground. Damage scales with Earth Spike level.',
+            description: 'Quakes in a ring at targeted ground.',
           },
         },
         {
@@ -376,12 +376,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '판층 개화',
             input: '균열 확산 직후 좌클릭',
-            description: '주변 링 형태로 지반을 폭발시킵니다. 피해량은 균열 레벨에 비례합니다.',
+            description: '주변 링 형태로 지반을 폭발시킵니다.',
           },
           en: {
             name: 'Stratum Bloom',
             input: 'Left-click after Fissure Spread',
-            description: 'Ring of ground bursts. Damage scales with Fissure level.',
+            description: 'Ring of ground bursts.',
           },
         },
         {
@@ -394,12 +394,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '먼지 폭풍',
             input: '먼지 파동 직후 우클릭',
-            description: '넓은 먼지 폭풍입니다. 피해량은 먼지 폭발 레벨에 비례합니다.',
+            description: '넓은 먼지 폭풍입니다.',
           },
           en: {
             name: 'Dust Storm',
             input: 'Right-click after Dust Wave',
-            description: 'Wide dust storm. Damage scales with Dust Burst level.',
+            description: 'Wide dust storm.',
           },
         },
         {
@@ -427,13 +427,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '단층 완파',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '복수 단층선을 따라 암반이 순차적으로 융기한 뒤 중앙의 강력한 최종 충격파로 마무리합니다. 피해량은 경험치 레벨에 비례합니다.',
+              '복수 단층선을 따라 암반이 순차적으로 융기한 뒤 중앙의 강력한 최종 충격파로 마무리합니다.',
           },
           en: {
             name: 'Faultline Finisher',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Stone rises in sequence along multiple fault lines before a powerful final wave erupts from the center. Damage scales with player XP level.',
+              'Stone rises in sequence along multiple fault lines before a powerful final wave erupts from the center.',
           },
         },
       ],

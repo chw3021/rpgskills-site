@@ -210,12 +210,12 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '한상차림',
             description:
-              '나눔밥상 투사체가 맞은 대상 기준 반경 3블록, 2초간 확산합니다. 아군 1초 무적, 적 1초 기절.',
+              '나눔밥상이 적중하면 주변에 한상이 퍼집니다. 아군은 잠시 무적이 되고, 적은 기절합니다.',
           },
           en: {
             name: 'Feast Spread',
             description:
-              'On Shared Table hit, spreads in a 3-block radius for 2s. Allies gain 1s invulnerability; enemies are stunned for 1s.',
+              'On Shared Table hit, the feast spreads nearby. Allies briefly become invulnerable; enemies are stunned.',
           },
         },
         {
@@ -297,12 +297,12 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '특별메뉴',
             input: '삽 + 웅크리기 + 전투 숫자키 4(핫바 4번)',
-            description: '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
+            description: '전투 모드에서만 발동합니다.',
           },
           en: {
             name: 'Special Menu',
             input: 'Shovel + sneak + combat hotbar 4',
-            description: 'Combat mode only. Damage scales with your level.',
+            description: 'Combat mode only.',
           },
         },
       ],
@@ -430,12 +430,12 @@ export const cookDetail: ClassDetailDef = {
           ko: {
             name: '헬키친',
             input: '삽 + 웅크리기 + 전투 숫자키 5(핫바 5번)',
-            description: '전투 모드에서만 발동합니다. 피해량은 경험치 레벨에 비례합니다.',
+            description: '전투 모드에서만 발동합니다.',
           },
           en: {
             name: 'Hell Kitchen',
             input: 'Shovel + sneak + combat hotbar 5',
-            description: 'Combat mode only. Damage scales with your level.',
+            description: 'Combat mode only.',
           },
         },
       ],

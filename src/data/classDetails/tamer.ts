@@ -142,12 +142,12 @@ export const tamerDetail: ClassDetailDef = {
           ko: {
             name: '거미줄 발사',
             input: '같은 스킬 재입력',
-            description: '스파이디 후 재입력. 피해량은 스파이디 레벨에 비례합니다.',
+            description: '스파이디 후 재입력.',
           },
           en: {
             name: 'Web Spread',
             input: 'Use the same skill again',
-            description: 'Follow-up to Spidey. Damage scales with Spidey level.',
+            description: 'Follow-up to Spidey.',
           },
         },
         {
@@ -258,12 +258,12 @@ export const tamerDetail: ClassDetailDef = {
           ko: {
             name: '할퀴기',
             input: '같은 스킬 재입력',
-            description: '반려동물이 할퀴기 공격합니다. 피해량은 반려동물 레벨에 비례합니다.',
+            description: '반려동물이 할퀴기 공격합니다.',
           },
           en: {
             name: 'Scratch',
             input: 'Use the same skill again',
-            description: 'Pets scratch attack. Damage scales with Pets level.',
+            description: 'Pets scratch attack.',
           },
         },
         {
@@ -306,12 +306,12 @@ export const tamerDetail: ClassDetailDef = {
           ko: {
             name: '발구르기',
             input: '같은 스킬 재입력',
-            description: '판다가 발구릅니다. 피해량은 판다 레벨에 비례합니다.',
+            description: '판다가 발구릅니다.',
           },
           en: {
             name: 'Stomp',
             input: 'Use the same skill again',
-            description: 'Panda stomps. Damage scales with Panda level.',
+            description: 'Panda stomps.',
           },
         },
         {

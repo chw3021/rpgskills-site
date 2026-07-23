@@ -173,12 +173,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '신격',
             input: '진압 재입력',
-            description: '신격을 사용합니다. 피해량은 진압 레벨에 비례합니다.',
+            description: '신격을 사용합니다.',
           },
           en: {
             name: 'Holy Smash',
             input: 'Use Thrust again',
-            description: 'Uses holy smash. Damage scales with Thrust level.',
+            description: 'Uses holy smash.',
           },
         },
         {
@@ -190,12 +190,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '광명',
             input: '결박 재입력',
-            description: '광명을 사용합니다. 피해량은 결박 레벨에 비례합니다.',
+            description: '광명을 사용합니다.',
           },
           en: {
             name: 'Illumination',
             input: 'Use Restraint again',
-            description: 'Uses illumination. Damage scales with Restraint level.',
+            description: 'Uses illumination.',
           },
         },
         {
@@ -207,12 +207,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '성수',
             input: '심판 재입력',
-            description: '성수를 뿌립니다. 피해량은 심판 레벨에 비례합니다.',
+            description: '성수를 뿌립니다.',
           },
           en: {
             name: 'Asperges',
             input: 'Use Judgement again',
-            description: 'Sprinkles holy water. Damage scales with Judgement level.',
+            description: 'Sprinkles holy water.',
           },
         },
         {
@@ -241,12 +241,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '영창',
             input: '격려 재입력',
-            description: '영창을 사용합니다. 피해량은 격려 레벨에 비례합니다.',
+            description: '영창을 사용합니다.',
           },
           en: {
             name: 'Aria',
             input: 'Use Encourage again',
-            description: 'Uses aria. Damage scales with Encourage level.',
+            description: 'Uses aria.',
           },
         },
         {
@@ -258,12 +258,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '축복',
             input: '기도 재입력',
-            description: '파티원을 무적 상태로 만듭니다. 지속 시간은 기도 레벨에 비례합니다.',
+            description: '파티원을 무적 상태로 만듭니다.',
           },
           en: {
             name: 'Bless',
             input: 'Use Pray again',
-            description: 'Grants party invulnerability. Duration scales with Pray level.',
+            description: 'Grants party invulnerability. Duration',
           },
         },
         {
@@ -312,12 +312,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '응징',
             input: '신격 재입력',
-            description: '응징을 사용합니다. 피해량은 진압 레벨에 비례합니다.',
+            description: '응징을 사용합니다.',
           },
           en: {
             name: 'Holy Pile',
             input: 'Use Holy Smash again',
-            description: 'Uses holy pile. Damage scales with Thrust level.',
+            description: 'Uses holy pile.',
           },
         },
         {
@@ -329,12 +329,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '운명',
             input: '광명 재입력',
-            description: '운명을 내립니다. 피해량은 결박 레벨에 비례합니다.',
+            description: '운명을 내립니다.',
           },
           en: {
             name: 'Doom',
             input: 'Use Illumination again',
-            description: 'Calls doom. Damage scales with Restraint level.',
+            description: 'Calls doom.',
           },
         },
         {
@@ -347,13 +347,13 @@ export const paladinDetail: ClassDetailDef = {
             name: '그리폰',
             input: '성수 재입력',
             description:
-              '그리폰을 소환합니다. 탑승 중 징벌이 강화되고, 점프 시 주변 피해·비행(충전 80% 이상). 피해량은 심판 레벨에 비례합니다.',
+              '그리폰을 소환합니다. 탑승 중 징벌이 강화되고, 점프 시 주변 피해·비행(충전 80% 이상).',
           },
           en: {
             name: 'Griffon',
             input: 'Use Asperges again',
             description:
-              'Summons a griffon. Enhances Punish while mounted; jump splash and flight at 80%+ charge. Damage scales with Judgement level.',
+              'Summons a griffon. Enhances Punish while mounted; jump splash and flight at 80%+ charge.',
           },
         },
         {
@@ -365,12 +365,12 @@ export const paladinDetail: ClassDetailDef = {
           ko: {
             name: '성역',
             input: '영창 재입력',
-            description: '성역을 사용합니다. 피해량은 격려 레벨에 비례합니다.',
+            description: '성역을 사용합니다.',
           },
           en: {
             name: 'Sanctuary',
             input: 'Use Aria again',
-            description: 'Uses sanctuary. Damage scales with Encourage level.',
+            description: 'Uses sanctuary.',
           },
         },
         {

@@ -171,12 +171,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '분출',
             input: '같은 스킬 재입력',
-            description: '분사 후 재입력. 피해량은 분사 레벨에 비례합니다.',
+            description: '분사 후 재입력.',
           },
           en: {
             name: 'Blood Squirt',
             input: 'Use the same skill again',
-            description: 'Follow-up to Spray. Damage scales with Spray level.',
+            description: 'Follow-up to Spray.',
           },
         },
         {
@@ -187,12 +187,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '할퀴기',
             input: '같은 스킬 재입력',
-            description: '휩쓸기 후 재입력. 피해량은 휩쓸기 레벨에 비례합니다.',
+            description: '휩쓸기 후 재입력.',
           },
           en: {
             name: 'Scratch',
             input: 'Use the same skill again',
-            description: 'Follow-up to Swipe. Damage scales with Swipe level.',
+            description: 'Follow-up to Swipe.',
           },
         },
         {
@@ -203,12 +203,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '폭발',
             input: '같은 스킬 재입력',
-            description: '흡입 후 재입력. 피해량은 흡입 레벨에 비례합니다.',
+            description: '흡입 후 재입력.',
           },
           en: {
             name: 'Burst Out',
             input: 'Use the same skill again',
-            description: 'Follow-up to Inhale. Damage scales with Inhale level.',
+            description: 'Follow-up to Inhale.',
           },
         },
         {
@@ -219,12 +219,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '무자비',
             input: '같은 스킬 재입력',
-            description: '난무 후 재입력. 피해량은 난무 레벨에 비례합니다.',
+            description: '난무 후 재입력.',
           },
           en: {
             name: 'Merciless',
             input: 'Use the same skill again',
-            description: 'Follow-up to Flurry. Damage scales with Flurry level.',
+            description: 'Follow-up to Flurry.',
           },
         },
         {
@@ -235,12 +235,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '강타',
             input: '같은 스킬 재입력',
-            description: '진홍빛 전진 후 재입력. 피해량은 진홍빛 전진 레벨에 비례합니다.',
+            description: '진홍빛 전진 후 재입력.',
           },
           en: {
             name: 'Smite',
             input: 'Use the same skill again',
-            description: 'Follow-up to Crimson Advance. Damage scales with its level.',
+            description: 'Follow-up to Crimson Advance.',
           },
         },
         {
@@ -289,12 +289,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '광분',
             input: '같은 스킬 재입력',
-            description: '분사 후 재입력. 피해량은 분사 레벨에 비례합니다.',
+            description: '분사 후 재입력.',
           },
           en: {
             name: 'Rave',
             input: 'Use the same skill again',
-            description: 'Follow-up to Spray. Damage scales with Spray level.',
+            description: 'Follow-up to Spray.',
           },
         },
         {
@@ -305,12 +305,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '진홍참',
             input: '같은 스킬 재입력',
-            description: '난무 후 재입력. 피해량은 난무 레벨에 비례합니다.',
+            description: '난무 후 재입력.',
           },
           en: {
             name: 'Crimson Slash',
             input: 'Use the same skill again',
-            description: 'Follow-up to Flurry. Damage scales with Flurry level.',
+            description: 'Follow-up to Flurry.',
           },
         },
         {
@@ -321,12 +321,12 @@ export const berserkerDetail: ClassDetailDef = {
           ko: {
             name: '맹공',
             input: '같은 스킬 재입력',
-            description: '진홍빛 전진 후 재입력. 피해량은 진홍빛 전진 레벨에 비례합니다.',
+            description: '진홍빛 전진 후 재입력.',
           },
           en: {
             name: 'Onslaught',
             input: 'Use the same skill again',
-            description: 'Follow-up to Crimson Advance. Damage scales with its level.',
+            description: 'Follow-up to Crimson Advance.',
           },
         },
         {
