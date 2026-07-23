@@ -254,13 +254,13 @@ export const sapperDetail: ClassDetailDef = {
             name: '포격난류',
             input: 'TNT 돌격 직후 웅크리기 + 좌클릭',
             description:
-              '전방에 포격 대포를 설치해 지속 포격합니다. 피해량은 TNT 돌격 레벨에 비례합니다. 전술철수 시 대포가 폭발·철거됩니다.',
+              '전방에 포격 대포를 설치해 전방 적을 우선 조준하며 지속 포격합니다. 피해량은 TNT 돌격 레벨에 비례합니다. 전술철수 시 대포가 폭발·철거됩니다.',
           },
           en: {
             name: 'Shell Drift',
             input: 'Sneak + left-click after TNT Rush',
             description:
-              'Deploys a shell cannon for sustained bombardment. Damage scales with TNT Rush level. Detonates with Tactical Withdrawal.',
+              'Deploys a shell cannon that prioritizes forward foes for sustained bombardment. Damage scales with TNT Rush level. Detonates with Tactical Withdrawal.',
           },
         },
         {

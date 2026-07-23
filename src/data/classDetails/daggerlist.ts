@@ -72,13 +72,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '칼날부채',
             input: '단검 + 비웅크리기 + 좌클릭',
             description:
-              '원뿔로 관통 칼날을 투척한 뒤 되돌아옵니다. 왕복 각 1회 타격하며 타격당 출혈 1을 부여합니다.',
+              '실체 칼날 투사체를 원뿔로 투척한 뒤 되돌아옵니다. 왕복 각 1회 타격하며 타격당 출혈 1을 부여합니다.',
           },
           en: {
             name: 'FanOfBlades',
             input: 'Dagger + not sneaking + left-click',
             description:
-              'Throw piercing blades in a cone that return. They hit once each way and apply 1 bleed per hit.',
+              'Throw real blade projectiles in a cone that return. They hit once each way and apply 1 bleed per hit.',
           },
           masterLevel: 50,
         },
@@ -142,12 +142,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '상처',
             description:
-              '공격력이 증가합니다. 스킬 타격 시 출혈을 부여합니다. 출혈은 스택별 4초(+숙련×1.5초) 동안 유지되며, 초당 현재 체력 × (0.05% + 상처 LV×0.012%) × 스택 피해를 줍니다. 중첩 상한은 없습니다.',
+              '공격력이 증가합니다. 스킬 타격 시 출혈을 부여합니다. 출혈은 스택별 4초(+숙련×1.5초) 동안 유지되며, 초당 현재 체력 × (0.05% + 상처 LV×0.012%) × 스택의 0.01% 피해를 줍니다. 중첩 상한은 20입니다.',
           },
           en: {
             name: 'Wound',
             description:
-              'Increases damage. Skills apply bleed. Each stack lasts 4s (+1.5s per proficiency) and deals current HP × (0.05% + Wound LV×0.012%) × stacks per second. No stack cap.',
+              'Increases damage. Skills apply bleed. Each stack lasts 4s (+1.5s per proficiency) and deals 0.01% of (current HP × (0.05% + Wound LV×0.012%) × stacks) per second. Stack cap is 20.',
           },
         },
       ],
@@ -165,12 +165,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '그림자절단',
             input: '절개 후 재우클릭',
-            description: '반대 방향의 원호를 베며 CRIT 파티클과 출혈 2를 부여합니다.',
+            description: '본인을 중심으로 원을 그리며 베고 출혈 2를 부여합니다.',
           },
           en: {
             name: 'ShadowCut',
             input: 'Right-click again after Slash',
-            description: 'Slash an arc in the opposite direction with CRIT particles and apply 2 bleed.',
+            description: 'Slash in a circle around yourself and apply 2 bleed.',
           },
         },
         {
@@ -200,13 +200,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '칼날폭풍',
             input: '칼날부채 후 좌클릭',
             description:
-              '칼날이 전방 3~4블록 이동한 뒤 회전 폭풍을 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
+              '전방으로 칼날을 투척해 3.5~4블록(벽이 있으면 그 전)에서 소용돌이를 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
           },
           en: {
             name: 'BladeStorm',
             input: 'Left-click after FanOfBlades',
             description:
-              'Blades travel 3–4 blocks, then form a spinning storm that pulls enemies and applies 1 bleed per hit.',
+              'Throw a blade forward 3.5–4 blocks (or until a wall), then spin a vortex that pulls enemies and applies 1 bleed per hit.',
           },
         },
         {
@@ -337,12 +337,12 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '그림자쇄도',
             input: '칼날폭풍 후 좌클릭',
-            description: '그림자 잔상이 전방으로 쇄도하며 경로를 4회 타격하고 타격마다 출혈 1을 부여합니다.',
+            description: '그림자 ArmorStand가 전방으로 돌진하며 경로의 적을 타격하고 타격마다 출혈 1을 부여합니다.',
           },
           en: {
             name: 'ShadowRush',
             input: 'Left-click after BladeStorm',
-            description: 'Shadow afterimages rush forward, hitting the path 4 times and applying 1 bleed per hit.',
+            description: 'Shadow ArmorStands rush forward, hitting foes on the path and applying 1 bleed per hit.',
           },
         },
         {

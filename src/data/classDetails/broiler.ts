@@ -16,12 +16,12 @@ export const broilerDetail: ClassDetailDef = {
   story: {
     ko: [
       '상의를 벗은 근육질 투사가 철퇴로 전열을 무너뜨립니다. 지진강타·충격파·방어 분쇄·대지 쐐기·균열·먼지 폭발로 대지를 흔듭니다.',
-      '전투본능은 공격력을 올리고 가까운 적을 도전 상대로 지정합니다. 여진으로 지진강타를 이어갑니다.',
+      '전투본능은 공격력을 올립니다. 여진으로 지진강타를 이어갑니다.',
       '감내자는 중력 낙석과 단계별 충격파로 대지를 분쇄하고, 역전가는 복수 단층선과 중앙 최종파로 전장을 마무리합니다.',
     ],
     en: [
       'A shirtless, muscular brawler who breaks formations with a mace. Seismic slam, shockwave, armor crack, earth spikes, fissures, and dust bursts shake the ground.',
-      'Combat Instinct raises damage and marks a nearby foe for a duel. Afterpulse chains off seismic slam.',
+      'Combat Instinct raises damage. Afterpulse chains off seismic slam.',
       'Risk Taker shatters the earth with falling rocks and staged shockwaves; Game Changer ends the fight with multiple fault lines and a central final wave.',
     ],
   },
@@ -130,13 +130,11 @@ export const broilerDetail: ClassDetailDef = {
           guiColumn: 7,
           ko: {
             name: '전투본능',
-            input: '숫자키 3 (전투 모드)',
-            description: '공격력이 증가하고 가까운 대상을 도전 상대로 지정합니다.',
+            description: '공격력이 증가합니다.',
           },
           en: {
             name: 'Combat Instinct',
-            input: 'Hotkey 3 (combat mode)',
-            description: 'Increases damage and marks a nearby foe for a duel.',
+            description: 'Increases damage.',
           },
         },
       ],

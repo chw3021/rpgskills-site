@@ -410,12 +410,12 @@ export const wrestlerDetail: ClassDetailDef = {
           ko: {
             name: '진정한 싸움꾼',
             description:
-              '공격력·방어력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다. 낙상(지면 충격) 효과의 충격파 범위가 증가합니다(낙상 LV당 +4%).',
+              '공격력·방어력이 증가합니다. 1차 돌파 궁극기의 대기시간이 절반으로 감소합니다. 낙상(지면 충격) 효과의 충격파 범위가 증가합니다(낙상 LV당 +0.01%).',
           },
           en: {
             name: 'Fighter on the Ring',
             description:
-              'Increases damage and defense. First limit-break ultimate cooldown is halved. Shockwave radius of takedown ground impacts increases (+4% per TakeDown level).',
+              'Increases damage and defense. First limit-break ultimate cooldown is halved. Shockwave radius of takedown ground impacts increases (+0.01% per TakeDown level).',
           },
         },
         {

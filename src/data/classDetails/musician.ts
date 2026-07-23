@@ -53,7 +53,7 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '치유의노래',
             input: '웅크리기 + 우클릭',
-            description: '전방 아군을 회복·정화하고 재생을 부여합니다. 공격 효과나 전투 강화는 없습니다.',
+            description: '하트 외곽 파티클로 전방 아군을 회복·정화하고 재생을 부여합니다.',
           },
           en: {
             name: 'Healing Song',
@@ -70,13 +70,13 @@ export const musicianDetail: ClassDetailDef = {
             name: '앰프설치',
             input: '손 바꾸기',
             description:
-              '전방에 5회 피해와 둔화를 주는 장판을 펼칩니다. 숙련 1+에서 다른 연주 사거리를, 숙련 2에서 앰프 지속을 늘립니다.',
+              '전방에 주크박스 앰프를 설치합니다. 이후 연주 스킬이 앰프에서도 미러되며, 근처면 다른 연주 사거리가 늘어납니다. 숙련 2에서 앰프 지속이 늘어납니다.',
           },
           en: {
             name: 'Amp',
             input: 'Swap hands',
             description:
-              'Creates a five-pulse damage and slow field. Limit 1 extends other skill range near it; limit 2 extends its duration.',
+              'Places a jukebox amp that mirrors later skills at half effect. Nearby amp also extends other skill range; limit 2 extends amp duration.',
           },
           masterLevel: 1,
         },
@@ -87,12 +87,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '혼란연주',
             input: '좌클릭',
-            description: '전방 적에게 피해를 주고 실명·멀미·구속으로 제어합니다.',
+            description: '소용돌이 연주로 적을 중앙으로 끌어당기고 실명·멀미·구속으로 제어합니다.',
           },
           en: {
             name: 'Confusion',
             input: 'Left-click',
-            description: 'Damages enemies ahead and controls them with Blindness, Nausea, and a bind.',
+            description: 'Pulls foes into a vortex and controls them with Blindness, Nausea, and a bind.',
           },
           masterLevel: 50,
         },
@@ -103,12 +103,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '크레센도',
             input: '웅크리기 + 손 바꾸기',
-            description: '자기 주변 적에게 피해를 주고 바깥으로 강하게 밀어냅니다.',
+            description: '전방 원뿔 파동으로 적을 타격하고 구속합니다. A코드를 저음에서 고음까지 빠르게 연주합니다.',
           },
           en: {
             name: 'Crescendo',
             input: 'Sneak + swap hands',
-            description: 'Damages nearby enemies and forcefully peels them outward.',
+            description: 'Fires a forward cone wave that binds struck foes while rising through an A chord.',
           },
           masterLevel: 50,
         },
@@ -118,14 +118,14 @@ export const musicianDetail: ClassDetailDef = {
           element: 'lightning',
           guiColumn: 5,
           ko: {
-            name: '음표연주',
+            name: '퍼포먼스',
             input: '웅크리기 + 좌클릭',
-            description: '적에게 단발 피해를 주고 아군에게 힘·신속·흡수를 부여합니다. 레벨에 따라 강화 시간이 늘어납니다.',
+            description: '전방 3칸 순간이동 후 원형으로 적을 공격하고 아군에게 힘·신속·흡수를 부여합니다.',
           },
           en: {
-            name: 'Note Burst',
+            name: 'Performance',
             input: 'Sneak + left-click',
-            description: 'Deals one hit to foes and grants allies Strength, Speed, and Absorption for a level-scaled duration.',
+            description: 'Flash-dashes 3 blocks forward, then damages in a ring and buffs allies with Strength, Speed, and Absorption.',
           },
           masterLevel: 50,
         },
@@ -174,14 +174,14 @@ export const musicianDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'healingSong',
           ko: {
-            name: '합창',
+            name: '치유의합창',
             input: '치유의노래 직후 재입력',
-            description: '아군을 회복·정화하고 짧은 흡수 보호를 부여합니다.',
+            description: '작은 하트 6개를 원형으로 소환해 아군을 회복·정화하고 짧은 흡수를 부여합니다.',
           },
           en: {
-            name: 'Chorus',
+            name: 'Healing Chorus',
             input: 'Re-input after Healing Song',
-            description: 'Heals and cleanses allies, then grants brief Absorption.',
+            description: 'Spawns six colored hearts in a ring to heal and cleanse allies with brief Absorption.',
           },
         },
         {
@@ -210,12 +210,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '불협화음',
             input: '혼란연주 직후 재좌클릭',
-            description: '피해와 함께 약화·둔화·짧은 구속을 부여해 적의 전투력을 낮춥니다.',
+            description: '전기처럼 전방으로 음표를 발사해 피해·약화·둔화·짧은 구속을 부여합니다.',
           },
           en: {
             name: 'Dissonance',
             input: 'Left-click again after Confusion',
-            description: 'Deals damage and reduces combat power with Weakness, Slowness, and a brief bind.',
+            description: 'Screams jagged note bolts forward with Weakness, Slowness, and a brief bind.',
           },
         },
         {
@@ -227,12 +227,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '포르티시모',
             input: '크레센도 직후 재입력',
-            description: '전방 부채꼴을 강타해 맞은 적만 강하게 날립니다.',
+            description: 'fff 기호로 주위 적을 구속합니다.',
           },
           en: {
             name: 'Fortissimo',
             input: 'Re-input after Crescendo',
-            description: 'Strikes a forward cone and launches only enemies caught ahead.',
+            description: 'Marks fff around you and binds nearby foes.',
           },
         },
         {
@@ -243,13 +243,13 @@ export const musicianDetail: ClassDetailDef = {
           chainOf: 'noteBurst',
           ko: {
             name: '스타카토',
-            input: '음표연주 직후 웅크리기 + 재좌클릭',
-            description: '전방으로 빠른 음표를 3회 사격하며, 각 발은 대상당 한 번 타격합니다.',
+            input: '퍼포먼스 직후 웅크리기 + 재좌클릭',
+            description: '스타카토 음표(점 찍힌 음표)를 3회 연주하며 전방을 타격합니다.',
           },
           en: {
             name: 'Staccato Volley',
-            input: 'Sneak + left-click again after Note Burst',
-            description: 'Fires three rapid notes forward, each hitting a target at most once.',
+            input: 'Sneak + left-click again after Performance',
+            description: 'Plays three staccato notes with dotted heads while striking ahead.',
           },
         },
         {
@@ -270,13 +270,13 @@ export const musicianDetail: ClassDetailDef = {
             name: '콘서트',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '10틱 간격의 4회 공연으로 아군을 소량 회복·정화·강화하고 적에게 피해·둔화·짧은 제압을 줍니다. 2차 한계 돌파 시 재사용 대기 35초(기본 70초).',
+              '단상을 소환하고 캐논 메인 멜로디를 연주합니다. 연주 중 아군을 회복·정화·강화하고 적에게 피해·둔화·짧은 제압을 줍니다. 2차 한계 돌파 시 재사용 대기 35초(기본 70초).',
           },
           en: {
             name: 'Concert',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Four pulses at 10-tick intervals lightly heal, cleanse, and buff allies while damaging, slowing, and briefly suppressing foes. Cooldown is 35s at limit 2 (70s base).',
+              'Summons a platform and plays Canon main melody while pulsing heal, cleanse, and buffs for allies and damage, slow, and brief suppression for foes. Cooldown is 35s at limit 2 (70s base).',
           },
         },
       ],
@@ -309,14 +309,14 @@ export const musicianDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'healingSong',
           ko: {
-            name: '웅장합창',
-            input: '치유의노래 직후 재입력 (2차)',
-            description: '넓은 전방 아군을 강하게 회복·정화하고 흡수 보호를 부여합니다.',
+            name: '행진곡',
+            input: '치유의합창 직후 재입력',
+            description: '거대 북을 소환해 C스케일 행진곡을 연주하고, 아군을 회복·보호하며 이속을 부여합니다.',
           },
           en: {
-            name: 'Grand Chorus',
-            input: 'Re-input after Healing Song (limit 2)',
-            description: 'Strongly heals and cleanses allies across a wide area, then grants Absorption.',
+            name: 'March',
+            input: 'Re-input after Healing Chorus',
+            description: 'Summons a giant snare, plays a short C-major march, heals allies, and grants Speed.',
           },
         },
         {
@@ -328,12 +328,12 @@ export const musicianDetail: ClassDetailDef = {
           ko: {
             name: '낙뢰파문',
             input: '앰프설치 직후 재손바꾸기 (2차)',
-            description: '현재 앰프 중심 또는 조준 지점에 3회 낙뢰 공격을 가합니다.',
+            description: '설치된 앰프 위치를 우선해 3회 낙뢰 공격을 가합니다. 앰프가 없으면 조준 지점에서 발동합니다.',
           },
           en: {
             name: 'Thunder Ripple',
             input: 'Swap hands again after Amp (limit 2)',
-            description: 'Calls three strikes at the active amp center or aimed point.',
+            description: 'Prioritizes the placed amp and calls three lightning strikes, or uses the aimed point if no amp remains.',
           },
         },
         {
@@ -343,14 +343,14 @@ export const musicianDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'confusion',
           ko: {
-            name: '혼돈화음',
-            input: '혼란연주 직후 재좌클릭 (2차)',
-            description: '전방 적에게 피해를 주고 장시간 실명·멀미·구속을 부여합니다.',
+            name: '악센트',
+            input: '불협화음 직후 재좌클릭',
+            description: '악센트(>) 기호와 크리퍼 얼굴 음표로 적을 놀래키며 공격하고 제압합니다.',
           },
           en: {
-            name: 'Chaos Chord',
-            input: 'Left-click again after Confusion (limit 2)',
-            description: 'Damages enemies ahead and applies long Blindness, Nausea, and binding.',
+            name: 'Accent',
+            input: 'Left-click again after Dissonance',
+            description: 'Draws accent (>) marks and a creeper face in notes to scare, damage, and suppress foes.',
           },
         },
         {
@@ -360,14 +360,14 @@ export const musicianDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'crescendo',
           ko: {
-            name: '거대압전',
-            input: '크레센도 직후 재입력 (2차)',
-            description: '주변 적을 끌어모은 뒤 폭발 피해와 함께 바깥으로 날립니다.',
+            name: '속주',
+            input: '포르티시모 직후 재입력',
+            description: '전방으로 음표를 10회 난사하고 오선지를 뻗으며, 타격한 적을 구속합니다.',
           },
           en: {
-            name: 'Colossal Press',
-            input: 'Re-input after Crescendo (limit 2)',
-            description: 'Pulls nearby enemies inward, then detonates and blasts them outward.',
+            name: 'Virtuoso Run',
+            input: 'Re-input after Fortissimo',
+            description: 'Barrages notes 10 times along a forward staff and binds struck foes.',
           },
         },
         {
@@ -377,14 +377,14 @@ export const musicianDetail: ClassDetailDef = {
           followUp: true,
           chainOf: 'noteBurst',
           ko: {
-            name: '대장연이표',
-            input: '음표연주 직후 웅크리기 + 재좌클릭 (2차)',
-            description: '3회 연주로 적에게 피해를 주고 아군의 힘·신속·흡수 지속시간을 갱신합니다.',
+            name: '거대음표',
+            input: '스타카토 직후 재입력',
+            description: '거대 온음표를 소환해 폭발시키고 아군 전투 강화를 갱신합니다.',
           },
           en: {
-            name: 'Grand Note',
-            input: 'Sneak + left-click again after Note Burst (limit 2)',
-            description: 'Three pulses damage foes and refresh ally Strength, Speed, and Absorption.',
+            name: 'Giant Note',
+            input: 'Re-input after Staccato',
+            description: 'Spawns a giant whole note that explodes and refreshes ally combat buffs.',
           },
         },
         {
@@ -410,13 +410,13 @@ export const musicianDetail: ClassDetailDef = {
             name: '마에스트로',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '즉발 피날레로 적에게 강한 피해·실명·외곽 밀치기를 주고 아군에게 저항·흡수·힘을 부여합니다. 직접 회복이나 정화는 없습니다.',
+              '무대·조명·단원을 소환하고 캐논을 풍성하게 연주합니다. 연주 중 아군에게 저항·흡수·힘을 주고 적에게 피해·실명·밀치기를 가합니다.',
           },
           en: {
             name: 'Maestro',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'An instant finale heavily damages, blinds, and blasts foes outward while granting allies Resistance, Absorption, and Strength without direct healing or cleansing.',
+              'Summons a stage, lights, and ensemble for a rich Canon performance that grants allies Resistance, Absorption, and Strength while damaging, blinding, and blasting foes.',
           },
         },
       ],
