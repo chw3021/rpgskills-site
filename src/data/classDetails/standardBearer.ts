@@ -54,13 +54,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '전장기',
             input: '지상에서 비웅크리기 + 우클릭',
             description:
-              '지휘 깃발 거점을 세웁니다. 구역 내 적을 포섭하고, 아군에게 신속과 소량 격려를 줍니다.',
+              '지휘 깃발 거점을 세웁니다. 붉은 원형 범위로 구역을 표시하며, 적을 포섭하고 아군에게 신속과 소량 격려를 줍니다.',
           },
           en: {
             name: 'War Banner',
             input: 'On ground + not sneaking + right-click',
             description:
-              'Plants a command banner zone that coerces foes and grants Speed plus light inspire to allies.',
+              'Plants a command banner zone marked by a red ring. Coerces foes and grants Speed plus light inspire to allies.',
           },
           masterLevel: 50,
         },
@@ -90,13 +90,13 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '신호',
             input: '손 바꾸기',
             description:
-              '기동 지휘: 본인과 가까운 파티원에게 신속과 피해 버프를 줍니다.',
+              '신호불을 세우고 회색 원형 범위를 표시합니다. 주변 적에게 피해를 주고, 본인·파티에게 신속과 피해 버프를 줍니다.',
           },
           en: {
             name: 'Signal Call',
             input: 'Swap hands',
             description:
-              'Mobility command: Speed and a damage buff for you and nearby party members.',
+              'Summons a signal brazier with a gray range ring. Damages nearby foes and grants Speed plus a damage buff to you and nearby party members.',
           },
           masterLevel: 50,
         },
@@ -108,12 +108,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '포고',
             input: '웅크리기 + 손 바꾸기',
-            description: '인장 폭발로 주변 적에게 피해를 주고, 가장 강한 포섭·표식을 남깁니다.',
+            description: '상단으로 상승한 뒤 석조 망루를 소환해 올라섭니다. 주변 적에게 인장 피해와 강한 포섭·표식을 남깁니다.',
           },
           en: {
             name: 'Proclaim',
             input: 'Sneak + swap hands',
-            description: 'Seal burst with nearby damage and the strongest coerce mark.',
+            description: 'Rises onto a summoned watchtower. Seal burst damages nearby foes with the strongest coerce mark.',
           },
           masterLevel: 50,
         },
@@ -125,12 +125,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '깃기돌진',
             input: '공중 + 비웅크리기 + 좌클릭',
-            description: '깃발 잔상을 남기며 돌진합니다. 경로 피해·포섭과 함께 격려가 발동합니다.',
+            description: '대형 깃발과 Carpet 경로를 남기며 돌진합니다. 경로 피해·포섭과 함께 격려가 발동합니다.',
           },
           en: {
             name: 'Banner Charge',
             input: 'While airborne + not sneaking + left-click',
-            description: 'Dash with banner afterimages. Path damage, coerce, and inspire on hits.',
+            description: 'Dash with larger banners and a carpet trail. Path damage, coerce, and inspire on hits.',
           },
           masterLevel: 50,
         },
@@ -143,14 +143,15 @@ export const standardBearerDetail: ClassDetailDef = {
             name: '전투나팔',
             input: '웅크리기 + 좌클릭',
             description:
-              '화음 나팔로 본인·파티에게 힘·성급과 격려 파동을 줍니다. 신호 레벨에 비례합니다.',
+              '거대 나팔을 소환해 주변 적에게 피해를 주고, 본인·파티에게 힘·성급과 격려 파동을 줍니다. 자체 레벨로 강화됩니다.',
           },
           en: {
             name: 'War Horn',
             input: 'Sneak + left-click',
             description:
-              'Chord fanfare grants Strength, Haste, and an inspire wave. Scales with Signal Call level.',
+              'Summons a giant war horn that damages nearby foes and grants Strength, Haste, and inspire. Scales with its own skill level.',
           },
+          masterLevel: 50,
         },
         {
           id: 'heraldry',
@@ -184,13 +185,13 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 9,
           ko: {
             name: '깃봉추적',
-            input: '전장기 맥동 종료 직후 우클릭',
-            description: '전방 직선 지원 피해. 계수는 전장기 레벨에 비례합니다.',
+            input: '전장기 시전 직후 우클릭',
+            description: '전방 횡베기 호 지원 피해. 계수는 전장기 레벨에 비례합니다.',
           },
           en: {
             name: 'Flag Fall',
-            input: 'Right-click after War Banner pulses end',
-            description: 'Forward support line. Scales with War Banner level.',
+            input: 'Right-click shortly after War Banner cast',
+            description: 'Forward support arc. Scales with War Banner level.',
           },
         },
         {
@@ -203,12 +204,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기세분쇄',
             input: '기세꺾기 직후 웅크리기 + 우클릭',
-            description: '전방 직선 지원 피해. 계수는 기세꺾기 레벨에 비례합니다.',
+            description: '양옆 부하(주민)와 함께 전방 가르기 호 지원 피해를 줍니다. 계수는 기세꺾기 레벨에 비례합니다.',
           },
           en: {
             name: 'Dirge Cut',
             input: 'Sneak + right-click after Demoralize',
-            description: 'Forward support line. Scales with Demoralize level.',
+            description: 'Forward support arc with villager retainers. Scales with Demoralize level.',
           },
         },
         {
@@ -221,12 +222,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '신호반향',
             input: '신호 직후 손 바꾸기',
-            description: '전방 직선 지원 피해. 계수는 신호 레벨에 비례합니다.',
+            description: '불화살 발사대를 세웁니다. 범위 피해와 홀딩·화상을 주고, 아군에게 화상 면역을 부여합니다.',
           },
           en: {
             name: 'Recall Ping',
             input: 'Swap hands after Signal Call',
-            description: 'Forward support line. Scales with Signal Call level.',
+            description: 'Summons a fire-arrow turret. AoE damage with hold/burn; allies gain fire resistance.',
           },
         },
         {
@@ -239,12 +240,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '포고각인',
             input: '포고 직후 웅크리기 + 손 바꾸기',
-            description: '전방 직선 지원 피해. 계수는 포고 레벨에 비례합니다.',
+            description: '바닥 거대 문장 각인으로 범위 지원 피해를 줍니다. 계수는 포고 레벨에 비례합니다.',
           },
           en: {
             name: 'Edict Mark',
             input: 'Sneak + swap hands after Proclaim',
-            description: 'Forward support line. Scales with Proclaim level.',
+            description: 'Giant heraldic seal imprint AoE. Scales with Proclaim level.',
           },
         },
         {
@@ -255,14 +256,14 @@ export const standardBearerDetail: ClassDetailDef = {
           chainOf: 'bannerCharge',
           guiColumn: 13,
           ko: {
-            name: '깃기교환',
+            name: '깃기질주',
             input: '깃기돌진 직후 공중 + 비웅크리기 + 좌클릭',
-            description: '전방 적과 위치를 교환하거나 전방으로 도약합니다. 착지 시 주변 적에게 지원 피해를 줍니다.',
+            description: '속도(Velocity) 기반 돌진으로 전방을 가로지르며 궤적 피해를 줍니다.',
           },
           en: {
             name: 'Standard Swap',
             input: 'Airborne + not sneaking + left-click after Banner Charge',
-            description: 'Swap places with a forward foe or leap ahead. Deals support damage on landing.',
+            description: 'Velocity-based dash that deals trail support damage.',
           },
         },
         {
@@ -327,12 +328,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기운파달',
             input: '깃봉추적 직후 우클릭',
-            description: '긴 전방 직선 지원 피해를 줍니다.',
+            description: '확대된 광역 파동과 추가타로 지원 피해를 줍니다.',
           },
           en: {
             name: 'High Command',
             input: 'Right-click after Flag Fall',
-            description: 'Long forward support line damage.',
+            description: 'Wider AoE wave with a follow-up hit.',
           },
         },
         {
@@ -345,12 +346,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기세압축',
             input: '기세분쇄 직후 웅크리기 + 우클릭',
-            description: '주변 지원 피해를 줍니다.',
+            description: '반구 충격파 3회로 적을 중앙으로 끌어모으며 지원 피해를 줍니다.',
           },
           en: {
             name: 'Low Crush',
             input: 'Sneak + right-click after Dirge Cut',
-            description: 'Nearby support burst damage.',
+            description: 'Three hemisphere bursts that pull foes inward.',
           },
         },
         {
@@ -363,12 +364,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '파열호각',
             input: '신호반향 직후 손 바꾸기',
-            description: '전방 직선 지원 피해를 줍니다.',
+            description: '거대 호각을 소환합니다. 적에게 홀딩·멀미, 아군에게 화상 면역을 부여합니다.',
           },
           en: {
             name: 'Surge Recall',
             input: 'Swap hands after Recall Ping',
-            description: 'Forward support line damage.',
+            description: 'Summons a giant whistle. Holds and nauseates foes; allies gain fire resistance.',
           },
         },
         {
@@ -398,13 +399,13 @@ export const standardBearerDetail: ClassDetailDef = {
           guiColumn: 22,
           ko: {
             name: '전장돌파',
-            input: '깃기교환 직후 공중 + 비웅크리기 + 좌클릭',
-            description: '전장을 가로지르는 긴 돌진으로 경로상 적에게 지원 피해와 포섭을 줍니다.',
+            input: '깃기질주 직후 공중 + 비웅크리기 + 좌클릭',
+            description: '주변 적을 지속적으로 끌어당기는 오라를 펼치고, 소형 깃발과 함께 다단 히트 지원 피해를 줍니다.',
           },
           en: {
             name: 'Field Breakthrough',
             input: 'Airborne + not sneaking + left-click after Standard Swap',
-            description: 'Long dash across the battlefield with support damage and coerce along the path.',
+            description: 'Creates a pull aura with mini-banners and multi-hit support damage.',
           },
         },
         {
