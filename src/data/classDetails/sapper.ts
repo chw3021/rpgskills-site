@@ -298,14 +298,14 @@ export const sapperDetail: ClassDetailDef = {
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
               '거대 포탄을 떨어뜨려 착탄 지점에 포격 거점을 설치합니다. 거점은 잠시 동안 주변 적에게 자동으로 포탄을 발사합니다.',
-            extra: ['전술철수로 즉시 폭파 가능합니다.', '좁은 통로나 거점 방어에 효과적입니다.'],
+            extra: ['좁은 통로나 거점 방어에 효과적입니다.'],
           },
           en: {
             name: 'Bombardment',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
               'Drops a massive shell that becomes a bombardment battery. The battery auto-fires shells at nearby enemies for a short time.',
-            extra: ['Can be detonated with Tactical Withdrawal.', 'Effective for chokepoint defense.'],
+            extra: ['Effective for chokepoint defense.'],
           },
         },
       ],
