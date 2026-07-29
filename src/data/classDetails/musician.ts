@@ -137,11 +137,11 @@ export const musicianDetail: ClassDetailDef = {
           guiColumn: 7,
           ko: {
             name: '화음',
-            description: '본인의 공격력이 증가합니다. 강화 연주는 아군에게 힘·신속을 부여합니다.',
+            description: '본인의 공격력이 증가합니다. 강화 연주는 아군에게 힘·신속과 공격 배율(×1.74)을 부여합니다.',
           },
           en: {
             name: 'Harmony',
-            description: 'Increases your damage. Empowering performances grant allies Strength and Speed.',
+            description: 'Increases your damage. Empowering performances grant allies Strength, Speed, and attack ×1.74.',
           },
         },
       ],

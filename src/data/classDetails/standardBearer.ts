@@ -30,9 +30,9 @@ export const standardBearerDetail: ClassDetailDef = {
   },
   story: {
     ko: [
-      '흰 깃발과 가위로 전열을 지휘하는 근접 지원가입니다. 적을 때릴수록 주변 아군을 격려해 치유하고, 문양 스택으로 팀의 피해를 키웁니다.',
+      '흰 깃발과 가위로 전열을 지휘하는 근접 지원가입니다. 적을 때릴수록 주변 아군을 격려해 치유하고, 포섭으로 적의 받는 피해를 키웁니다.',
       '깃발 구역, 기세 제압, 신호 기동, 포고 표식, 나팔 사기로 전선이 갈리며, 기장은 연계와 패업령으로 전장을 이끕니다.',
-      '진기는 연대기와 전장돌파로 군기를 정점에 올리며, 문양 스택과 격려로 전장을 깃발 아래 유지합니다.',
+      '진기는 연대기와 전장돌파로 군기를 정점에 올리며, 격려와 포섭으로 전장을 깃발 아래 유지합니다.',
     ],
     en: [
       'A frontline support who commands with banner and shears. Hitting foes inspires and heals nearby allies, while Sigil stacks raise outgoing damage.',
@@ -162,12 +162,12 @@ export const standardBearerDetail: ClassDetailDef = {
           ko: {
             name: '기병깃술',
             description:
-              '근접 최종 피해가 증가합니다. 스킬이 적중할 때마다 문양 스택을 쌓아 주는 피해를 키우고, 주변 아군을 조금 격려 치유합니다.',
+              '근접 최종 피해가 증가합니다. 스킬이 적중할 때마다 주변 아군을 조금 격려 치유합니다.',
           },
           en: {
             name: 'Heraldry',
             description:
-              'Increases melee final damage. Skill hits build Sigil stacks that raise outgoing damage, and lightly inspire-heal nearby allies.',
+              'Increases melee final damage. Skill hits lightly inspire-heal nearby allies.',
           },
         },
       ],

@@ -182,12 +182,14 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '잔상베기',
             input: '그림자질주 후 웅크리기 + 재우클릭',
-            description: '공중에서 내려찍어 하강 보텍스를 만들고 4회 타격합니다. 타격당 출혈 1을 부여합니다.',
+            description:
+              '대상 뒤에서 내려찍어 하강 보텍스와 함께 4회 타격합니다. 대상이 없으면 제자리에서 공격합니다. 타격당 출혈 1.',
           },
           en: {
             name: 'Afterimage',
             input: 'Sneak + right-click again after ShadowDash',
-            description: 'Aerial stomp with a downward vortex for 4 hits, applying 1 bleed per hit.',
+            description:
+              'Aerial stomp with a downward vortex for 4 hits. Attacks in place if no target. Apply 1 bleed per hit.',
           },
         },
         {
@@ -200,13 +202,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '칼날폭풍',
             input: '칼날부채 후 좌클릭',
             description:
-              '전방으로 칼날을 투척해 벽 앞에서 소용돌이를 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
+              '전방으로 칼날을 투척해 끝점에서 3초간 회전하는 칼날 소용돌이를 만듭니다. 적을 끌어당기며 타격마다 출혈 1을 부여합니다.',
           },
           en: {
             name: 'BladeStorm',
             input: 'Left-click after FanOfBlades',
             description:
-              'Throw a blade forward until it hits a wall, then spin a vortex that pulls enemies and applies 1 bleed per hit.',
+              'Throw a blade forward, then spin a 3-second vortex of blades at the tip that pulls enemies and applies 1 bleed per hit.',
           },
         },
         {
@@ -319,13 +321,13 @@ export const daggerlistDetail: ClassDetailDef = {
             name: '암영잔상',
             input: '잔상베기 후 웅크리기 + 재우클릭',
             description:
-              '질주로 맞힌 단일 대상 뒤에 그림자 2기를 세우고 포탈과 별 모양 베기 궤적으로 3회 타격합니다.',
+              '질주로 맞힌 단일 대상 뒤에 그림자 2기를 세우고 포탈과 별 모양 베기 궤적으로 3회 타격합니다. 대상이 없으면 제자리에서 공격합니다.',
           },
           en: {
             name: 'AfterimageII',
             input: 'Sneak + right-click again after Afterimage',
             description:
-              'Place 2 shadow stands behind the single dash-hit target and strike 3 times with portal and star-shaped swing trails.',
+              'Place 2 shadow stands behind the single dash-hit target and strike 3 times. Attacks in place if no target.',
           },
         },
         {
@@ -337,12 +339,14 @@ export const daggerlistDetail: ClassDetailDef = {
           ko: {
             name: '그림자쇄도',
             input: '칼날폭풍 후 좌클릭',
-            description: '그림자가 전방으로 돌진하며 경로의 적을 타격하고 출혈을 부여합니다.',
+            description:
+              '그림자가 전방으로 5회 연속 돌진하며 경로의 적을 타격합니다. 끝점에 도달하면 사라지고 다시 돌진합니다. 타격마다 출혈 1.',
           },
           en: {
             name: 'ShadowRush',
             input: 'Left-click after BladeStorm',
-            description: 'Shadows rush forward, hitting foes on the path and applying bleed.',
+            description:
+              'Shadows rush forward 5 times, vanishing at each end before rushing again. Apply 1 bleed per hit.',
           },
         },
         {
