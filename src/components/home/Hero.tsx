@@ -37,9 +37,8 @@ export function Hero() {
         <div className="hero-badge">
           {t.hero.compatible}{' '}
           <strong>
-            API {site.spigotApiVersion}
-          </strong>{' '}
-          <span style={{ color: 'var(--text-muted)' }}>({site.mcVersion})</span>
+            MC {site.supportedMcVersions.join(' · ')}
+          </strong>
           <br />
           <span style={{ fontSize: '0.75rem' }}>{t.hero.mcVersionLabel}</span>
         </div>

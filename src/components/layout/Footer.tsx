@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-inner">
         <span>
-          © {new Date().getFullYear()} {site.name} · MC {site.mcVersion}
+          © {new Date().getFullYear()} {site.name} · MC {site.supportedMcVersions.join(' · ')}
         </span>
         <span>
           <a href={site.spigotUrl} target="_blank" rel="noopener noreferrer">

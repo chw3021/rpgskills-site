@@ -4,8 +4,8 @@ Paste into [RPGSkills resource edit](https://www.spigotmc.org/resources/rpgskill
 
 | Spigot field | What to use |
 |--------------|-------------|
-| **Game version** | Minecraft builds that ship **Spigot/Paper API 26.1.2+** (site labels this **Minecraft 26.1.2**) |
-| **External download link** | `https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills.jar` |
+| **Game version** | Minecraft **26.2** and **26.1.2** (separate JARs) |
+| **External download link** | Site download page (version selector): `https://chw3021.github.io/rpgskills-site/#/download` — or latest assets `RPGskills-26.2.jar` / `RPGskills-26.1.2.jar` on GitHub Releases |
 | **Main description** | BBCode block below |
 | **Do not link** | Private source `rpgskills.github.io` as download |
 
@@ -13,12 +13,12 @@ Paste into [RPGSkills resource edit](https://www.spigotmc.org/resources/rpgskill
 
 | What | Value |
 |------|--------|
-| **Spigot API (build)** | `26.1.2-R0.1-SNAPSHOT` (`spigot-api` dependency) |
-| **API line (marketing)** | **26.1.2** / **26.1+** |
-| **Minecraft (players)** | **26.1.2** — Paper/Spigot build must report API **26.1.2+** |
-| **Plugin release** | **v1.0.2** (GitHub Releases tag) |
+| **Spigot API builds** | `26.2-R0.1-SNAPSHOT` and `26.1.2-R0.1-SNAPSHOT` |
+| **API / Minecraft lines** | **26.2** (recommended) · **26.1.2** |
+| **Release assets** | `RPGskills-26.2.jar`, `RPGskills-26.1.2.jar` |
+| **Plugin release** | GitHub Releases tag (e.g. **v1.0.2**) |
 
-**Current release:** RPGSkills **v1.0.2** · **Spigot/Paper API 26.1.2** · **Minecraft 26.1.2**
+**Current lines:** RPGSkills · **Spigot/Paper API 26.2 & 26.1.2** — pick the JAR that matches your server on the official Download page.
 
 **Official site (primary docs):** https://chw3021.github.io/rpgskills-site/
 
@@ -27,7 +27,7 @@ Paste into [RPGSkills resource edit](https://www.spigotmc.org/resources/rpgskill
 ## Short tagline (optional — plain text field)
 
 ```
-RPGSkills v1.0.2 — Official site for guides · API 26.1.2 · MC 26.1.2
+RPGSkills — Official site for guides · MC 26.2 & 26.1.2 (separate JARs)
 ```
 
 ---
@@ -61,7 +61,7 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 
 [SIZE=4][B]Download (mirror)[/B][/SIZE]
 [LIST]
-[*][URL='https://github.com/chw3021/rpgskills-releases/releases'][B]GitHub Releases[/B][/URL] — [URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills.jar']RPGskills.jar[/URL] (latest: [B]v1.0.2[/B])
+[*][URL='https://github.com/chw3021/rpgskills-releases/releases'][B]GitHub Releases[/B][/URL] — [URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills-26.2.jar']RPGskills-26.2.jar[/URL] · [URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills-26.1.2.jar']RPGskills-26.1.2.jar[/URL] (pick your server version)
 [*][URL='https://www.spigotmc.org/resources/rpgskills.122034/']Spigot resource page[/URL] — reviews & discussion
 [*][URL='https://github.com/chw3021/rpgskills-releases/issues/new']Bug reports (GitHub Issues)[/URL]
 [/LIST]

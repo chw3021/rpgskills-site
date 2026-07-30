@@ -101,7 +101,7 @@ export const en: Translations = {
     spigot: 'Spigot Page',
     gettingStarted: 'Getting Started',
     compatible: 'Compatible with',
-    mcVersionLabel: 'Spigot/Paper API 26.1.2 (26.1.2-R0.1-SNAPSHOT) · Minecraft 26.1.2',
+    mcVersionLabel: 'Spigot/Paper API 26.2 & 26.1.2 · pick the matching JAR on Download',
     battleImageAlt:
       'The Wither descends through violet mist as swordsmen, archers, mages, and other heroes charge to meet it',
   },
@@ -209,7 +209,7 @@ export const en: Translations = {
           'Party commands: create, join, password, invite, kick, leave, assemble, list',
           'Multi-language support in config',
           'Enable or disable the plugin per world',
-          'Drop RPGskills.jar into plugins/, configure, and apply the resource pack',
+          'Drop the matching RPGskills-*.jar into plugins/, configure, and apply the resource pack',
         ],
       },
     ],
@@ -221,11 +221,11 @@ export const en: Translations = {
     steps: [
       {
         title: '1. Prepare your server',
-        body: 'Use Paper or Spigot Minecraft 26.1.2 with Spigot API 26.1.2 or newer (matches pom.xml spigot-api 26.1.2-R0.1-SNAPSHOT).',
+        body: 'Use Paper or Spigot Minecraft 26.2 or 26.1.2. On the Download page, pick the JAR that matches your server (RPGskills-26.2.jar or RPGskills-26.1.2.jar).',
       },
       {
         title: '2. Install the plugin',
-        body: 'Place RPGskills.jar in the plugins folder and restart. Config is created under plugins/RPGskills/.',
+        body: 'Place the matching RPGskills-*.jar in the plugins folder and restart. Config is created under plugins/RPGskills/.',
       },
       {
         title: '3. Apply the resource pack',
@@ -243,8 +243,9 @@ export const en: Translations = {
   download: {
     pageTitle: 'Download',
     pageDescription:
-      'Get the latest plugin JAR and resource pack. The JAR link updates automatically from GitHub Releases.',
+      'Pick your Minecraft version, then get the matching plugin JAR and resource pack. JAR links update from GitHub Releases.',
     pluginJar: 'Plugin JAR',
+    mcVersionSelect: 'Minecraft / Spigot API version',
     latestFromGithub: 'Latest release from GitHub',
     loading: ' — loading…',
     apiFallback: 'API fallback',
@@ -255,7 +256,7 @@ export const en: Translations = {
     downloadZip: 'Download ZIP',
     repository: 'Repository',
     noGithubReleaseHint:
-      'Could not load the latest JAR from GitHub Releases. Open All Releases on chw3021/rpgskills-releases or use Spigot below.',
+      'Could not load the JAR for this Minecraft version from GitHub Releases. Open All Releases on chw3021/rpgskills-releases or use Spigot below.',
     getJarFromSpigot: 'Download from Spigot',
   },
   support: {
@@ -281,8 +282,8 @@ export const en: Translations = {
       },
     ],
     bugReportChecklist: [
-      'Server software and version (Paper/Spigot, Minecraft 26.1.2)',
-      'RPGSkills JAR version or Releases tag',
+      'Server software and version (Paper/Spigot, Minecraft 26.2 or 26.1.2)',
+      'RPGSkills JAR name / Releases tag (e.g. RPGskills-26.2.jar)',
       'List of other plugins (/plugins)',
       'Steps to reproduce',
       'Full console stack trace',
@@ -440,8 +441,8 @@ export const en: Translations = {
       id: 'version-mismatch',
       question: 'What if my server version does not match?',
       answer:
-        'RPGSkills is developed and tested for Spigot/Paper Minecraft 26.1.2 (API 26.1.2). ' +
-        'Other major versions may break commands, monsters, or GUIs and show console errors.',
+        'RPGSkills ships separate JARs for Spigot/Paper Minecraft 26.2 and 26.1.2. ' +
+        'On the Download page, select your server version and install that JAR. Other major versions may break commands, monsters, or GUIs.',
     },
     {
       id: 'resource-pack',

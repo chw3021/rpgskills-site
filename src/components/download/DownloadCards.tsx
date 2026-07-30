@@ -1,21 +1,41 @@
+import { useState } from 'react';
 import { downloads } from '../../config/downloads';
-import { site } from '../../config/site';
+import { site, type SupportedMcVersion } from '../../config/site';
 import { useI18n } from '../../i18n/useI18n';
 import { useLatestRelease } from '../../hooks/useLatestRelease';
 
 export function DownloadCards() {
   const { t } = useI18n();
-  const release = useLatestRelease();
+  const [mcVersion, setMcVersion] = useState<SupportedMcVersion>(site.mcVersion);
+  const release = useLatestRelease(mcVersion);
   const d = t.download;
 
   return (
     <div className="card-grid">
       <article className="card">
         <h3>{d.pluginJar}</h3>
+        <p className="meta" style={{ marginBottom: '0.75rem' }}>
+          {d.mcVersionSelect}
+        </p>
+        <div className="page-tabs" role="tablist" aria-label={d.mcVersionSelect}>
+          {site.supportedMcVersions.map((version) => (
+            <button
+              key={version}
+              type="button"
+              role="tab"
+              aria-selected={mcVersion === version}
+              className={mcVersion === version ? 'page-tab page-tab--active' : 'page-tab'}
+              onClick={() => setMcVersion(version)}
+            >
+              MC {version}
+            </button>
+          ))}
+        </div>
         <p className="meta">
           {d.latestFromGithub}
           {release.loading && d.loading}
           {!release.loading && release.version && ` — ${release.version}`}
+          {!release.loading && ` · ${downloads.jar.assetFileName(mcVersion)}`}
         </p>
         {release.error && (
           <p className="meta" style={{ color: 'var(--warning)' }}>
@@ -47,7 +67,7 @@ export function DownloadCards() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {d.allReleases}
+                {release.error === 'no_jar_on_github' ? d.downloadJar : d.allReleases}
               </a>
               <a
                 href={site.spigotUrl}

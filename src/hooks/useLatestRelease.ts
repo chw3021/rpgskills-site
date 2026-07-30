@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { downloads } from '../config/downloads';
-import { site } from '../config/site';
+import { site, type SupportedMcVersion } from '../config/site';
 import type { ReleaseInfo } from '../types/release';
 
 const releasesUrl = site.pluginReleasesUrl;
@@ -12,20 +12,30 @@ type GithubRelease = {
   assets?: { name: string; browser_download_url: string }[];
 };
 
-function findJarAsset(release: GithubRelease | undefined) {
-  return release?.assets?.find((a) => downloads.jar.assetNamePattern.test(a.name));
+function findJarAsset(release: GithubRelease | undefined, mcVersion: SupportedMcVersion) {
+  return release?.assets?.find((a) => downloads.jar.matchesAsset(a.name, mcVersion));
 }
 
-export function useLatestRelease(): ReleaseInfo {
+export function useLatestRelease(mcVersion: SupportedMcVersion): ReleaseInfo {
   const [info, setInfo] = useState<ReleaseInfo>({
     version: 'latest',
     jarUrl: releasesUrl,
     loading: true,
     directJar: false,
+    mcVersion,
   });
 
   useEffect(() => {
     const apiBase = `https://api.github.com/repos/${site.githubOrg}/${site.pluginReleaseRepo}`;
+    let cancelled = false;
+
+    setInfo({
+      version: 'latest',
+      jarUrl: releasesUrl,
+      loading: true,
+      directJar: false,
+      mcVersion,
+    });
 
     const resolve = async () => {
       try {
@@ -40,43 +50,57 @@ export function useLatestRelease(): ReleaseInfo {
             throw new Error(`GitHub API ${listRes.status}`);
           }
           const list = (await listRes.json()) as GithubRelease[];
-          release = list.find((r) => !r.draft && findJarAsset(r));
+          release = list.find((r) => !r.draft && findJarAsset(r, mcVersion));
         } else {
           throw new Error(`GitHub API ${latestRes.status}`);
         }
 
-        const asset = findJarAsset(release);
+        if (cancelled) {
+          return;
+        }
+
+        const asset = findJarAsset(release, mcVersion);
         if (asset?.browser_download_url) {
           setInfo({
             version: release?.tag_name ?? 'latest',
             jarUrl: asset.browser_download_url,
             loading: false,
             directJar: true,
+            mcVersion,
           });
           return;
         }
 
         setInfo({
           version: '-',
-          jarUrl: releasesUrl,
+          jarUrl: downloads.jar.fallbackUrl(mcVersion),
           loading: false,
           directJar: false,
+          mcVersion,
           error: 'no_jar_on_github',
         });
       } catch (err) {
+        if (cancelled) {
+          return;
+        }
         const message = err instanceof Error ? err.message : String(err);
         setInfo({
           version: 'latest',
           jarUrl: releasesUrl,
           loading: false,
           directJar: false,
+          mcVersion,
           error: message,
         });
       }
     };
 
     void resolve();
-  }, []);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [mcVersion]);
 
   return info;
 }

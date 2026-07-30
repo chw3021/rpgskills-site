@@ -101,7 +101,7 @@ export const ko: Translations = {
     spigot: 'Spigot 페이지',
     gettingStarted: '시작하기',
     compatible: '호환 버전',
-    mcVersionLabel: 'Spigot/Paper API 26.1.2 (26.1.2-R0.1-SNAPSHOT) · Minecraft 26.1.2',
+    mcVersionLabel: 'Spigot/Paper API 26.2 · 26.1.2 · Download에서 서버에 맞는 JAR 선택',
     battleImageAlt:
       '위더가 보랏빛 안개 속에 강림하고, 검사·궁수·마법사 등 영웅들이 맞서 돌진하는 장면',
   },
@@ -220,11 +220,11 @@ export const ko: Translations = {
     steps: [
       {
         title: '1. 서버 준비',
-        body: 'Paper 또는 Spigot Minecraft 26.1.2 + Spigot API 26.1.2 이상 (pom.xml spigot-api 26.1.2-R0.1-SNAPSHOT 기준).',
+        body: 'Paper 또는 Spigot Minecraft 26.2 또는 26.1.2를 사용하세요. Download 페이지에서 서버 버전에 맞는 JAR(RPGskills-26.2.jar / RPGskills-26.1.2.jar)를 고르세요.',
       },
       {
         title: '2. 플러그인 설치',
-        body: 'RPGskills.jar를 plugins 폴더에 넣고 서버를 재시작합니다. config는 plugins/RPGskills/ 에 생성됩니다.',
+        body: '서버에 맞는 RPGskills-*.jar를 plugins 폴더에 넣고 재시작합니다. config는 plugins/RPGskills/ 에 생성됩니다.',
       },
       {
         title: '3. 리소스팩 적용',
@@ -242,8 +242,9 @@ export const ko: Translations = {
   download: {
     pageTitle: '다운로드',
     pageDescription:
-      '최신 플러그인 JAR와 리소스팩을 받으세요. JAR 링크는 GitHub Releases API로 자동 갱신됩니다.',
+      '마인크래프트 버전을 선택한 뒤 맞는 플러그인 JAR와 리소스팩을 받으세요. JAR 링크는 GitHub Releases API로 자동 갱신됩니다.',
     pluginJar: '플러그인 JAR',
+    mcVersionSelect: '마인크래프트 / Spigot API 버전',
     latestFromGithub: 'GitHub 최신 릴리스',
     loading: ' — 불러오는 중…',
     apiFallback: 'API 대체',
@@ -254,7 +255,7 @@ export const ko: Translations = {
     downloadZip: 'ZIP 다운로드',
     repository: '리포지토리',
     noGithubReleaseHint:
-      'GitHub Releases에서 최신 JAR를 불러오지 못했습니다. chw3021/rpgskills-releases 전체 릴리스 또는 아래 Spigot을 이용하세요.',
+      '선택한 마인크래프트 버전의 JAR를 GitHub Releases에서 불러오지 못했습니다. chw3021/rpgskills-releases 전체 릴리스 또는 아래 Spigot을 이용하세요.',
     getJarFromSpigot: 'Spigot에서 받기',
   },
   support: {
@@ -280,8 +281,8 @@ export const ko: Translations = {
       },
     ],
     bugReportChecklist: [
-      '서버 소프트웨어 및 버전 (Paper/Spigot, Minecraft 26.1.2)',
-      'RPGSkills JAR 버전 또는 Releases 태그',
+      '서버 소프트웨어 및 버전 (Paper/Spigot, Minecraft 26.2 또는 26.1.2)',
+      'RPGSkills JAR 파일명 / Releases 태그 (예: RPGskills-26.2.jar)',
       '설치된 다른 플러그인 목록 (/plugins)',
       '재현 단계',
       '콘솔 전체 스택 트레이스',
@@ -435,8 +436,8 @@ export const ko: Translations = {
       id: 'version-mismatch',
       question: '서버 버전이 맞지 않으면 어떻게 되나요?',
       answer:
-        'RPGSkills는 Spigot/Paper Minecraft 26.1.2 (API 26.1.2) 기준으로 개발·테스트됩니다. ' +
-        '다른 메이저 버전에서는 명령어·몬스터·GUI가 동작하지 않거나 콘솔 오류가 발생할 수 있습니다.',
+        'RPGSkills는 Spigot/Paper Minecraft 26.2와 26.1.2용 JAR를 따로 제공합니다. ' +
+        'Download 페이지에서 서버 버전을 선택한 뒤 해당 JAR를 설치하세요. 다른 메이저 버전에서는 명령어·몬스터·GUI가 동작하지 않거나 콘솔 오류가 발생할 수 있습니다.',
     },
     {
       id: 'resource-pack',

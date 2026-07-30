@@ -9,7 +9,8 @@ export function InstallPage() {
     <>
       <PageHeader title={t.install.pageTitle} description={t.install.pageDescription} />
       <div className="notice">
-        <strong>{t.install.versionNotice}:</strong> {site.mcVersion} — {t.hero.mcVersionLabel}
+        <strong>{t.install.versionNotice}:</strong> MC {site.supportedMcVersions.join(' · ')} —{' '}
+        {t.hero.mcVersionLabel}
       </div>
       <div className="install-steps">
         {t.install.steps.map((step, i) => (

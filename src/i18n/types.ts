@@ -239,6 +239,7 @@ export type Translations = {
     pageTitle: string;
     pageDescription: string;
     pluginJar: string;
+    mcVersionSelect: string;
     latestFromGithub: string;
     loading: string;
     apiFallback: string;
