@@ -41,14 +41,14 @@ export const sapperDetail: ClassDetailDef = {
             name: '투석기',
             input: '우클릭',
             description:
-              '전방에 투석기를 설치해 돌탄 3발을 포물선으로 발사합니다. 돌은 잠시 후 자동 폭발하며, 적 근처에서도 즉시 터집니다.',
+              '전방에 투석기를 설치해 돌탄 7발을 포물선으로 발사합니다. 돌은 잠시 후 자동 폭발하며, 적 근처에서도 즉시 터집니다.',
             extra: ['착탄 시 광역 피해와 제압을 가합니다.', '투석기는 가장 가까운 적 방향으로 회전합니다.'],
           },
           en: {
             name: 'Catapult',
             input: 'Right-click',
             description:
-              'Deploys a catapult that lobs 3 stone shots. Stones auto-detonate shortly after launch or near enemies.',
+              'Deploys a catapult that lobs 7 stone shots. Stones auto-detonate shortly after launch or near enemies.',
             extra: ['Deals area damage and suppression on impact.', 'Catapult rotates toward nearest enemy.'],
           },
           masterLevel: 50,
@@ -61,12 +61,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '스프링갈드',
             input: '웅크리기 + 우클릭',
-            description: '전방에 석궁 거치대를 설치해 4발의 화살을 직선으로 관통 발사합니다. 화살은 근처 적을 자동 조준합니다.',
+            description: '전방에 발리스타를 설치해 8발의 화살을 직선으로 관통 발사합니다. 설치물이 근처 적을 향해 조준하며 발사합니다.',
           },
           en: {
             name: 'Springald',
             input: 'Sneak + right-click',
-            description: 'Deploys a springald that fires 4 bolts in a line. Bolts auto-aim toward nearby enemies.',
+            description: 'Deploys a ballista that fires 8 piercing bolts. The mount aims and fires at nearby enemies.',
           },
           masterLevel: 50,
         },
@@ -100,15 +100,15 @@ export const sapperDetail: ClassDetailDef = {
             name: '비등유',
             input: '웅크리기 + 손 바꾸기',
             description:
-              '전방 가마에서 검은 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 웅덩이는 잠시 유지되며, 적을 중심으로 끌어당깁니다.',
-            extra: ['그리스불로 점화 가능합니다.'],
+              '전방 가마에서 검은 기름을 쏟아 광역 피해와 강한 제압을 가합니다. 검은 기름판이 잠시 유지되며, 적을 중심으로 끌어당깁니다.',
+            extra: ['그리스불로 점화하면 붉은 불판으로 변합니다.'],
           },
           en: {
             name: 'Boiling Oil',
             input: 'Sneak + swap hands',
             description:
-              'Pours black oil from a forward vat for area damage and heavy suppression. The pool lingers and pulls enemies toward its center.',
-            extra: ['Can ignite with Greek fire.'],
+              'Pours black oil from a forward vat for area damage and heavy suppression. A black oil plate lingers and pulls enemies toward its center.',
+            extra: ['Greek fire turns the pool into a red burning plate.'],
           },
           masterLevel: 50,
         },
@@ -197,12 +197,12 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '노선강철',
             input: '스프링갈드 종료 직후 웅크리기 + 우클릭',
-            description: '전방 직선 피해.',
+            description: '전방에 강철 말뚝 노선(중세 철책 함정)을 깔아 순차 돌출 피해를 주고, 노선 위 적을 Holding·둔화로 붙잡습니다.',
           },
           en: {
             name: 'Spring Rip',
             input: 'Sneak + right-click after Springald ends',
-            description: 'Forward line damage.',
+            description: 'Deploys a steel stake corridor that erupts forward, Holding and slowing foes on the line.',
           },
         },
         {
@@ -346,15 +346,15 @@ export const sapperDetail: ClassDetailDef = {
           ko: {
             name: '철갑관통',
             input: '웅크+우클릭 (노선강철 직후)',
-            description: '노선강철 직후 웅크+우클릭 시, 초대형 볼트로 적을 관통하며 벽으로 밀어붙입니다.',
-            extra: ['좁은 통로에서 사용하면 적을 벽에 꽂을 수 있습니다.'],
+            description: '노선강철 직후 웅크+우클릭 시, 초대형 볼트로 적을 관통하며 Holding과 둔화를 부여합니다.',
+            extra: ['밀치기 없이 적을 붙잡아 둔화시킵니다.'],
           },
           en: {
             name: 'Piercing Salvo',
             input: 'Sneak+right-click (after Spring Rip)',
             description:
-              'Sneak+right-click after Spring Rip to fire a massive bolt that pierces and slams enemies into walls.',
-            extra: ['Most effective in narrow corridors.'],
+              'Sneak+right-click after Spring Rip to fire a massive bolt that pierces foes and applies Holding and Slow.',
+            extra: ['No knockback; holds and slows enemies.'],
           },
         },
         {
