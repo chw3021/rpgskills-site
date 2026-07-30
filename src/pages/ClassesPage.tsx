@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { PageHeader } from '../components/ui/PageHeader';
 import { ClassCard } from '../components/classes/ClassCard';
 import { ImageLightbox } from '../components/ui/ImageLightbox';
@@ -12,15 +12,23 @@ import {
 } from '../data/classCatalog';
 import { CRAFTING_RECIPES } from '../data/craftingRecipes';
 import { useI18n } from '../i18n/useI18n';
-
-type PageTab = 'classes' | 'crafting';
+import {
+  loadClassesPageState,
+  saveClassesPageState,
+  type ClassesPageTab,
+} from '../utils/classesPageState';
 
 export function ClassesPage() {
   const { locale, t } = useI18n();
-  const [tab, setTab] = useState<PageTab>('classes');
-  const [archetypeFilter, setArchetypeFilter] = useState<ArchetypeId | 'all'>('all');
-  const [roleFilter, setRoleFilter] = useState<RoleId | 'all'>('all');
+  const initial = useRef(loadClassesPageState()).current;
+  const [tab, setTab] = useState<ClassesPageTab>(initial.tab);
+  const [archetypeFilter, setArchetypeFilter] = useState<ArchetypeId | 'all'>(
+    initial.archetypeFilter,
+  );
+  const [roleFilter, setRoleFilter] = useState<RoleId | 'all'>(initial.roleFilter);
   const [lightbox, setLightbox] = useState<{ src: string; title: string } | null>(null);
+  const stateRef = useRef({ tab, archetypeFilter, roleFilter });
+  stateRef.current = { tab, archetypeFilter, roleFilter };
 
   const filtered = useMemo(() => {
     return CLASSES.filter((c) => {
@@ -31,6 +39,39 @@ export function ClassesPage() {
   }, [archetypeFilter, roleFilter]);
 
   const loc = locale === 'ko' ? 'ko' : 'en';
+
+  useLayoutEffect(() => {
+    const y = initial.scrollY;
+    if (y > 0) {
+      const prev = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo(0, y);
+      document.documentElement.style.scrollBehavior = prev;
+    }
+    return () => {
+      saveClassesPageState({
+        ...stateRef.current,
+        scrollY: window.scrollY,
+      });
+    };
+  }, [initial.scrollY]);
+
+  useEffect(() => {
+    saveClassesPageState({
+      tab,
+      archetypeFilter,
+      roleFilter,
+      scrollY: window.scrollY,
+    });
+  }, [tab, archetypeFilter, roleFilter]);
+
+  const toggleArchetype = (id: ArchetypeId) => {
+    setArchetypeFilter((prev) => (prev === id ? 'all' : id));
+  };
+
+  const toggleRole = (id: RoleId) => {
+    setRoleFilter((prev) => (prev === id ? 'all' : id));
+  };
 
   return (
     <>
@@ -62,28 +103,46 @@ export function ClassesPage() {
           <section className="guide-block">
             <h2>{t.classes.archetypesTitle}</h2>
             <div className="legend-grid">
-              {ARCHETYPES.map((a) => (
-                <div key={a.id} className="legend-card">
-                  <h3>{a[loc].name}</h3>
-                  <p>{a[loc].desc}</p>
-                </div>
-              ))}
+              {ARCHETYPES.map((a) => {
+                const active = archetypeFilter === a.id;
+                return (
+                  <button
+                    key={a.id}
+                    type="button"
+                    className={active ? 'legend-card legend-card--active' : 'legend-card'}
+                    aria-pressed={active}
+                    onClick={() => toggleArchetype(a.id)}
+                  >
+                    <h3>{a[loc].name}</h3>
+                    <p>{a[loc].desc}</p>
+                  </button>
+                );
+              })}
             </div>
           </section>
 
           <section className="guide-block">
             <h2>{t.classes.rolesTitle}</h2>
             <div className="legend-grid legend-grid--compact">
-              {ROLES.map((r) => (
-                <div key={r.id} className="legend-card">
-                  <h3>{r[loc].name}</h3>
-                  <p>{r[loc].desc}</p>
-                </div>
-              ))}
+              {ROLES.map((r) => {
+                const active = roleFilter === r.id;
+                return (
+                  <button
+                    key={r.id}
+                    type="button"
+                    className={active ? 'legend-card legend-card--active' : 'legend-card'}
+                    aria-pressed={active}
+                    onClick={() => toggleRole(r.id)}
+                  >
+                    <h3>{r[loc].name}</h3>
+                    <p>{r[loc].desc}</p>
+                  </button>
+                );
+              })}
             </div>
           </section>
 
-          <section className="guide-block">
+          <section className="guide-block" id="class-roster">
             <h2>{t.classes.rosterTitle}</h2>
             <p className="meta">{t.classes.rosterHint}</p>
             <div className="class-filters">

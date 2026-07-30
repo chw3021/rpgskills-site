@@ -3,18 +3,15 @@ import { Link } from 'react-router-dom';
 import type { ClassDef } from '../../data/classCatalog';
 import { getClassDetail } from '../../data/classDetails';
 import { useI18n } from '../../i18n/useI18n';
-import { classIconFile } from '../../utils/classIcon';
+import { classIconSrc } from '../../utils/classIcon';
 import { ClassStatRadar } from './ClassStatRadar';
 
 type ClassCardProps = {
   cls: ClassDef;
 };
 
-const iconBase = `${import.meta.env.BASE_URL}class-icons/`;
-const iconExtensions = ['webp', 'png'] as const;
-
 export function ClassCard({ cls }: ClassCardProps) {
-  const [iconIndex, setIconIndex] = useState(0);
+  const [iconFailed, setIconFailed] = useState(false);
   const { locale, t } = useI18n();
   const copy = locale === 'ko' ? cls.ko : cls.en;
   const diff = t.classes.difficulty[cls.difficulty];
@@ -23,11 +20,7 @@ export function ClassCard({ cls }: ClassCardProps) {
   const s = cls.stats;
   const hasDetail = Boolean(getClassDetail(cls.id));
   const detailHref = `/classes/${cls.id}`;
-
-  const iconSrc =
-    iconIndex < iconExtensions.length
-      ? `${iconBase}${classIconFile(cls.id)}.${iconExtensions[iconIndex]}`
-      : null;
+  const iconSrc = iconFailed ? null : classIconSrc(cls.id);
 
   const body = (
     <>
@@ -41,7 +34,7 @@ export function ClassCard({ cls }: ClassCardProps) {
               width={96}
               height={96}
               loading="lazy"
-              onError={() => setIconIndex((i) => i + 1)}
+              onError={() => setIconFailed(true)}
             />
           </div>
         )}

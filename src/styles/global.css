@@ -989,6 +989,26 @@ ul {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.legend-card:hover {
+  border-color: var(--accent);
+}
+
+.legend-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.legend-card--active {
+  border-color: var(--accent);
+  background: rgba(62, 207, 142, 0.08);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 .legend-card h3 {

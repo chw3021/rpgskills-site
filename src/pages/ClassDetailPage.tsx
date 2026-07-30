@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ClassDetailView } from '../components/classes/ClassDetailView';
 import { CLASSES } from '../data/classCatalog';
@@ -7,6 +8,10 @@ import { useI18n } from '../i18n/useI18n';
 export function ClassDetailPage() {
   const { classId } = useParams<{ classId: string }>();
   const { t } = useI18n();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [classId]);
 
   const cls = CLASSES.find((c) => c.id === classId);
   const detail = classId ? getClassDetail(classId) : undefined;

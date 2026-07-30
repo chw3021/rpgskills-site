@@ -9,8 +9,9 @@ export function classIconFile(classId: string): string {
   return ICON_FILE_ALIASES[classId] ?? classId;
 }
 
-export function classIconSrc(classId: string, ext: 'png' | 'webp' = 'webp'): string {
+/** Assets in public/class-icons are PNG; prefer png to avoid console 404s for missing webp. */
+export function classIconSrc(classId: string, ext: 'png' | 'webp' = 'png'): string {
   return `${iconBase}${classIconFile(classId)}.${ext}`;
 }
 
-export const classIconExtensions = ['webp', 'png'] as const;
+export const classIconExtensions = ['png', 'webp'] as const;

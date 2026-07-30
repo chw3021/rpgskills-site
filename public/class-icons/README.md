@@ -2,7 +2,7 @@
 
 Place AI-generated portraits here (one file per class id):
 
-- Format: `png` or `webp`, **512×512** recommended (site tries `.webp` then `.png`)
+- Format: **`png`** (preferred; site loads `.png` directly). Optional `.webp` fallback unused while assets are PNG.
 - Filename: `{id}.png` (e.g. `swordman.png`, `fireMage.png`)
 - IDs: see `src/data/classCatalog.ts`
 
