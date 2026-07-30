@@ -392,7 +392,7 @@ export const CLASSES: ClassDef[] = [
     id: 'standardBearer',
     archetype: 'battleLine',
     role: 'supporter',
-    difficulty: 'hard',
+    difficulty: 'easy',
     stats: { attack: 2, defence: 3, control: 3, support: 5, area: 2.5, range: 2.5, mobility: 4 },
     en: { name: 'StandardBearer', equipment: 'Dagger', summary: 'Rallies allies with her banner and ambushes or sways enemies.' },
     ko: { name: '기수', equipment: '단검', summary: '깃발로 아군을 돕고 적을 기습하거나 포섭합니다.' },
