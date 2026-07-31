@@ -17,12 +17,12 @@ export const broilerDetail: ClassDetailDef = {
     ko: [
       '상의를 벗은 근육질 투사가 철퇴로 전열을 무너뜨립니다. 지진강타·충격파·방어 분쇄·대지 쐐기·균열·먼지 폭발로 대지를 흔듭니다.',
       '전투본능은 공격력을 올립니다. 여진으로 지진강타를 이어갑니다.',
-      '감내자는 중력 낙석과 단계별 충격파로 대지를 분쇄하고, 역전가는 복수 단층선과 중앙 최종파로 전장을 마무리합니다.',
+      '감내자는 거대 암석 낙하와 단계별 충격파로 대지를 분쇄하고, 역전가는 암석 언덕 상승 후 강하 초토화로 전장을 마무리합니다.',
     ],
     en: [
       'A shirtless, muscular brawler who breaks formations with a mace. Seismic slam, shockwave, armor crack, earth spikes, fissures, and dust bursts shake the ground.',
       'Combat Instinct raises damage. Afterpulse chains off seismic slam.',
-      'Risk Taker shatters the earth with falling rocks and staged shockwaves; Game Changer ends the fight with multiple fault lines and a central final wave.',
+      'Risk Taker shatters the earth with giant falling rocks and staged shockwaves; Game Changer ends the fight by rising on a rock hill and crash-diving to smash the ground.',
     ],
   },
   skillSections: [
@@ -118,8 +118,16 @@ export const broilerDetail: ClassDetailDef = {
           id: 'dustBurst',
           icon: 'wind',
           element: 'earth',
-          ko: { name: '먼지 폭발', input: '우클릭', description: '흙먼지로 적을 제압합니다.' },
-          en: { name: 'Dust Burst', input: 'Right-click', description: 'Suppresses foes with a dust burst.' },
+          ko: {
+            name: '먼지 폭발',
+            input: '우클릭',
+            description: '전방에 모래 블록을 소환해 폭발시킵니다. 피격 적에게 실명을 부여합니다.',
+          },
+          en: {
+            name: 'Dust Burst',
+            input: 'Right-click',
+            description: 'Spawns a sand block ahead and detonates it. Applies Blindness to hit foes.',
+          },
           masterLevel: 50,
         },
         {
@@ -249,12 +257,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '먼지 파동',
             input: '먼지 폭발 직후 우클릭',
-            description: '짧은 시간 안에만 사용 가능합니다.',
+            description: '폭발 지점에서 모래 구형 파동이 3회 확장됩니다. 피격 적에게 실명을 부여합니다.',
           },
           en: {
             name: 'Dust Wave',
             input: 'Right-click after Dust Burst',
-            description: 'Only within a short window.',
+            description: 'Three expanding sand spheres erupt from the burst point. Applies Blindness.',
           },
         },
         {
@@ -276,13 +284,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '암석 낙하',
             input: '웅크리기 + 숫자키 4 (전투 모드)',
             description:
-              '중력에 따라 낙석이 떨어져 착탄 파편을 흩뿌리고 단계별 충격파로 대지를 분쇄합니다.',
+              '거대 암석이 떨어져 넓은 범위에 충격파를 일으키고 단계별로 대지를 분쇄합니다.',
           },
           en: {
             name: 'Bedrock Barrage',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Gravity-driven rocks scatter debris on impact while staged shockwaves shatter the earth.',
+              'Giant rocks slam down with wide impact shockwaves that shatter the earth in stages.',
           },
         },
       ],
@@ -394,12 +402,12 @@ export const broilerDetail: ClassDetailDef = {
           ko: {
             name: '먼지 폭풍',
             input: '먼지 파동 직후 우클릭',
-            description: '넓은 먼지 폭풍입니다.',
+            description: '전방에 모래 회오리를 만들어 적을 중심부로 끌어당깁니다.',
           },
           en: {
             name: 'Dust Storm',
             input: 'Right-click after Dust Wave',
-            description: 'Wide dust storm.',
+            description: 'Creates a sand whirlwind ahead that pulls enemies into its center.',
           },
         },
         {
@@ -427,13 +435,13 @@ export const broilerDetail: ClassDetailDef = {
             name: '단층 완파',
             input: '웅크리기 + 숫자키 5 (전투 모드)',
             description:
-              '복수 단층선을 따라 암반이 순차적으로 융기한 뒤 중앙의 강력한 최종 충격파로 마무리합니다.',
+              '주위 적을 제압하고 암석 언덕과 함께 상승한 뒤, 급강하해 지면을 철퇴로 초토화합니다.',
           },
           en: {
             name: 'Faultline Finisher',
             input: 'Sneak + hotkey 5 (combat mode)',
             description:
-              'Stone rises in sequence along multiple fault lines before a powerful final wave erupts from the center.',
+              'Suppresses nearby foes, rises on a rock hill, then crash-dives to smash the ground with your mace.',
           },
         },
       ],
