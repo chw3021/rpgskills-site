@@ -24,6 +24,14 @@ export function Hero() {
           >
             {t.hero.spigot}
           </a>
+          <a
+            href={site.curseforgeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
+            {t.hero.curseforge}
+          </a>
           <Link to="/install" className="btn btn-secondary">
             {t.hero.gettingStarted}
           </Link>

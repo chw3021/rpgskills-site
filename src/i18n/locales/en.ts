@@ -99,6 +99,7 @@ export const en: Translations = {
       'Custom monsters, weapons, armor, skills, quests, boss raids, and a party system — turn your server into an RPG adventure.',
     download: 'Download',
     spigot: 'Spigot Page',
+    curseforge: 'CurseForge',
     gettingStarted: 'Getting Started',
     compatible: 'Compatible with',
     mcVersionLabel: 'Spigot/Paper API 26.2 & 26.1.2 · pick the matching JAR on Download',
@@ -308,6 +309,7 @@ export const en: Translations = {
   },
   footer: {
     spigot: 'Spigot',
+    curseforge: 'CurseForge',
     releases: 'Releases',
     website: 'Website',
   },

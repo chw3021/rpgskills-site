@@ -8,6 +8,7 @@ export const site = {
   /** Supported MC / Spigot API lines — newest first */
   supportedMcVersions: ['26.2', '26.1.2'] as const,
   spigotUrl: 'https://www.spigotmc.org/resources/rpgskills.122034/',
+  curseforgeUrl: 'https://www.curseforge.com/minecraft/bukkit-plugins/rpgskills-by-chw3021',
   /** Private source — not used for JAR downloads */
   pluginRepo: 'https://github.com/chw3021/rpgskills.github.io',
   /** Public mirror — GitHub Releases API + direct JAR URLs */

@@ -208,6 +208,7 @@ export type Translations = {
     intro: string;
     download: string;
     spigot: string;
+    curseforge: string;
     gettingStarted: string;
     compatible: string;
     mcVersionLabel: string;
@@ -281,6 +282,7 @@ export type Translations = {
   };
   footer: {
     spigot: string;
+    curseforge: string;
     releases: string;
     website: string;
   };

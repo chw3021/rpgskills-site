@@ -99,6 +99,7 @@ export const ko: Translations = {
       '커스텀 몬스터, 무기·방어구, 스킬, 퀘스트, 보스 레이드, 파티 시스템으로 서버를 RPG 어드벤처로 바꿔 보세요.',
     download: '다운로드',
     spigot: 'Spigot 페이지',
+    curseforge: 'CurseForge',
     gettingStarted: '시작하기',
     compatible: '호환 버전',
     mcVersionLabel: 'Spigot/Paper API 26.2 · 26.1.2 · Download에서 서버에 맞는 JAR 선택',
@@ -306,6 +307,7 @@ export const ko: Translations = {
   },
   footer: {
     spigot: 'Spigot',
+    curseforge: 'CurseForge',
     releases: '릴리스',
     website: '웹사이트',
   },

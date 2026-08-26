@@ -15,6 +15,10 @@ export function Footer() {
             {t.footer.spigot}
           </a>
           {' · '}
+          <a href={site.curseforgeUrl} target="_blank" rel="noopener noreferrer">
+            {t.footer.curseforge}
+          </a>
+          {' · '}
           <a href={site.pluginReleasesUrl} target="_blank" rel="noopener noreferrer">
             {t.footer.releases}
           </a>
