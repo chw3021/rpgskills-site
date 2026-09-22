@@ -786,6 +786,78 @@ ul {
   box-shadow: 0 4px 16px rgba(0, 112, 186, 0.35);
 }
 
+.platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(62, 207, 142, 0.08));
+}
+
+.platform-links__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-right: 0.15rem;
+}
+
+.btn-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.btn-platform:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-platform--spigot {
+  background: rgba(237, 129, 6, 0.14);
+  border-color: rgba(237, 129, 6, 0.45);
+  color: #f0973a;
+}
+
+.btn-platform--spigot:hover {
+  background: rgba(237, 129, 6, 0.26);
+  box-shadow: 0 4px 16px rgba(237, 129, 6, 0.25);
+}
+
+.btn-platform--curseforge {
+  background: rgba(241, 100, 54, 0.14);
+  border-color: rgba(241, 100, 54, 0.45);
+  color: #f77b52;
+}
+
+.btn-platform--curseforge:hover {
+  background: rgba(241, 100, 54, 0.26);
+  box-shadow: 0 4px 16px rgba(241, 100, 54, 0.25);
+}
+
+.btn-platform--modrinth {
+  background: rgba(27, 217, 106, 0.14);
+  border-color: rgba(27, 217, 106, 0.45);
+  color: #2fe37f;
+}
+
+.btn-platform--modrinth:hover {
+  background: rgba(27, 217, 106, 0.26);
+  box-shadow: 0 4px 16px rgba(27, 217, 106, 0.25);
+}
+
 .card-grid {
   display: grid;
   gap: 1rem;

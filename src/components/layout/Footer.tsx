@@ -19,6 +19,10 @@ export function Footer() {
             {t.footer.curseforge}
           </a>
           {' · '}
+          <a href={site.modrinthUrl} target="_blank" rel="noopener noreferrer">
+            {t.footer.modrinth}
+          </a>
+          {' · '}
           <a href={site.pluginReleasesUrl} target="_blank" rel="noopener noreferrer">
             {t.footer.releases}
           </a>

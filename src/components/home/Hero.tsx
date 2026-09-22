@@ -16,11 +16,20 @@ export function Hero() {
           <Link to="/download" className="btn btn-primary">
             {t.hero.download}
           </Link>
+          <Link to="/install" className="btn btn-secondary">
+            {t.hero.gettingStarted}
+          </Link>
+          <Link to="/story" className="btn btn-secondary">
+            {t.nav.story}
+          </Link>
+        </div>
+        <div className="platform-links">
+          <span className="platform-links__label">{t.hero.platformsLabel}</span>
           <a
             href={site.spigotUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-secondary"
+            className="btn-platform btn-platform--spigot"
           >
             {t.hero.spigot}
           </a>
@@ -28,16 +37,18 @@ export function Hero() {
             href={site.curseforgeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-secondary"
+            className="btn-platform btn-platform--curseforge"
           >
             {t.hero.curseforge}
           </a>
-          <Link to="/install" className="btn btn-secondary">
-            {t.hero.gettingStarted}
-          </Link>
-          <Link to="/story" className="btn btn-secondary">
-            {t.nav.story}
-          </Link>
+          <a
+            href={site.modrinthUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-platform btn-platform--modrinth"
+          >
+            {t.hero.modrinth}
+          </a>
         </div>
       </div>
       <div className="hero-visual">

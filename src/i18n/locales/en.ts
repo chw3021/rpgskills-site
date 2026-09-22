@@ -100,6 +100,8 @@ export const en: Translations = {
     download: 'Download',
     spigot: 'Spigot Page',
     curseforge: 'CurseForge',
+    modrinth: 'Modrinth',
+    platformsLabel: 'Also available on',
     gettingStarted: 'Getting Started',
     compatible: 'Compatible with',
     mcVersionLabel: 'Spigot/Paper API 26.2 & 26.1.2 · pick the matching JAR on Download',
@@ -310,6 +312,7 @@ export const en: Translations = {
   footer: {
     spigot: 'Spigot',
     curseforge: 'CurseForge',
+    modrinth: 'Modrinth',
     releases: 'Releases',
     website: 'Website',
   },

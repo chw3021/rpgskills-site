@@ -100,6 +100,8 @@ export const ko: Translations = {
     download: '다운로드',
     spigot: 'Spigot 페이지',
     curseforge: 'CurseForge',
+    modrinth: 'Modrinth',
+    platformsLabel: '다른 플랫폼에서도 만나보세요',
     gettingStarted: '시작하기',
     compatible: '호환 버전',
     mcVersionLabel: 'Spigot/Paper API 26.2 · 26.1.2 · Download에서 서버에 맞는 JAR 선택',
@@ -308,6 +310,7 @@ export const ko: Translations = {
   footer: {
     spigot: 'Spigot',
     curseforge: 'CurseForge',
+    modrinth: 'Modrinth',
     releases: '릴리스',
     website: '웹사이트',
   },
