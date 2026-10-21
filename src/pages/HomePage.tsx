@@ -15,11 +15,11 @@ export function HomePage() {
         <h2>{t.home.championsTitle}</h2>
         <p className="home-champions__hint">{t.home.championsHint}</p>
       </section>
-      <section>
+      <section className="home-why">
         <h2>{t.home.whyTitle}</h2>
-        <div className="card-grid">
+        <div className="card-grid card-grid--numbered">
           {sections.slice(0, 3).map((section) => (
-            <article key={section.title} className="card">
+            <article key={section.title} className="card card--feature">
               <h3>{section.title}</h3>
               <ul>
                 {section.items.slice(0, 2).map((item) => (
@@ -29,7 +29,7 @@ export function HomePage() {
             </article>
           ))}
         </div>
-        <div className="btn-row" style={{ marginTop: '1.5rem' }}>
+        <div className="btn-row">
           <Link to="/features" className="btn btn-secondary">
             {t.home.viewAllFeatures}
           </Link>

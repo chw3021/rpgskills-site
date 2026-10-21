@@ -21,6 +21,7 @@ export const en: Translations = {
     support: 'Support',
     donate: 'Donate',
     ariaMain: 'Main navigation',
+    menu: 'Menu',
   },
   community: {
     firebaseNotConfigured:
@@ -33,6 +34,8 @@ export const en: Translations = {
     loading: 'Loading…',
     errorGeneric: 'Something went wrong. Please try again.',
     pageOf: 'Page {current} of {total}',
+    cancel: 'Cancel',
+    edited: 'edited',
     free: {
       pageTitle: 'Free board',
       pageDescription: 'Chat about the plugin, your server, and gameplay.',
@@ -59,6 +62,8 @@ export const en: Translations = {
       markSolved: 'Mark solved',
       markOpen: 'Mark open',
       solvedBadge: 'Solved',
+      confirmDeletePost: 'Delete this post? Its comments will be deleted too.',
+      confirmDeleteComment: 'Delete this comment?',
     },
     qna: {
       pageTitle: 'Q&A',
@@ -86,6 +91,8 @@ export const en: Translations = {
       markSolved: 'Mark solved',
       markOpen: 'Mark open',
       solvedBadge: 'Solved',
+      confirmDeletePost: 'Delete this question? Its answers will be deleted too.',
+      confirmDeleteComment: 'Delete this answer?',
     },
   },
   lang: {

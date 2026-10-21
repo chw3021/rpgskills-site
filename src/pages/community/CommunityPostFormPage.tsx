@@ -34,14 +34,25 @@ export function CommunityPostFormPage({ boardId, mode }: Props) {
   useEffect(() => {
     if (mode !== 'edit' || !isFirebaseConfigured() || !id) return;
     setReady(false);
-    const unsub = subscribePost(boardId, id, (post) => {
-      setSourcePost(post);
-      if (post) {
-        setTitle(post.title);
-        setBody(post.body);
-      }
-      setReady(true);
-    });
+    // Fill the inputs only once; later snapshots (e.g. new comments) must not overwrite in-progress edits.
+    let filled = false;
+    const unsub = subscribePost(
+      boardId,
+      id,
+      (post) => {
+        setSourcePost(post);
+        if (post && !filled) {
+          filled = true;
+          setTitle(post.title);
+          setBody(post.body);
+        }
+        setReady(true);
+      },
+      (e) => {
+        setError(e.message);
+        setReady(true);
+      },
+    );
     return unsub;
   }, [boardId, id, mode]);
 
@@ -71,15 +82,20 @@ export function CommunityPostFormPage({ boardId, mode }: Props) {
     }
   }
 
+  const backTo = mode === 'edit' && id ? boardPostPath(boardId, id) : boardBasePath(boardId);
+  const backLink = (
+    <Link to={boardBasePath(boardId)} className="back-link">
+      ← {copy.back}
+    </Link>
+  );
+
   if (mode === 'edit' && ready && isFirebaseConfigured() && id && !sourcePost) {
     return (
       <>
         <PageHeader title={formTitle} description={copy.pageDescription} />
         <AuthBar />
+        {backLink}
         <p className="community-empty">{copy.notFound}</p>
-        <p>
-          <Link to={boardBasePath(boardId)}>← {copy.back}</Link>
-        </p>
       </>
     );
   }
@@ -89,7 +105,7 @@ export function CommunityPostFormPage({ boardId, mode }: Props) {
       <>
         <PageHeader title={formTitle} description={copy.pageDescription} />
         <AuthBar />
-        <p className="text-muted">{t.community.loading}</p>
+        <p className="community-empty">{t.community.loading}</p>
       </>
     );
   }
@@ -98,17 +114,16 @@ export function CommunityPostFormPage({ boardId, mode }: Props) {
     <>
       <PageHeader title={formTitle} description={copy.pageDescription} />
       <AuthBar />
-      <p>
-        <Link to={boardBasePath(boardId)}>← {copy.back}</Link>
-      </p>
+      {backLink}
       {error ? <p className="community-error">{error}</p> : null}
 
       {user && isFirebaseConfigured() ? (
-        <form className="community-form card" onSubmit={(e) => void handleSubmit(e)}>
+        <form className="community-form community-form--post" onSubmit={(e) => void handleSubmit(e)}>
           <label>
             <span className="sr-only">{copy.titlePlaceholder}</span>
             <input
               type="text"
+              className="input input--title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder={copy.titlePlaceholder}
@@ -116,17 +131,31 @@ export function CommunityPostFormPage({ boardId, mode }: Props) {
               required
             />
           </label>
-          <textarea
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-            placeholder={copy.bodyPlaceholder}
-            rows={8}
-            maxLength={8000}
-            required
-          />
-          <button type="submit" className="btn btn-primary" disabled={submitting}>
-            {mode === 'new' ? copy.submit : copy.saveEdit}
-          </button>
+          <label>
+            <span className="sr-only">{copy.bodyPlaceholder}</span>
+            <textarea
+              className="input"
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+              placeholder={copy.bodyPlaceholder}
+              rows={12}
+              maxLength={8000}
+              required
+            />
+          </label>
+          <div className="community-form__footer">
+            <span className="community-form__counter">{body.length} / 8000</span>
+            <Link to={backTo} className="btn btn-ghost">
+              {t.community.cancel}
+            </Link>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={submitting || !title.trim() || !body.trim()}
+            >
+              {mode === 'new' ? copy.submit : copy.saveEdit}
+            </button>
+          </div>
         </form>
       ) : null}
     </>

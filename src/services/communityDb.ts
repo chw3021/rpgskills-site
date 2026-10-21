@@ -50,6 +50,8 @@ function mapPost(id: string, raw: Record<string, unknown>): CommunityPost {
     createdAt: Number(raw.createdAt ?? 0),
     updatedAt: Number(raw.updatedAt ?? 0),
     solved: raw.solved === true,
+    commentCount:
+      raw.comments && typeof raw.comments === 'object' ? Object.keys(raw.comments).length : 0,
   };
 }
 
@@ -90,19 +92,24 @@ export function subscribePost(
   boardId: BoardId,
   postId: string,
   onData: (post: CommunityPost | null) => void,
+  onError?: (error: Error) => void,
 ): Unsubscribe {
-  return onValue(postRef(boardId, postId), (snap) => {
-    if (!snap.exists()) {
-      onData(null);
-      return;
-    }
-    const val = snap.val() as Record<string, unknown>;
-    if (!val.title) {
-      onData(null);
-      return;
-    }
-    onData(mapPost(postId, val));
-  });
+  return onValue(
+    postRef(boardId, postId),
+    (snap) => {
+      if (!snap.exists()) {
+        onData(null);
+        return;
+      }
+      const val = snap.val() as Record<string, unknown>;
+      if (!val.title) {
+        onData(null);
+        return;
+      }
+      onData(mapPost(postId, val));
+    },
+    (err) => onError?.(err),
+  );
 }
 
 export async function updatePost(
@@ -127,16 +134,21 @@ export function subscribeComments(
   boardId: BoardId,
   postId: string,
   onData: (comments: CommunityComment[]) => void,
+  onError?: (error: Error) => void,
 ): Unsubscribe {
-  return onValue(commentsRef(boardId, postId), (snap) => {
-    const list: CommunityComment[] = [];
-    snap.forEach((child) => {
-      if (!child.key) return;
-      list.push(mapComment(child.key, child.val() as Record<string, unknown>));
-    });
-    list.sort((a, b) => a.createdAt - b.createdAt);
-    onData(list);
-  });
+  return onValue(
+    commentsRef(boardId, postId),
+    (snap) => {
+      const list: CommunityComment[] = [];
+      snap.forEach((child) => {
+        if (!child.key) return;
+        list.push(mapComment(child.key, child.val() as Record<string, unknown>));
+      });
+      list.sort((a, b) => a.createdAt - b.createdAt);
+      onData(list);
+    },
+    (err) => onError?.(err),
+  );
 }
 
 export async function createPost(

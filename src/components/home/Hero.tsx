@@ -8,19 +8,23 @@ export function Hero() {
 
   return (
     <section className="hero">
-      <div>
-        <h1>{site.name}</h1>
-        <p>{t.hero.tagline}</p>
-        <p style={{ color: 'var(--text-muted)' }}>{t.hero.intro}</p>
+      <div className="hero-copy">
+        <p className="eyebrow">
+          <span className="eyebrow__dot" aria-hidden />
+          Minecraft {site.supportedMcVersions.join(' · ')}
+        </p>
+        <h1 className="hero-title">{site.name}</h1>
+        <p className="hero-tagline">{t.hero.tagline}</p>
+        <p className="hero-intro">{t.hero.intro}</p>
         <div className="btn-row">
-          <Link to="/download" className="btn btn-primary">
-            {t.hero.download}
+          <Link to="/download" className="btn btn-primary btn-lg">
+            ⬇ {t.hero.download}
           </Link>
-          <Link to="/install" className="btn btn-secondary">
+          <Link to="/install" className="btn btn-secondary btn-lg">
             {t.hero.gettingStarted}
           </Link>
-          <Link to="/story" className="btn btn-secondary">
-            {t.nav.story}
+          <Link to="/story" className="btn btn-ghost btn-lg">
+            {t.nav.story} →
           </Link>
         </div>
         <div className="platform-links">
@@ -54,12 +58,8 @@ export function Hero() {
       <div className="hero-visual">
         <HeroBattleVisual />
         <div className="hero-badge">
-          {t.hero.compatible}{' '}
-          <strong>
-            MC {site.supportedMcVersions.join(' · ')}
-          </strong>
-          <br />
-          <span style={{ fontSize: '0.75rem' }}>{t.hero.mcVersionLabel}</span>
+          {t.hero.compatible} <strong>MC {site.supportedMcVersions.join(' · ')}</strong>
+          <small>{t.hero.mcVersionLabel}</small>
         </div>
       </div>
     </section>

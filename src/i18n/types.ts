@@ -128,6 +128,8 @@ export type CommunityBoardCopy = {
   solvedBadge: string;
   prevPage: string;
   nextPage: string;
+  confirmDeletePost: string;
+  confirmDeleteComment: string;
 };
 
 export type StoryChapter = {
@@ -184,6 +186,7 @@ export type Translations = {
     support: string;
     donate: string;
     ariaMain: string;
+    menu: string;
   };
   community: {
     firebaseNotConfigured: string;
@@ -195,6 +198,8 @@ export type Translations = {
     loading: string;
     errorGeneric: string;
     pageOf: string;
+    cancel: string;
+    edited: string;
     free: CommunityBoardCopy;
     qna: CommunityBoardCopy;
   };

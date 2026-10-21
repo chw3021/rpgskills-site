@@ -10,6 +10,7 @@ export type CommunityPost = {
   createdAt: number;
   updatedAt: number;
   solved?: boolean;
+  commentCount: number;
 };
 
 export type CommunityComment = {

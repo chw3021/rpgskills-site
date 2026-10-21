@@ -21,6 +21,7 @@ export const ko: Translations = {
     support: '지원',
     donate: '후원',
     ariaMain: '주 메뉴',
+    menu: '메뉴',
   },
   community: {
     firebaseNotConfigured:
@@ -33,6 +34,8 @@ export const ko: Translations = {
     loading: '불러오는 중…',
     errorGeneric: '요청을 처리하지 못했습니다. 잠시 후 다시 시도해 주세요.',
     pageOf: '{current} / {total} 페이지',
+    cancel: '취소',
+    edited: '수정됨',
     free: {
       pageTitle: '자유게시판',
       pageDescription: '플러그인·서버·플레이 이야기를 자유롭게 나눠 보세요.',
@@ -59,6 +62,8 @@ export const ko: Translations = {
       markSolved: '해결됨으로 표시',
       markOpen: '미해결로 표시',
       solvedBadge: '해결',
+      confirmDeletePost: '이 글을 삭제하시겠습니까? 댓글도 함께 삭제됩니다.',
+      confirmDeleteComment: '이 댓글을 삭제하시겠습니까?',
     },
     qna: {
       pageTitle: 'Q&A',
@@ -86,6 +91,8 @@ export const ko: Translations = {
       markSolved: '해결됨으로 표시',
       markOpen: '미해결로 표시',
       solvedBadge: '해결',
+      confirmDeletePost: '이 질문을 삭제하시겠습니까? 답변도 함께 삭제됩니다.',
+      confirmDeleteComment: '이 답변을 삭제하시겠습니까?',
     },
   },
   lang: {
