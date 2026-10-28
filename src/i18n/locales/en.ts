@@ -309,7 +309,7 @@ export const en: Translations = {
       { label: 'Server software', value: 'Paper or Spigot' },
       {
         label: 'Java',
-        value: 'The plugin is compiled for Java 21. Run the Java version your Paper or Spigot build requires.',
+        value: 'Java 21',
       },
       { label: 'Required plugins', value: 'None' },
       { label: 'Resource pack', value: 'Optional but recommended for custom textures (Beta)' },
@@ -347,7 +347,7 @@ export const en: Translations = {
       {
         title: '3. Apply the resource pack',
         body:
-          'Download the pack from the Download page. Use GitHub Code → Download ZIP or the Google Drive mirror. ' +
+          'Download the pack from the Download page. Use GitHub Code → Download ZIP. ' +
           'Distribute via server.properties resource-pack or per-player client install.',
       },
       {
@@ -569,7 +569,7 @@ export const en: Translations = {
       question: 'Textures look broken without the resource pack',
       answer:
         'Custom weapons, armor, and monsters require the resource pack (Beta). ' +
-        'Download it from the Download page (GitHub ZIP or Google Drive) and apply via server or client.',
+        'Download it from the Download page (GitHub ZIP) and apply via server or client.',
     },
     {
       id: 'party-error',

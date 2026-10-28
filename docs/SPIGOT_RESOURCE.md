@@ -16,7 +16,7 @@ Paste into [RPGSkills resource edit](https://www.spigotmc.org/resources/rpgskill
 | **Spigot API builds** | `26.2-R0.1-SNAPSHOT` and `26.1.2-R0.1-SNAPSHOT` |
 | **API / Minecraft lines** | **26.2** (recommended) · **26.1.2** |
 | **Release assets** | `RPGskills-26.2.jar`, `RPGskills-26.1.2.jar` |
-| **Plugin release** | GitHub Releases tag (e.g. **v1.0.2**) |
+| **Plugin release** | GitHub Releases tag (e.g. **v1.0.21**) |
 
 **Current lines:** RPGSkills · **Spigot/Paper API 26.2 & 26.1.2** — pick the JAR that matches your server on the official Download page.
 
@@ -39,7 +39,7 @@ RPGSkills — Official site for guides · MC 26.2 & 26.1.2 (separate JARs)
 [SIZE=5][I]Guides, install steps, 32 classes, crafting grids, commands, FAQ, and community boards are kept up to date on the site. Use Spigot for reviews; use the site for accurate gameplay info.[/I][/SIZE]
 
 [B][SIZE=6][URL='https://chw3021.github.io/rpgskills-site/']https://chw3021.github.io/rpgskills-site/[/URL][/SIZE][/B]
-[SIZE=5][I]English · 한국어 · RPGSkills v1.0.2 · spigot-api 26.1.2-R0.1-SNAPSHOT · Minecraft 26.1.2[/I][/SIZE]
+[SIZE=5][I]English · 한국어 · RPGSkills v1.0.21 · spigot-api 26.1.2-R0.1-SNAPSHOT · Minecraft 26.1.2[/I][/SIZE]
 
 [B][SIZE=7]Requires Spigot/Paper API 26.1.2+[/SIZE][/B]
 [SIZE=5][I]Paper or Spigot [B]Minecraft 26.1.2[/B] with API [B]26.1.2[/B] or newer ([I]check /version or build logs — must match 26.1+, not legacy 1.21.x API jars[/I])[/I][/SIZE]
@@ -154,7 +154,7 @@ Knuckle / Wand / Dagger grids and alternate Bow·Crossbow·Fishing Rod materials
 ## Update post BBCode (optional — “Updates” section)
 
 ```bbcode
-[SIZE=5][B]RPGSkills v1.0.2[/B][/SIZE]
+[SIZE=5][B]RPGSkills v1.0.21[/B][/SIZE]
 [LIST]
 [*][SIZE=5][B][URL='https://chw3021.github.io/rpgskills-site/']★ Official website — primary documentation ★[/URL][/B][/SIZE]
 [*]Install · Download · 32 classes · crafting · commands · FAQ: [URL='https://chw3021.github.io/rpgskills-site/']chw3021.github.io/rpgskills-site[/URL]

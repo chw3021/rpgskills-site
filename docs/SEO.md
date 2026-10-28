@@ -64,7 +64,7 @@ custom monsters, field bosses and boss raids alone or in a party. No other plugi
 RPGSkills — Minecraft RPG Plugin with Classes and Skills
 
 RPGSkills is a free RPG plugin for Paper and Spigot servers (Minecraft 26.2 and 26.1.2,
-one JAR per version). It needs no other plugins.
+one JAR per version) running on Java 21. It needs no other plugins.
 
 How to play
 - Open the class menu with /rpg class and choose one of 32 classes across 8 archetypes

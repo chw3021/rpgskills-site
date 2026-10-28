@@ -299,7 +299,7 @@ export const ko: Translations = {
       { label: '서버 소프트웨어', value: 'Paper 또는 Spigot' },
       {
         label: 'Java',
-        value: '플러그인은 Java 21 기준으로 빌드됩니다. 사용 중인 Paper·Spigot 빌드가 요구하는 Java 버전으로 실행하세요.',
+        value: 'Java 21',
       },
       { label: '필수 플러그인', value: '없음' },
       { label: '리소스팩', value: '선택 사항이지만 커스텀 텍스처를 위해 권장합니다 (Beta)' },
@@ -337,7 +337,7 @@ export const ko: Translations = {
       {
         title: '3. 리소스팩 적용',
         body:
-          'Download 페이지에서 리소스팩을 받습니다. GitHub Code → Download ZIP 또는 Google Drive를 사용하세요. ' +
+          'Download 페이지에서 리소스팩을 받습니다. GitHub Code → Download ZIP을 사용하세요. ' +
           'server.properties resource-pack 또는 클라이언트 개별 적용이 가능합니다.',
       },
       {
@@ -555,7 +555,7 @@ export const ko: Translations = {
       question: '리소스팩을 적용하지 않으면 텍스처가 깨져 보여요',
       answer:
         '커스텀 무기·방어구·몬스터는 리소스팩(Beta)이 필요합니다. Download 페이지에서 ' +
-        'GitHub ZIP 또는 Google Drive 팩을 받아 서버 resource-pack 또는 클라이언트에 적용하세요.',
+        'GitHub ZIP 팩을 받아 서버 resource-pack 또는 클라이언트에 적용하세요.',
     },
     {
       id: 'party-error',
