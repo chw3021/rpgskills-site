@@ -1,45 +1,9 @@
+import { CommandTable } from '../components/support/CommandTable';
 import { FaqList } from '../components/support/FaqList';
 import { ReportIssue } from '../components/support/ReportIssue';
 import { PageHeader } from '../components/ui/PageHeader';
 import { site } from '../config/site';
 import { useI18n } from '../i18n/useI18n';
-import type { CommandRow } from '../i18n/types';
-
-function CommandTable({
-  title,
-  rows,
-  commandCol,
-  descriptionCol,
-}: {
-  title: string;
-  rows: CommandRow[];
-  commandCol: string;
-  descriptionCol: string;
-}) {
-  return (
-    <section style={{ marginBottom: '2rem' }}>
-      <h2>{title}</h2>
-      <table className="command-table">
-        <thead>
-          <tr>
-            <th>{commandCol}</th>
-            <th>{descriptionCol}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr key={row.cmd}>
-              <td>
-                <code>{row.cmd}</code>
-              </td>
-              <td>{row.desc}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
-  );
-}
 
 export function SupportPage() {
   const { t } = useI18n();

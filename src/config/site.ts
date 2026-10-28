@@ -23,3 +23,11 @@ export const site = {
 } as const;
 
 export type SupportedMcVersion = (typeof site.supportedMcVersions)[number];
+
+/** Main documentation pages linked from the home page and footer (router paths, trailing slash). */
+export const guideLinks = {
+  installation: '/installation/',
+  classes: '/classes/',
+  skills: '/skills/',
+  download: '/download/',
+} as const;

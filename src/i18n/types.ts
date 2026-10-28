@@ -26,6 +26,36 @@ export type ReportChannel = {
   description: string;
 };
 
+export type FactRow = {
+  label: string;
+  value: string;
+};
+
+export type GuideKey = 'installation' | 'classes' | 'skills' | 'download';
+
+export type SkillsTranslations = {
+  pageTitle: string;
+  pageDescription: string;
+  intro: string;
+  /** `{skills}` and `{classes}` are replaced with counts computed from the class data */
+  statsLine: string;
+  layoutTitle: string;
+  layoutItems: string[];
+  typesTitle: string;
+  types: { name: string; body: string }[];
+  controlsTitle: string;
+  controlsBody: string;
+  elementsTitle: string;
+  /** `{list}` is replaced with the localized element names */
+  elementsBody: string;
+  indexTitle: string;
+  indexHint: string;
+  /** `{name}` is replaced with the class name */
+  classLink: string;
+  /** `{count}` is replaced with the number of skills */
+  skillCount: string;
+};
+
 export type ClassesTranslations = {
   pageTitle: string;
   pageDescription: string;
@@ -100,6 +130,7 @@ export type ClassDetailTranslations = {
   passive: string;
   ultimate: string;
   masterLevel: string;
+  allSkills: string;
 };
 
 export type CommunityBoardCopy = {
@@ -169,7 +200,6 @@ export type CraftingTranslations = {
 export type Translations = {
   meta: {
     htmlLang: string;
-    siteDescription: string;
   };
   nav: {
     home: string;
@@ -179,6 +209,7 @@ export type Translations = {
     story: string;
     features: string;
     classes: string;
+    skills: string;
     install: string;
     download: string;
     boardFree: string;
@@ -209,6 +240,7 @@ export type Translations = {
     ko: string;
   };
   hero: {
+    subtitle: string;
     tagline: string;
     intro: string;
     download: string;
@@ -227,6 +259,17 @@ export type Translations = {
     viewClasses: string;
     championsTitle: string;
     championsHint: string;
+    factsTitle: string;
+    /** `{versions}` is replaced with the supported Minecraft versions */
+    facts: FactRow[];
+    guidesTitle: string;
+    guides: Record<GuideKey, { title: string; body: string }>;
+  };
+  skills: SkillsTranslations;
+  notFound: {
+    title: string;
+    body: string;
+    home: string;
   };
   story: StoryTranslations;
   classes: ClassesTranslations;
@@ -240,8 +283,25 @@ export type Translations = {
   install: {
     pageTitle: string;
     pageDescription: string;
-    versionNotice: string;
+    requirementsTitle: string;
+    /** `{versions}` is replaced with the supported Minecraft versions */
+    requirements: FactRow[];
+    downloadTitle: string;
+    /** `{jars}` is replaced with the JAR file names */
+    downloadBody: string;
+    downloadCta: string;
+    releasesCta: string;
+    stepsTitle: string;
     steps: InstallStep[];
+    firstRunTitle: string;
+    firstRunSteps: string[];
+    commandsTitle: string;
+    commandsMore: string;
+    commandsMoreLink: string;
+    troubleshootingTitle: string;
+    troubleshootingBody: string;
+    reportIssue: string;
+    supportLink: string;
   };
   download: {
     pageTitle: string;

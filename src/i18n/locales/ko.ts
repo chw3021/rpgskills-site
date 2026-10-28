@@ -3,8 +3,6 @@ import type { Translations } from '../types';
 export const ko: Translations = {
   meta: {
     htmlLang: 'ko',
-    siteDescription:
-      'RPGSkills — 마인크래프트 서버를 RPG 어드벤처로. 커스텀 몬스터, 스킬, 퀘스트, 레이드 등.',
   },
   nav: {
     home: '홈',
@@ -14,6 +12,7 @@ export const ko: Translations = {
     story: '스토리',
     features: '기능',
     classes: '직업',
+    skills: '스킬',
     install: '설치',
     download: '다운로드',
     boardFree: '자유게시판',
@@ -101,6 +100,7 @@ export const ko: Translations = {
     ko: '한국어',
   },
   hero: {
+    subtitle: '직업과 스킬을 갖춘 마인크래프트 RPG 플러그인',
     tagline: '위더의 그림자 아래, 서버를 RPG 어드벤처로 바꿔 보세요',
     intro:
       '커스텀 몬스터, 무기·방어구, 스킬, 퀘스트, 보스 레이드, 파티 시스템으로 서버를 RPG 어드벤처로 바꿔 보세요.',
@@ -122,6 +122,72 @@ export const ko: Translations = {
     championsTitle: '32명의 영웅이 맞선다',
     championsHint:
       '각 직업은 고유한 무기와 스킬로 전장에 서 있습니다. 위더의 그림자가 드리운 세계에서, 당신이 선택한 길이 마지막 방어선이 됩니다.',
+    factsTitle: 'RPGSkills 한눈에 보기',
+    facts: [
+      { label: '마인크래프트 버전', value: '{versions} — 버전별 JAR 제공' },
+      { label: '서버 소프트웨어', value: 'Paper 또는 Spigot' },
+      { label: '필수 플러그인', value: '없음 — 다른 플러그인 없이 동작합니다' },
+      { label: '리소스팩', value: '커스텀 무기·방어구·몬스터 외형을 위해 권장합니다 (Beta)' },
+      { label: '직업', value: '8계열 × 4역할, 총 32직업' },
+      { label: '가격', value: '무료 — 후원은 선택 사항이며 기능 해금과 무관합니다' },
+    ],
+    guidesTitle: '가이드',
+    guides: {
+      installation: {
+        title: '설치 가이드',
+        body: '서버 요구 사항, 단계별 설치, 첫 명령어, 문제 해결 방법을 안내합니다.',
+      },
+      classes: {
+        title: '직업 가이드',
+        body: '32개 직업의 역할, 추천 장비, 스탯, 배경, 스킬 트리를 확인하실 수 있습니다.',
+      },
+      skills: {
+        title: '스킬 가이드',
+        body: '스킬 트리, 한계 돌파, 연계기, 패시브, 궁극기, 속성의 동작 방식을 설명합니다.',
+      },
+      download: {
+        title: '다운로드',
+        body: '서버 버전에 맞는 플러그인 JAR와 선택 사항인 리소스팩을 받으실 수 있습니다.',
+      },
+    },
+  },
+  skills: {
+    pageTitle: '스킬 가이드',
+    pageDescription:
+      'RPGSkills 직업 스킬의 구성과 동작 방식(스킬 트리, 한계 돌파, 연계기, 패시브, 궁극기, 속성, 조작법)과 모든 직업의 스킬 목록입니다.',
+    intro:
+      'RPGSkills의 모든 직업은 액티브 스킬, 연계기, 패시브, 궁극기로 이루어진 고유한 스킬 구성을 가집니다. 게임에서는 /rpg skill 로 현재 직업의 스킬을 확인하실 수 있고, 이 사이트의 직업 페이지에서도 같은 배치와 설명, 조작법을 보실 수 있습니다.',
+    statsLine: '이 사이트에는 {classes}개 직업, 총 {skills}개 스킬이 정리되어 있습니다.',
+    layoutTitle: '스킬 트리 구성',
+    layoutItems: [
+      '스킬 GUI는 9 × 3 칸으로 구성되며, 첫 줄에는 기본 스킬이 배치됩니다.',
+      '두 번째와 세 번째 줄은 1차·2차 한계 돌파 시 해금됩니다. 필요한 숙련도는 직업마다 다르며 각 직업 페이지에 표시됩니다.',
+      '같은 열의 스킬은 연계기로 이어지며, 많은 연계기는 같은 스킬을 한 번 더 사용해 발동합니다.',
+      '피해량은 스킬 레벨과 숙련도에 따라 달라지며, 스킬별 마스터 레벨이 표시됩니다.',
+      '/rpg rank 로 직업별 숙련도 상위 10위 랭킹을 확인하실 수 있습니다.',
+    ],
+    typesTitle: '스킬 종류',
+    types: [
+      { name: '액티브 스킬', body: '웅크리기 + 우클릭, 점프 + 좌클릭처럼 조작을 조합해 발동합니다.' },
+      { name: '연계기', body: '같은 열에서 이어지는 공격으로, 주로 같은 스킬을 한 번 더 사용해 발동합니다.' },
+      { name: '패시브', body: '직업 자체나 다른 스킬을 강화하는 효과입니다.' },
+      { name: '궁극기', body: '직업별 가장 강력한 스킬로, 주로 전투 모드에서 웅크리기 + 단축키 4 또는 5로 사용합니다.' },
+    ],
+    controlsTitle: '조작법',
+    controlsBody:
+      '스킬은 클릭, 웅크리기, 점프, 손 바꾸기, 전투 모드의 단축키 등 기본 조작으로 사용합니다. 스킬별 정확한 입력은 각 직업 페이지에 표시됩니다.',
+    elementsTitle: '속성',
+    elementsBody:
+      '모든 스킬은 {list} 중 하나의 속성을 가집니다. /rpg element 로 속성 공격력과 저항을 확인하실 수 있습니다.',
+    indexTitle: '직업별 스킬',
+    indexHint: '직업을 열면 스킬별 조작법과 설명을 보실 수 있습니다.',
+    classLink: '{name} 스킬·직업 가이드',
+    skillCount: '스킬 {count}개',
+  },
+  notFound: {
+    title: '페이지를 찾을 수 없습니다',
+    body: '요청하신 페이지가 없거나 주소가 변경되었습니다.',
+    home: '홈으로 이동',
   },
   story: {
     pageTitle: '세계관 — 위더의 귀환',
@@ -224,9 +290,41 @@ export const ko: Translations = {
     ],
   },
   install: {
-    pageTitle: '설치',
-    pageDescription: '플러그인 설치, 버전 호환, 리소스팩 적용 가이드.',
-    versionNotice: '버전',
+    pageTitle: '설치 가이드',
+    pageDescription:
+      'Paper·Spigot 서버에 RPGSkills를 설치하는 방법입니다. 요구 사항, 다운로드, 설치 순서, 첫 명령어, 문제 해결을 안내합니다.',
+    requirementsTitle: '요구 사항',
+    requirements: [
+      { label: '마인크래프트', value: '{versions} (서버 버전에 맞는 JAR를 받으세요)' },
+      { label: '서버 소프트웨어', value: 'Paper 또는 Spigot' },
+      {
+        label: 'Java',
+        value: '플러그인은 Java 21 기준으로 빌드됩니다. 사용 중인 Paper·Spigot 빌드가 요구하는 Java 버전으로 실행하세요.',
+      },
+      { label: '필수 플러그인', value: '없음' },
+      { label: '리소스팩', value: '선택 사항이지만 커스텀 텍스처를 위해 권장합니다 (Beta)' },
+    ],
+    downloadTitle: '다운로드',
+    downloadBody:
+      '마인크래프트 버전마다 JAR가 따로 있습니다: {jars}. 다운로드 페이지에서 GitHub의 최신 릴리스를 자동으로 연결합니다.',
+    downloadCta: '다운로드 페이지 열기',
+    releasesCta: 'GitHub 전체 릴리스',
+    stepsTitle: '설치 순서',
+    firstRunTitle: '처음 실행할 때',
+    firstRunSteps: [
+      '처음 재시작하면 plugins/RPGskills/ 폴더에 설정 파일이 생성됩니다.',
+      'config에서 언어와 RPGSkills를 활성화할 월드를 설정한 뒤 서버를 다시 시작합니다.',
+      '게임에서 /rpg class 로 직업 메뉴를 열고 직업을 선택합니다.',
+      '/rpg skill 로 직업 스킬과 조작법을 확인합니다.',
+    ],
+    commandsTitle: '주요 명령어',
+    commandsMore: '파티·관리자 명령어는 지원 페이지에서 확인하실 수 있습니다.',
+    commandsMoreLink: '전체 명령어 보기',
+    troubleshootingTitle: '문제 해결',
+    troubleshootingBody:
+      '문제가 계속되면 서버 버전, RPGSkills JAR 이름, 플러그인 목록, 전체 콘솔 로그를 첨부해 GitHub 이슈로 알려 주세요.',
+    reportIssue: 'GitHub에 이슈 등록',
+    supportLink: 'FAQ가 있는 지원 페이지',
     steps: [
       {
         title: '1. 서버 준비',
@@ -428,6 +526,7 @@ export const ko: Translations = {
     passive: '패시브',
     ultimate: '궁극기',
     masterLevel: '마스터 LV.{lv}',
+    allSkills: '전체 스킬 목록으로 보기',
   },
   crafting: {
     title: '커스텀 무기 조합',

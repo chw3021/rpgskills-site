@@ -9,7 +9,7 @@ export function ScrollToTop() {
   const { pathname } = useLocation();
 
   useLayoutEffect(() => {
-    if (pathname === '/classes') {
+    if (pathname.replace(/\/+$/, '') === '/classes') {
       return;
     }
     const prev = document.documentElement.style.scrollBehavior;

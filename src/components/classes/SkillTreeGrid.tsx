@@ -22,7 +22,7 @@ const ELEMENT_CLASS: Record<SkillElement, string> = {
   frost: 'skill-tree__element--frost',
 };
 
-const LEGEND_ELEMENTS: SkillElement[] = [
+export const LEGEND_ELEMENTS: SkillElement[] = [
   'earth',
   'wind',
   'fire',
@@ -33,7 +33,7 @@ const LEGEND_ELEMENTS: SkillElement[] = [
   'frost',
 ];
 
-function elementLabel(element: SkillElement, t: SkillTreeGridProps['t']): string {
+export function elementLabel(element: SkillElement, t: SkillTreeGridProps['t']): string {
   const labels: Record<SkillElement, string> = {
     earth: t.classDetail.elementEarth,
     wind: t.classDetail.elementWind,
@@ -197,6 +197,14 @@ export function SkillTreeGrid({ detail, loc, locale, t }: SkillTreeGridProps) {
       </div>
 
       {selected && <SkillDetailPanel node={selected} loc={loc} t={t} />}
+
+      {/* Every skill stays in the HTML so the page is readable without clicking each cell. */}
+      <details className="skill-tree__all">
+        <summary>{t.classDetail.allSkills}</summary>
+        {placed.map((node) => (
+          <SkillDetailPanel key={node.skill.id} node={node} loc={loc} t={t} />
+        ))}
+      </details>
     </div>
   );
 }

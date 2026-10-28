@@ -5,7 +5,7 @@ Paste into [RPGSkills resource edit](https://www.spigotmc.org/resources/rpgskill
 | Spigot field | What to use |
 |--------------|-------------|
 | **Game version** | Minecraft **26.2** and **26.1.2** (separate JARs) |
-| **External download link** | Site download page (version selector): `https://chw3021.github.io/rpgskills-site/#/download` — or latest assets `RPGskills-26.2.jar` / `RPGskills-26.1.2.jar` on GitHub Releases |
+| **External download link** | Site download page (version selector): `https://chw3021.github.io/rpgskills-site/download/` — or latest assets `RPGskills-26.2.jar` / `RPGskills-26.1.2.jar` on GitHub Releases |
 | **Main description** | BBCode block below |
 | **Do not link** | Private source `rpgskills.github.io` as download |
 
@@ -49,14 +49,14 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 
 [SIZE=4][B][COLOR=#0066cc]Official site — what to open[/COLOR][/B][/SIZE]
 [LIST]
-[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/#/']Home[/URL][/B][/SIZE] — overview & getting started
-[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/#/install']Install[/URL][/B][/SIZE] — server version, plugin folder, resource pack
-[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/#/download']Download[/URL][/B][/SIZE] — latest JAR (auto-linked from GitHub Releases) & resource pack ZIP
-[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/#/classes']32 classes & crafting[/URL][/B][/SIZE] — every class, skills, and recipe grids
-[*][B][URL='https://chw3021.github.io/rpgskills-site/#/features']Features[/URL][/B] — monsters, elements, raids, parties, config
-[*][B][URL='https://chw3021.github.io/rpgskills-site/#/story']Story / lore[/URL][/B] — Return of the Wither
-[*][B][URL='https://chw3021.github.io/rpgskills-site/#/support']Support[/URL][/B] — commands tables, FAQ, bug-report checklist
-[*][B][URL='https://chw3021.github.io/rpgskills-site/#/community/qna']Q&A board[/URL][/B] · [URL='https://chw3021.github.io/rpgskills-site/#/community/free']Free board[/URL] — ask on the site (Google sign-in)
+[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/']Home[/URL][/B][/SIZE] — overview & getting started
+[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/installation/']Install[/URL][/B][/SIZE] — server version, plugin folder, resource pack
+[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/download/']Download[/URL][/B][/SIZE] — latest JAR (auto-linked from GitHub Releases) & resource pack ZIP
+[*][SIZE=6][B][URL='https://chw3021.github.io/rpgskills-site/classes/']32 classes & crafting[/URL][/B][/SIZE] — every class, skills, and recipe grids
+[*][B][URL='https://chw3021.github.io/rpgskills-site/features/']Features[/URL][/B] — monsters, elements, raids, parties, config
+[*][B][URL='https://chw3021.github.io/rpgskills-site/story/']Story / lore[/URL][/B] — Return of the Wither
+[*][B][URL='https://chw3021.github.io/rpgskills-site/support/']Support[/URL][/B] — commands tables, FAQ, bug-report checklist
+[*][B][URL='https://chw3021.github.io/rpgskills-site/community/qna/']Q&A board[/URL][/B] · [URL='https://chw3021.github.io/rpgskills-site/community/free/']Free board[/URL] — ask on the site (Google sign-in)
 [/LIST]
 
 [SIZE=4][B]Download (mirror)[/B][/SIZE]
@@ -66,29 +66,29 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 [*][URL='https://github.com/chw3021/rpgskills-releases/issues/new']Bug reports (GitHub Issues)[/URL]
 [/LIST]
 
-[SIZE=3][B]Features at a glance[/B] ([I]details on the [URL='https://chw3021.github.io/rpgskills-site/#/features']site[/URL][/I]):[/SIZE]
+[SIZE=3][B]Features at a glance[/B] ([I]details on the [URL='https://chw3021.github.io/rpgskills-site/features/']site[/URL][/I]):[/SIZE]
 [LIST]
 [*][B]Custom Monsters[/B]: Biome-based scaling and special abilities
 [*][B]Weapons & Armor[/B]: Custom gear; elemental fragments; [B][COLOR=#b300b3][U]/smith[/U][/COLOR][/B]
-[*][B]32 Classes & Skills[/B]: 8 archetypes × 4 roles — [URL='https://chw3021.github.io/rpgskills-site/#/classes']class guide[/URL]; [B]/rpg skill[/B], [B]/rpg rank[/B], [B]/rpg graph[/B]
+[*][B]32 Classes & Skills[/B]: 8 archetypes × 4 roles — [URL='https://chw3021.github.io/rpgskills-site/classes/']class guide[/URL]; [B]/rpg skill[/B], [B]/rpg rank[/B], [B]/rpg graph[/B]
 [*][B]Quests[/B]: Quest NPCs after structure loot
 [*][B]Combo & Field Bosses[/B]: 5 combo stacks spawn extras; milestones summon field bosses
 [*][B]Boss Raids[/B]: Jungle, Nether, End ([B][COLOR=#5900b3]EnderMimic[/COLOR][/B]), Wither Raid (Beta)
 [*][B]Party System[/B]: create, join, invite, kick, assemble, and more
-[*][B]Resource Pack[/B] (Beta) — [URL='https://chw3021.github.io/rpgskills-site/#/download']download on official site[/URL] ([URL='https://github.com/chw3021/RpgSkills']GitHub ZIP[/URL])
+[*][B]Resource Pack[/B] (Beta) — [URL='https://chw3021.github.io/rpgskills-site/download/']download on official site[/URL] ([URL='https://github.com/chw3021/RpgSkills']GitHub ZIP[/URL])
 [*][B]Multi-language config[/B] · [B]per-world toggles[/B]
 [/LIST]
 
-[SIZE=3][B]Installation[/B] ([I]step-by-step: [URL='https://chw3021.github.io/rpgskills-site/#/install']Install page[/URL][/I]):[/SIZE]
+[SIZE=3][B]Installation[/B] ([I]step-by-step: [URL='https://chw3021.github.io/rpgskills-site/installation/']Install page[/URL][/I]):[/SIZE]
 [LIST=1]
 [*]Run [B]Paper or Spigot Minecraft 26.1.2[/B] with [B]Spigot API 26.1.2+[/B]
-[*]Get [B]RPGskills.jar[/B] from [URL='https://chw3021.github.io/rpgskills-site/#/download']official Download page[/URL] or [URL='https://github.com/chw3021/rpgskills-releases/releases']GitHub Releases[/URL]
+[*]Get [B]RPGskills.jar[/B] from [URL='https://chw3021.github.io/rpgskills-site/download/']official Download page[/URL] or [URL='https://github.com/chw3021/rpgskills-releases/releases']GitHub Releases[/URL]
 [*]Place in [B]plugins/[/B] and restart — config under [B]plugins/RPGskills/[/B]
 [*]Apply the resource pack (see Download page on the site)
 [*]Set language and worlds in config
 [/LIST]
 
-[B][SIZE=6][URL='https://chw3021.github.io/rpgskills-site/#/download']→ Download & install on the official site[/URL][/SIZE][/B]
+[B][SIZE=6][URL='https://chw3021.github.io/rpgskills-site/download/']→ Download & install on the official site[/URL][/SIZE][/B]
 
 
 
@@ -100,7 +100,7 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 [LIST]
 [*]Monster strength varies by biome; each biome drops elemental fragments for weapon upgrades.
 [*][B]Order[/B]: Earth (Plains) → Wind (Mountain/Hill) → Frost → Ocean → Dark (Forest) → Hyper (Desert) → Burning (Badlands) → Poison (Swamp) → Wild (Jungle). [I]Trident & Mace follow the Netherite order.[/I]
-[*]Smith with [B][COLOR=#b300b3][U]/smith[/U][/COLOR][/B] — gear in slot 1, ingredient in slot 2. Full tables: [URL='https://chw3021.github.io/rpgskills-site/#/classes']Classes & crafting[/URL]
+[*]Smith with [B][COLOR=#b300b3][U]/smith[/U][/COLOR][/B] — gear in slot 1, ingredient in slot 2. Full tables: [URL='https://chw3021.github.io/rpgskills-site/classes/']Classes & crafting[/URL]
 [/LIST]
 
 [SIZE=3][B]Boss raids[/B][/SIZE]
@@ -113,7 +113,7 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 [FONT=Verdana][SIZE=4][U][B]After reinstalling, delete raid world folders:[/B][/U]
 [U][B]OverworldRaid, NethercoreRaid, EndercoreRaid, WitherRaid[/B][/U][/SIZE][/FONT]
 
-[SIZE=3][B]Party commands[/B][/SIZE] ([I]full table: [URL='https://chw3021.github.io/rpgskills-site/#/support']Support[/URL][/I])
+[SIZE=3][B]Party commands[/B][/SIZE] ([I]full table: [URL='https://chw3021.github.io/rpgskills-site/support/']Support[/URL][/I])
 [LIST]
 [*]/party create [I]&lt;partyname&gt;[/I] · /party join [I]&lt;partyname&gt;[/I] · /party password [I]&lt;password&gt;[/I]
 [*]/party invite [I]&lt;player&gt;[/I] · /party kick [I]&lt;player&gt;[/I] · /party leave · /party assemble · /party list
@@ -122,19 +122,19 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 [SIZE=3][B]Player commands[/B][/SIZE]
 [LIST]
 [*]/rpg dam (d, damage) · /rpg element (el) · /rpg skill (s) · /rpg escape (es)
-[*]/rpg class (c) — [URL='https://chw3021.github.io/rpgskills-site/#/classes']all 32 classes on site[/URL]
+[*]/rpg class (c) — [URL='https://chw3021.github.io/rpgskills-site/classes/']all 32 classes on site[/URL]
 [*]/rpg rank (r) · /rpg graph (g) · /rpg gclear (gc) · /smith
 [/LIST]
 
 [B]Admin:[/B] /rpg exp · /rpg pro · /rpg enchant · /rpg enchant clear · /rpg elements (elm)
 
 [SIZE=4][B]Custom crafting (summary)[/B][/SIZE]
-Knuckle / Wand / Dagger grids and alternate Bow·Crossbow·Fishing Rod materials — [B][URL='https://chw3021.github.io/rpgskills-site/#/classes']see official crafting tab[/URL][/B]. Netherite-tier weapons also via [B][COLOR=#b300b3][U]/smith[/U][/COLOR][/B].
+Knuckle / Wand / Dagger grids and alternate Bow·Crossbow·Fishing Rod materials — [B][URL='https://chw3021.github.io/rpgskills-site/classes/']see official crafting tab[/URL][/B]. Netherite-tier weapons also via [B][COLOR=#b300b3][U]/smith[/U][/COLOR][/B].
 
 [SIZE=3][B]Need help?[/B][/SIZE]
 [LIST]
-[*][SIZE=5][B][URL='https://chw3021.github.io/rpgskills-site/#/support']Official Support — commands, FAQ, bug checklist[/URL][/B][/SIZE]
-[*][URL='https://chw3021.github.io/rpgskills-site/#/community/qna']Site Q&A board[/URL]
+[*][SIZE=5][B][URL='https://chw3021.github.io/rpgskills-site/support/']Official Support — commands, FAQ, bug checklist[/URL][/B][/SIZE]
+[*][URL='https://chw3021.github.io/rpgskills-site/community/qna/']Site Q&A board[/URL]
 [*][URL='https://github.com/chw3021/rpgskills-releases/issues/new']GitHub Issues[/URL]
 [*][URL='https://www.spigotmc.org/resources/rpgskills.122034/']Spigot reviews & discussion[/URL]
 [/LIST]

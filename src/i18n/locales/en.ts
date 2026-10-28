@@ -3,8 +3,6 @@ import type { Translations } from '../types';
 export const en: Translations = {
   meta: {
     htmlLang: 'en',
-    siteDescription:
-      'RPGSkills — Transform your Minecraft server into an RPG adventure. Custom monsters, skills, quests, raids, and more.',
   },
   nav: {
     home: 'Home',
@@ -14,6 +12,7 @@ export const en: Translations = {
     story: 'Story',
     features: 'Features',
     classes: 'Classes',
+    skills: 'Skills',
     install: 'Install',
     download: 'Download',
     boardFree: 'Free board',
@@ -101,6 +100,7 @@ export const en: Translations = {
     ko: '한국어',
   },
   hero: {
+    subtitle: 'Minecraft RPG plugin with classes and skills',
     tagline: 'Under the Wither’s shadow—turn your server into an RPG adventure',
     intro:
       'Custom monsters, weapons, armor, skills, quests, boss raids, and a party system — turn your server into an RPG adventure.',
@@ -122,6 +122,81 @@ export const en: Translations = {
     championsTitle: 'Thirty-two champions answer the call',
     championsHint:
       'Every class brings its own weapons and skills to the front line. In a world under the Wither’s shadow, the path you choose becomes the last line of defense.',
+    factsTitle: 'RPGSkills at a glance',
+    facts: [
+      { label: 'Minecraft versions', value: '{versions} — a separate JAR for each' },
+      { label: 'Server software', value: 'Paper or Spigot' },
+      { label: 'Required plugins', value: 'None — RPGSkills does not depend on other plugins' },
+      { label: 'Resource pack', value: 'Recommended for custom weapon, armor, and monster visuals (Beta)' },
+      { label: 'Classes', value: '32 classes across 8 archetypes and 4 roles' },
+      { label: 'Price', value: 'Free — donations are optional and do not unlock features' },
+    ],
+    guidesTitle: 'Guides',
+    guides: {
+      installation: {
+        title: 'Installation guide',
+        body: 'Server requirements, step-by-step setup, first commands, and troubleshooting.',
+      },
+      classes: {
+        title: 'Class guide',
+        body: 'All 32 classes with roles, recommended gear, stats, lore, and skill trees.',
+      },
+      skills: {
+        title: 'Skills overview',
+        body: 'How skill trees, limit breaks, combo chains, passives, ultimates, and elements work.',
+      },
+      download: {
+        title: 'Download',
+        body: 'The plugin JAR for your Minecraft version and the optional resource pack.',
+      },
+    },
+  },
+  skills: {
+    pageTitle: 'Skills and Skill Trees',
+    pageDescription:
+      'How class skills work in RPGSkills — skill tree layout, limit breaks, combo chains, passives, ultimates, elements, and controls — plus the skill list of every class.',
+    intro:
+      'Every class in RPGSkills has its own skill set made of active skills, follow-up attacks, passives, and ultimates. In game, /rpg skill shows the skills of your current class; each class page on this site shows the same layout with descriptions and controls.',
+    statsLine: '{skills} skills across {classes} classes are documented on this site.',
+    layoutTitle: 'Skill tree layout',
+    layoutItems: [
+      'The skill GUI is a 9 × 3 grid. The first row holds the base skills.',
+      'The second and third rows unlock at the 1st and 2nd limit break. Each class has its own proficiency thresholds, listed on its class page.',
+      'Skills in the same column form a combo chain; many follow-ups are triggered by using the same skill again.',
+      'Damage scales with skill level and proficiency, and skills list their master level.',
+      'Use /rpg rank to see the top 10 proficiency rankings for each class.',
+    ],
+    typesTitle: 'Skill types',
+    types: [
+      {
+        name: 'Active skills',
+        body: 'Triggered with a control combination such as Sneak + right-click or Jump + left-click.',
+      },
+      {
+        name: 'Follow-ups',
+        body: 'Chained attacks in the same column, often triggered by using the same skill again.',
+      },
+      { name: 'Passives', body: 'Effects that strengthen the class or its other skills.' },
+      {
+        name: 'Ultimates',
+        body: 'The strongest skills of each class, usually bound to Sneak + hotkey 4 or 5 in combat mode.',
+      },
+    ],
+    controlsTitle: 'Controls',
+    controlsBody:
+      'Skills use vanilla controls — clicks, sneaking, jumping, swapping hands, and hotbar keys in combat mode. The exact input of every skill is listed on its class page.',
+    elementsTitle: 'Elements',
+    elementsBody:
+      'Every skill has one of eight elements: {list}. Use /rpg element to check your elemental power and resistance.',
+    indexTitle: 'Skills by class',
+    indexHint: 'Open a class to see each skill with its controls and description.',
+    classLink: '{name} skills and class guide',
+    skillCount: '{count} skills',
+  },
+  notFound: {
+    title: 'Page not found',
+    body: 'The page you are looking for does not exist or has moved.',
+    home: 'Go to the home page',
   },
   story: {
     pageTitle: 'Lore — Return of the Wither',
@@ -225,9 +300,41 @@ export const en: Translations = {
     ],
   },
   install: {
-    pageTitle: 'Installation',
-    pageDescription: 'Plugin setup, version compatibility, and resource pack guide.',
-    versionNotice: 'Version',
+    pageTitle: 'How to Install RPGSkills',
+    pageDescription:
+      'Set up the RPGSkills Minecraft RPG plugin on a Paper or Spigot server: requirements, download, installation steps, first commands, and troubleshooting.',
+    requirementsTitle: 'Requirements',
+    requirements: [
+      { label: 'Minecraft', value: '{versions} (download the JAR that matches your server)' },
+      { label: 'Server software', value: 'Paper or Spigot' },
+      {
+        label: 'Java',
+        value: 'The plugin is compiled for Java 21. Run the Java version your Paper or Spigot build requires.',
+      },
+      { label: 'Required plugins', value: 'None' },
+      { label: 'Resource pack', value: 'Optional but recommended for custom textures (Beta)' },
+    ],
+    downloadTitle: 'Download',
+    downloadBody:
+      'Each Minecraft version has its own JAR: {jars}. The download page links the latest GitHub release automatically.',
+    downloadCta: 'Open the download page',
+    releasesCta: 'All releases on GitHub',
+    stepsTitle: 'Installation steps',
+    firstRunTitle: 'First run',
+    firstRunSteps: [
+      'After the first restart, the configuration files are created in plugins/RPGskills/.',
+      'Set the language and the worlds where RPGSkills is enabled in the config, then restart the server.',
+      'In game, open the class menu with /rpg class and pick a class.',
+      'Open /rpg skill to see your class skills and their controls.',
+    ],
+    commandsTitle: 'Essential commands',
+    commandsMore: 'Party and admin commands are listed on the support page.',
+    commandsMoreLink: 'View all commands',
+    troubleshootingTitle: 'Troubleshooting',
+    troubleshootingBody:
+      'If the problem continues, open an issue on GitHub with your server version, RPGSkills JAR name, plugin list, and full console log.',
+    reportIssue: 'Report an issue on GitHub',
+    supportLink: 'Support page with FAQ',
     steps: [
       {
         title: '1. Prepare your server',
@@ -431,6 +538,7 @@ export const en: Translations = {
     passive: 'Passive',
     ultimate: 'Ultimate',
     masterLevel: 'Master LV.{lv}',
+    allSkills: 'Show all skills as a list',
   },
   crafting: {
     title: 'Custom weapon crafting',

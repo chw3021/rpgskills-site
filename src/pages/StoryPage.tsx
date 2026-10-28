@@ -22,10 +22,10 @@ export function StoryPage() {
         <h2>{story.ctaTitle}</h2>
         <p>{story.ctaBody}</p>
         <div className="btn-row">
-          <Link to="/classes" className="btn btn-primary">
+          <Link to="/classes/" className="btn btn-primary">
             {story.ctaClasses}
           </Link>
-          <Link to="/download" className="btn btn-secondary">
+          <Link to="/download/" className="btn btn-secondary">
             {story.ctaDownload}
           </Link>
         </div>

@@ -21,7 +21,7 @@ export function FeaturesPage() {
         ))}
       </div>
       <div className="btn-row">
-        <Link to="/classes" className="btn btn-secondary">
+        <Link to="/classes/" className="btn btn-secondary">
           {t.home.viewClasses} →
         </Link>
       </div>

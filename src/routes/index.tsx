@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Navigate, Routes, Route } from 'react-router-dom';
 import { SiteLayout } from '../components/layout/SiteLayout';
 import { HomePage } from '../pages/HomePage';
 import { FeaturesPage } from '../pages/FeaturesPage';
@@ -9,6 +9,8 @@ import { DownloadPage } from '../pages/DownloadPage';
 import { SupportPage } from '../pages/SupportPage';
 import { DonatePage } from '../pages/DonatePage';
 import { StoryPage } from '../pages/StoryPage';
+import { SkillsPage } from '../pages/SkillsPage';
+import { NotFoundPage } from '../pages/NotFoundPage';
 import { CommunityListPage } from '../pages/community/CommunityListPage';
 import { CommunityPostDetailPage } from '../pages/community/CommunityPostDetailPage';
 import { CommunityPostFormPage } from '../pages/community/CommunityPostFormPage';
@@ -36,12 +38,15 @@ export function AppRoutes() {
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/classes" element={<ClassesPage />} />
         <Route path="/classes/:classId" element={<ClassDetailPage />} />
-        <Route path="/install" element={<InstallPage />} />
+        <Route path="/installation" element={<InstallPage />} />
+        <Route path="/install" element={<Navigate to="/installation/" replace />} />
+        <Route path="/skills" element={<SkillsPage />} />
         <Route path="/download" element={<DownloadPage />} />
         {communityRoutes('free', '/community/free')}
         {communityRoutes('qna', '/community/qna')}
         <Route path="/support" element={<SupportPage />} />
         <Route path="/donate" element={<DonatePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );

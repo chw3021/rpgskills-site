@@ -6,7 +6,6 @@ import {
   useState,
   type ReactNode,
 } from 'react';
-import { site } from '../config/site';
 import { detectLocaleFromIp } from './detectLocale';
 import {
   defaultLocale,
@@ -52,12 +51,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
+  // Title/description/canonical are per-URL (seo/pageMeta.ts); only the document language follows the UI.
   useEffect(() => {
     document.documentElement.lang = t.meta.htmlLang;
-    document.title = site.name;
-
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', t.meta.siteDescription);
   }, [t]);
 
   const value = useMemo(() => ({ locale, setLocale, t }), [locale, setLocale, t]);

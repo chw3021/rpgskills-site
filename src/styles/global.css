@@ -1242,11 +1242,25 @@ textarea.input {
   gap: 1rem;
 }
 
-.faq-question:hover {
-  color: var(--accent);
+.faq-question::-webkit-details-marker {
+  display: none;
 }
 
-.faq-question[aria-expanded='true'] {
+.faq-question {
+  list-style: none;
+}
+
+.faq-question::after {
+  content: '+';
+  flex-shrink: 0;
+}
+
+.faq-item[open] > .faq-question::after {
+  content: '−';
+}
+
+.faq-question:hover,
+.faq-item[open] > .faq-question {
   color: var(--accent);
 }
 
@@ -2742,5 +2756,114 @@ textarea.input {
 
   .skill-tree__row-labels {
     display: none;
+  }
+}
+
+/* ============================================================
+   Documentation pages (home facts, guides, install, skills)
+   ============================================================ */
+.hero-title__sub {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
+}
+
+.home-facts,
+.home-guides,
+.doc-section {
+  margin-bottom: 2.5rem;
+}
+
+.fact-list {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.fact-list__row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 14rem) 1fr;
+  gap: 1rem;
+  padding: 0.8rem 1.25rem;
+}
+
+.fact-list__row + .fact-list__row {
+  border-top: 1px solid var(--border);
+}
+
+.fact-list dt {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.fact-list dd {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.card--link {
+  display: block;
+  color: inherit;
+}
+
+.card--link:hover {
+  border-color: var(--border-strong);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.card--link h3 {
+  color: var(--accent);
+}
+
+.doc-list {
+  margin: 0;
+  padding-left: 1.4rem;
+  color: var(--text-muted);
+}
+
+.doc-list li + li {
+  margin-top: 0.45rem;
+}
+
+.skill-tree__all {
+  margin-top: 1.25rem;
+}
+
+.skill-tree__all > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.skill-tree__all > .skill-tree__detail {
+  margin-top: 0.75rem;
+}
+
+.skill-index {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+}
+
+.skill-index ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.skill-index li + li {
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 640px) {
+  .fact-list__row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
 }

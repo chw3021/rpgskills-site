@@ -13,17 +13,20 @@ export function Hero() {
           <span className="eyebrow__dot" aria-hidden />
           Minecraft {site.supportedMcVersions.join(' · ')}
         </p>
-        <h1 className="hero-title">{site.name}</h1>
+        <h1 className="hero-title">
+          {site.name}{' '}
+          <span className="hero-title__sub">{t.hero.subtitle}</span>
+        </h1>
         <p className="hero-tagline">{t.hero.tagline}</p>
         <p className="hero-intro">{t.hero.intro}</p>
         <div className="btn-row">
-          <Link to="/download" className="btn btn-primary btn-lg">
+          <Link to="/download/" className="btn btn-primary btn-lg">
             ⬇ {t.hero.download}
           </Link>
-          <Link to="/install" className="btn btn-secondary btn-lg">
+          <Link to="/installation/" className="btn btn-secondary btn-lg">
             {t.hero.gettingStarted}
           </Link>
-          <Link to="/story" className="btn btn-ghost btn-lg">
+          <Link to="/story/" className="btn btn-ghost btn-lg">
             {t.nav.story} →
           </Link>
         </div>

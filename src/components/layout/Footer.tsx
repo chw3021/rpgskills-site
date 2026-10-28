@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { site } from '../../config/site';
+import { guideLinks, site } from '../../config/site';
+import type { GuideKey } from '../../i18n/types';
 import { useI18n } from '../../i18n/useI18n';
 
 export function Footer() {
@@ -28,6 +29,13 @@ export function Footer() {
           </Link>
           <p>{t.hero.tagline}</p>
         </div>
+        <nav className="footer-links" aria-label="Guides">
+          {(Object.keys(guideLinks) as GuideKey[]).map((key) => (
+            <Link key={key} to={guideLinks[key]}>
+              {t.home.guides[key].title}
+            </Link>
+          ))}
+        </nav>
         <nav className="footer-links" aria-label="Footer">
           {links.map((link) => (
             <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">

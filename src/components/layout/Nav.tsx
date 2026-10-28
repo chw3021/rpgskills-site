@@ -5,6 +5,7 @@ type LeafKey =
   | 'story'
   | 'features'
   | 'classes'
+  | 'skills'
   | 'install'
   | 'download'
   | 'boardFree'
@@ -22,35 +23,39 @@ const navStructure: NavEntry[] = [
     type: 'group',
     labelKey: 'groupBackground',
     items: [
-      { to: '/story', labelKey: 'story' },
-      { to: '/features', labelKey: 'features' },
-      { to: '/classes', labelKey: 'classes' },
+      { to: '/story/', labelKey: 'story' },
+      { to: '/features/', labelKey: 'features' },
+      { to: '/classes/', labelKey: 'classes' },
+      { to: '/skills/', labelKey: 'skills' },
     ],
   },
   {
     type: 'group',
     labelKey: 'groupDownload',
     items: [
-      { to: '/install', labelKey: 'install' },
-      { to: '/download', labelKey: 'download' },
+      { to: '/installation/', labelKey: 'install' },
+      { to: '/download/', labelKey: 'download' },
     ],
   },
   {
     type: 'group',
     labelKey: 'groupCommunity',
     items: [
-      { to: '/community/free', labelKey: 'boardFree' },
-      { to: '/community/qna', labelKey: 'boardQna' },
-      { to: '/support', labelKey: 'support' },
+      { to: '/community/free/', labelKey: 'boardFree' },
+      { to: '/community/qna/', labelKey: 'boardQna' },
+      { to: '/support/', labelKey: 'support' },
     ],
   },
-  { type: 'cta', to: '/donate', labelKey: 'donate' },
+  { type: 'cta', to: '/donate/', labelKey: 'donate' },
 ];
 
+/** Compares without trailing slashes because both /classes and /classes/ reach the same page. */
 function isGroupActive(items: { to: string }[], pathname: string): boolean {
+  const current = pathname.replace(/\/+$/, '') || '/';
   return items.some((item) => {
-    if (item.to === '/') return pathname === '/';
-    return pathname === item.to || pathname.startsWith(`${item.to}/`);
+    const target = item.to.replace(/\/+$/, '') || '/';
+    if (target === '/') return current === '/';
+    return current === target || current.startsWith(`${target}/`);
   });
 }
 

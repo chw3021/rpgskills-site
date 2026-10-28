@@ -19,7 +19,7 @@ export function ClassCard({ cls }: ClassCardProps) {
   const role = t.classes.roleLabels[cls.role];
   const s = cls.stats;
   const hasDetail = Boolean(getClassDetail(cls.id));
-  const detailHref = `/classes/${cls.id}`;
+  const detailHref = `/classes/${cls.id}/`;
   const iconSrc = iconFailed ? null : classIconSrc(cls.id);
 
   const body = (

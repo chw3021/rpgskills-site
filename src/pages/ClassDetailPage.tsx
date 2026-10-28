@@ -22,7 +22,7 @@ export function ClassDetailPage() {
         <h1>{t.classDetail.notFoundTitle}</h1>
         <p>{t.classDetail.notFoundBody}</p>
         <p>
-          <Link to="/classes">{t.classDetail.backToRoster}</Link>
+          <Link to="/classes/">{t.classDetail.backToRoster}</Link>
         </p>
       </section>
     );

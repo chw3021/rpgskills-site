@@ -25,7 +25,7 @@ export function ClassDetailView({ cls, detail }: ClassDetailViewProps) {
   return (
     <article className="class-detail">
       <nav className="class-detail__nav">
-        <Link to="/classes">{t.classDetail.backToRoster}</Link>
+        <Link to="/classes/">{t.classDetail.backToRoster}</Link>
         <span className="class-detail__order">
           {t.classDetail.classIndex.replace('{n}', String(detail.order)).replace('{total}', '32')}
         </span>

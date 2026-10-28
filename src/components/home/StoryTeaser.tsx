@@ -16,7 +16,7 @@ export function StoryTeaser() {
             {p}
           </p>
         ))}
-        <Link to="/story" className="btn btn-secondary">
+        <Link to="/story/" className="btn btn-secondary">
           {story.readFull}
         </Link>
       </div>
