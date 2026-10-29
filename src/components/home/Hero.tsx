@@ -56,6 +56,14 @@ export function Hero() {
           >
             {t.hero.modrinth}
           </a>
+          <a
+            href={site.koreaminecraftUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-platform btn-platform--koreaminecraft"
+          >
+            {t.hero.koreaminecraft}
+          </a>
         </div>
       </div>
       <div className="hero-visual">

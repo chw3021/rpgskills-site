@@ -935,6 +935,17 @@ textarea.input {
   box-shadow: 0 4px 16px rgba(27, 217, 106, 0.25);
 }
 
+.btn-platform--koreaminecraft {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+}
+
+.btn-platform--koreaminecraft:hover {
+  background: rgba(59, 130, 246, 0.24);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+}
+
 /* ============================================================
    Home: story teaser, champions, features
    ============================================================ */

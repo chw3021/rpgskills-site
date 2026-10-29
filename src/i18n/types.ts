@@ -247,6 +247,7 @@ export type Translations = {
     spigot: string;
     curseforge: string;
     modrinth: string;
+    koreaminecraft: string;
     platformsLabel: string;
     gettingStarted: string;
     compatible: string;
@@ -351,6 +352,7 @@ export type Translations = {
     spigot: string;
     curseforge: string;
     modrinth: string;
+    koreaminecraft: string;
     releases: string;
     website: string;
   };

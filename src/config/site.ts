@@ -10,6 +10,7 @@ export const site = {
   spigotUrl: 'https://www.spigotmc.org/resources/rpgskills.122034/',
   curseforgeUrl: 'https://www.curseforge.com/minecraft/bukkit-plugins/rpgskills-by-chw3021',
   modrinthUrl: 'https://modrinth.com/plugin/rpgskills?loader=bukkit',
+  koreaminecraftUrl: 'https://www.koreaminecraft.net/plugins/4245632',
   /** Private source — not used for JAR downloads */
   pluginRepo: 'https://github.com/chw3021/rpgskills.github.io',
   /** Public mirror — GitHub Releases API + direct JAR URLs */

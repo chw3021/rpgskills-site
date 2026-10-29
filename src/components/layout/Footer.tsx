@@ -10,6 +10,7 @@ export function Footer() {
     { href: site.spigotUrl, label: t.footer.spigot },
     { href: site.curseforgeUrl, label: t.footer.curseforge },
     { href: site.modrinthUrl, label: t.footer.modrinth },
+    { href: site.koreaminecraftUrl, label: t.footer.koreaminecraft },
     { href: site.pluginReleasesUrl, label: t.footer.releases },
   ];
 
