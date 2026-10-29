@@ -13,6 +13,7 @@ export const ko: Translations = {
     features: '기능',
     classes: '직업',
     skills: '스킬',
+    simulator: '스킬 계산기',
     install: '설치',
     download: '다운로드',
     boardFree: '자유게시판',
@@ -184,6 +185,25 @@ export const ko: Translations = {
     indexHint: '직업을 열면 스킬별 조작법과 설명을 보실 수 있습니다.',
     classLink: '{name} 스킬·직업 가이드',
     skillCount: '스킬 {count}개',
+  },
+  simulator: {
+    pageTitle: '스킬 계수 계산기',
+    pageDescription: '직업과 스킬 레벨을 고르면 플러그인 기본 설정 기준의 스킬 계수와 예상 피해를 계산합니다.',
+    intro:
+      '플러그인이 사용하는 기본 스킬 계수를 레벨별로 계산합니다. 서버 config.yml의 SkillCoefficients 항목에서 같은 키로 값을 바꿀 수 있습니다.',
+    disclaimer:
+      '예상 피해는 "공격력(D) × 계수"로 계산한 참고값이며 피해 유형의 scaled 계수에만 표시됩니다. 실제 피해는 스킬마다 공식이 다르고 속성·인챈트·몬스터 보정이 더해집니다.',
+    classLabel: '직업',
+    levelLabel: '스킬 레벨',
+    attackLabel: '공격력 (D)',
+    classPageLink: '직업 가이드 보기',
+    skillCol: '스킬',
+    keyCol: '설정 키',
+    formulaCol: '공식',
+    valueCol: 'Lv.{level} 값',
+    estimateCol: '예상 피해',
+    noteCol: '분류',
+    noteLabels: {},
   },
   notFound: {
     title: '페이지를 찾을 수 없습니다',

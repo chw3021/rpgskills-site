@@ -56,6 +56,26 @@ export type SkillsTranslations = {
   skillCount: string;
 };
 
+export type SimulatorTranslations = {
+  pageTitle: string;
+  pageDescription: string;
+  intro: string;
+  disclaimer: string;
+  classLabel: string;
+  levelLabel: string;
+  attackLabel: string;
+  classPageLink: string;
+  skillCol: string;
+  keyCol: string;
+  formulaCol: string;
+  /** `{level}` is replaced with the selected skill level */
+  valueCol: string;
+  estimateCol: string;
+  noteCol: string;
+  /** Translations of the Korean notes in the plugin skeleton; unknown notes are shown as-is */
+  noteLabels: Record<string, string>;
+};
+
 export type ClassesTranslations = {
   pageTitle: string;
   pageDescription: string;
@@ -210,6 +230,7 @@ export type Translations = {
     features: string;
     classes: string;
     skills: string;
+    simulator: string;
     install: string;
     download: string;
     boardFree: string;
@@ -267,6 +288,7 @@ export type Translations = {
     guides: Record<GuideKey, { title: string; body: string }>;
   };
   skills: SkillsTranslations;
+  simulator: SimulatorTranslations;
   notFound: {
     title: string;
     body: string;

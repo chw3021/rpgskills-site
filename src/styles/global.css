@@ -1211,6 +1211,22 @@ textarea.input {
   background: rgba(255, 255, 255, 0.02);
 }
 
+.sim-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sim-controls label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .command-table code {
   color: var(--accent);
   font-size: 0.85rem;

@@ -10,6 +10,7 @@ import { SupportPage } from '../pages/SupportPage';
 import { DonatePage } from '../pages/DonatePage';
 import { StoryPage } from '../pages/StoryPage';
 import { SkillsPage } from '../pages/SkillsPage';
+import { SimulatorPage } from '../pages/SimulatorPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import { CommunityListPage } from '../pages/community/CommunityListPage';
 import { CommunityPostDetailPage } from '../pages/community/CommunityPostDetailPage';
@@ -41,6 +42,7 @@ export function AppRoutes() {
         <Route path="/installation" element={<InstallPage />} />
         <Route path="/install" element={<Navigate to="/installation/" replace />} />
         <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/simulator" element={<SimulatorPage />} />
         <Route path="/download" element={<DownloadPage />} />
         {communityRoutes('free', '/community/free')}
         {communityRoutes('qna', '/community/qna')}

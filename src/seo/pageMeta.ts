@@ -62,6 +62,12 @@ const STATIC_PAGES: Omit<PageMeta, 'image'>[] = [
     sitemap: true,
   },
   {
+    path: '/simulator/',
+    title: `Skill Coefficient Calculator | ${site.name}`,
+    description: en.simulator.pageDescription,
+    sitemap: true,
+  },
+  {
     path: '/features/',
     title: `Features - ${BRAND_SUFFIX}`,
     description:

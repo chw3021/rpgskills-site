@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs && node scripts/verify-seo.mjs",
     "preview": "vite preview",
+    "sync:coefficients": "node scripts/sync-skill-coefficients.mjs",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

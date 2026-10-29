@@ -6,6 +6,7 @@ type LeafKey =
   | 'features'
   | 'classes'
   | 'skills'
+  | 'simulator'
   | 'install'
   | 'download'
   | 'boardFree'
@@ -27,6 +28,7 @@ const navStructure: NavEntry[] = [
       { to: '/features/', labelKey: 'features' },
       { to: '/classes/', labelKey: 'classes' },
       { to: '/skills/', labelKey: 'skills' },
+      { to: '/simulator/', labelKey: 'simulator' },
     ],
   },
   {
