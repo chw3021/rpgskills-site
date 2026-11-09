@@ -212,7 +212,7 @@ export const witchDoctorDetail: ClassDetailDef = {
             name: 'Forbidden Hex',
             input: 'Use Bosou again',
             description:
-              'Consumes 20% party HP for regeneration and brief invulnerability. Duration scales with Bosou level.',
+              'Consumes 20% party HP for regeneration and brief invulnerability.',
           },
         },
         {

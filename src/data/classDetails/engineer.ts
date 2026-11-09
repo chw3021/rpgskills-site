@@ -102,13 +102,13 @@ export const engineerDetail: ClassDetailDef = {
             name: '제트팩',
             input: '우클릭 + 점프',
             description:
-              '낙하 피해에 면역됩니다. 착지 시 주변 적에게 피해를 주며, 피해량은 낙하 높이에 비례합니다.',
+              '낙하 피해에 면역됩니다. 착지 시 주변 적에게 피해를 줍니다.',
           },
           en: {
             name: 'Jetpack',
             input: 'Right-click + jump',
             description:
-              'Immune to fall damage. Landing damages nearby foes; damage scales with fall distance.',
+              'Immune to fall damage. Landing damages nearby foes.',
           },
           masterLevel: 1,
         },
