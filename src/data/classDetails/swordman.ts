@@ -261,7 +261,7 @@ export const swordmanDetail: ClassDetailDef = {
             name: '검무',
             input: '같은 스킬 재입력',
             description:
-              '발도 사용 후 다시 입력하면 검무를 펼칩니다. 여러 단의 베기와 타격 후 마무리 일격이 이어지며,',
+              '발도 사용 후 다시 입력하면 검무를 펼칩니다. 여러 단의 베기와 타격 후 마무리 일격이 이어집니다.',
           },
           en: {
             name: 'Sword Dance',

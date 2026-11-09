@@ -146,7 +146,7 @@ export const cavalrymanDetail: ClassDetailDef = {
           en: {
             name: 'Lancer Discipline',
             description:
-              'Increases damage. Grants mount speed after boarding and damage reduction briefly after dismounting (',
+              'Increases damage. Grants mount speed after boarding and damage reduction briefly after dismounting (scales with proficiency and level).',
           },
         },
       ],

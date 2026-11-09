@@ -174,7 +174,7 @@ export const sniperDetail: ClassDetailDef = {
           en: {
             name: 'Smoke Shell',
             input: 'Use the same skill again',
-            description: 'After flash bomb, throw smoke. Invulnerable while sneaking inside (duration',
+            description: 'After flash bomb, throw smoke. Invulnerable while sneaking inside (duration scales with Flash Bomb level).',
           },
         },
         {

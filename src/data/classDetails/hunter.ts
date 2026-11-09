@@ -21,7 +21,7 @@ export const hunterDetail: ClassDetailDef = {
     ],
     en: [
       'An assassin who strikes one mark from the hooded shadows. Stealth, dodge, and climb close the gap; one axe swing ends the hunt.',
-      'One Shot stacks every skill into a single empowered blow. Half damage when not fully charged; at full charge, bonus',
+      'One Shot stacks every skill into a single empowered blow. Half damage when not fully charged; at full charge, it adds bonus damage based on max HP.',
       'Jaeger brings terror; Executor brings righteous judgment. They ride the wind to execute evil from the dark.',
     ],
   },

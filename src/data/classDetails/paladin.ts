@@ -263,7 +263,7 @@ export const paladinDetail: ClassDetailDef = {
           en: {
             name: 'Bless',
             input: 'Use Pray again',
-            description: 'Grants party invulnerability. Duration',
+            description: 'Grants party invulnerability. Duration scales with Pray level.',
           },
         },
         {

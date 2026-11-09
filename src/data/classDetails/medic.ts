@@ -301,7 +301,7 @@ export const medicDetail: ClassDetailDef = {
             name: 'Caduceus Tower',
             input: 'Sneak + hotkey 4 (combat mode)',
             description:
-              'Deploys a Caduceus tower that pulses heal and saturation. Interval',
+              'Deploys a Caduceus tower that pulses heal and saturation. Interval depends on Medicine level.',
           },
         },
       ],
@@ -380,13 +380,13 @@ export const medicDetail: ClassDetailDef = {
             name: '초음파 분무기',
             input: '자동제세동기 재입력',
             description:
-              '초음파 분무기를 사용합니다. 부패 중첩이 늘고',
+              '초음파 분무기를 사용합니다. 부패 중첩 수가 증가합니다.',
           },
           en: {
             name: 'Ultrasonic Nebulizer',
             input: 'Use AED again',
             description:
-              'Uses an ultrasonic nebulizer. Adds decay stacks;',
+              'Uses an ultrasonic nebulizer. Increases decay stacks.',
           },
         },
         {

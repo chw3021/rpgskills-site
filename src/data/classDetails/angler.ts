@@ -92,7 +92,7 @@ export const anglerDetail: ClassDetailDef = {
             name: 'Coral Liquor',
             input: 'Sneak + swap hands',
             description:
-              'Brief party invulnerability with damage dealt/taken modifiers. Duration',
+              'Brief party invulnerability with damage dealt/taken modifiers. Duration scales with Coral Liquor level.',
           },
           masterLevel: 20,
         },
