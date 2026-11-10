@@ -13,6 +13,7 @@ export const en: Translations = {
     features: 'Features',
     classes: 'Classes',
     skills: 'Skills',
+    monsters: 'Monsters',
     simulator: 'Skill calculator',
     install: 'Install',
     download: 'Download',
@@ -194,6 +195,30 @@ export const en: Translations = {
     indexHint: 'Open a class to see each skill with its controls and description.',
     classLink: '{name} skills and class guide',
     skillCount: '{count} skills',
+  },
+  monsters: {
+    pageTitle: 'Monster Encyclopedia',
+    pageDescription:
+      'Every RPGSkills field monster by biome, with health, equipment, and the vanilla mob each one replaces.',
+    intro:
+      'RPGSkills turns vanilla mobs into zone-specific monsters depending on the biome. Each zone has its own health level, and named monsters take the place of specific vanilla mobs. Custom textures require the resource pack.',
+    statsLine: '{monsters} named monsters across {zones} zones',
+    jumpLabel: 'Jump to zone',
+    biomesLabel: 'Biomes',
+    hpLabel: 'HP',
+    baseLabel: 'Base mob',
+    equipmentLabel: 'Equipment & traits',
+    pack: 'Spawns {count} at once',
+    replaces: {
+      undead: 'Replaces undead mobs',
+      spider: 'Replaces spiders',
+      creeper: 'Replaces creepers',
+      enderman: 'Replaces endermen',
+      guardian: 'Replaces guardians',
+      bee: 'Replaces bees',
+      ocean: 'Replaces squid, or ocean mobs at night',
+      end: 'Replaces mobs in the End',
+    },
   },
   simulator: {
     pageTitle: 'Skill Coefficient Calculator',

@@ -2157,6 +2157,26 @@ textarea.input {
   text-decoration: underline;
 }
 
+.monster-card__head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.monster-card__hp {
+  margin: 0.25rem 0 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+a.class-badge {
+  text-decoration: none;
+}
+
+a.class-badge:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .class-card__equip,
 .class-card__summary {
   font-size: 0.9rem;

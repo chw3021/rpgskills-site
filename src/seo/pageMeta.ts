@@ -62,6 +62,12 @@ const STATIC_PAGES: Omit<PageMeta, 'image'>[] = [
     sitemap: true,
   },
   {
+    path: '/monsters/',
+    title: `Monster Encyclopedia - ${BRAND_SUFFIX}`,
+    description: en.monsters.pageDescription,
+    sitemap: true,
+  },
+  {
     path: '/simulator/',
     title: `Skill Coefficient Calculator | ${site.name}`,
     description: en.simulator.pageDescription,

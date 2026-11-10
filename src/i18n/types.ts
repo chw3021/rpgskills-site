@@ -56,6 +56,22 @@ export type SkillsTranslations = {
   skillCount: string;
 };
 
+export type MonstersTranslations = {
+  pageTitle: string;
+  pageDescription: string;
+  intro: string;
+  /** `{monsters}` and `{zones}` are replaced with counts computed from the monster data */
+  statsLine: string;
+  jumpLabel: string;
+  biomesLabel: string;
+  hpLabel: string;
+  baseLabel: string;
+  equipmentLabel: string;
+  /** `{count}` is replaced with the number spawned at once */
+  pack: string;
+  replaces: Record<'undead' | 'spider' | 'creeper' | 'enderman' | 'guardian' | 'bee' | 'ocean' | 'end', string>;
+};
+
 export type SimulatorTranslations = {
   pageTitle: string;
   pageDescription: string;
@@ -230,6 +246,7 @@ export type Translations = {
     features: string;
     classes: string;
     skills: string;
+    monsters: string;
     simulator: string;
     install: string;
     download: string;
@@ -288,6 +305,7 @@ export type Translations = {
     guides: Record<GuideKey, { title: string; body: string }>;
   };
   skills: SkillsTranslations;
+  monsters: MonstersTranslations;
   simulator: SimulatorTranslations;
   notFound: {
     title: string;
