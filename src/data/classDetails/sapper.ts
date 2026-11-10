@@ -381,15 +381,15 @@ export const sapperDetail: ClassDetailDef = {
           element: 'earth',
           guiColumn: 21,
           followUp: true,
-          chainOf: 'boilingOil',
+          chainOf: 'netTrap',
           ko: {
             name: '선인장 돌격',
-            input: '비등유 직후 웅크리기 + 손 바꾸기',
+            input: '그물함정 직후 웅크리기 + 손 바꾸기',
             description: '선인장 기둥을 굴려 적에게 피해·제압합니다.',
           },
           en: {
             name: 'Cactus Rush',
-            input: 'Sneak + swap hands after Boiling Oil',
+            input: 'Sneak + swap hands after Net Trap',
             description:
               'Rolls a cactus column at foes for damage and suppression.',
           },

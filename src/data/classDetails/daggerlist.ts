@@ -242,7 +242,7 @@ export const daggerlistDetail: ClassDetailDef = {
           en: {
             name: 'ShadowBurst',
             input: 'Sneak + swap hands after Execution',
-            description: "Explode at Execution's gather center for 5 hits and refresh bleed duration.",
+            description: 'Explode at Execution’s gather center for 5 hits and refresh bleed duration.',
           },
         },
         {

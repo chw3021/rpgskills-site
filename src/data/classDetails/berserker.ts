@@ -140,6 +140,7 @@ export const berserkerDetail: ClassDetailDef = {
             description:
               'Eager: 20% less damage taken, heal on hit. Frenzy: 20% more damage, extra HP cost on skills.',
           },
+          masterLevel: 1,
         },
         {
           id: 'lunacy',
