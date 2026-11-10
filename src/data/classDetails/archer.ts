@@ -58,7 +58,7 @@ export const archerDetail: ClassDetailDef = {
           en: {
             name: 'Retrieve',
             input: 'Swap hands',
-            description: '',
+            description: 'Damage scales with the number of arrows stuck in the target.',
           },
           masterLevel: 1,
         },

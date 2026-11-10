@@ -43,6 +43,7 @@ export const hunterDetail: ClassDetailDef = {
             name: 'Back Attack',
             description: '50% bonus damage when hitting from behind. Hit detection improves with XP level.',
           },
+          masterLevel: 1,
         },
         {
           id: 'webThrow',
@@ -50,6 +51,7 @@ export const hunterDetail: ClassDetailDef = {
           element: 'wind',
           ko: { name: '그물 투척', input: '웅크리기 + 우클릭', description: '그물을 투척합니다.' },
           en: { name: 'Web Throw', input: 'Sneak + right-click', description: 'Throws a web.' },
+          masterLevel: 1,
         },
         {
           id: 'dodge',
@@ -65,6 +67,7 @@ export const hunterDetail: ClassDetailDef = {
             input: 'Swap hands',
             description: 'Dodges. Reduces fall damage.',
           },
+          masterLevel: 1,
         },
         {
           id: 'hunting',
@@ -128,6 +131,7 @@ export const hunterDetail: ClassDetailDef = {
             input: 'Sneak + swap hands',
             description: 'Toggles wall climbing.',
           },
+          masterLevel: 1,
         },
         {
           id: 'atrocity',
@@ -238,6 +242,7 @@ export const hunterDetail: ClassDetailDef = {
           id: 'webRetrieving',
           icon: 'poison',
           element: 'wind',
+          followUp: true,
           ko: { name: '그물 회수', input: '재사용', description: '그물에 맞은 적을 끌어옵니다.' },
           en: { name: 'Web Retrieving', input: 'Use again', description: 'Pulls enemies caught in webs.' },
         },
