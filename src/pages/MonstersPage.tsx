@@ -12,11 +12,27 @@ function iconOf(id: string): string | undefined {
   return ICONS[`../assets/monster-icons/${id}.png`] ?? ICONS[`../assets/monster-icons/${id}.jpg`];
 }
 
+function isBoss(monster: MonsterDef): boolean {
+  return monster.kind === 'comboBoss' || monster.kind === 'raidBoss';
+}
+
 function MonsterCard({ monster }: { monster: MonsterDef }) {
   const { locale, t } = useI18n();
   const loc = locale === 'ko' ? 'ko' : 'en';
   const copy = monster[loc];
   const icon = iconOf(monster.id);
+  const hpLine =
+    monster.hp != null
+      ? `${t.monsters.hpLabel} ${monster.hp.toLocaleString(loc)}`
+      : monster.hpScale != null
+        ? t.monsters.hpScales.replace('{scale}', String(monster.hpScale))
+        : null;
+  const kindLabel =
+    monster.kind === 'comboBoss'
+      ? t.monsters.comboBoss
+      : monster.kind === 'raidBoss'
+        ? t.monsters.raidBoss
+        : null;
 
   return (
     <article className="class-card monster-card">
@@ -26,16 +42,17 @@ function MonsterCard({ monster }: { monster: MonsterDef }) {
         )}
         <header className="monster-card__head">
           <h3>{copy.name}</h3>
-          <p className="monster-card__hp">
-            {t.monsters.hpLabel} {monster.hp.toLocaleString(loc)}
-          </p>
+          {hpLine && <p className="monster-card__hp">{hpLine}</p>}
         </header>
       </div>
       <p className="class-card__badges">
+        {kindLabel && <span className="class-badge class-badge--diff">{kindLabel}</span>}
         <span className="class-badge">
           {t.monsters.baseLabel}: {ENTITY_NAMES[monster.entity][loc]}
         </span>
-        <span className="class-badge class-badge--role">{t.monsters.replaces[monster.replaces]}</span>
+        {monster.replaces && (
+          <span className="class-badge class-badge--role">{t.monsters.replaces[monster.replaces]}</span>
+        )}
         {monster.pack && (
           <span className="class-badge class-badge--diff">
             {t.monsters.pack.replace('{count}', String(monster.pack))}
@@ -74,7 +91,9 @@ export function MonstersPage() {
       </section>
 
       {ZONES.map((zone) => {
-        const monsters = MONSTERS.filter((m) => m.zone === zone.id);
+        const inZone = MONSTERS.filter((m) => m.zone === zone.id);
+        const field = inZone.filter((m) => !isBoss(m));
+        const bosses = inZone.filter(isBoss);
         return (
           <section key={zone.id} id={`zone-${zone.id}`} className="guide-block">
             <h2>{zone[loc].name}</h2>
@@ -82,12 +101,22 @@ export function MonstersPage() {
               <strong>{t.monsters.biomesLabel}:</strong> {zone[loc].biomes}
             </p>
             <p className="meta">{zone[loc].defaultMobs}</p>
-            {monsters.length > 0 && (
+            {field.length > 0 && (
               <div className="class-grid">
-                {monsters.map((m) => (
+                {field.map((m) => (
                   <MonsterCard key={m.id} monster={m} />
                 ))}
               </div>
+            )}
+            {bosses.length > 0 && (
+              <>
+                <h3 className="monster-bosses-title">{t.monsters.bossesTitle}</h3>
+                <div className="class-grid">
+                  {bosses.map((m) => (
+                    <MonsterCard key={m.id} monster={m} />
+                  ))}
+                </div>
+              </>
             )}
           </section>
         );

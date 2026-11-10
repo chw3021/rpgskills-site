@@ -65,8 +65,13 @@ export type MonstersTranslations = {
   jumpLabel: string;
   biomesLabel: string;
   hpLabel: string;
+  /** `{scale}` is replaced with the raid-phase HP multiplier */
+  hpScales: string;
   baseLabel: string;
   equipmentLabel: string;
+  comboBoss: string;
+  raidBoss: string;
+  bossesTitle: string;
   /** `{count}` is replaced with the number spawned at once */
   pack: string;
   replaces: Record<'undead' | 'spider' | 'creeper' | 'enderman' | 'guardian' | 'bee' | 'ocean' | 'end', string>;

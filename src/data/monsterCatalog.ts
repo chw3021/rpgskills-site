@@ -1,9 +1,9 @@
 import type { LocalizedText } from './classCatalog';
 
 /**
- * Field monsters from rpgskills-common monsters/*MobsSpawn.java.
- * Zones are listed in the order the plugin checks them (MobsSkillsEvents).
- * Raid mobs and bosses are not included.
+ * Field monsters from rpgskills-common monsters/*MobsSpawn.java,
+ * combo bosses from *Raids.java Boss(), and raid-world phase-2 bosses.
+ * Zones follow the plugin check order in MobsSkillsEvents, then the Wither raid.
  */
 
 export type EntityId =
@@ -26,7 +26,13 @@ export type EntityId =
   | 'shulker'
   | 'phantom'
   | 'slime'
-  | 'bee';
+  | 'bee'
+  | 'ironGolem'
+  | 'elderGuardian'
+  | 'breeze'
+  | 'witherSkeleton'
+  | 'piglin'
+  | 'wither';
 
 /** Which vanilla spawn the plugin replaces with this monster. */
 export type ReplaceId = 'undead' | 'spider' | 'creeper' | 'enderman' | 'guardian' | 'bee' | 'ocean' | 'end';
@@ -42,7 +48,8 @@ export type ZoneId =
   | 'poison'
   | 'wild'
   | 'nether'
-  | 'ender';
+  | 'ender'
+  | 'wither';
 
 export type ZoneDef = {
   id: ZoneId;
@@ -50,13 +57,20 @@ export type ZoneDef = {
   ko: { name: string; biomes: string; defaultMobs: string };
 };
 
+export type MonsterKind = 'field' | 'comboBoss' | 'raidBoss';
+
 export type MonsterDef = {
   /** Also the image file name: src/assets/monster-icons/{id}.jpg */
   id: string;
   zone: ZoneId;
   entity: EntityId;
-  hp: number;
-  replaces: ReplaceId;
+  /** Omitted for raid bosses whose health scales from the previous phase */
+  hp?: number;
+  /** Raid phase multiplier applied to the previous boss HP (1.2 or 1.5) */
+  hpScale?: number;
+  /** Default is a named field monster */
+  kind?: MonsterKind;
+  replaces?: ReplaceId;
   /** Number spawned at once when greater than 1 */
   pack?: number;
   en: { name: string; equipment: string };
@@ -84,6 +98,12 @@ export const ENTITY_NAMES: Record<EntityId, LocalizedText> = {
   phantom: { en: 'Phantom', ko: '팬텀' },
   slime: { en: 'Slime', ko: '슬라임' },
   bee: { en: 'Bee', ko: '꿀벌' },
+  ironGolem: { en: 'Iron Golem', ko: '철골렘' },
+  elderGuardian: { en: 'Elder Guardian', ko: '엘더가디언' },
+  breeze: { en: 'Breeze', ko: '브리즈' },
+  witherSkeleton: { en: 'Wither Skeleton', ko: '위더스켈레톤' },
+  piglin: { en: 'Piglin', ko: '피글린' },
+  wither: { en: 'Wither', ko: '위더' },
 };
 
 export const ZONES: ZoneDef[] = [
@@ -230,6 +250,19 @@ export const ZONES: ZoneDef[] = [
       name: '엔드',
       biomes: '엔드. 모든 몹 스폰이 대체될 수 있고, 용 병사들은 세 마리씩 나타납니다.',
       defaultMobs: '그 외 몹은 바닐라 이름에 체력 80,000입니다.',
+    },
+  },
+  {
+    id: 'wither',
+    en: {
+      name: 'Wither Raid',
+      biomes: 'Wither raid world, entered through a wither raid portal',
+      defaultMobs: 'No field monsters. The final boss is The Wither: True Form.',
+    },
+    ko: {
+      name: '위더 레이드',
+      biomes: '위더 레이드 월드. 위더 레이드 포탈로 입장합니다.',
+      defaultMobs: '필드 몬스터는 없습니다. 최종 보스는 [더 위더: 트루폼]입니다.',
     },
   },
 ];
@@ -857,5 +890,207 @@ export const MONSTERS: MonsterDef[] = [
       equipment: 'Dragon head, amethyst-trimmed netherite armor, Loyalty II trident and shield, slow falling',
     },
     ko: { name: '용수호자창기병', equipment: '드래곤 머리, 자수정 장식 네더라이트 갑옷, 충성 II 삼지창과 방패, 느린 낙하' },
+  },
+
+  // Combo bosses (*Raids.java Boss())
+  {
+    id: 'elderCreeper',
+    zone: 'plain',
+    entity: 'creeper',
+    hp: 200,
+    kind: 'comboBoss',
+    en: { name: 'ElderCreeper', equipment: 'Charged, giant size (scale 3.5), explosion radius 10, stones in both hands' },
+    ko: { name: '장로크리퍼', equipment: '대전된 상태, 거대 크기(배율 3.5), 폭발 반경 10, 양손에 돌' },
+  },
+  {
+    id: 'stoneGolem',
+    zone: 'mountains',
+    entity: 'ironGolem',
+    hp: 1000,
+    kind: 'comboBoss',
+    en: { name: 'StoneGolem', equipment: 'Not player-created, stones in both hands with Sharpness III and Wind Burst III' },
+    ko: { name: '스톤골렘', equipment: '플레이어가 만든 골렘이 아님, 양손에 날카로움 III·돌풍 III 돌' },
+  },
+  {
+    id: 'snowWitch',
+    zone: 'snow',
+    entity: 'witch',
+    hp: 3000,
+    kind: 'comboBoss',
+    en: { name: 'SnowWitch', equipment: 'Custom blaze-rod staff' },
+    ko: { name: '설산마녀', equipment: '커스텀 블레이즈 막대 지팡이' },
+  },
+  {
+    id: 'elderGuardian',
+    zone: 'ocean',
+    entity: 'elderGuardian',
+    hp: 10000,
+    kind: 'comboBoss',
+    en: { name: 'ElderGuardian', equipment: 'None' },
+    ko: { name: '엘더가디언', equipment: '없음' },
+  },
+  {
+    id: 'nightCorpsCommander',
+    zone: 'dark',
+    entity: 'skeleton',
+    hp: 25000,
+    kind: 'comboBoss',
+    en: { name: 'NightCorpsCommander', equipment: 'Dark banner helmet, black leather armor, custom bow' },
+    ko: { name: '밤의군단장', equipment: '어두운 깃발 투구, 검은 가죽 갑옷, 커스텀 활' },
+  },
+  {
+    id: 'drB',
+    zone: 'hyper',
+    entity: 'illusioner',
+    hp: 40000,
+    kind: 'comboBoss',
+    en: { name: 'Dr.B', equipment: 'Black stained-glass head, custom bow' },
+    ko: { name: '닥터B', equipment: '검은 색유리 머리, 커스텀 활' },
+  },
+  {
+    id: 'redKnight',
+    zone: 'red',
+    entity: 'skeleton',
+    hp: 60000,
+    kind: 'comboBoss',
+    en: { name: 'RedKnight', equipment: 'Red leather armor, custom bow and Fire Aspect III shield, fire resistance' },
+    ko: { name: '붉은기사', equipment: '붉은 가죽 갑옷, 커스텀 활과 발화 III 방패, 화염 저항' },
+  },
+  {
+    id: 'terrorist',
+    zone: 'poison',
+    entity: 'skeleton',
+    hp: 100000,
+    kind: 'comboBoss',
+    en: { name: 'Terrorist', equipment: 'Netherite armor, custom Fire Aspect III bow and brewing stand' },
+    ko: { name: '테러리스트', equipment: '네더라이트 갑옷, 커스텀 발화 III 활과 양조기' },
+  },
+
+  // Raid-world phase-2 bosses (OverworldRaids / NethercoreRaids / EndercoreRaids / WitherRaids)
+  {
+    id: 'outragedGolem',
+    zone: 'mountains',
+    entity: 'ironGolem',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'OutragedGolem', equipment: 'Giant size (scale 2), regeneration. Overworld raid phase 2 after StoneGolem' },
+    ko: { name: '분노한골렘', equipment: '거대 크기(배율 2), 재생. 스톤골렘 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'frozenHeart',
+    zone: 'snow',
+    entity: 'witch',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'FrozenHeart', equipment: 'Overworld raid phase 2 after SnowWitch' },
+    ko: { name: '차가운심장의마녀', equipment: '설산마녀 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'encroachedElderGuardian',
+    zone: 'ocean',
+    entity: 'elderGuardian',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'Encroached ElderGuardian', equipment: 'Overworld raid phase 2 after ElderGuardian' },
+    ko: { name: '잠식된 엘더가디언', equipment: '엘더가디언 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'nightMare',
+    zone: 'dark',
+    entity: 'skeleton',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'NightMare', equipment: 'Black Mojang-pattern banner, custom bow. Overworld raid phase 2 after NightCorpsCommander' },
+    ko: { name: '악몽의형상', equipment: '모장 문양 검은 깃발, 커스텀 활. 밤의군단장 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'theBeast',
+    zone: 'hyper',
+    entity: 'husk',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'TheBeast', equipment: 'Black stained-glass head, custom netherite pickaxe. Overworld raid phase 2 after Dr.B' },
+    ko: { name: '더비스트', equipment: '검은 색유리 머리, 커스텀 네더라이트 곡괭이. 닥터B 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'ruinedRedKnight',
+    zone: 'red',
+    entity: 'stray',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'Ruined RedKnight', equipment: 'Netherite armor, custom bow and Fire Aspect shield. Overworld raid phase 2 after RedKnight' },
+    ko: { name: '몰락한 붉은기사', equipment: '네더라이트 갑옷, 커스텀 활과 발화 방패. 붉은기사 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'theApocalyptic',
+    zone: 'poison',
+    entity: 'skeleton',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'TheApocalyptic', equipment: 'Netherite armor, custom bow. Overworld raid phase 2 after Terrorist' },
+    ko: { name: '종말론자', equipment: '네더라이트 갑옷, 커스텀 활. 테러리스트 다음 오버월드 레이드 2단계' },
+  },
+  {
+    id: 'distortedWraith',
+    zone: 'nether',
+    entity: 'breeze',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'DistortedWraith', equipment: 'Warped nylium helmet, regeneration. Nether raid phase 2, warped' },
+    ko: { name: '왜곡된망령', equipment: '뒤틀린 네사체 투구, 재생. 네더 레이드 2단계, 뒤틀린 숲' },
+  },
+  {
+    id: 'lordOfPhantoms',
+    zone: 'nether',
+    entity: 'illusioner',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'LordOfPhantoms', equipment: 'Verdant froglight head, bow, silent. Nether raid phase 2, soul sand valley' },
+    ko: { name: '혼령의군주', equipment: '초록빛 개구리등 머리, 활, 소리를 내지 않음. 네더 레이드 2단계, 영혼 모래 골짜기' },
+  },
+  {
+    id: 'crimsonSavager',
+    zone: 'nether',
+    entity: 'witherSkeleton',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'CrimsonSavager', equipment: 'Custom bow and netherite sword. Nether raid phase 2, crimson forest' },
+    ko: { name: '진홍빛학살자', equipment: '커스텀 활과 네더라이트 검. 네더 레이드 2단계, 진홍빛 숲' },
+  },
+  {
+    id: 'cannibalPiglin',
+    zone: 'nether',
+    entity: 'piglin',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'CannibalPiglin', equipment: 'Player-head helmet and off-hand, orange leather armor, crossbow. Nether raid phase 2' },
+    ko: { name: '식인피글린', equipment: '플레이어 머리 투구·보조손, 주황 가죽 갑옷, 쇠뇌. 네더 레이드 2단계' },
+  },
+  {
+    id: 'distroyer',
+    zone: 'ender',
+    entity: 'stray',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'Distroyer', equipment: 'Obsidian head, dark purple leather armor, bow and end crystal. End raid phase 2' },
+    ko: { name: '차원파괴자', equipment: '흑요석 머리, 짙은 보라 가죽 갑옷, 활과 엔드 수정. 엔드 레이드 2단계' },
+  },
+  {
+    id: 'voidGod',
+    zone: 'ender',
+    entity: 'stray',
+    kind: 'raidBoss',
+    hpScale: 1.2,
+    en: { name: 'VoidGod', equipment: 'Indigo leather armor with eye trim, bow and note block. End raid phase 2' },
+    ko: { name: '공허의화신', equipment: '남보라 가죽 갑옷(눈 장식), 활과 소리 블록. 엔드 레이드 2단계' },
+  },
+  {
+    id: 'witherTrueForm',
+    zone: 'wither',
+    entity: 'wither',
+    kind: 'raidBoss',
+    hpScale: 1.5,
+    en: { name: 'The Wither: True Form', equipment: 'Final wither raid boss. Health is 1.5× the previous phase' },
+    ko: { name: '더 위더: 트루폼', equipment: '위더 레이드 최종 보스. 체력은 이전 페이즈의 1.5배' },
   },
 ];
