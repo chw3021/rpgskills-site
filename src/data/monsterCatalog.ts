@@ -692,8 +692,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'zombie',
     hp: 25000,
     replaces: 'undead',
-    en: { name: 'DrugAddict', equipment: 'Green glazed terracotta head, green leather armor, potion and brewing stand, very fast' },
-    ko: { name: '약물중독자', equipment: '초록 유광 테라코타 머리, 초록 가죽 갑옷, 물약과 양조기, 매우 빠름' },
+    en: { name: 'DrugAddict', equipment: 'Green glazed-terracotta helmet, woodland camo military uniform, potion and brewing stand, very fast' },
+    ko: { name: '약물중독자', equipment: '초록 유광 테라코타 투구, 우드랜드 카모 군복, 물약과 양조기, 매우 빠름' },
   },
   {
     id: 'patrol',
@@ -701,8 +701,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'bogged',
     hp: 23000,
     replaces: 'undead',
-    en: { name: 'Patrol', equipment: 'Mangrove leaves head, green leather armor, bow' },
-    ko: { name: '보초병', equipment: '맹그로브 잎 머리, 초록 가죽 갑옷, 활' },
+    en: { name: 'Patrol', equipment: 'Mangrove-leaf ghillie helmet, woodland camo military uniform, bow' },
+    ko: { name: '보초병', equipment: '맹그로브 잎 길리 투구, 우드랜드 카모 군복, 활' },
   },
   {
     id: 'giantSlime',
@@ -719,8 +719,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'witch',
     hp: 20000,
     replaces: 'undead',
-    en: { name: 'Grenadier', equipment: 'None' },
-    ko: { name: '척탄병', equipment: '없음' },
+    en: { name: 'Grenadier', equipment: 'Woodland camo military uniform, potion grenades' },
+    ko: { name: '척탄병', equipment: '우드랜드 카모 군복, 물약 수류탄' },
   },
   {
     id: 'venomSpider',
@@ -728,8 +728,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'caveSpider',
     hp: 18000,
     replaces: 'spider',
-    en: { name: 'VenomSpider', equipment: 'None, very fast' },
-    ko: { name: '맹독거미', equipment: '없음, 매우 빠름' },
+    en: { name: 'VenomSpider', equipment: 'Olive camouflage carapace, very fast' },
+    ko: { name: '맹독거미', equipment: '올리브 위장 껍질, 매우 빠름' },
   },
   {
     id: 'autoNuker',
@@ -737,8 +737,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'creeper',
     hp: 20000,
     replaces: 'creeper',
-    en: { name: 'AutoNuker', equipment: 'None' },
-    ko: { name: '자폭기', equipment: '없음' },
+    en: { name: 'AutoNuker', equipment: 'Woodland camo demolition creeper' },
+    ko: { name: '자폭기', equipment: '우드랜드 카모 자폭 크리퍼' },
   },
   {
     id: 'scout',
@@ -746,8 +746,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'enderman',
     hp: 25000,
     replaces: 'enderman',
-    en: { name: 'Scout', equipment: 'None' },
-    ko: { name: '척후병', equipment: '없음' },
+    en: { name: 'Scout', equipment: 'Woodland camo scout gear on an enderman' },
+    ko: { name: '척후병', equipment: '엔더맨 체형의 우드랜드 카모 척후 군장' },
   },
 
   // Wild (WildMobsSpawn)
@@ -965,8 +965,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'skeleton',
     hp: 100000,
     kind: 'comboBoss',
-    en: { name: 'Terrorist', equipment: 'Netherite armor, custom Fire Aspect III bow and brewing stand' },
-    ko: { name: '테러리스트', equipment: '네더라이트 갑옷, 커스텀 발화 III 활과 양조기' },
+    en: { name: 'Terrorist', equipment: 'Woodland camo tactical netherite (Poison Boss), custom Fire Aspect III bow and brewing stand' },
+    ko: { name: '테러리스트', equipment: '우드랜드 카모 전술 네더라이트(Poison Boss), 커스텀 발화 III 활과 양조기' },
   },
 
   // Raid-world bosses (OverworldRaids / NethercoreRaids / EndercoreRaids / WitherRaids)
@@ -1003,8 +1003,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'skeleton',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'NightMare', equipment: 'Black Mojang-pattern banner, custom bow. Overworld raid phase 2 after NightCorpsCommander' },
-    ko: { name: '악몽의형상', equipment: '모장 문양 검은 깃발, 커스텀 활. 밤의군단장 다음 오버월드 레이드 2단계' },
+    en: { name: 'NightMare', equipment: 'Legless Mephisto-like form, black banner hood, custom bow. Overworld raid phase 2 after NightCorpsCommander' },
+    ko: { name: '악몽의형상', equipment: '다리 없는 메피스토형, 검은 깃발 두건, 커스텀 활. 밤의군단장 다음 오버월드 레이드 2단계' },
   },
   {
     id: 'theBeast',
@@ -1030,8 +1030,8 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'skeleton',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'TheApocalyptic', equipment: 'Netherite armor, custom bow. Overworld raid phase 2 after Terrorist' },
-    ko: { name: '종말론자', equipment: '네더라이트 갑옷, 커스텀 활. 테러리스트 다음 오버월드 레이드 2단계' },
+    en: { name: 'TheApocalyptic', equipment: 'Heavier woodland camo tactical netherite (Poison Boss 2), custom bow. Overworld raid phase 2 after Terrorist' },
+    ko: { name: '종말론자', equipment: '강화 우드랜드 카모 전술 네더라이트(Poison Boss 2), 커스텀 활. 테러리스트 다음 오버월드 레이드 2단계' },
   },
   {
     id: 'warpedDemon',
