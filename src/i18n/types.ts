@@ -68,7 +68,7 @@ export type MonstersTranslations = {
   /** `{scale}` is replaced with the raid-phase HP multiplier */
   hpScales: string;
   baseLabel: string;
-  equipmentLabel: string;
+  storyLabel: string;
   comboBoss: string;
   raidBoss: string;
   bossesTitle: string;

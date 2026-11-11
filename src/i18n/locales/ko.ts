@@ -189,7 +189,7 @@ export const ko: Translations = {
   },
   monsters: {
     pageTitle: '몬스터 도감',
-    pageDescription: '바이옴별 RPGSkills 필드 몬스터와 콤보·레이드 보스의 체력, 장비, 등장 조건을 정리했습니다.',
+    pageDescription: '바이옴별 RPGSkills 필드 몬스터와 콤보·레이드 보스의 체력, 이야기, 등장 조건을 정리했습니다.',
     intro:
       'RPGSkills는 바이옴마다 바닐라 몹을 그 지역 전용 몬스터로 바꿉니다. 지역마다 체력 기준이 다르고, 이름 있는 몬스터는 정해진 바닐라 몹 대신 나타납니다. 콤보가 쌓이면 필드 보스가, 레이드 월드에서는 강화된 보스가 등장합니다. 커스텀 텍스처를 보려면 리소스팩이 필요합니다.',
     statsLine: '{zones}개 지역, 이름 있는 몬스터 {monsters}종',
@@ -198,7 +198,7 @@ export const ko: Translations = {
     hpLabel: '체력',
     hpScales: '이전 페이즈 체력 ×{scale}',
     baseLabel: '기반 몹',
-    equipmentLabel: '장비·특징',
+    storyLabel: '이야기',
     comboBoss: '콤보 보스',
     raidBoss: '레이드 보스',
     bossesTitle: '보스',

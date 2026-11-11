@@ -60,7 +60,7 @@ function MonsterCard({ monster }: { monster: MonsterDef }) {
         )}
       </p>
       <p className="class-card__equip">
-        <strong>{t.monsters.equipmentLabel}:</strong> {copy.equipment}
+        <strong>{t.monsters.storyLabel}:</strong> {copy.story}
       </p>
     </article>
   );

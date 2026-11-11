@@ -199,7 +199,7 @@ export const en: Translations = {
   monsters: {
     pageTitle: 'Monster Encyclopedia',
     pageDescription:
-      'Every RPGSkills field monster, combo boss, and raid boss by biome, with health, equipment, and spawn conditions.',
+      'Every RPGSkills field monster, combo boss, and raid boss by biome, with health, lore, and spawn conditions.',
     intro:
       'RPGSkills turns vanilla mobs into zone-specific monsters depending on the biome. Each zone has its own health level, and named monsters take the place of specific vanilla mobs. Combo stacks summon field bosses, and raid worlds bring multi-phase bosses. Custom textures require the resource pack.',
     statsLine: '{monsters} named monsters across {zones} zones',
@@ -208,7 +208,7 @@ export const en: Translations = {
     hpLabel: 'HP',
     hpScales: 'Previous phase HP ×{scale}',
     baseLabel: 'Base mob',
-    equipmentLabel: 'Equipment & traits',
+    storyLabel: 'Lore',
     comboBoss: 'Combo boss',
     raidBoss: 'Raid boss',
     bossesTitle: 'Bosses',
