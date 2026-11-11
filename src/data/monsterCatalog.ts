@@ -2,7 +2,8 @@ import type { LocalizedText } from './classCatalog';
 
 /**
  * Field monsters from rpgskills-common monsters/*MobsSpawn.java,
- * combo bosses from *Raids.java Boss(), and raid-world phase-2 bosses.
+ * combo bosses from *Raids.java Boss(), and raid-world phase-1/2 bosses.
+ * Nether/Ender raids have unique phase-1 forms; Wither phase 2 is the same skeleton after half health.
  * Zones follow the plugin check order in MobsSkillsEvents, then the Wither raid.
  */
 
@@ -257,12 +258,14 @@ export const ZONES: ZoneDef[] = [
     en: {
       name: 'Wither Raid',
       biomes: 'Wither raid world, entered through a wither raid portal',
-      defaultMobs: 'No field monsters. The final boss is The Wither: True Form.',
+      defaultMobs:
+        'No field monsters. Phases 1–2 are The Wither (giant wither skeleton on a quartz throne, then standing after half health). The final boss is The Wither: True Form.',
     },
     ko: {
       name: '위더 레이드',
       biomes: '위더 레이드 월드. 위더 레이드 포탈로 입장합니다.',
-      defaultMobs: '필드 몬스터는 없습니다. 최종 보스는 [더 위더: 트루폼]입니다.',
+      defaultMobs:
+        '필드 몬스터는 없습니다. 1·2단계는 [더 위더](거대 위더스켈레톤, 석영 왕좌 → 체력 절반에서 해방)이고, 최종 보스는 [더 위더: 트루폼]입니다.',
     },
   },
 ];
@@ -966,7 +969,7 @@ export const MONSTERS: MonsterDef[] = [
     ko: { name: '테러리스트', equipment: '네더라이트 갑옷, 커스텀 발화 III 활과 양조기' },
   },
 
-  // Raid-world phase-2 bosses (OverworldRaids / NethercoreRaids / EndercoreRaids / WitherRaids)
+  // Raid-world bosses (OverworldRaids / NethercoreRaids / EndercoreRaids / WitherRaids)
   {
     id: 'outragedGolem',
     zone: 'mountains',
@@ -1031,13 +1034,31 @@ export const MONSTERS: MonsterDef[] = [
     ko: { name: '종말론자', equipment: '네더라이트 갑옷, 커스텀 활. 테러리스트 다음 오버월드 레이드 2단계' },
   },
   {
+    id: 'warpedDemon',
+    zone: 'nether',
+    entity: 'breeze',
+    kind: 'raidBoss',
+    hp: 250000,
+    en: { name: 'WarpedDemon', equipment: 'Giant size (scale 2), regeneration. Nether raid phase 1, warped' },
+    ko: { name: '뒤틀린정령', equipment: '거대 크기(배율 2), 재생. 네더 레이드 1단계, 뒤틀린 숲' },
+  },
+  {
     id: 'distortedWraith',
     zone: 'nether',
     entity: 'breeze',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'DistortedWraith', equipment: 'Warped nylium helmet, regeneration. Nether raid phase 2, warped' },
-    ko: { name: '왜곡된망령', equipment: '뒤틀린 네사체 투구, 재생. 네더 레이드 2단계, 뒤틀린 숲' },
+    en: { name: 'DistortedWraith', equipment: 'Warped nylium helmet, regeneration. Nether raid phase 2 after WarpedDemon' },
+    ko: { name: '왜곡된망령', equipment: '뒤틀린 네사체 투구, 재생. 뒤틀린정령 다음 네더 레이드 2단계' },
+  },
+  {
+    id: 'harvester',
+    zone: 'nether',
+    entity: 'illusioner',
+    kind: 'raidBoss',
+    hp: 250000,
+    en: { name: 'Harvester', equipment: 'Skeleton-skull helmet, netherite hoe and totem, silent, regeneration. Nether raid phase 1, soul sand valley' },
+    ko: { name: '수확자', equipment: '스켈레톤 머리 투구, 네더라이트 괭이와 불사의 토템, 소리를 내지 않음, 재생. 네더 레이드 1단계, 영혼 모래 골짜기' },
   },
   {
     id: 'lordOfPhantoms',
@@ -1045,8 +1066,17 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'illusioner',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'LordOfPhantoms', equipment: 'Verdant froglight head, bow, silent. Nether raid phase 2, soul sand valley' },
-    ko: { name: '혼령의군주', equipment: '초록빛 개구리등 머리, 활, 소리를 내지 않음. 네더 레이드 2단계, 영혼 모래 골짜기' },
+    en: { name: 'LordOfPhantoms', equipment: 'Verdant froglight head, bow, silent. Nether raid phase 2 after Harvester' },
+    ko: { name: '혼령의군주', equipment: '초록빛 개구리등 머리, 활, 소리를 내지 않음. 수확자 다음 네더 레이드 2단계' },
+  },
+  {
+    id: 'crimsonWarrior',
+    zone: 'nether',
+    entity: 'witherSkeleton',
+    kind: 'raidBoss',
+    hp: 250000,
+    en: { name: 'CrimsonWarrior', equipment: 'Crimson-roots helmet, netherite armor with raiser trim, custom bow. Nether raid phase 1, crimson forest' },
+    ko: { name: '진홍빛전사', equipment: '진홍빛 뿌리 투구, 라이저 장식 네더라이트 갑옷, 커스텀 활. 네더 레이드 1단계, 진홍빛 숲' },
   },
   {
     id: 'crimsonSavager',
@@ -1054,8 +1084,17 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'witherSkeleton',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'CrimsonSavager', equipment: 'Custom bow and netherite sword. Nether raid phase 2, crimson forest' },
-    ko: { name: '진홍빛학살자', equipment: '커스텀 활과 네더라이트 검. 네더 레이드 2단계, 진홍빛 숲' },
+    en: { name: 'CrimsonSavager', equipment: 'Crimson-hyphae helmet, custom bow and netherite sword. Nether raid phase 2 after CrimsonWarrior' },
+    ko: { name: '진홍빛학살자', equipment: '진홍빛 균사 투구, 커스텀 활과 네더라이트 검. 진홍빛전사 다음 네더 레이드 2단계' },
+  },
+  {
+    id: 'piglinCook',
+    zone: 'nether',
+    entity: 'piglin',
+    kind: 'raidBoss',
+    hp: 250000,
+    en: { name: 'PiglinCook', equipment: 'White leather armor with silence trim, crossbow and furnace. Nether raid phase 1' },
+    ko: { name: '피글린요리사', equipment: '침묵 장식 흰 가죽 갑옷, 쇠뇌와 화로. 네더 레이드 1단계' },
   },
   {
     id: 'cannibalPiglin',
@@ -1063,8 +1102,17 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'piglin',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'CannibalPiglin', equipment: 'Player-head helmet and off-hand, orange leather armor, crossbow. Nether raid phase 2' },
-    ko: { name: '식인피글린', equipment: '플레이어 머리 투구·보조손, 주황 가죽 갑옷, 쇠뇌. 네더 레이드 2단계' },
+    en: { name: 'CannibalPiglin', equipment: 'Player-head helmet and off-hand, orange leather armor, crossbow. Nether raid phase 2 after PiglinCook' },
+    ko: { name: '식인피글린', equipment: '플레이어 머리 투구·보조손, 주황 가죽 갑옷, 쇠뇌. 피글린요리사 다음 네더 레이드 2단계' },
+  },
+  {
+    id: 'disrupter',
+    zone: 'ender',
+    entity: 'stray',
+    kind: 'raidBoss',
+    hp: 800000,
+    en: { name: 'Disrupter', equipment: 'Near-black purple leather armor, bow and end rod. End raid phase 1' },
+    ko: { name: '차원훼방꾼', equipment: '거의 검은 보라 가죽 갑옷, 활과 엔드 막대. 엔드 레이드 1단계' },
   },
   {
     id: 'distroyer',
@@ -1072,8 +1120,17 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'stray',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'Distroyer', equipment: 'Obsidian head, dark purple leather armor, bow and end crystal. End raid phase 2' },
-    ko: { name: '차원파괴자', equipment: '흑요석 머리, 짙은 보라 가죽 갑옷, 활과 엔드 수정. 엔드 레이드 2단계' },
+    en: { name: 'Distroyer', equipment: 'Obsidian head, dark purple leather armor, bow and end crystal. End raid phase 2 after Disrupter' },
+    ko: { name: '차원파괴자', equipment: '흑요석 머리, 짙은 보라 가죽 갑옷, 활과 엔드 수정. 차원훼방꾼 다음 엔드 레이드 2단계' },
+  },
+  {
+    id: 'voidArtist',
+    zone: 'ender',
+    entity: 'stray',
+    kind: 'raidBoss',
+    hp: 800000,
+    en: { name: 'VoidArtist', equipment: 'Indigo leather armor with eye trim, archaeology brush and note block, silent, regeneration. End raid phase 1' },
+    ko: { name: '공허예술가', equipment: '남보라 가죽 갑옷(눈 장식), 고고학 붓과 소리 블록, 소리를 내지 않음, 재생. 엔드 레이드 1단계' },
   },
   {
     id: 'voidGod',
@@ -1081,8 +1138,25 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'stray',
     kind: 'raidBoss',
     hpScale: 1.2,
-    en: { name: 'VoidGod', equipment: 'Indigo leather armor with eye trim, bow and note block. End raid phase 2' },
-    ko: { name: '공허의화신', equipment: '남보라 가죽 갑옷(눈 장식), 활과 소리 블록. 엔드 레이드 2단계' },
+    en: { name: 'VoidGod', equipment: 'Indigo leather armor with eye trim, bow and note block, giant size (scale 1.4). End raid phase 2 after VoidArtist' },
+    ko: { name: '공허의화신', equipment: '남보라 가죽 갑옷(눈 장식), 활과 소리 블록, 거대 크기(배율 1.4). 공허예술가 다음 엔드 레이드 2단계' },
+  },
+  {
+    id: 'theWither',
+    zone: 'wither',
+    entity: 'witherSkeleton',
+    kind: 'raidBoss',
+    hp: 2500000,
+    en: { name: 'The Wither', equipment: 'Giant size (scale 2.3), netherite armor with dune trim, custom bow. Wither raid phase 1, seated on a quartz throne until half health' },
+    ko: { name: '더 위더', equipment: '거대 크기(배율 2.3), 듄 장식 네더라이트 갑옷, 커스텀 활. 위더 레이드 1단계, 체력 절반까지 석영 왕좌에 앉음' },
+  },
+  {
+    id: 'theWitherPhase2',
+    zone: 'wither',
+    entity: 'witherSkeleton',
+    kind: 'raidBoss',
+    en: { name: 'The Wither (Phase 2)', equipment: 'Same giant wither skeleton after the throne breaks at half health. Wither raid phase 2' },
+    ko: { name: '더 위더 (2단계)', equipment: '체력 절반에서 왕좌가 부서진 뒤의 같은 거대 위더스켈레톤. 위더 레이드 2단계' },
   },
   {
     id: 'witherTrueForm',
@@ -1090,7 +1164,7 @@ export const MONSTERS: MonsterDef[] = [
     entity: 'wither',
     kind: 'raidBoss',
     hpScale: 1.5,
-    en: { name: 'The Wither: True Form', equipment: 'Final wither raid boss. Health is 1.5× the previous phase' },
-    ko: { name: '더 위더: 트루폼', equipment: '위더 레이드 최종 보스. 체력은 이전 페이즈의 1.5배' },
+    en: { name: 'The Wither: True Form', equipment: 'Final wither raid boss after The Wither. Health is 1.5× the previous phase' },
+    ko: { name: '더 위더: 트루폼', equipment: '더 위더 다음 위더 레이드 최종 보스. 체력은 이전 페이즈의 1.5배' },
   },
 ];

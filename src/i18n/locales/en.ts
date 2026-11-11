@@ -201,7 +201,7 @@ export const en: Translations = {
     pageDescription:
       'Every RPGSkills field monster, combo boss, and raid boss by biome, with health, equipment, and spawn conditions.',
     intro:
-      'RPGSkills turns vanilla mobs into zone-specific monsters depending on the biome. Each zone has its own health level, and named monsters take the place of specific vanilla mobs. Combo stacks summon field bosses, and raid worlds bring stronger phase-2 bosses. Custom textures require the resource pack.',
+      'RPGSkills turns vanilla mobs into zone-specific monsters depending on the biome. Each zone has its own health level, and named monsters take the place of specific vanilla mobs. Combo stacks summon field bosses, and raid worlds bring multi-phase bosses. Custom textures require the resource pack.',
     statsLine: '{monsters} named monsters across {zones} zones',
     jumpLabel: 'Jump to zone',
     biomesLabel: 'Biomes',
