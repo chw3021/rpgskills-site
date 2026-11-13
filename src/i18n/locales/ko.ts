@@ -449,18 +449,13 @@ export const ko: Translations = {
   },
   donate: {
     pageTitle: '후원',
-    pageDescription: 'RPGSkills 개발을 응원해 주세요. 후원은 기능 해금과 무관합니다.',
+    pageDescription: 'RPGSkills 개발자에게 커피 한 잔 사 주세요 ☕',
     intro: 'RPGSkills는 무료 플러그인입니다. 후원은 개발·서버 비용·업데이트에 도움이 됩니다. ',
-    introBold: '후원은 프리미엄 기능 해금과 연동되지 않습니다.',
+    introBold: '개발자에게 커피 한 잔 사 주시면, 그 카페인은 전부 새 직업과 스킬로 바뀝니다 ☕',
     paypalButton: 'PayPal로 후원하기',
     githubSponsorsButton: 'GitHub Sponsors로 후원하기',
     disclaimer1: '· 후원은 자발적인 지원이며, 디지털 콘텐츠 환불이 어려울 수 있습니다.',
     disclaimer2: '· 결제·영수증 문의는 PayPal 또는 GitHub Sponsors 거래 내역을 기준으로 합니다.',
-    disclaimer3:
-      '· 향후 프리미엄 라이선스는 별도 구매·키 발급 절차로 제공될 예정입니다 (Firebase 연동 예정).',
-    premiumTitle: '추후 제공 예정:',
-    premiumBody:
-      'Firebase 기반 프리미엄 라이선스 구매 및 키 활성화 — PremiumSection 확장을 위한 구조가 준비되어 있습니다.',
   },
   footer: {
     spigot: 'Spigot',

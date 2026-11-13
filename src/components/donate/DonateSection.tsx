@@ -34,12 +34,7 @@ export function DonateSection() {
       <aside className="donate-disclaimer">
         <p>{d.disclaimer1}</p>
         <p>{d.disclaimer2}</p>
-        <p>{d.disclaimer3}</p>
       </aside>
-
-      <div className="premium-placeholder" role="note">
-        <strong>{d.premiumTitle}</strong> {d.premiumBody}
-      </div>
     </section>
   );
 }

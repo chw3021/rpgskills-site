@@ -471,19 +471,14 @@ export const en: Translations = {
   },
   donate: {
     pageTitle: 'Donate',
-    pageDescription: 'Support RPGSkills development. Donations do not unlock features.',
+    pageDescription: 'Buy the RPGSkills developer a cup of coffee ☕',
     intro:
       'RPGSkills is a free plugin. Donations help with development, hosting, and updates. ',
-    introBold: 'Donations are not tied to premium feature unlocks.',
+    introBold: 'Buy the developer a coffee, and every drop of that caffeine turns into new classes and skills ☕',
     paypalButton: 'Donate with PayPal',
     githubSponsorsButton: 'Sponsor on GitHub',
     disclaimer1: '· Donations are voluntary support; digital content refunds may not be available.',
     disclaimer2: '· Payment and receipt inquiries are handled via your PayPal or GitHub Sponsors transaction history.',
-    disclaimer3:
-      '· Premium licenses will be offered separately with key activation in the future (Firebase planned).',
-    premiumTitle: 'Coming later:',
-    premiumBody:
-      'Premium license purchase & key activation via Firebase — this page is ready for PremiumSection expansion.',
   },
   footer: {
     spigot: 'Spigot',

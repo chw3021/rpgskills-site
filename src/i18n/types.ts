@@ -390,9 +390,6 @@ export type Translations = {
     githubSponsorsButton: string;
     disclaimer1: string;
     disclaimer2: string;
-    disclaimer3: string;
-    premiumTitle: string;
-    premiumBody: string;
   };
   footer: {
     spigot: string;
