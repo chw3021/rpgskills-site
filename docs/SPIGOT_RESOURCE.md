@@ -39,10 +39,10 @@ RPGSkills — Official site for guides · MC 26.3, 26.2 & 26.1.2 (separate JARs)
 [SIZE=5][I]Guides, install steps, 32 classes, crafting grids, commands, FAQ, and community boards are kept up to date on the site. Use Spigot for reviews; use the site for accurate gameplay info.[/I][/SIZE]
 
 [B][SIZE=6][URL='https://chw3021.github.io/rpgskills-site/']https://chw3021.github.io/rpgskills-site/[/URL][/SIZE][/B]
-[SIZE=5][I]English · 한국어 · RPGSkills v1.0.22 · spigot-api 26.1.2-R0.1-SNAPSHOT · Minecraft 26.1.2[/I][/SIZE]
+[SIZE=5][I]English · 한국어 · RPGSkills v1.0.24 · Minecraft 26.3 · 26.2 · 26.1.2 (separate JARs)[/I][/SIZE]
 
-[B][SIZE=7]Requires Spigot/Paper API 26.1.2+[/SIZE][/B]
-[SIZE=5][I]Paper or Spigot [B]Minecraft 26.1.2[/B] with API [B]26.1.2[/B] or newer ([I]check /version or build logs — must match 26.1+, not legacy 1.21.x API jars[/I])[/I][/SIZE]
+[B][SIZE=7]Supports Spigot/Paper 26.3 · 26.2 · 26.1.2[/SIZE][/B]
+[SIZE=5][I]Pick the JAR that matches your server: [B]RPGskills-26.3.jar[/B], [B]RPGskills-26.2.jar[/B], or [B]RPGskills-26.1.2.jar[/B] ([I]check /version — legacy 1.21.x servers are not supported[/I])[/I][/SIZE]
 
 [B][SIZE=6]RPGSkills — Transform Your Minecraft Server into an RPG Adventure![/SIZE][/B]
 Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Full documentation lives on the official website[/B] — linked below.
@@ -81,8 +81,8 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 
 [SIZE=3][B]Installation[/B] ([I]step-by-step: [URL='https://chw3021.github.io/rpgskills-site/installation/']Install page[/URL][/I]):[/SIZE]
 [LIST=1]
-[*]Run [B]Paper or Spigot Minecraft 26.1.2[/B] with [B]Spigot API 26.1.2+[/B]
-[*]Get [B]RPGskills.jar[/B] from [URL='https://chw3021.github.io/rpgskills-site/download/']official Download page[/URL] or [URL='https://github.com/chw3021/rpgskills-releases/releases']GitHub Releases[/URL]
+[*]Run [B]Paper or Spigot Minecraft 26.3, 26.2, or 26.1.2[/B]
+[*]Get the matching [B]RPGskills-&lt;version&gt;.jar[/B] from the [URL='https://chw3021.github.io/rpgskills-site/download/']official Download page[/URL] or [URL='https://github.com/chw3021/rpgskills-releases/releases']GitHub Releases[/URL]
 [*]Place in [B]plugins/[/B] and restart — config under [B]plugins/RPGskills/[/B]
 [*]Apply the resource pack (see Download page on the site)
 [*]Set language and worlds in config
@@ -99,7 +99,7 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 [SIZE=3][B]Biome elements & /smith[/B][/SIZE]
 [LIST]
 [*]Monster strength varies by biome; each biome drops elemental fragments for weapon upgrades.
-[*][B]Order[/B]: Earth (Plains) → Wind (Mountain/Hill) → Frost → Ocean → Dark (Forest) → Hyper (Desert) → Burning (Badlands) → Poison (Swamp) → Wild (Jungle). [I]Trident & Mace follow the Netherite order.[/I]
+[*][B]Order[/B]: Earth (Plains) → Wind (Mountain/Hill/Taiga/Dappled Forest) → Frost → Ocean → Dark (Forest) → Hyper (Desert) → Burning (Badlands) → Poison (Swamp) → Wild (Jungle). [I]Trident & Mace follow the Netherite order.[/I]
 [*]Smith with [B][COLOR=#b300b3][U]/smith[/U][/COLOR][/B] — gear in slot 1, ingredient in slot 2. Full tables: [URL='https://chw3021.github.io/rpgskills-site/classes/']Classes & crafting[/URL]
 [/LIST]
 
@@ -144,8 +144,8 @@ Knuckle / Wand / Dagger grids and alternate Bow·Crossbow·Fishing Rod materials
 
 ## Spigot editor checklist
 
-1. **Supported versions** → pick builds that ship **API 26.1.2+** (site: **Minecraft 26.1.2**).
-2. **Download** → External link = `releases/latest/download/RPGskills.jar`.
+1. **Supported versions** → **26.3**, **26.2**, **26.1.2**.
+2. **Download** → External link = site download page `https://chw3021.github.io/rpgskills-site/download/` (there is no single `RPGskills.jar` asset anymore).
 3. **Description** → paste BBCode block (no ` ``` ` fences).
 4. **Updates tab** → use update post BBCode below.
 
@@ -154,12 +154,11 @@ Knuckle / Wand / Dagger grids and alternate Bow·Crossbow·Fishing Rod materials
 ## Update post BBCode (optional — “Updates” section)
 
 ```bbcode
-[SIZE=5][B]RPGSkills v1.0.22[/B][/SIZE]
+[SIZE=5][B]RPGSkills v1.0.24 — Minecraft 26.3 support[/B][/SIZE]
 [LIST]
-[*][SIZE=5][B][URL='https://chw3021.github.io/rpgskills-site/']★ Official website — primary documentation ★[/URL][/B][/SIZE]
-[*]Install · Download · 32 classes · crafting · commands · FAQ: [URL='https://chw3021.github.io/rpgskills-site/']chw3021.github.io/rpgskills-site[/URL]
-[*]Community Q&A & free board on the site (EN / 한국어)
-[*]JAR: [URL='https://github.com/chw3021/rpgskills-releases/releases']GitHub Releases[/URL] ([URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills.jar']RPGskills.jar[/URL])
-[*][B]Spigot/Paper API 26.1.2[/B] ([I]26.1.2-R0.1-SNAPSHOT[/I]) · Minecraft [B]26.1.2[/B]
+[*][B]New:[/B] separate build for [B]Minecraft 26.3[/B] — [URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills-26.3.jar']RPGskills-26.3.jar[/URL]
+[*]The new [B]Dappled Forest[/B] biome belongs to the [B]Wind (Mountains)[/B] group — recommended level 30–70
+[*]Still available: [URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills-26.2.jar']RPGskills-26.2.jar[/URL] · [URL='https://github.com/chw3021/rpgskills-releases/releases/latest/download/RPGskills-26.1.2.jar']RPGskills-26.1.2.jar[/URL]
+[*][SIZE=5][B][URL='https://chw3021.github.io/rpgskills-site/download/']★ Download page on the official website ★[/URL][/B][/SIZE]
 [/LIST]
 ```
