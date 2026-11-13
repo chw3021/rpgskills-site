@@ -132,7 +132,7 @@ export const en: Translations = {
       { label: 'Required plugins', value: 'None — RPGSkills does not depend on other plugins' },
       { label: 'Resource pack', value: 'Recommended for custom weapon, armor, and monster visuals (Beta)' },
       { label: 'Classes', value: '32 classes across 8 archetypes and 4 roles' },
-      { label: 'Price', value: 'Free — donations are optional and do not unlock features' },
+      { label: 'Price', value: 'Free — if you enjoy it, buy the developer a coffee ☕' },
     ],
     guidesTitle: 'Guides',
     guides: {

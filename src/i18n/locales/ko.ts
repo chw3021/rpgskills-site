@@ -132,7 +132,7 @@ export const ko: Translations = {
       { label: '필수 플러그인', value: '없음 — 다른 플러그인 없이 동작합니다' },
       { label: '리소스팩', value: '커스텀 무기·방어구·몬스터 외형을 위해 권장합니다 (Beta)' },
       { label: '직업', value: '8계열 × 4역할, 총 32직업' },
-      { label: '가격', value: '무료 — 후원은 선택 사항이며 기능 해금과 무관합니다' },
+      { label: '가격', value: '무료 — 마음에 드셨다면 개발자에게 커피 한 잔 사 주세요 ☕' },
     ],
     guidesTitle: '가이드',
     guides: {
