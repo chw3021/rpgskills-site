@@ -114,7 +114,7 @@ export const en: Translations = {
     platformsLabel: 'Also available on',
     gettingStarted: 'Getting Started',
     compatible: 'Compatible with',
-    mcVersionLabel: 'Spigot/Paper API 26.2 & 26.1.2 · pick the matching JAR on Download',
+    mcVersionLabel: 'Spigot/Paper API 26.3, 26.2 & 26.1.2 · pick the matching JAR on Download',
     battleImageAlt:
       'The Wither descends through violet mist as swordsmen, archers, mages, and other heroes charge to meet it',
   },
@@ -399,7 +399,7 @@ export const en: Translations = {
     steps: [
       {
         title: '1. Prepare your server',
-        body: 'Use Paper or Spigot Minecraft 26.2 or 26.1.2. On the Download page, pick the JAR that matches your server (RPGskills-26.2.jar or RPGskills-26.1.2.jar).',
+        body: 'Use Paper or Spigot Minecraft 26.3, 26.2, or 26.1.2. On the Download page, pick the JAR that matches your server (RPGskills-26.3.jar, RPGskills-26.2.jar, or RPGskills-26.1.2.jar).',
       },
       {
         title: '2. Install the plugin',
@@ -460,8 +460,8 @@ export const en: Translations = {
       },
     ],
     bugReportChecklist: [
-      'Server software and version (Paper/Spigot, Minecraft 26.2 or 26.1.2)',
-      'RPGSkills JAR name / Releases tag (e.g. RPGskills-26.2.jar)',
+      'Server software and version (Paper/Spigot, Minecraft 26.3, 26.2, or 26.1.2)',
+      'RPGSkills JAR name / Releases tag (e.g. RPGskills-26.3.jar)',
       'List of other plugins (/plugins)',
       'Steps to reproduce',
       'Full console stack trace',
@@ -623,7 +623,7 @@ export const en: Translations = {
       id: 'version-mismatch',
       question: 'What if my server version does not match?',
       answer:
-        'RPGSkills ships separate JARs for Spigot/Paper Minecraft 26.2 and 26.1.2. ' +
+        'RPGSkills ships separate JARs for Spigot/Paper Minecraft 26.3, 26.2, and 26.1.2. ' +
         'On the Download page, select your server version and install that JAR. Other major versions may break commands, monsters, or GUIs.',
     },
     {

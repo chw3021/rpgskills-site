@@ -125,12 +125,12 @@ export const ZONES: ZoneDef[] = [
     id: 'mountains',
     en: {
       name: 'Mountains',
-      biomes: 'Peaks, hills, stony areas, taiga (not snowy)',
+      biomes: 'Peaks, hills, stony areas, taiga, dappled forest (not snowy)',
       defaultMobs: 'Other mobs become "Mountains" + vanilla name with 120 HP.',
     },
     ko: {
       name: '산악지대',
-      biomes: '봉우리, 언덕, 돌 지형, 타이가 (눈 덮인 곳 제외)',
+      biomes: '봉우리, 언덕, 돌 지형, 타이가, 단풍숲 (눈 덮인 곳 제외)',
       defaultMobs: '그 외 몹은 "산악지대" + 바닐라 이름, 체력 120으로 바뀝니다.',
     },
   },
@@ -164,12 +164,12 @@ export const ZONES: ZoneDef[] = [
     id: 'dark',
     en: {
       name: 'Dark Field',
-      biomes: 'Forests, caves, deep dark (Overworld)',
+      biomes: 'Forests (except dappled forest), caves, deep dark (Overworld)',
       defaultMobs: 'Other mobs become "DarkField" + vanilla name with 5,000 HP.',
     },
     ko: {
       name: '암흑지대',
-      biomes: '숲, 동굴, 딥 다크 (오버월드)',
+      biomes: '숲 (단풍숲 제외), 동굴, 딥 다크 (오버월드)',
       defaultMobs: '그 외 몹은 "암흑지대" + 바닐라 이름, 체력 5,000으로 바뀝니다.',
     },
   },

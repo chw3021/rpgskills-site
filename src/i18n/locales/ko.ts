@@ -114,7 +114,7 @@ export const ko: Translations = {
     platformsLabel: '다른 플랫폼에서도 만나보세요',
     gettingStarted: '시작하기',
     compatible: '호환 버전',
-    mcVersionLabel: 'Spigot/Paper API 26.2 · 26.1.2 · Download에서 서버에 맞는 JAR 선택',
+    mcVersionLabel: 'Spigot/Paper API 26.3 · 26.2 · 26.1.2 · Download에서 서버에 맞는 JAR 선택',
     battleImageAlt:
       '위더가 보랏빛 안개 속에 강림하고, 검사·궁수·마법사 등 영웅들이 맞서 돌진하는 장면',
   },
@@ -377,7 +377,7 @@ export const ko: Translations = {
     steps: [
       {
         title: '1. 서버 준비',
-        body: 'Paper 또는 Spigot Minecraft 26.2 또는 26.1.2를 사용하세요. Download 페이지에서 서버 버전에 맞는 JAR(RPGskills-26.2.jar / RPGskills-26.1.2.jar)를 고르세요.',
+        body: 'Paper 또는 Spigot Minecraft 26.3, 26.2, 26.1.2 중 하나를 사용하세요. Download 페이지에서 서버 버전에 맞는 JAR(RPGskills-26.3.jar / RPGskills-26.2.jar / RPGskills-26.1.2.jar)를 고르세요.',
       },
       {
         title: '2. 플러그인 설치',
@@ -438,8 +438,8 @@ export const ko: Translations = {
       },
     ],
     bugReportChecklist: [
-      '서버 소프트웨어 및 버전 (Paper/Spigot, Minecraft 26.2 또는 26.1.2)',
-      'RPGSkills JAR 파일명 / Releases 태그 (예: RPGskills-26.2.jar)',
+      '서버 소프트웨어 및 버전 (Paper/Spigot, Minecraft 26.3, 26.2 또는 26.1.2)',
+      'RPGSkills JAR 파일명 / Releases 태그 (예: RPGskills-26.3.jar)',
       '설치된 다른 플러그인 목록 (/plugins)',
       '재현 단계',
       '콘솔 전체 스택 트레이스',
@@ -597,7 +597,7 @@ export const ko: Translations = {
       id: 'version-mismatch',
       question: '서버 버전이 맞지 않으면 어떻게 되나요?',
       answer:
-        'RPGSkills는 Spigot/Paper Minecraft 26.2와 26.1.2용 JAR를 따로 제공합니다. ' +
+        'RPGSkills는 Spigot/Paper Minecraft 26.3, 26.2, 26.1.2용 JAR를 따로 제공합니다. ' +
         'Download 페이지에서 서버 버전을 선택한 뒤 해당 JAR를 설치하세요. 다른 메이저 버전에서는 명령어·몬스터·GUI가 동작하지 않거나 콘솔 오류가 발생할 수 있습니다.',
     },
     {

@@ -31,7 +31,7 @@ const STATIC_PAGES: Omit<PageMeta, 'image'>[] = [
     path: '/',
     title: 'RPGSkills - Minecraft RPG Plugin with Classes and Skills',
     description:
-      'RPGSkills is a free Minecraft RPG plugin for Paper and Spigot 26.2 and 26.1.2 with 32 classes, skill trees, custom monsters, quests, boss raids, and parties.',
+      'RPGSkills is a free Minecraft RPG plugin for Paper and Spigot 26.3, 26.2, and 26.1.2 with 32 classes, skill trees, custom monsters, quests, boss raids, and parties.',
     sitemap: true,
     jsonLd: {
       '@context': 'https://schema.org',
@@ -44,7 +44,7 @@ const STATIC_PAGES: Omit<PageMeta, 'image'>[] = [
     path: '/installation/',
     title: `How to Install RPGSkills on Paper or Spigot | ${site.name}`,
     description:
-      'Install the RPGSkills Minecraft RPG plugin: server requirements, the right JAR for Minecraft 26.2 or 26.1.2, resource pack setup, first commands, and troubleshooting.',
+      'Install the RPGSkills Minecraft RPG plugin: server requirements, the right JAR for Minecraft 26.3, 26.2, or 26.1.2, resource pack setup, first commands, and troubleshooting.',
     sitemap: true,
   },
   {
@@ -82,9 +82,9 @@ const STATIC_PAGES: Omit<PageMeta, 'image'>[] = [
   },
   {
     path: '/download/',
-    title: `Download RPGSkills for Minecraft 26.2 and 26.1.2 | ${site.name}`,
+    title: `Download RPGSkills for Minecraft 26.3, 26.2, and 26.1.2 | ${site.name}`,
     description:
-      'Download the RPGSkills plugin JAR for Minecraft 26.2 or 26.1.2 from GitHub Releases, plus the optional resource pack for custom textures.',
+      'Download the RPGSkills plugin JAR for Minecraft 26.3, 26.2, or 26.1.2 from GitHub Releases, plus the optional resource pack for custom textures.',
     sitemap: true,
   },
   {
