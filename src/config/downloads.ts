@@ -10,6 +10,6 @@ export const downloads = {
       assetName.toLowerCase() === `RPGskills-${mcVersion}.jar`.toLowerCase(),
   },
   resourcePack: {
-    githubZip: `${site.resourcePackRepo}/archive/refs/heads/master.zip`,
+    githubZip: `${site.resourcePackRepo}/releases/download/latest/RPGskills-ResourcePack.zip`,
   },
 } as const;

@@ -408,7 +408,7 @@ export const en: Translations = {
       {
         title: '3. Apply the resource pack',
         body:
-          'Download the pack from the Download page. Use GitHub Code → Download ZIP. ' +
+          'Download the pack ZIP from the Download page. Use the ZIP as-is without extracting it. ' +
           'Distribute via server.properties resource-pack or per-player client install.',
       },
       {
@@ -430,7 +430,7 @@ export const en: Translations = {
     downloadJar: 'Download JAR',
     allReleases: 'All Releases',
     resourcePackGithub: 'Resource Pack (GitHub)',
-    resourcePackGithubMeta: 'RpgSkills repository — Code → Download ZIP',
+    resourcePackGithubMeta: 'Put the downloaded ZIP into your resourcepacks folder without extracting it',
     downloadZip: 'Download ZIP',
     repository: 'Repository',
     noGithubReleaseHint:

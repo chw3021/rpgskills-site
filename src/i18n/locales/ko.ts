@@ -386,7 +386,7 @@ export const ko: Translations = {
       {
         title: '3. 리소스팩 적용',
         body:
-          'Download 페이지에서 리소스팩을 받습니다. GitHub Code → Download ZIP을 사용하세요. ' +
+          'Download 페이지에서 리소스팩 ZIP을 받습니다. 압축을 해제하지 말고 ZIP 그대로 사용하세요. ' +
           'server.properties resource-pack 또는 클라이언트 개별 적용이 가능합니다.',
       },
       {
@@ -408,7 +408,7 @@ export const ko: Translations = {
     downloadJar: 'JAR 다운로드',
     allReleases: '전체 릴리스',
     resourcePackGithub: '리소스팩 (GitHub)',
-    resourcePackGithubMeta: 'RpgSkills 리포지토리 — Code → Download ZIP',
+    resourcePackGithubMeta: '다운로드한 ZIP을 압축 해제 없이 resourcepacks 폴더에 넣으세요',
     downloadZip: 'ZIP 다운로드',
     repository: '리포지토리',
     noGithubReleaseHint:

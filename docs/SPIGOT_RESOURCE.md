@@ -75,7 +75,7 @@ Custom monsters, weapons, armor, skills, quests, boss raids, and parties. [B]Ful
 [*][B]Combo & Field Bosses[/B]: 5 combo stacks spawn extras; milestones summon field bosses
 [*][B]Boss Raids[/B]: Jungle, Nether, End ([B][COLOR=#5900b3]EnderMimic[/COLOR][/B]), Wither Raid (Beta)
 [*][B]Party System[/B]: create, join, invite, kick, assemble, and more
-[*][B]Resource Pack[/B] (Beta) — [URL='https://chw3021.github.io/rpgskills-site/download/']download on official site[/URL] ([URL='https://github.com/chw3021/RpgSkills']GitHub ZIP[/URL])
+[*][B]Resource Pack[/B] (Beta) — [URL='https://chw3021.github.io/rpgskills-site/download/']download on official site[/URL] ([URL='https://github.com/chw3021/RpgSkills/releases/download/latest/RPGskills-ResourcePack.zip']GitHub ZIP[/URL])
 [*][B]Multi-language config[/B] · [B]per-world toggles[/B]
 [/LIST]
 
