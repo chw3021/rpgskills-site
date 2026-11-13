@@ -21,6 +21,14 @@ export function DonateSection() {
         >
           {d.paypalButton}
         </a>
+        <a
+          href={site.githubSponsorsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-github-sponsors"
+        >
+          {d.githubSponsorsButton}
+        </a>
       </div>
 
       <aside className="donate-disclaimer">

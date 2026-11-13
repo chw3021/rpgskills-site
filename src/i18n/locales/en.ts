@@ -430,7 +430,7 @@ export const en: Translations = {
     downloadJar: 'Download JAR',
     allReleases: 'All Releases',
     resourcePackGithub: 'Resource Pack (GitHub)',
-    resourcePackGithubMeta: 'Put the downloaded ZIP into your resourcepacks folder without extracting it',
+    resourcePackGithubMeta: 'ZIP for the Minecraft version selected above. Put it into your resourcepacks folder without extracting it',
     downloadZip: 'Download ZIP',
     repository: 'Repository',
     noGithubReleaseHint:
@@ -476,8 +476,9 @@ export const en: Translations = {
       'RPGSkills is a free plugin. Donations help with development, hosting, and updates. ',
     introBold: 'Donations are not tied to premium feature unlocks.',
     paypalButton: 'Donate with PayPal',
+    githubSponsorsButton: 'Sponsor on GitHub',
     disclaimer1: '· Donations are voluntary support; digital content refunds may not be available.',
-    disclaimer2: '· Payment and receipt inquiries are handled via your PayPal transaction history.',
+    disclaimer2: '· Payment and receipt inquiries are handled via your PayPal or GitHub Sponsors transaction history.',
     disclaimer3:
       '· Premium licenses will be offered separately with key activation in the future (Firebase planned).',
     premiumTitle: 'Coming later:',

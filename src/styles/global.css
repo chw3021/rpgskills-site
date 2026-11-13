@@ -646,6 +646,16 @@ code {
   box-shadow: 0 6px 20px rgba(0, 112, 186, 0.4);
 }
 
+.btn-github-sponsors {
+  background: #bf3989;
+  color: #fff;
+}
+
+.btn-github-sponsors:hover {
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(191, 57, 137, 0.4);
+}
+
 .input {
   width: 100%;
   font: inherit;

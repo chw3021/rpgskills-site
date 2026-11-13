@@ -387,6 +387,7 @@ export type Translations = {
     intro: string;
     introBold: string;
     paypalButton: string;
+    githubSponsorsButton: string;
     disclaimer1: string;
     disclaimer2: string;
     disclaimer3: string;

@@ -85,8 +85,11 @@ export function DownloadCards() {
       <article className="card">
         <h3>{d.resourcePackGithub}</h3>
         <p className="meta">{d.resourcePackGithubMeta}</p>
+        <p className="meta">
+          MC {mcVersion} · {downloads.resourcePack.assetFileName(mcVersion)}
+        </p>
         <div className="btn-row" style={{ marginTop: '1rem' }}>
-          <a href={downloads.resourcePack.githubZip} className="btn btn-primary">
+          <a href={downloads.resourcePack.zipUrl(mcVersion)} className="btn btn-primary">
             {d.downloadZip}
           </a>
           <a

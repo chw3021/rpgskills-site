@@ -21,6 +21,7 @@ export const site = {
   githubOrg: 'chw3021',
   siteUrl: 'https://chw3021.github.io/rpgskills-site',
   paypalDonateUrl: 'https://www.paypal.com/ncp/payment/4E3ZVDBYBCW62',
+  githubSponsorsUrl: 'https://github.com/sponsors/chw3021',
 } as const;
 
 export type SupportedMcVersion = (typeof site.supportedMcVersions)[number];
